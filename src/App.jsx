@@ -9,6 +9,7 @@ import Locations from './components/Locations';
 import CTA from './components/CTA';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FixedButtons from './components/FixedButtons';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <CTA />
       <Contact />
       <Footer />
+      <FixedButtons />
     </div>
   );
 }

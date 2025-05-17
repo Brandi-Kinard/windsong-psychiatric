@@ -7,11 +7,53 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <p>&copy; {currentYear} Windsong Psychiatric. All rights reserved.</p>
-        <div className="footer-links">
-          <a href="/privacy">Privacy Policy</a>
-          <span className="footer-divider">|</span>
-          <a href="/terms">Terms of Service</a>
+        <div className="footer-content">
+          <div className="footer-section">
+            <h3 className="footer-logo">Windsong Psychiatric</h3>
+            <p className="footer-tagline">Compassionate mental health care</p>
+          </div>
+          
+          <div className="footer-section">
+            <h4 className="footer-heading">Contact</h4>
+            <ul className="footer-list">
+              <li>
+                <a href="tel:9805852019">(980) 585-2019</a>
+              </li>
+              <li>
+                <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a>
+              </li>
+              <li>Serving NC & SC</li>
+            </ul>
+          </div>
+          
+          <div className="footer-section">
+            <h4 className="footer-heading">Quick Links</h4>
+            <ul className="footer-list">
+              <li><a href="#services">Services</a></li>
+              <li><a href="#provider">Meet Dr. Davis</a></li>
+              <li><a href="#locations">Locations</a></li>
+              <li><a href="/patient-portal">Patient Portal</a></li>
+            </ul>
+          </div>
+          
+          <div className="footer-section">
+            <h4 className="footer-heading">Hours</h4>
+            <ul className="footer-list">
+              <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
+              <li>Saturday: By Appointment</li>
+              <li>Sunday: Closed</li>
+              <li>Virtual appointments available</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="footer-bottom">
+          <p>&copy; {currentYear} Windsong Psychiatric. All rights reserved.</p>
+          <div className="footer-bottom-links">
+            <a href="/privacy">Privacy Policy</a>
+            <span className="footer-divider">|</span>
+            <a href="/terms">Terms of Service</a>
+          </div>
         </div>
       </div>
     </footer>
