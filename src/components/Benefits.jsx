@@ -6,17 +6,17 @@ const Benefits = () => {
     {
       icon: '🧠',
       title: 'Care for every age',
-      description: 'Felicia provides specialized mental health care for children, adolescents, adults, and seniors, ensuring age-appropriate treatment approaches.'
+      description: 'Provides specialized mental health care for children, adolescents, adults, and seniors, ensuring age-appropriate treatment approaches.'
     },
     {
       icon: '🩺',
       title: 'Experienced provider',
-      description: 'Felicia Davis is a board-certified psychiatric provider with decades of experience in mental health care.'
+      description: 'A board-certified psychiatric provider with decades of experience in mental health care.'
     },
     {
       icon: '👤',
       title: 'Whole-person approach',
-      description: 'Felicia treats the whole person, not just symptoms, integrating physical health, lifestyle, and environmental factors into your care plan.'
+      description: 'Treats the whole person, not just symptoms, integrating physical health, lifestyle, and environmental factors into your care plan.'
     }
   ];
 
