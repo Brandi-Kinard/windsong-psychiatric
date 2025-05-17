@@ -1,13 +1,11 @@
 .hero {
   margin-top: 60px;
   background: #ffffff;
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 2rem 0;
   overflow: hidden;
 }
 
 .hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,16 +18,17 @@
 }
 
 .hero-illustration {
-  width: 100%;
-  text-align: center;
-  max-width: 1000px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 0;
 }
 
 .hero-illustration img {
   width: 100%;
-  max-width: 600px;
   height: auto;
-  object-fit: contain;
+  display: block;
+  object-fit: cover;
   animation: fadeInUp 1s ease-out;
 }
 
@@ -76,15 +75,17 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 3rem 1.5rem 1.5rem;
+    padding: 3rem 1.5rem 0;
   }
   
   .hero-content {
     margin-bottom: 2rem;
   }
   
-  .hero-illustration img {
-    max-width: 100%;
+  .hero-illustration {
+    width: 100vw;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
   }
   
   .hero-title {
