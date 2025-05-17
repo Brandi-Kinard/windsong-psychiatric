@@ -5,7 +5,7 @@ const Locations = () => {
   const locations = [
     {
       name: 'Huntersville, NC',
-      image: 'https://maps.geoapify.com/v1/staticmap?style=osm-bright-smooth&width=400&height=200&center=lonlat:-80.8620,35.4107&zoom=14&marker=lonlat:-80.8620,35.4107;color:%23246D80;size:medium&apiKey=13a21b0d7b594e39b66d0af96b5c3ee7',
+      image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/huntersville.png',
       address: '9820 Northcross Center Court\nSuite 50\nHuntersville, NC 28078',
       phone: '(704) 688-4199',
       hours: 'Mon-Fri: 9:00 AM - 5:00 PM\nSat: By Appointment',
@@ -17,7 +17,7 @@ const Locations = () => {
     },
     {
       name: 'Fort Mill, SC',
-      image: 'https://maps.geoapify.com/v1/staticmap?style=osm-bright-smooth&width=400&height=200&center=lonlat:-80.9744,35.0074&zoom=14&marker=lonlat:-80.9744,35.0074;color:%23246D80;size:medium&apiKey=13a21b0d7b594e39b66d0af96b5c3ee7',
+      image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/fort-mill.png',
       address: '200 Tom Hall Street\nSuite 102\nFort Mill, SC 29715',
       phone: '(803) 547-2000',
       hours: 'Mon-Fri: 9:00 AM - 5:00 PM\nSat: By Appointment',
@@ -91,8 +91,8 @@ const Locations = () => {
                   </div>
                 </div>
                 
-                <a href={location.link} className="location-link">
-                  {location.linkText} →
+                <a href={location.link} className="location-cta">
+                  {location.linkText}
                 </a>
               </div>
             </div>

@@ -36,6 +36,8 @@
   overflow: hidden;
   transition: all 0.3s ease;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
 }
 
 .location-card:hover {
@@ -95,6 +97,9 @@
 
 .location-content {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 200px);
 }
 
 .location-name {
@@ -104,9 +109,6 @@
   margin-bottom: 1rem;
 }
 
-.location-info {
-  margin-bottom: 1.5rem;
-}
 
 .location-address,
 .location-phone,
@@ -141,16 +143,27 @@
   color: #006B6B;
 }
 
-.location-link {
-  display: inline-block;
-  color: #246D80;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.location-info {
+  flex: 1;
+  margin-bottom: 1.5rem;
 }
 
-.location-link:hover {
-  color: #006B6B;
+.location-cta {
+  display: inline-block;
+  background-color: #246D80;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.location-cta:hover {
+  background-color: #006B6B;
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
