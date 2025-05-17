@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './FixedButtons.css';
+import PoliciesModal from './PoliciesModal';
 
 const FixedButtons = () => {
+  const [isPoliciesModalOpen, setIsPoliciesModalOpen] = useState(false);
+
   return (
     <>
       <button 
@@ -14,11 +17,16 @@ const FixedButtons = () => {
       
       <button 
         className="fixed-button fixed-button-policies"
-        onClick={() => window.location.href = '/policies'}
-        aria-label="View policies"
+        onClick={() => setIsPoliciesModalOpen(true)}
+        aria-label="View policies and fees"
       >
-        📋 Policies
+        📋 Policies & fees
       </button>
+      
+      <PoliciesModal 
+        isOpen={isPoliciesModalOpen} 
+        onClose={() => setIsPoliciesModalOpen(false)} 
+      />
     </>
   );
 };
