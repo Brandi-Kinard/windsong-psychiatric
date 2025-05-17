@@ -25,7 +25,7 @@ We implement industry-standard security measures to protect your personal health
 • Encrypted data transmission using SSL protocols
 • Secure servers with restricted access
 • Regular security audits and updates
-• Staff training on privacy and security practices
+• Ongoing training on privacy and security best practices
 
 Your Rights
 You have the right to:
@@ -80,7 +80,7 @@ Cancellation Policy
 • Emergency situations handled on a case-by-case basis
 
 Questions?
-Our billing department is available to discuss payment options, insurance coverage, and financial assistance programs. We believe cost should not be a barrier to mental health care.`;
+Felicia is available to discuss payment options, insurance coverage, and financial assistance programs. She believes cost should not be a barrier to mental health care.`;
 
   return (
     <>
