@@ -99,15 +99,18 @@
   
   .nav-logo-primary {
     font-size: 1.875rem;
-    bottom: 2px;
-    left: 0;
+    top: 5px;
+    left: 55px;
+    bottom: auto;
   }
   
   .nav-logo-secondary {
-    left: 117px;
-    font-size: 0.8rem;
-    bottom: 5px;
+    left: 55px;
+    font-size: 0.7rem;
+    bottom: 8px;
     font-weight: 600;
+    top: auto;
+    line-height: 1;
   }
   
   .nav-links {
