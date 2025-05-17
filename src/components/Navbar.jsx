@@ -15,7 +15,11 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <div className="nav-logo">
-          <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/windsong-logo-real-nrrw-rec.png" alt="Windsong Psychiatric" />
+          <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/tree-bw.png" alt="Windsong Psychiatric" />
+          <div className="nav-logo-text">
+            <span className="nav-logo-primary">Windsong</span>
+            <span className="nav-logo-secondary">Family & Psychiatric Associates, PLLC</span>
+          </div>
         </div>
         
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
