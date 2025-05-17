@@ -1,0 +1,19 @@
+/* Peacock blue-green color scheme update */
+:root {
+  /* Primary peacock blue-green colors */
+  --primary-color: #008B8B; /* peacock blue-green */
+  --primary-hover: #006B6B; /* darker peacock blue-green */
+  --primary-light: #E0FFFF; /* light cyan/turquoise */
+  --primary-lighter: #F0FFFF; /* very light cyan */
+  
+  /* Keep other colors the same */
+  --text-dark: #1f2937;
+  --text-medium: #6b7280;
+  --text-light: #9ca3af;
+  
+  --bg-light: #f9fafb;
+  --bg-dark: #374151;
+  
+  --border-light: #e5e7eb;
+  --border-medium: #d1d5db;
+}

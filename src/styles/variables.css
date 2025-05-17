@@ -1,10 +1,10 @@
 /* CSS Variables for consistent theming */
 :root {
   /* Colors */
-  --primary-color: #06b6d4; /* cyan-500 */
-  --primary-hover: #0891b2; /* cyan-600 */
-  --primary-light: #ecfeff; /* cyan-50 */
-  --primary-lighter: #f0fdfa; /* cyan-50 lighter */
+  --primary-color: #008B8B; /* peacock blue-green */
+  --primary-hover: #006B6B; /* darker peacock blue-green */
+  --primary-light: #E0FFFF; /* light peacock */
+  --primary-lighter: #F0FFFF; /* very light peacock */
   
   --text-dark: #1f2937; /* gray-800 */
   --text-medium: #6b7280; /* gray-500 */

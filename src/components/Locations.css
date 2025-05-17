@@ -98,25 +98,25 @@
 }
 
 .location-phone a {
-  color: #06b6d4;
+  color: #008B8B;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .location-phone a:hover {
-  color: #0891b2;
+  color: #006B6B;
 }
 
 .location-link {
   display: inline-block;
-  color: #06b6d4;
+  color: #008B8B;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .location-link:hover {
-  color: #0891b2;
+  color: #006B6B;
 }
 
 @media (max-width: 768px) {

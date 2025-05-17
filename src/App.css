@@ -59,7 +59,7 @@ p {
 
 /* Improved focus states */
 :focus-visible {
-  outline: 2px solid #06b6d4;
+  outline: 2px solid #008B8B;
   outline-offset: 2px;
 }
 

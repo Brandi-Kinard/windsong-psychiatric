@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f0fdfa;
+  background-color: #F0FFFF;
   border-radius: 16px;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .service-link {
-  color: #06b6d4;
+  color: #008B8B;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -79,7 +79,7 @@
 }
 
 .service-link:hover {
-  color: #0891b2;
+  color: #006B6B;
 }
 
 @media (max-width: 768px) {

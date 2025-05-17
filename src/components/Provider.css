@@ -39,7 +39,7 @@
 .checkmark {
   width: 24px;
   height: 24px;
-  background-color: #06b6d4;
+  background-color: #008B8B;
   color: white;
   border-radius: 50%;
   display: inline-flex;
@@ -59,7 +59,7 @@
 
 .provider-link {
   display: inline-block;
-  color: #06b6d4;
+  color: #008B8B;
   font-weight: 600;
   font-size: 1.125rem;
   text-decoration: none;
@@ -67,7 +67,7 @@
 }
 
 .provider-link:hover {
-  color: #0891b2;
+  color: #006B6B;
 }
 
 .provider-image {
@@ -81,7 +81,7 @@
   right: 20px;
   bottom: -20px;
   left: -20px;
-  background-color: #ecfeff;
+  background-color: #E0FFFF;
   transform: rotate(-3deg);
   border-radius: 20px;
 }
