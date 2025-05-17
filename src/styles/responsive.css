@@ -1,0 +1,59 @@
+/* Global responsive adjustments */
+
+/* Mobile-first approach */
+@media (max-width: 480px) {
+  /* Reduce padding on mobile for all sections */
+  section {
+    padding: 3rem 1rem;
+  }
+  
+  /* Adjust typography */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+  p { font-size: 0.95rem; }
+}
+
+/* Tablet adjustments */
+@media (min-width: 481px) and (max-width: 768px) {
+  section {
+    padding: 4rem 1.5rem;
+  }
+}
+
+/* Ensure consistent button states */
+button, .cta-button, .service-link, .location-link, .provider-link {
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+button:focus, .cta-button:focus {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+button:active, .cta-button:active {
+  transform: scale(0.98);
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, .card, .stat-item, .service-card, .location-card, .benefit-item {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Consistent hover states */
+.card:hover, .stat-item:hover, .service-card:hover, .location-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Focus states for accessibility */
+*:focus {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+/* Disable outline for mouse users */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
