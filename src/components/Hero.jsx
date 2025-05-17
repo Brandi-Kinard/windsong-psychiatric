@@ -12,6 +12,7 @@ const Hero = () => {
         </div>
         <div className="hero-illustration">
           <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/final-people-banner.png" alt="Mental health support illustration" />
+          <div className="hero-illustration-overlay"></div>
         </div>
       </div>
     </section>
