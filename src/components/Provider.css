@@ -57,17 +57,26 @@
   margin-bottom: 2rem;
 }
 
-.provider-link {
-  display: inline-block;
+.provider-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
   color: #246D80;
+  border: 2px solid #246D80;
+  border-radius: 50px;
   font-weight: 600;
   font-size: 1.125rem;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: transparent;
 }
 
-.provider-link:hover {
+.provider-cta:hover {
   color: #006B6B;
+  border-color: #006B6B;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .provider-image {

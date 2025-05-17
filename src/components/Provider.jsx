@@ -30,7 +30,7 @@ const Provider = () => {
               She believes in treating each patient as a unique individual, not just a diagnosis.
             </p>
             
-            <a href="/meet-felicia-davis" className="provider-link">
+            <a href="/meet-felicia-davis" className="provider-cta">
               Meet Felicia Davis →
             </a>
           </div>

@@ -74,6 +74,28 @@
   color: #246D80;
 }
 
+.nav-link-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  margin-left: 1rem;
+  color: #246D80;
+  border: 2px solid #246D80;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+.nav-link-cta:hover {
+  color: #006B6B;
+  border-color: #006B6B;
+  transform: scale(1.05);
+  background-color: rgba(36, 109, 128, 0.05);
+}
+
 .nav-menu {
   display: none;
   flex-direction: column;
@@ -131,5 +153,10 @@
   
   .nav-link {
     font-size: 1.1rem;
+  }
+  
+  .nav-link-cta {
+    width: fit-content;
+    margin: 1rem auto 0;
   }
 }

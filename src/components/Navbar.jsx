@@ -31,6 +31,13 @@ const Navbar = () => {
               {link.text}
             </a>
           ))}
+          <a 
+            href="/patient-portal" 
+            className="nav-link nav-link-cta"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Patient Portal
+          </a>
         </div>
         
         <div className="nav-menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
