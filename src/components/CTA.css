@@ -63,15 +63,15 @@
 }
 
 .cta-button-secondary {
-  background-color: white;
-  color: #06b6d4;
-  border: 2px solid #06b6d4;
+  background-color: #000000;
+  color: white;
+  border: 2px solid #000000;
 }
 
 .cta-button-secondary:hover {
-  background-color: #f0fdfa;
-  border-color: #0891b2;
-  color: #0891b2;
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+  color: white;
 }
 
 .cta-button-icon {
