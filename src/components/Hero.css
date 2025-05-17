@@ -1,27 +1,28 @@
 .hero {
   margin-top: 60px;
   background: #ffffff;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 2rem;
   overflow: hidden;
 }
 
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
 .hero-content {
-  text-align: left;
-  max-width: 500px;
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 3rem;
 }
 
 .hero-illustration {
-  position: relative;
-  text-align: right;
+  width: 100%;
+  text-align: center;
+  max-width: 1000px;
 }
 
 .hero-illustration img {
@@ -74,19 +75,12 @@
 }
 
 @media (max-width: 768px) {
-  .hero-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+  .hero {
+    padding: 3rem 1.5rem 1.5rem;
   }
   
   .hero-content {
-    text-align: center;
-    max-width: 100%;
-  }
-  
-  .hero-illustration {
-    text-align: center;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
   .hero-illustration img {
@@ -99,5 +93,6 @@
   
   .hero-subtitle {
     font-size: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
