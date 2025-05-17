@@ -5,7 +5,7 @@ const Locations = () => {
   const locations = [
     {
       name: 'Huntersville, NC',
-      image: 'https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-s+246D80(-80.8620,35.4107)/-80.8620,35.4107,13,0/400x200@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+      image: 'https://maps.geoapify.com/v1/staticmap?style=osm-bright-smooth&width=400&height=200&center=lonlat:-80.8620,35.4107&zoom=14&marker=lonlat:-80.8620,35.4107;color:%23246D80;size:medium&apiKey=13a21b0d7b594e39b66d0af96b5c3ee7',
       address: '9820 Northcross Center Court\nSuite 50\nHuntersville, NC 28078',
       phone: '(704) 688-4199',
       hours: 'Mon-Fri: 9:00 AM - 5:00 PM\nSat: By Appointment',
@@ -17,7 +17,7 @@ const Locations = () => {
     },
     {
       name: 'Fort Mill, SC',
-      image: 'https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-s+246D80(-80.9744,35.0074)/-80.9744,35.0074,13,0/400x200@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+      image: 'https://maps.geoapify.com/v1/staticmap?style=osm-bright-smooth&width=400&height=200&center=lonlat:-80.9744,35.0074&zoom=14&marker=lonlat:-80.9744,35.0074;color:%23246D80;size:medium&apiKey=13a21b0d7b594e39b66d0af96b5c3ee7',
       address: '200 Tom Hall Street\nSuite 102\nFort Mill, SC 29715',
       phone: '(803) 547-2000',
       hours: 'Mon-Fri: 9:00 AM - 5:00 PM\nSat: By Appointment',

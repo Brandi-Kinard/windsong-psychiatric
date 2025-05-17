@@ -4,24 +4,86 @@ import './PoliciesModal.css';
 const PoliciesModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
-  const privacyContent = `PRIVACY STATEMENT
+  const privacyContent = `🌿 POLICIES & FEES
 
-At Windsong Family & Psychiatric Associates, we are committed to protecting your privacy and ensuring a safe online experience. This Privacy Statement outlines how we collect, use, and protect your information.
+At Windsong Family & Psychiatric Associates, we are committed to providing compassionate, personalized care. To ensure a smooth experience for all our clients, we've outlined our policies and fees below.
+
+📅 APPOINTMENT SCHEDULING & CANCELLATIONS
+
+Scheduling
+• Appointments can be made by calling our office at 980-585-2019 or through our Patient Portal
+• We offer both in-person and telemedicine appointments
+
+Cancellations
+• We understand that life happens. If you need to cancel or reschedule, please provide at least 24 hours' notice
+• This allows us to offer the slot to another client in need
+
+Late Cancellations/No-Shows
+• Appointments missed or canceled with less than 24 hours' notice may incur a fee
+• We appreciate your understanding as this helps us manage our schedule effectively
+• Emergency situations are handled on a case-by-case basis
+
+💳 FEES & INSURANCE
+
+Initial Psychiatric Evaluation (60-90 min)
+• Insurance: Copay varies by plan
+• Self-pay: $350-$450
+
+Follow-Up Sessions
+• Medication Management (15-30 min): $150-$200
+• Psychotherapy Session (45-50 min): $175-$225
+• Combined Therapy & Medication (60 min): $250-$300
+
+Accepted Insurance
+We accept most major insurance plans, including:
+• Blue Cross Blue Shield
+• Aetna  
+• Cigna
+• United Healthcare
+• Medicare
+• Medicaid
+• It's advisable to check with your provider regarding coverage specifics
+
+Self-Pay Options
+• For clients without insurance, we offer self-pay rates
+• Flexible payment plans available upon request
+• Sliding scale fees based on financial need
+• Please contact our office for more details
+
+Payment Methods
+• Payment is due at the time of service
+• We accept cash, check, credit/debit cards, and HSA/FSA cards
+
+💊 PRESCRIPTION REFILLS
+
+During Appointments
+• We recommend discussing medication needs during your scheduled sessions
+
+Between Appointments  
+• If you require a refill between appointments, please contact our office at least 3 business days in advance
+
+After-Hours Requests
+• Refill requests made outside of business hours will be addressed on the next business day
+
+📄 FORMS & DOCUMENTATION
+
+Standard Forms
+• Completion of standard forms (e.g., work/school notes) is complimentary
+
+Extended Documentation
+• For detailed forms or letters (e.g., FMLA, disability), a fee may apply
+• Please submit such requests well in advance to allow adequate processing time
+
+🔐 PRIVACY & CONFIDENTIALITY
+
+Your privacy is paramount. We adhere to all HIPAA regulations to ensure your personal and health information remains confidential.
 
 Information We Collect
-• Personal Information: We collect information you provide directly, such as your name, contact details, and health information necessary for treatment.
-• Technical Information: We automatically collect certain technical data including IP addresses, browser types, and website usage statistics to improve our services.
-• Demographic Information: We may collect non-identifying information such as age, gender, and location to better understand our patient population.
+• Personal Information: Name, contact details, and health information necessary for treatment
+• Technical Information: IP addresses, browser types, and website usage statistics
+• Demographic Information: Age, gender, and location to better understand our patient population
 
-How We Use Your Information
-• To provide and improve our mental health services
-• To communicate with you about appointments, treatment, and health information
-• To process payments and insurance claims
-• To comply with legal and regulatory requirements
-• To improve our website and patient experience
-
-Information Protection
-We implement industry-standard security measures to protect your personal health information:
+How We Protect Your Information
 • Encrypted data transmission using SSL protocols
 • Secure servers with restricted access
 • Regular security audits and updates
@@ -41,46 +103,16 @@ We do not sell, trade, or otherwise transfer your personal information to third 
 • When required by law or court order
 • With your explicit consent
 
-Contact Information
-For privacy concerns or questions, please contact us:
+📞 CONTACT US
+
+If you have any questions or need assistance, our friendly staff is here to help.
+
 Phone: 980-585-2019
+Email: info@windsongpsychiatric.com
 Address: 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078
-Email: privacy@windsongpsychiatric.com
+Office Hours: Monday–Thursday, 8:30 AM – 6:00 PM; Friday, 8:30 AM – 12:00 PM
 
-FEES AND PAYMENT POLICIES
-
-Insurance Coverage
-We accept most major insurance plans, including:
-• Blue Cross Blue Shield
-• Aetna
-• Cigna
-• United Healthcare
-• Medicare
-• Medicaid
-• And many others
-
-Please verify your specific coverage before your appointment.
-
-Self-Pay Rates
-For patients without insurance or choosing to self-pay:
-• Initial Psychiatric Evaluation (60-90 min): $350-$450
-• Medication Management (15-30 min): $150-$200
-• Psychotherapy Session (45-50 min): $175-$225
-• Combined Therapy & Medication (60 min): $250-$300
-
-Payment Options
-• Cash, check, or credit card accepted
-• Payment due at time of service
-• Flexible payment plans available upon request
-• Sliding scale fees based on financial need
-
-Cancellation Policy
-• 24-hour notice required for cancellations
-• Late cancellations or no-shows may incur a fee
-• Emergency situations handled on a case-by-case basis
-
-Questions?
-Felicia is available to discuss payment options, insurance coverage, and financial assistance programs. She believes cost should not be a barrier to mental health care.`;
+We appreciate the opportunity to support your mental health journey. Thank you for choosing Windsong Family & Psychiatric Associates.`;
 
   return (
     <>
