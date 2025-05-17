@@ -25,7 +25,7 @@ const Benefits = () => {
       <div className="benefits-container">
         <div className="benefits-header">
           <h2 className="benefits-title">Why choose Windsong Psychiatric</h2>
-          <p className="benefits-subtitle">Evidence-based care that puts you first</p>
+          <p className="benefits-subtitle">Evidence-based care that puts you first, offering the right treatment at the right time</p>
         </div>
         
         <div className="benefits-grid">
