@@ -1,12 +1,69 @@
-# React + Vite
+# Windsong Psychiatric
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website for Windsong Psychiatric mental health practice. Built with React and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **Modern UI**: Clean, professional design with calming blue and gray color scheme
+- **Service Showcase**: Grid layout displaying all mental health services offered
+- **Contact Form**: Easy-to-use contact form with practice information
+- **Performance**: Fast loading times with Vite build tooling
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18
+- Vite
+- Plain CSS (no frameworks)
+- Vanilla JavaScript (no TypeScript)
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/[your-username]/windsong-psychiatric.git
+cd windsong-psychiatric
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Build for production:
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+├── components/        # React components
+│   ├── Navbar.jsx    # Navigation bar
+│   ├── Hero.jsx      # Hero section
+│   ├── Stats.jsx     # Statistics display
+│   ├── Services.jsx  # Services grid
+│   ├── Contact.jsx   # Contact form
+│   └── Footer.jsx    # Footer component
+├── App.jsx           # Main app component
+├── main.jsx          # Entry point
+└── *.css            # Styling files
+```
+
+## Deployment
+
+This project can be easily deployed to:
+- Vercel
+- Netlify
+- GitHub Pages
+- Any static hosting service
+
+## License
+
+All rights reserved. © 2025 Windsong Psychiatric
