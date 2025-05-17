@@ -38,7 +38,7 @@
   bottom: 2px;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #008B8B;
+  color: #246D80;
   line-height: 1;
   font-family: 'Dancing Script', cursive;
   letter-spacing: 0.5px;
@@ -48,10 +48,10 @@
 
 .nav-logo-secondary {
   position: absolute;
-  left: 158px;
+  left: 162px;
   bottom: 10px;
   font-size: 0.9rem;
-  font-weight: normal;
+  font-weight: 600;
   color: #4b5563;
   line-height: 1.2;
   white-space: nowrap;
@@ -71,7 +71,7 @@
 }
 
 .nav-link:hover {
-  color: #008B8B;
+  color: #246D80;
 }
 
 .nav-menu {
@@ -104,9 +104,10 @@
   }
   
   .nav-logo-secondary {
-    left: 113px;
+    left: 117px;
     font-size: 0.8rem;
     bottom: 5px;
+    font-weight: 600;
   }
   
   .nav-links {

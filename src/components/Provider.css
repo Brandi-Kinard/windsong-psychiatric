@@ -39,7 +39,7 @@
 .checkmark {
   width: 24px;
   height: 24px;
-  background-color: #008B8B;
+  background-color: #246D80;
   color: white;
   border-radius: 50%;
   display: inline-flex;
@@ -59,7 +59,7 @@
 
 .provider-link {
   display: inline-block;
-  color: #008B8B;
+  color: #246D80;
   font-weight: 600;
   font-size: 1.125rem;
   text-decoration: none;

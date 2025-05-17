@@ -98,7 +98,7 @@
 }
 
 .location-phone a {
-  color: #008B8B;
+  color: #246D80;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -109,7 +109,7 @@
 
 .location-link {
   display: inline-block;
-  color: #008B8B;
+  color: #246D80;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s ease;

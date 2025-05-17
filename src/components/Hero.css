@@ -1,5 +1,5 @@
 .hero {
-  margin-top: 60px;
+  margin-top: 80px;
   background: #ffffff;
   padding: 6rem 2rem 4rem;
   min-height: 100vh;
@@ -72,7 +72,7 @@
 
 .hero-cta {
   display: inline-block;
-  background-color: #008B8B;
+  background-color: #246D80;
   color: white;
   padding: 1.25rem 2.5rem;
   border-radius: 50px;
@@ -88,7 +88,8 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 3rem 1.5rem 0;
+    padding: 2rem 1.5rem 1rem;
+    min-height: auto;
   }
   
   .hero-content {
@@ -103,10 +104,17 @@
   
   .hero-title {
     font-size: 2rem;
+    margin-bottom: 1rem;
   }
   
   .hero-subtitle {
     font-size: 1rem;
     margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+  
+  .hero-cta {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
   }
 }
