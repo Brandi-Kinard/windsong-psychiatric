@@ -4,34 +4,28 @@ import './Services.css';
 const Services = () => {
   const services = [
     {
-      icon: '🧠',
-      title: 'Individual Therapy',
-      description: 'One-on-one sessions tailored to your unique needs and goals'
-    },
-    {
-      icon: '👥',
-      title: 'Group Therapy',
-      description: 'Connect with others in a supportive group environment'
+      icon: '📋',
+      title: 'Psychiatric Evaluations',
+      description: 'Comprehensive assessments to understand your mental health needs and create personalized treatment plans',
+      link: '/services/evaluations'
     },
     {
       icon: '💊',
       title: 'Medication Management',
-      description: 'Expert psychiatric evaluation and medication monitoring'
+      description: 'Expert psychiatric medication evaluation, prescribing, and ongoing monitoring for optimal results',
+      link: '/services/medication'
     },
     {
-      icon: '📋',
-      title: 'Psychological Assessment',
-      description: 'Comprehensive evaluations to better understand your needs'
+      icon: '🖥️',
+      title: 'Telemedicine',
+      description: 'Convenient virtual appointments from the comfort of your home with the same quality care',
+      link: '/services/telemedicine'
     },
     {
-      icon: '🏥',
-      title: 'Crisis Intervention',
-      description: '24/7 support for urgent mental health concerns'
-    },
-    {
-      icon: '📱',
-      title: 'Telepsychiatry',
-      description: 'Convenient virtual appointments from anywhere'
+      icon: '⭐',
+      title: 'Specialized Care',
+      description: 'Focused treatment for anxiety, depression, ADHD, trauma, and other mental health conditions',
+      link: '/services/specialized'
     }
   ];
 
@@ -45,6 +39,7 @@ const Services = () => {
               <div className="service-icon">{service.icon}</div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
+              <a href={service.link} className="service-link">Learn more →</a>
             </div>
           ))}
         </div>
