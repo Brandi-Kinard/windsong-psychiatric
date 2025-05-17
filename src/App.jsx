@@ -5,6 +5,8 @@ import Stats from './components/Stats';
 import Benefits from './components/Benefits';
 import Provider from './components/Provider';
 import Services from './components/Services';
+import Locations from './components/Locations';
+import CTA from './components/CTA';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './App.css';
@@ -18,6 +20,8 @@ function App() {
       <Benefits />
       <Provider />
       <Services />
+      <Locations />
+      <CTA />
       <Contact />
       <Footer />
     </div>

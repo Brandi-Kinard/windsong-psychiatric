@@ -1,0 +1,131 @@
+.locations {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+}
+
+.locations-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.locations-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.locations-subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 3rem;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.location-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.location-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.location-image {
+  height: 200px;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.location-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.location-content {
+  padding: 1.5rem;
+}
+
+.location-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.location-info {
+  margin-bottom: 1.5rem;
+}
+
+.location-address,
+.location-phone,
+.location-hours {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  align-items: flex-start;
+}
+
+.location-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.location-address pre,
+.location-hours pre {
+  margin: 0;
+  font-family: inherit;
+  font-size: 0.975rem;
+  color: #6b7280;
+  white-space: pre-wrap;
+}
+
+.location-phone a {
+  color: #06b6d4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.location-phone a:hover {
+  color: #0891b2;
+}
+
+.location-link {
+  display: inline-block;
+  color: #06b6d4;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.location-link:hover {
+  color: #0891b2;
+}
+
+@media (max-width: 768px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .locations-title {
+    font-size: 2rem;
+  }
+}
