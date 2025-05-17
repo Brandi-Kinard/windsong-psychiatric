@@ -1,37 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Locations.css';
 
 const Locations = () => {
   const locations = [
     {
       name: 'Huntersville, NC',
-      image: 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-hospital+246D80(-80.8428,35.4107)/-80.8428,35.4107,14/400x300?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
-      address: '16740 Cranlyn Road\nSuite 201\nHuntersville, NC 28078',
+      image: 'https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-s+246D80(-80.8620,35.4107)/-80.8620,35.4107,13,0/400x200@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+      address: '9820 Northcross Center Court\nSuite 50\nHuntersville, NC 28078',
       phone: '(704) 688-4199',
       hours: 'Mon-Fri: 9:00 AM - 5:00 PM\nSat: By Appointment',
-      link: 'https://maps.google.com/?q=16740+Cranlyn+Road+Huntersville+NC+28078',
+      link: 'https://maps.google.com/?q=9820+Northcross+Center+Court+Huntersville+NC+28078',
       linkText: 'Get directions',
-      mapLink: 'https://www.google.com/maps/dir//16740+Cranlyn+Road,+Suite+201,+Huntersville,+NC+28078'
+      mapLink: 'https://www.google.com/maps/dir//9820+Northcross+Center+Court,+Suite+50,+Huntersville,+NC+28078',
+      lat: 35.4107,
+      lng: -80.8428
     },
     {
       name: 'Fort Mill, SC',
-      image: 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-hospital+246D80(-80.9744,35.0074)/-80.9744,35.0074,14/400x300?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
+      image: 'https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/pin-s+246D80(-80.9744,35.0074)/-80.9744,35.0074,13,0/400x200@2x?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
       address: '200 Tom Hall Street\nSuite 102\nFort Mill, SC 29715',
       phone: '(803) 547-2000',
       hours: 'Mon-Fri: 9:00 AM - 5:00 PM\nSat: By Appointment',
       link: 'https://maps.google.com/?q=200+Tom+Hall+Street+Fort+Mill+SC+29715',
       linkText: 'Get directions',
-      mapLink: 'https://www.google.com/maps/dir//200+Tom+Hall+Street,+Suite+102,+Fort+Mill,+SC+29715'
+      mapLink: 'https://www.google.com/maps/dir//200+Tom+Hall+Street,+Suite+102,+Fort+Mill,+SC+29715',
+      lat: 35.0074,
+      lng: -80.9744
     },
     {
       name: 'Virtual Care',
-      image: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=400&h=300&fit=crop&crop=center',
+      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop&crop=center',
       address: 'Available throughout\nNorth & South Carolina',
       phone: '(980) 585-2019',
       hours: 'Mon-Fri: 8:00 AM - 6:00 PM\nSat: 9:00 AM - 2:00 PM',
       link: '/virtual-care',
       linkText: 'Learn more',
-      mapLink: null
+      mapLink: null,
+      lat: null,
+      lng: null
     }
   ];
 
@@ -47,10 +53,21 @@ const Locations = () => {
               <div className="location-image">
                 {location.mapLink ? (
                   <a href={location.mapLink} target="_blank" rel="noopener noreferrer" title="Get directions">
-                    <img src={location.image} alt={`Map of ${location.name}`} />
+                    <img 
+                      src={location.image} 
+                      alt={`Map of ${location.name}`}
+                      loading="lazy"
+                      onError={(e) => {
+                        e.target.src = `https://via.placeholder.com/400x200/EDF6F9/246D80?text=${encodeURIComponent(location.name)}`;
+                      }}
+                    />
                   </a>
                 ) : (
-                  <img src={location.image} alt={location.name} />
+                  <img 
+                    src={location.image} 
+                    alt={location.name}
+                    loading="lazy"
+                  />
                 )}
               </div>
               
