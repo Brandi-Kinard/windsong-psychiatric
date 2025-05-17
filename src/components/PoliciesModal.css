@@ -75,9 +75,9 @@
   white-space: pre-wrap;
   font-family: inherit;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #374151;
-  font-size: 0.95rem;
+  font-size: 1.125rem;
 }
 
 .policies-modal-footer {
@@ -135,6 +135,10 @@
   
   .policies-modal-content {
     padding: 1.5rem;
+  }
+  
+  .policies-modal-content pre {
+    font-size: 1rem;
   }
   
   .policies-modal-header {
