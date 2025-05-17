@@ -12,19 +12,19 @@ const CTA = () => {
         
         <div className="cta-options">
           <div className="cta-option">
-            <a href="tel:9805852019" className="cta-button cta-button-primary">
-              <span className="cta-button-icon">📞</span>
-              Call 980-585-2019
+            <a href="/new-patient" className="cta-button cta-button-primary">
+              <span className="cta-button-icon">✨</span>
+              Get Started
             </a>
-            <p className="cta-caption">New patients: Call for initial consultation</p>
+            <p className="cta-caption">New patients begin here</p>
           </div>
           
           <div className="cta-option">
             <a href="/patient-portal" className="cta-button cta-button-secondary">
               <span className="cta-button-icon">🔐</span>
-              Access Patient Portal
+              Patient Portal
             </a>
-            <p className="cta-caption">Existing patients: Manage your appointments</p>
+            <p className="cta-caption">Existing patients sign in</p>
           </div>
         </div>
       </div>

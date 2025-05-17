@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="hero-content">
         <h1 className="hero-title">Compassionate Mental Health Care</h1>
         <p className="hero-subtitle">We're here to support your mental wellness journey</p>
-        <a href="#contact" className="hero-cta">Schedule Appointment</a>
+        <a href="/new-patient" className="hero-cta">Get Started</a>
       </div>
     </section>
   );
