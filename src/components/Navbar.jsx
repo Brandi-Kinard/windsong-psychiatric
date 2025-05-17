@@ -16,10 +16,8 @@ const Navbar = () => {
       <div className="nav-container">
         <div className="nav-logo">
           <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/tree-bw.png" alt="Windsong Psychiatric" />
-          <div className="nav-logo-text">
-            <span className="nav-logo-primary">Windsong</span>
-            <span className="nav-logo-secondary">Family & Psychiatric Associates, PLLC</span>
-          </div>
+          <span className="nav-logo-primary">Windsong</span>
+          <span className="nav-logo-secondary">Family & Psychiatric Associates, PLLC</span>
         </div>
         
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
