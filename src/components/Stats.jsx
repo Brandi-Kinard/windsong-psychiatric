@@ -3,9 +3,21 @@ import './Stats.css';
 
 const Stats = () => {
   const statsData = [
-    { value: '10+', label: 'Years of Experience' },
-    { value: '500+', label: 'Patients Helped' },
-    { value: '95%', label: 'Patient Satisfaction' }
+    { 
+      value: '87%', 
+      label: 'Symptom Improvement',
+      description: 'Patients report significant improvement in their mental health symptoms'
+    },
+    { 
+      value: '94%', 
+      label: 'Patient Satisfaction',
+      description: 'Our patients rate their care experience as excellent'
+    },
+    { 
+      value: '24h', 
+      label: 'Response Time',
+      description: 'Quick response to all patient inquiries and concerns'
+    }
   ];
 
   return (
@@ -15,6 +27,7 @@ const Stats = () => {
           <div key={index} className="stat-item">
             <div className="stat-value">{stat.value}</div>
             <div className="stat-label">{stat.label}</div>
+            <div className="stat-description">{stat.description}</div>
           </div>
         ))}
       </div>
