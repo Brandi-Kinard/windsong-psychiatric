@@ -87,14 +87,14 @@
 
 .image-background {
   position: absolute;
-  width: 340px;
-  height: 470px;
-  background-color: #B8E4FF;
+  width: 330px;
+  height: 460px;
+  background-color: #E5F2F6;
   transform: rotate(-3deg);
   border-radius: 20px;
   z-index: 1;
-  top: -10px;
-  left: -10px;
+  top: -5px;
+  left: -5px;
 }
 
 .image-placeholder {
@@ -135,10 +135,10 @@
   }
   
   .image-background {
-    width: 300px;
-    height: 420px;
-    top: -10px;
-    left: -10px;
+    width: 290px;
+    height: 410px;
+    top: -5px;
+    left: -5px;
   }
   
   .provider-title {
