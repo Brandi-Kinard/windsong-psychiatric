@@ -14,7 +14,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="nav-logo">Windsong Psychiatric</div>
+        <div className="nav-logo">
+          <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/windsong-logo-real-nrrw-rec.png" alt="Windsong Psychiatric" />
+        </div>
         
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           {navLinks.map((link, index) => (
