@@ -4,17 +4,17 @@ import './Benefits.css';
 const Benefits = () => {
   const benefitsData = [
     {
-      icon: '🛡️',
+      icon: '🧠',
       title: 'Care for every age',
       description: 'We provide specialized mental health care for children, adolescents, adults, and seniors, ensuring age-appropriate treatment approaches.'
     },
     {
-      icon: '❤️',
+      icon: '🩺',
       title: 'Experienced providers',
       description: 'Our team of board-certified psychiatrists and licensed therapists brings decades of combined experience in mental health care.'
     },
     {
-      icon: '🧠',
+      icon: '👤',
       title: 'Whole-person approach',
       description: 'We treat the whole person, not just symptoms, integrating physical health, lifestyle, and environmental factors into your care plan.'
     }

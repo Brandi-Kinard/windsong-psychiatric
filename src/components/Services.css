@@ -1,6 +1,6 @@
 .services {
   padding: 5rem 2rem;
-  background-color: #f9fafb;
+  background-color: #EDF6F9;
 }
 
 .services-container {
@@ -50,7 +50,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #F0FFFF;
+  background-color: #E5F2F6;
   border-radius: 16px;
 }
 

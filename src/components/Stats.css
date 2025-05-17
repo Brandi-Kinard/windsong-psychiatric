@@ -14,7 +14,7 @@
 
 .stat-item {
   padding: 2rem;
-  background-color: #f9fafb; /* light gray */
+  background-color: #EDF6F9; /* lighter version of blue-gray */
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }

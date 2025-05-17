@@ -1,6 +1,6 @@
 .cta {
   padding: 6rem 2rem;
-  background-color: #F0FFFF; /* very light peacock blue */
+  background-color: #EDF6F9; /* lighter version of blue-gray */
 }
 
 .cta-container {
@@ -71,14 +71,14 @@
 
 .cta-button-secondary {
   background-color: transparent;
-  color: #000000;
-  border: 2px solid #000000;
+  color: #246D80;
+  border: 2px solid #246D80;
 }
 
 .cta-button-secondary:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-color: #000000;
-  color: #000000;
+  background-color: rgba(36, 109, 128, 0.05);
+  border-color: #006B6B;
+  color: #006B6B;
 }
 
 .cta-button-icon {
