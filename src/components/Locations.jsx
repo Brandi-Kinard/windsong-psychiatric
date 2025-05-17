@@ -5,30 +5,33 @@ const Locations = () => {
   const locations = [
     {
       name: 'Huntersville, NC',
-      image: '/images/huntersville-office.jpg',
+      image: 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-hospital+246D80(-80.8428,35.4107)/-80.8428,35.4107,14/400x300?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
       address: '16740 Cranlyn Road\nSuite 201\nHuntersville, NC 28078',
       phone: '(704) 688-4199',
       hours: 'Mon-Fri: 9:00 AM - 5:00 PM\nSat: By Appointment',
-      link: 'https://maps.google.com/?q=16740+Cranlyn+Road+Huntersville+NC',
-      linkText: 'Get directions'
+      link: 'https://maps.google.com/?q=16740+Cranlyn+Road+Huntersville+NC+28078',
+      linkText: 'Get directions',
+      mapLink: 'https://www.google.com/maps/dir//16740+Cranlyn+Road,+Suite+201,+Huntersville,+NC+28078'
     },
     {
       name: 'Fort Mill, SC',
-      image: '/images/fort-mill-office.jpg',
+      image: 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-hospital+246D80(-80.9744,35.0074)/-80.9744,35.0074,14/400x300?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw',
       address: '200 Tom Hall Street\nSuite 102\nFort Mill, SC 29715',
       phone: '(803) 547-2000',
       hours: 'Mon-Fri: 9:00 AM - 5:00 PM\nSat: By Appointment',
-      link: 'https://maps.google.com/?q=200+Tom+Hall+Street+Fort+Mill+SC',
-      linkText: 'Get directions'
+      link: 'https://maps.google.com/?q=200+Tom+Hall+Street+Fort+Mill+SC+29715',
+      linkText: 'Get directions',
+      mapLink: 'https://www.google.com/maps/dir//200+Tom+Hall+Street,+Suite+102,+Fort+Mill,+SC+29715'
     },
     {
       name: 'Virtual Care',
-      image: '/images/virtual-care.jpg',
+      image: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=400&h=300&fit=crop&crop=center',
       address: 'Available throughout\nNorth & South Carolina',
       phone: '(980) 585-2019',
       hours: 'Mon-Fri: 8:00 AM - 6:00 PM\nSat: 9:00 AM - 2:00 PM',
       link: '/virtual-care',
-      linkText: 'Learn more'
+      linkText: 'Learn more',
+      mapLink: null
     }
   ];
 
@@ -42,7 +45,13 @@ const Locations = () => {
           {locations.map((location, index) => (
             <div key={index} className="location-card">
               <div className="location-image">
-                <img src={location.image} alt={location.name} />
+                {location.mapLink ? (
+                  <a href={location.mapLink} target="_blank" rel="noopener noreferrer" title="Get directions">
+                    <img src={location.image} alt={`Map of ${location.name}`} />
+                  </a>
+                ) : (
+                  <img src={location.image} alt={location.name} />
+                )}
               </div>
               
               <div className="location-content">
