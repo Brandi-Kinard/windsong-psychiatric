@@ -62,21 +62,20 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  color: #246D80;
-  border: 2px solid #246D80;
+  color: white;
+  background-color: #246D80;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1.125rem;
   text-decoration: none;
   transition: all 0.3s ease;
-  background-color: transparent;
+  border: none;
 }
 
 .provider-cta:hover {
-  color: #006B6B;
-  border-color: #006B6B;
+  background-color: #006B6B;
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .provider-image {
@@ -88,12 +87,14 @@
 
 .image-background {
   position: absolute;
-  width: 320px;
-  height: 450px;
-  background-color: #E0FFFF;
+  width: 340px;
+  height: 470px;
+  background-color: #B8E4FF;
   transform: rotate(-3deg);
   border-radius: 20px;
   z-index: 1;
+  top: -10px;
+  left: -10px;
 }
 
 .image-placeholder {
@@ -128,10 +129,16 @@
     order: -1;
   }
   
-  .image-background,
   .image-placeholder {
     width: 280px;
     height: 400px;
+  }
+  
+  .image-background {
+    width: 300px;
+    height: 420px;
+    top: -10px;
+    left: -10px;
   }
   
   .provider-title {
