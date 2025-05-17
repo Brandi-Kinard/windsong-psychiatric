@@ -5,13 +5,13 @@ const Services = () => {
   const services = [
     {
       icon: '📋',
-      title: 'Psychiatric Evaluations',
+      title: 'Psychiatric evaluations',
       description: 'Comprehensive assessments to understand your mental health needs and create personalized treatment plans',
       link: '/services/evaluations'
     },
     {
       icon: '💊',
-      title: 'Medication Management',
+      title: 'Medication management',
       description: 'Expert psychiatric medication evaluation, prescribing, and ongoing monitoring for optimal results',
       link: '/services/medication'
     },
@@ -23,7 +23,7 @@ const Services = () => {
     },
     {
       icon: '⭐',
-      title: 'Specialized Care',
+      title: 'Specialized care',
       description: 'Focused treatment for anxiety, depression, ADHD, trauma, and other mental health conditions',
       link: '/services/specialized'
     }

@@ -35,7 +35,7 @@ const Locations = () => {
   return (
     <section className="locations" id="locations">
       <div className="locations-container">
-        <h2 className="locations-title">Our Locations</h2>
+        <h2 className="locations-title">Our locations</h2>
         <p className="locations-subtitle">Convenient care where you need it</p>
         
         <div className="locations-grid">

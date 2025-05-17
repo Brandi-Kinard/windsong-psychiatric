@@ -24,7 +24,7 @@ const Benefits = () => {
     <section className="benefits" id="benefits">
       <div className="benefits-container">
         <div className="benefits-header">
-          <h2 className="benefits-title">Why Choose Windsong Psychiatric</h2>
+          <h2 className="benefits-title">Why choose Windsong Psychiatric</h2>
           <p className="benefits-subtitle">Evidence-based care that puts you first</p>
         </div>
         

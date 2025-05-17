@@ -5,17 +5,17 @@ const Stats = () => {
   const statsData = [
     { 
       value: '87%', 
-      label: 'Symptom Improvement',
+      label: 'Symptom improvement',
       description: 'Patients report significant improvement in their mental health symptoms'
     },
     { 
       value: '94%', 
-      label: 'Patient Satisfaction',
+      label: 'Patient satisfaction',
       description: 'Our patients rate their care experience as excellent'
     },
     { 
       value: '24h', 
-      label: 'Response Time',
+      label: 'Response time',
       description: 'Quick response to all patient inquiries and concerns'
     }
   ];
