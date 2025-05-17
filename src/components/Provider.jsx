@@ -25,20 +25,20 @@ const Provider = () => {
             </ul>
             
             <p className="provider-description">
-              Dr. Davis brings over a decade of experience in psychiatric care, 
+              Felicia Davis brings over a decade of experience in psychiatric care, 
               combining cutting-edge medical knowledge with a warm, personal approach. 
               She believes in treating each patient as a unique individual, not just a diagnosis.
             </p>
             
-            <a href="/meet-dr-davis" className="provider-link">
-              Meet Dr. Davis →
+            <a href="/meet-felicia-davis" className="provider-link">
+              Meet Felicia Davis →
             </a>
           </div>
           
           <div className="provider-image">
             <div className="image-background"></div>
             <div className="image-placeholder">
-              <p>Professional photo of Dr. Davis</p>
+              <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/felicia-davis.avif" alt="Felicia Davis, Psychiatric Provider" />
             </div>
           </div>
         </div>

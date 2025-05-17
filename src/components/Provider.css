@@ -99,9 +99,11 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.image-placeholder p {
-  color: #9ca3af;
-  font-size: 1.125rem;
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 @media (max-width: 768px) {
