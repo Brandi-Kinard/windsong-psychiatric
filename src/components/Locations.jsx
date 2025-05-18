@@ -33,7 +33,7 @@ const Locations = () => {
     },
     {
       name: 'Virtual Care',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop&crop=center',
+      image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/virtual-call.png',
       address: 'Available throughout\nNorth & South Carolina',
       phone: '(980) 585-2019',
       hours: 'Mon-Fri: 8:00 AM - 6:00 PM\nSat: 9:00 AM - 2:00 PM',
