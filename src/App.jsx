@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Insurance from './components/Insurance';
 import Stats from './components/Stats';
 import Benefits from './components/Benefits';
 import Provider from './components/Provider';
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
+      <Insurance />
       <Benefits />
       <Stats />
       <Provider />
