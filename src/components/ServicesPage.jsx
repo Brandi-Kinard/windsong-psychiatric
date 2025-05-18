@@ -5,7 +5,7 @@ import '../styles/icons.css';
 const ServicesPage = () => {
   const services = [
     {
-      title: 'Psychiatric Evaluations',
+      title: 'Psychiatric evaluations',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Psychiatric%20evaluations.png',
       iconAlt: 'Psychiatric evaluations icon',
       description: 'Comprehensive assessments and diagnoses',
@@ -20,7 +20,7 @@ const ServicesPage = () => {
       color: '#E3F2FD'
     },
     {
-      title: 'Medication Management',
+      title: 'Medication management',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Medication%20management.png',
       iconAlt: 'Medication management icon',
       description: 'Expert psychiatric medication treatment',
@@ -50,7 +50,7 @@ const ServicesPage = () => {
       color: '#E0F2F1'
     },
     {
-      title: 'Specialized Care',
+      title: 'Specialized care',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Specialized%20care.png',
       iconAlt: 'Specialized care icon',
       description: 'Targeted treatment for specific conditions',
@@ -80,7 +80,7 @@ const ServicesPage = () => {
       color: '#E8EAF6'
     },
     {
-      title: 'Prevention & Wellness',
+      title: 'Prevention & wellness',
       icon: '🌟',
       iconAlt: 'Prevention and wellness icon',
       description: 'Proactive mental health strategies',
@@ -98,15 +98,15 @@ const ServicesPage = () => {
 
   const treatmentAreas = [
     {
-      category: 'Mood Disorders',
+      category: 'Mood disorders',
       conditions: [
         { name: 'Depression', description: 'Persistent feelings of sadness or loss of interest in activities, causing significant impairment in daily life.' },
-        { name: 'Bipolar Disorder', description: 'Episodes of unusual and extreme mood swings ranging from depressive lows to manic highs, affecting the ability to carry out day-to-day tasks.' },
-        { name: 'Major Depressive Disorder', description: 'Severe, persistent depression that interferes with daily functioning and quality of life.' }
+        { name: 'Bipolar disorder', description: 'Episodes of unusual and extreme mood swings ranging from depressive lows to manic highs, affecting the ability to carry out day-to-day tasks.' },
+        { name: 'Major depressive disorder', description: 'Severe, persistent depression that interferes with daily functioning and quality of life.' }
       ]
     },
     {
-      category: 'Anxiety & Stress Disorders',
+      category: 'Anxiety & stress disorders',
       conditions: [
         { name: 'Anxiety', description: 'Intense, excessive, and persistent worry and fear about everyday situations. Fast heart rate, rapid breathing, sweating, and feeling tired may occur.' },
         { name: 'OCD', description: 'Centers on themes such as fear of germs or the need to arrange objects in a specific manner. Symptoms usually begin gradually and vary throughout life.' },
@@ -114,33 +114,32 @@ const ServicesPage = () => {
       ]
     },
     {
-      category: 'Psychotic Disorders',
+      category: 'Psychotic disorders',
       conditions: [
         { name: 'Schizophrenia', description: 'Thoughts or experiences that seem out of touch with reality, disorganized speech or behavior, and decreased participation in daily activities.' },
-        { name: 'Schizoaffective Disorder', description: 'A combination of schizophrenia symptoms and mood disorder symptoms.' }
+        { name: 'Schizoaffective disorder', description: 'A combination of schizophrenia symptoms and mood disorder symptoms.' }
       ]
     },
     {
-      category: 'Neurodevelopmental & Cognitive',
+      category: 'Neurodevelopmental & cognitive',
       conditions: [
         { name: 'ADHD', description: 'Symptoms of inattention, distractibility, and poor working memory such as trouble focusing, forgetting appointments, and struggling with executive functions.' },
         { name: 'Dementia', description: 'Progressive decline in cognitive function, memory, and ability to perform everyday activities.' },
-        { name: 'Cognitive Assessments', description: 'Comprehensive evaluations of memory, thinking, and reasoning abilities.' }
+        { name: 'Cognitive assessments', description: 'Comprehensive evaluations of memory, thinking, and reasoning abilities.' }
       ]
     },
     {
-      category: 'Sleep & Other Conditions',
+      category: 'Sleep & other conditions',
       conditions: [
         { name: 'Insomnia', description: 'Having difficulty falling or staying asleep and not feeling well-rested.' },
-        { name: 'Adjustment Disorder', description: 'Difficulty coping with stressful life events or significant changes.' },
+        { name: 'Adjustment disorder', description: 'Difficulty coping with stressful life events or significant changes.' },
         { name: 'Grief', description: 'Support for processing loss and bereavement.' }
       ]
     }
   ];
 
   const geriatricServices = {
-    title: 'Geriatric Psychiatry Specialty',
-    description: 'Specialized mental health care for older adults',
+    title: 'Geriatric care',
     features: [
       'In-home visits',
       'Facility visits',
@@ -158,7 +157,7 @@ const ServicesPage = () => {
     <section className="services-page">
       <div className="services-hero">
         <div className="services-hero-content">
-          <h1 className="services-hero-title">Our Services</h1>
+          <h1 className="services-hero-title">Our services</h1>
           <p className="services-hero-subtitle">
             At Windsong Family Psychiatric Associates, we provide evidence-based mental health 
             treatment in a warm, supportive environment. Our services address a wide range of 
@@ -188,14 +187,14 @@ const ServicesPage = () => {
               </div>
               
               <div className="service-detail-content">
-                <h3 className="service-detail-subtitle">What's Included</h3>
+                <h3 className="service-detail-subtitle">What's included</h3>
                 <ul className="service-detail-list">
                   {service.details.map((detail, idx) => (
                     <li key={idx}>{detail}</li>
                   ))}
                 </ul>
                 
-                <h3 className="service-detail-subtitle">Our Approach</h3>
+                <h3 className="service-detail-subtitle">Our approach</h3>
                 <p className="service-detail-approach">{service.approach}</p>
               </div>
             </div>
@@ -205,7 +204,7 @@ const ServicesPage = () => {
 
       {/* Treatment Areas */}
       <div className="treatment-areas-section">
-        <h2 className="section-title">Conditions We Treat</h2>
+        <h2 className="section-title">Conditions we treat</h2>
         <div className="treatment-areas-grid">
           {treatmentAreas.map((category, index) => (
             <div key={index} className="treatment-category">
@@ -227,9 +226,7 @@ const ServicesPage = () => {
       <div className="geriatric-section">
         <div className="geriatric-content">
           <h2 className="section-title">{geriatricServices.title}</h2>
-          <p className="geriatric-description">{geriatricServices.description}</p>
           <div className="geriatric-features">
-            <h3 className="geriatric-subtitle">Specialized Services for Older Adults</h3>
             <ul className="geriatric-list">
               {geriatricServices.features.map((feature, index) => (
                 <li key={index}>{feature}</li>
@@ -242,7 +239,7 @@ const ServicesPage = () => {
       {/* Call to Action */}
       <div className="services-cta-section">
         <div className="services-cta-container">
-          <h2 className="services-cta-title">Ready to Start Your Journey?</h2>
+          <h2 className="services-cta-title">Ready to start your journey?</h2>
           <p className="services-cta-text">
             Take the first step toward better mental health. We're here to support you every step of the way.
           </p>
