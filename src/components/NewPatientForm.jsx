@@ -356,6 +356,7 @@ ${formData.notes || 'None'}
               <h2>Thank you for reaching out!</h2>
               <p>We've received your information and will contact you within 1-2 business days.</p>
               <p>For urgent mental health concerns, please call us at (980) 585-2019.</p>
+              <p>For 24/7 emotional support, call or text 988 to reach the Suicide & Crisis Lifeline.</p>
               <p><strong>If you are experiencing a life-threatening emergency, please call 911 immediately.</strong></p>
               <button 
                 className="action-button primary"
