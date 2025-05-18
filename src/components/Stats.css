@@ -8,14 +8,14 @@
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
   text-align: center;
   padding: 0 1rem;
 }
 
 .stat-item {
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
   background-color: #EDF6F9; /* lighter version of blue-gray */
   border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -23,15 +23,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  aspect-ratio: 1 / 1; /* Make the cards square */
-  min-height: 450px;
-  max-width: 450px;
+  min-height: 380px;
+  max-width: 380px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .stat-image {
-  height: 250px;
-  width: 250px;
+  height: 180px;
+  width: 180px;
   margin-bottom: 1.5rem;
   object-fit: contain;
   display: block;
@@ -49,22 +49,56 @@
   color: #6b7280; /* gray-500 */
   line-height: 1.6;
   margin-top: 0;
+  padding: 0 1rem;
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+  .stats-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .stat-item {
+    max-width: 360px;
+    min-height: 360px;
+  }
+}
+
 @media (max-width: 768px) {
   .stats-container {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 0;
   }
   
   .stat-item {
-    min-height: 400px;
+    min-height: 340px;
     max-width: 400px;
   }
   
   .stat-image {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats {
+    padding: 3rem 1rem;
+  }
+  
+  .stat-item {
+    min-height: 320px;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+  }
+  
+  .stat-label {
+    font-size: 1.35rem;
+  }
+  
+  .stat-description {
+    font-size: 1rem;
   }
 }
