@@ -30,13 +30,13 @@ const Services = () => {
       description: 'Focused treatment for anxiety, depression, ADHD, trauma, and other mental health conditions'
     },
     {
-      icon: '💉',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/injection.png',
       iconAlt: 'Injections icon',
       title: 'Injections',
       description: 'Medical injections for psychiatric conditions, including long-acting medications for sustained treatment'
     },
     {
-      icon: '🌟',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/prevention%20and%20wellness.png',
       iconAlt: 'Prevention and wellness icon',
       title: 'Prevention & wellness',
       description: 'Proactive mental health strategies and wellness programs to maintain optimal psychological well-being'

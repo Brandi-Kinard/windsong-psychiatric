@@ -66,7 +66,7 @@ const ServicesPage = () => {
     },
     {
       title: 'Injections',
-      icon: '💉',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/injection.png',
       iconAlt: 'Injections icon',
       description: 'Medical injections for psychiatric conditions',
       details: [
@@ -81,7 +81,7 @@ const ServicesPage = () => {
     },
     {
       title: 'Prevention & wellness',
-      icon: '🌟',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/prevention%20and%20wellness.png',
       iconAlt: 'Prevention and wellness icon',
       description: 'Proactive mental health strategies',
       details: [
