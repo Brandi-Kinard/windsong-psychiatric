@@ -94,8 +94,8 @@
   transform: rotate(-3deg);
   border-radius: 20px;
   z-index: 1;
-  top: -5px;
-  left: -5px;
+  top: 0px;
+  left: 0px;
 }
 
 .image-placeholder {
@@ -138,8 +138,8 @@
   .image-background {
     width: 290px;
     height: 410px;
-    top: -5px;
-    left: -5px;
+    top: 0px;
+    left: 0px;
   }
   
   .provider-title {
