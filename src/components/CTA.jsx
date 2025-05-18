@@ -22,7 +22,7 @@ const CTA = () => {
           </div>
           
           <div className="cta-option">
-            <a href="/patient-portal" className="cta-button cta-button-secondary">
+            <a href="https://patientonlineportal.com/" className="cta-button cta-button-secondary" target="_blank" rel="noopener noreferrer">
               <span className="cta-button-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Patient%20Portal.png" alt="Lock" /></span>
               Patient Portal
             </a>

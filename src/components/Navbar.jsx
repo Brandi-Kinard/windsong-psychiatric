@@ -40,8 +40,10 @@ const Navbar = () => {
             </Link>
           ))}
           <a 
-            href="/patient-portal" 
+            href="https://patientonlineportal.com/" 
             className="nav-link nav-link-cta"
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsMenuOpen(false)}
           >
             Patient Portal

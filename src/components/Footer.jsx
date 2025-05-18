@@ -40,7 +40,7 @@ const Footer = () => {
                   <Link to="/#locations" state={{ fromOtherPage: true }}>Locations</Link>
                 )}
               </li>
-              <li><a href="/patient-portal">Patient Portal</a></li>
+              <li><a href="https://patientonlineportal.com/" target="_blank" rel="noopener noreferrer">Patient Portal</a></li>
             </ul>
           </div>
           
