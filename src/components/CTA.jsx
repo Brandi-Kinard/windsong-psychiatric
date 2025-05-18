@@ -1,4 +1,5 @@
 import React from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import './CTA.css';
 
 const CTA = () => {
@@ -29,16 +30,12 @@ const CTA = () => {
         </div>
         
         <div className="cta-animation">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
+          <DotLottieReact
+            src="/tree-leaves-falling.json"
+            loop
+            autoplay
             className="tree-animation"
-          >
-            <source src="/tree-leaves-falling.webm" type="video/webm" />
-            Your browser does not support the video tag.
-          </video>
+          />
         </div>
       </div>
     </section>
