@@ -35,9 +35,9 @@ const ServicesPage = () => {
       color: '#FFF3E0'
     },
     {
-      title: 'Telepsychiatry',
+      title: 'Telemedicine',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Telemedicine.png',
-      iconAlt: 'Telepsychiatry icon',
+      iconAlt: 'Telemedicine icon',
       description: 'Convenient virtual mental health care',
       details: [
         'Secure video appointments',
