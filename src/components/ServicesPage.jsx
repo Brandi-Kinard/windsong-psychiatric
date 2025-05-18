@@ -93,6 +93,36 @@ const ServicesPage = () => {
       ],
       approach: 'Access quality psychiatric care from the comfort of your home with our secure, HIPAA-compliant telehealth platform.',
       color: '#E0F2F1'
+    },
+    {
+      title: 'Injections',
+      icon: '💉',
+      iconAlt: 'Injections icon',
+      description: 'Medical injections for psychiatric conditions',
+      details: [
+        'Long-acting antipsychotics',
+        'Mood stabilizer injections',
+        'Vitamin B12 injections',
+        'Monthly medication options',
+        'Reduced medication non-compliance'
+      ],
+      approach: 'Injectable medications provide sustained treatment with improved adherence, offering convenience and consistent therapeutic levels for optimal mental health management.',
+      color: '#E8EAF6'
+    },
+    {
+      title: 'Prevention & Wellness',
+      icon: '🌟',
+      iconAlt: 'Prevention and wellness icon',
+      description: 'Proactive mental health strategies',
+      details: [
+        'Stress management techniques',
+        'Wellness education',
+        'Lifestyle counseling',
+        'Early intervention programs',
+        'Mental health maintenance plans'
+      ],
+      approach: 'We believe in preventing mental health issues before they arise through education, healthy lifestyle promotion, and early intervention strategies.',
+      color: '#FFF8E1'
     }
   ];
 

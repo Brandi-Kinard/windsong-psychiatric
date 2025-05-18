@@ -9,29 +9,37 @@ const Services = () => {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Psychiatric%20evaluations.png',
       iconAlt: 'Psychiatric evaluations icon',
       title: 'Psychiatric evaluations',
-      description: 'Comprehensive assessments to understand your mental health needs and create personalized treatment plans',
-      link: '/services'
+      description: 'Comprehensive assessments to understand your mental health needs and create personalized treatment plans'
     },
     {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Medication%20management.png',
       iconAlt: 'Medication management icon',
       title: 'Medication management',
-      description: 'Expert psychiatric medication evaluation, prescribing, and ongoing monitoring for optimal results',
-      link: '/services'
+      description: 'Expert psychiatric medication evaluation, prescribing, and ongoing monitoring for optimal results'
     },
     {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Telemedicine.png',
       iconAlt: 'Telemedicine icon',
       title: 'Telemedicine',
-      description: 'Convenient virtual appointments from the comfort of your home with the same quality care',
-      link: '/services'
+      description: 'Convenient virtual appointments from the comfort of your home with the same quality care'
     },
     {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Specialized%20care.png',
       iconAlt: 'Specialized care icon',
       title: 'Specialized care',
-      description: 'Focused treatment for anxiety, depression, ADHD, trauma, and other mental health conditions',
-      link: '/services'
+      description: 'Focused treatment for anxiety, depression, ADHD, trauma, and other mental health conditions'
+    },
+    {
+      icon: '💉',
+      iconAlt: 'Injections icon',
+      title: 'Injections',
+      description: 'Medical injections for psychiatric conditions, including long-acting medications for sustained treatment'
+    },
+    {
+      icon: '🌟',
+      iconAlt: 'Prevention and wellness icon',
+      title: 'Prevention & wellness',
+      description: 'Proactive mental health strategies and wellness programs to maintain optimal psychological well-being'
     }
   ];
 
@@ -43,13 +51,21 @@ const Services = () => {
           {services.map((service, index) => (
             <div key={index} className="service-card">
               <div className="service-icon">
-                <img src={service.icon} alt={service.iconAlt} />
+                {service.icon.startsWith('http') ? (
+                  <img src={service.icon} alt={service.iconAlt} />
+                ) : (
+                  <span className="service-icon-emoji">{service.icon}</span>
+                )}
               </div>
               <h3 className="service-title">{service.title}</h3>
               <p className="service-description">{service.description}</p>
-              <Link to={service.link} className="service-link">Learn more</Link>
             </div>
           ))}
+        </div>
+        <div className="services-learn-more">
+          <Link to="/services" className="services-cta-button">
+            Learn more about our services
+          </Link>
         </div>
       </div>
     </section>
