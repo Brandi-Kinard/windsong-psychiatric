@@ -239,11 +239,9 @@ const ServicesPage = () => {
             Take the first step toward better mental health. We're here to support you every step of the way.
           </p>
           <div className="services-cta-buttons">
-            <a href="tel:9805852019" className="services-cta-button primary">
-              Call (980) 585-2019
-            </a>
-            <a href="/patient-portal" className="services-cta-button secondary">
-              Patient Portal
+            <a href="/new-patient" className="services-cta-button primary">
+              <span className="cta-button-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Get%20started.png" alt="Sparkles" /></span>
+              Get started
             </a>
           </div>
         </div>

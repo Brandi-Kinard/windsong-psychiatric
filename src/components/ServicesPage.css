@@ -339,7 +339,9 @@
   border-radius: 50px;
   text-decoration: none;
   transition: all 0.3s ease;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .services-cta-button.primary {
