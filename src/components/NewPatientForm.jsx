@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import './NewPatientForm.css';
 
 const NewPatientForm = () => {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     seekingCareFor: '',
     supportType: [],
@@ -86,8 +88,20 @@ const NewPatientForm = () => {
     }
   };
 
+  // EmailJS configuration - replace these with your actual values
+  const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
+  const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+  
+  // Toggle this to switch between test and production emails
+  const TEST_MODE = true; // Set to false when ready for production
+  const TEST_EMAIL = 'your-test-email@gmail.com'; // Replace with your test email
+  const PRODUCTION_EMAIL = 'brandiellenkinard@gmail.com';
+
   const handleSubmit = async () => {
     if (!validateStep()) return;
+    
+    setIsSubmitting(true);
 
     // Format the data for email
     const emailBody = `
@@ -118,21 +132,31 @@ ${formData.notes || 'None'}
     `;
 
     try {
-      // For development: log the form data
-      console.log('Form submission:', {
-        to: 'brandiellenkinard@gmail.com',
-        subject: 'New Patient Inquiry - Windsong Psychiatric',
-        body: emailBody
-      });
-
-      // In production, you would send this to your backend API
-      // which would handle the email sending securely
+      // Initialize EmailJS
+      emailjs.init(EMAILJS_PUBLIC_KEY);
       
-      // For now, we'll simulate successful submission
+      const templateParams = {
+        to_email: TEST_MODE ? TEST_EMAIL : PRODUCTION_EMAIL,
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: 'New Patient Inquiry - Windsong Psychiatric',
+        message: emailBody
+      };
+
+      // Send email
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
+      
+      // Show success message
       setCurrentStep(9); // Success step
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('There was an error submitting your information. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -368,9 +392,9 @@ ${formData.notes || 'None'}
               <button 
                 className="nav-button next primary"
                 onClick={handleSubmit}
-                disabled={!validateStep()}
+                disabled={!validateStep() || isSubmitting}
               >
-                Submit
+                {isSubmitting ? 'Submitting...' : 'Submit'}
               </button>
             ) : (
               <button 
