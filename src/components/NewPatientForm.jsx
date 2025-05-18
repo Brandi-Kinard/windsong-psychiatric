@@ -141,6 +141,7 @@ ${formData.notes || 'None'}
         contactMethod: formData.preferredContact,  // camelCase for template
         seekingCareFor: formData.seekingCareFor,
         supportType: formData.supportType.join(', '),
+        primaryConcerns: formData.supportType.join(', '),  // Alternative name
         previousCare: formData.previousCare,
         appointmentType: formData.appointmentType,
         availability: formData.availability.join(', '),
