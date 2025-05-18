@@ -359,7 +359,9 @@ ${formData.notes || 'None'}
 
           {currentStep === 8 && (
             <div className="form-step success-step">
-              <div className="success-icon">✓</div>
+              <div className="success-icon">
+                <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/heart.png" alt="Heart icon" />
+              </div>
               <h2>Thank you for reaching out!</h2>
               <p>We've received your information and will contact you within 1-2 business days.</p>
               <p>For urgent mental health concerns, please call us at (980) 585-2019.</p>
@@ -367,7 +369,7 @@ ${formData.notes || 'None'}
                 className="action-button primary"
                 onClick={() => navigate('/')}
               >
-                Return to Home
+                Return to home
               </button>
               <div className="crisis-info">
                 <p>If you're overwhelmed or in a crisis and it is after business hours, you can call or text 988 anytime for support from the Suicide & Crisis Lifeline.</p>
