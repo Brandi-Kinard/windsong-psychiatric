@@ -16,7 +16,7 @@ const Services = () => {
       link: '/services/medication'
     },
     {
-      icon: '🖥️',
+      icon: '👩🏽‍💻',
       title: 'Telemedicine',
       description: 'Convenient virtual appointments from the comfort of your home with the same quality care',
       link: '/services/telemedicine'
