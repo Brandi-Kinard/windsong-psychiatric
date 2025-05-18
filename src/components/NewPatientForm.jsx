@@ -137,6 +137,7 @@ ${formData.notes || 'None'}
         to_email: TEST_MODE ? TEST_EMAIL : PRODUCTION_EMAIL,
         from_name: formData.name,
         from_email: formData.email,
+        reply_to: formData.email,  // This ensures replies go to the form submitter
         phone: formData.phone,
         preferred_contact: formData.preferredContact,
         seeking_care_for: formData.seekingCareFor,
