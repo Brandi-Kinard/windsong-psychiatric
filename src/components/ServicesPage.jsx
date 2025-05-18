@@ -145,7 +145,7 @@ const ServicesPage = () => {
       'Facility visits',
       '24-hour availability',
       'Dementia care',
-      'Medication optimization',
+      'Medication management',
       'Family support and education',
       'Coordination with medical providers',
       'Cognitive assessments',
