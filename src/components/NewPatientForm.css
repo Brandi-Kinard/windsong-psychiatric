@@ -274,6 +274,27 @@
   font-weight: 600;
 }
 
+.crisis-info {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.crisis-info p {
+  color: #dc2626;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.crisis-info p:last-child {
+  margin-bottom: 0;
+}
+
+.crisis-info p strong {
+  font-weight: 700;
+}
+
 /* Footer */
 .form-footer {
   padding: 2rem;
