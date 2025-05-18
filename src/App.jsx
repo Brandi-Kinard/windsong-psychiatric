@@ -25,9 +25,7 @@ function Home() {
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
+        element.scrollIntoView();
       }
     }
   }, [location]);
