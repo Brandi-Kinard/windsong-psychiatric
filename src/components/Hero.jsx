@@ -11,7 +11,7 @@ const Hero = () => {
           <a href="/new-patient" className="hero-cta">Get started</a>
         </div>
         <div className="hero-illustration">
-          <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/final-people-banner.png" alt="Mental health support illustration" />
+          <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/uodated-peep-banner.png" alt="Mental health support illustration" />
           <div className="hero-illustration-overlay"></div>
         </div>
       </div>

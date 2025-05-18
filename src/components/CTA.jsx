@@ -31,7 +31,7 @@ const CTA = () => {
         
         <div className="cta-animation">
           <DotLottieReact
-            src="/tree-leaves-falling.json"
+            src="https://lottie.host/67d8b0a5-8ee0-4a8f-bf42-33a157fd606e/OdFg3dNfIP.lottie"
             loop
             autoplay
             className="tree-animation"
