@@ -160,14 +160,6 @@ const ServicesPage = () => {
         <div className="services-hero-content">
           <h1 className="services-hero-title">Our Services</h1>
           <p className="services-hero-subtitle">
-            Comprehensive psychiatric care tailored to your unique needs
-          </p>
-        </div>
-      </div>
-
-      <div className="services-intro">
-        <div className="services-intro-container">
-          <p className="services-intro-text">
             At Windsong Family Psychiatric Associates, we provide evidence-based mental health 
             treatment in a warm, supportive environment. Our services address a wide range of 
             psychiatric conditions, with treatment plans customized to each individual's needs.
@@ -177,7 +169,6 @@ const ServicesPage = () => {
 
       {/* Main Services */}
       <div className="services-section">
-        <h2 className="section-title">Our Core Services</h2>
         <div className="services-grid-container">
           {services.map((service, index) => (
             <div key={index} className="service-detail-card">

@@ -7,7 +7,7 @@
 
 /* Hero section */
 .services-hero {
-  background-color: #E5F2F6;
+  background-color: #ffffff;
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -25,9 +25,11 @@
 }
 
 .services-hero-subtitle {
-  font-size: 1.5rem;
-  color: #6b7280;
-  line-height: 1.5;
+  font-size: 1.25rem;
+  color: #374151;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /* Introduction section */
@@ -350,7 +352,7 @@
   }
   
   .services-hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
   
   .services-intro-text {
