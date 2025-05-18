@@ -142,14 +142,16 @@ ${formData.notes || 'None'}
     <div className="new-patient-form">
       <div className="form-container">
         <div className="form-header">
-          <button className="close-button" onClick={() => navigate('/')}>
-            ✕
-          </button>
-          <div className="progress-bar">
-            <div 
-              className="progress-fill" 
-              style={{ width: `${progressPercentage}%` }}
-            />
+          <div className="header-top">
+            <div className="progress-bar">
+              <div 
+                className="progress-fill" 
+                style={{ width: `${progressPercentage}%` }}
+              />
+            </div>
+            <button className="close-button" onClick={() => navigate('/')}>
+              ✕
+            </button>
           </div>
           <div className="step-indicator">
             Step {currentStep} of {totalSteps}
@@ -232,7 +234,7 @@ ${formData.notes || 'None'}
               <h2>Do you have a provider gender preference?</h2>
               <p className="step-subtitle">This is optional</p>
               <div className="options-grid">
-                {['Female', 'Male', 'No preference'].map(option => (
+                {['Female', 'Male', 'Non-binary or gender-diverse', 'Open to best match'].map(option => (
                   <button
                     key={option}
                     className={`option-button ${formData.providerGender === option ? 'selected' : ''}`}

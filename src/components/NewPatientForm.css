@@ -21,13 +21,18 @@
 .form-header {
   padding: 2rem;
   border-bottom: 1px solid #e5e7eb;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .close-button {
-  position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
   background: none;
   border: none;
   font-size: 1.5rem;
@@ -48,12 +53,12 @@
 }
 
 .progress-bar {
-  width: 100%;
+  flex: 1;
   height: 6px;
   background-color: #e5e7eb;
   border-radius: 3px;
-  margin-bottom: 1rem;
   overflow: hidden;
+  margin-right: 1rem;
 }
 
 .progress-fill {
@@ -110,7 +115,7 @@
 /* Options Grid */
 .options-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
   margin-top: 2rem;
 }
