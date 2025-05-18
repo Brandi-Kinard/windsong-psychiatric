@@ -136,7 +136,7 @@ ${formData.notes || 'None'}
     }
   };
 
-  const progressPercentage = ((currentStep - 1) / totalSteps) * 100;
+  const progressPercentage = currentStep <= totalSteps ? ((currentStep - 1) / totalSteps) * 100 : 100;
 
   return (
     <div className="new-patient-form">
@@ -153,9 +153,11 @@ ${formData.notes || 'None'}
               ✕
             </button>
           </div>
-          <div className="step-indicator">
-            Step {currentStep} of {totalSteps}
-          </div>
+          {currentStep <= totalSteps && (
+            <div className="step-indicator">
+              Step {currentStep} of {totalSteps}
+            </div>
+          )}
         </div>
 
         <div className="form-content">
@@ -340,7 +342,8 @@ ${formData.notes || 'None'}
               <div className="success-icon">✓</div>
               <h2>Thank you for reaching out!</h2>
               <p>We've received your information and will contact you within 1-2 business days.</p>
-              <p>If you have any urgent concerns, please call us at (980) 585-2019.</p>
+              <p>For urgent mental health concerns, please call us at (980) 585-2019.</p>
+              <p><strong>If you are experiencing a life-threatening emergency, please call 911 immediately.</strong></p>
               <button 
                 className="action-button primary"
                 onClick={() => navigate('/')}

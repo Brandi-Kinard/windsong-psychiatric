@@ -269,6 +269,11 @@
   font-size: 1.125rem;
 }
 
+.success-step p strong {
+  color: #dc2626;
+  font-weight: 600;
+}
+
 /* Footer */
 .form-footer {
   padding: 2rem;
