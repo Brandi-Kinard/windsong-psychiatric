@@ -90,7 +90,7 @@ const NewPatientForm = () => {
 
   // EmailJS configuration
   const EMAILJS_SERVICE_ID = 'service_idvcxum';
-  const EMAILJS_TEMPLATE_ID = 'template_uncwr8d';  // New test template
+  const EMAILJS_TEMPLATE_ID = 'template_xjaha0n';  // Back to main template
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
   // Production mode - emails go to the business email
@@ -132,28 +132,21 @@ ${formData.notes || 'None'}
       emailjs.init(EMAILJS_PUBLIC_KEY);
       
       const templateParams = {
-        // Primary fields
+        // EmailJS only accepts non-underscore variables in your template
         to_email: RECIPIENT_EMAIL,
-        from_name: formData.name,
-        from_email: formData.email,
         reply_to: formData.email,
+        name: formData.name,
+        email: formData.email,
         phone: formData.phone,
-        preferred_contact: formData.preferredContact,
-        seeking_care_for: formData.seekingCareFor,
-        support_type: formData.supportType.join(', '),
-        previous_care: formData.previousCare,
-        appointment_type: formData.appointmentType,
+        contactMethod: formData.preferredContact,  // camelCase for template
+        seekingCareFor: formData.seekingCareFor,
+        supportType: formData.supportType.join(', '),
+        previousCare: formData.previousCare,
+        appointmentType: formData.appointmentType,
         availability: formData.availability.join(', '),
         notes: formData.notes || 'None provided',
         date: new Date().toLocaleDateString(),
-        time: new Date().toLocaleTimeString(),
-        
-        // Adding alternate variable names in case EmailJS is expecting these
-        name: formData.name,
-        email: formData.email,
-        patient_name: formData.name,
-        patient_email: formData.email,
-        contact_method: formData.preferredContact
+        time: new Date().toLocaleTimeString()
       };
       
       // Temporary debug to see what we're sending
