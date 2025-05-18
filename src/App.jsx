@@ -12,6 +12,7 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import FixedButtons from './components/FixedButtons';
 import About from './components/About';
+import ServicesPage from './components/ServicesPage';
 import './App.css';
 
 function Home() {
@@ -37,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/meet-felicia-davis" element={<About />} />
+          <Route path="/services" element={<ServicesPage />} />
         </Routes>
         <Footer />
         <FixedButtons />

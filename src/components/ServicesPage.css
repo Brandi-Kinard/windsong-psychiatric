@@ -1,0 +1,253 @@
+/* Services page styles */
+.services-page {
+  padding-top: 80px;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Hero section */
+.services-hero {
+  background-color: #E5F2F6;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.services-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services-hero-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.services-hero-subtitle {
+  font-size: 1.5rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* Introduction section */
+.services-intro {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+}
+
+.services-intro-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-intro-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #374151;
+}
+
+/* Services grid */
+.services-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.service-detail-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-detail-header {
+  padding: 2rem;
+  text-align: center;
+}
+
+.service-detail-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.service-detail-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.service-detail-description {
+  font-size: 1.125rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.service-detail-content {
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.service-detail-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.service-detail-subtitle:first-child {
+  margin-top: 0;
+}
+
+.service-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-detail-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.service-detail-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #246D80;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.service-detail-approach {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* CTA section */
+.services-cta-section {
+  background-color: #E5F2F6;
+  padding: 4rem 2rem;
+  margin-top: 3rem;
+}
+
+.services-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-cta-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.services-cta-text {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.services-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.services-cta-button {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.services-cta-button.primary {
+  background-color: #246D80;
+  color: white;
+}
+
+.services-cta-button.primary:hover {
+  background-color: #006B6B;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.services-cta-button.secondary {
+  background-color: transparent;
+  color: #246D80;
+  border: 2px solid #246D80;
+}
+
+.services-cta-button.secondary:hover {
+  background-color: #246D80;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .services-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .services-hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .services-intro-text {
+    font-size: 1.125rem;
+  }
+  
+  .services-grid-container {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+  
+  .service-detail-card {
+    margin: 0 auto;
+    max-width: 450px;
+  }
+  
+  .services-cta-title {
+    font-size: 2rem;
+  }
+  
+  .services-cta-text {
+    font-size: 1.125rem;
+  }
+  
+  .services-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .services-cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

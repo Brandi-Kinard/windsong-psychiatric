@@ -9,7 +9,7 @@ const Navbar = () => {
   const navLinks = [
     { to: '/', text: 'Home' },
     { to: '/meet-felicia-davis', text: 'About' },
-    { to: location.pathname === '/' ? '#services' : '/#services', text: 'Services' }
+    { to: '/services', text: 'Services' }
   ];
 
   const isActive = (to) => {
@@ -29,30 +29,16 @@ const Navbar = () => {
         </Link>
         
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          {navLinks.map((link, index) => {
-            if (link.to.includes('#')) {
-              return (
-                <a 
-                  key={index} 
-                  href={link.to} 
-                  className={`nav-link ${location.pathname === '/' && link.text === 'Services' ? 'active' : ''}`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.text}
-                </a>
-              );
-            }
-            return (
-              <Link 
-                key={index} 
-                to={link.to} 
-                className={`nav-link ${isActive(link.to) ? 'active' : ''}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.text}
-              </Link>
-            );
-          })}
+          {navLinks.map((link, index) => (
+            <Link 
+              key={index} 
+              to={link.to} 
+              className={`nav-link ${isActive(link.to) ? 'active' : ''}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {link.text}
+            </Link>
+          ))}
           <a 
             href="/patient-portal" 
             className="nav-link nav-link-cta"
