@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FixedButtons.css';
+import '../styles/icons.css';
 import PoliciesModal from './PoliciesModal';
 
 const FixedButtons = () => {
@@ -12,7 +13,7 @@ const FixedButtons = () => {
         onClick={() => alert('Help functionality coming soon!')}
         aria-label="Get help"
       >
-        💬 Help
+        <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Help.png" alt="Chat bubble" /> Help
       </button>
       
       <button 
@@ -20,7 +21,7 @@ const FixedButtons = () => {
         onClick={() => setIsPoliciesModalOpen(true)}
         aria-label="View policies and fees"
       >
-        📋 Policies & fees
+        <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Policies%20%26%20fees.png" alt="Clipboard" /> Policies & fees
       </button>
       
       <PoliciesModal 

@@ -134,6 +134,12 @@
   flex-shrink: 0;
 }
 
+.location-icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+  vertical-align: middle;
+}
+
 .location-address pre,
 .location-hours pre {
   margin: 0;

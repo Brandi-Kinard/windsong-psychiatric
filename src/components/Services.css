@@ -55,6 +55,12 @@
   border-radius: 16px;
 }
 
+.service-icon img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
 .service-title {
   font-size: 1.75rem;
   color: #1f2937;

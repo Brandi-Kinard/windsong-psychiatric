@@ -94,6 +94,13 @@
   line-height: 1.6;
 }
 
+.info-item h3 img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
 @media (max-width: 768px) {
   .contact-content {
     grid-template-columns: 1fr;

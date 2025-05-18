@@ -1,5 +1,6 @@
 import React from 'react';
 import './PoliciesModal.css';
+import '../styles/icons.css';
 
 const PoliciesModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;

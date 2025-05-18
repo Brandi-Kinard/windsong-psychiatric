@@ -82,6 +82,12 @@
   margin-bottom: 1rem;
 }
 
+.service-detail-icon img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
 .service-detail-title {
   font-size: 1.75rem;
   font-weight: bold;

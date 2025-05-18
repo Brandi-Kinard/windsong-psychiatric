@@ -1,0 +1,57 @@
+/* Icon styles for emoji replacements */
+.icon-emoji {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* Service icons */
+.service-icon img {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Location icons */
+.location-icon img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.25rem;
+}
+
+/* CTA button icons */
+.cta-button-icon img {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+/* Fixed button icons */
+.fixed-button img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+/* Contact info icons */
+.info-item h3 img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Benefits icons */
+.benefit-icon img {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Policy modal icons */
+.policies-modal-content img {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}

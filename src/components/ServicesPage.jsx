@@ -1,11 +1,13 @@
 import React from 'react';
 import './ServicesPage.css';
+import '../styles/icons.css';
 
 const ServicesPage = () => {
   const services = [
     {
       title: 'Depression & Anxiety Treatment',
       icon: '🌤️',
+      iconAlt: 'Mental health icon',
       description: 'Expert care for mood disorders and anxiety conditions',
       details: [
         'Major Depressive Disorder',
@@ -20,6 +22,7 @@ const ServicesPage = () => {
     {
       title: 'ADHD Management',
       icon: '🎯',
+      iconAlt: 'ADHD management icon',
       description: 'Comprehensive evaluation and treatment for attention disorders',
       details: [
         'Adult ADHD assessment',
@@ -34,6 +37,7 @@ const ServicesPage = () => {
     {
       title: 'Trauma Recovery',
       icon: '🌿',
+      iconAlt: 'Trauma recovery icon',
       description: 'Healing support for PTSD and trauma-related conditions',
       details: [
         'Post-Traumatic Stress Disorder',
@@ -47,7 +51,8 @@ const ServicesPage = () => {
     },
     {
       title: 'Medication Management',
-      icon: '💊',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Medication%20management.png',
+      iconAlt: 'Medication management icon',
       description: 'Personalized psychiatric medication treatment',
       details: [
         'Initial psychiatric evaluation',
@@ -62,6 +67,7 @@ const ServicesPage = () => {
     {
       title: 'Couples & Family Support',
       icon: '❤️',
+      iconAlt: 'Couples and family support icon',
       description: 'Strengthening relationships through mental health care',
       details: [
         'Couples counseling',
@@ -75,7 +81,8 @@ const ServicesPage = () => {
     },
     {
       title: 'Telepsychiatry',
-      icon: '💻',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Telemedicine.png',
+      iconAlt: 'Telepsychiatry icon',
       description: 'Convenient virtual mental health care',
       details: [
         'Secure video appointments',
@@ -118,7 +125,13 @@ const ServicesPage = () => {
               className="service-detail-header"
               style={{ backgroundColor: service.color }}
             >
-              <span className="service-detail-icon">{service.icon}</span>
+              <span className="service-detail-icon">
+                {service.iconAlt ? (
+                  <img src={service.icon} alt={service.iconAlt} />
+                ) : (
+                  service.icon
+                )}
+              </span>
               <h2 className="service-detail-title">{service.title}</h2>
               <p className="service-detail-description">{service.description}</p>
             </div>

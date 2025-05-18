@@ -1,20 +1,24 @@
 import React from 'react';
 import './Benefits.css';
+import '../styles/icons.css';
 
 const Benefits = () => {
   const benefitsData = [
     {
-      icon: '🧠',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Care%20for%20everyone.png',
+      iconAlt: 'Brain icon',
       title: 'Care for every age',
       description: 'Provides specialized mental health care for children, adolescents, adults, and seniors, ensuring age-appropriate treatment approaches.'
     },
     {
-      icon: '🩺',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Experienced%20provider.png',
+      iconAlt: 'Stethoscope icon',
       title: 'Experienced provider',
       description: 'A board-certified psychiatric provider with decades of experience in mental health care.'
     },
     {
-      icon: '👤',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Whole-person%20approach.png',
+      iconAlt: 'Person icon',
       title: 'Whole-person approach',
       description: 'Treats the whole person, not just symptoms, integrating physical health, lifestyle, and environmental factors into your care plan.'
     }
@@ -32,7 +36,9 @@ const Benefits = () => {
           {benefitsData.map((benefit, index) => (
             <div key={index} className="benefit-item">
               <div className="benefit-icon-wrapper">
-                <div className="benefit-icon">{benefit.icon}</div>
+                <div className="benefit-icon">
+                  <img src={benefit.icon} alt={benefit.iconAlt} />
+                </div>
               </div>
               <h3 className="benefit-title">{benefit.title}</h3>
               <p className="benefit-description">{benefit.description}</p>

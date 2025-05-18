@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Locations.css';
+import '../styles/icons.css';
 
 const Locations = () => {
   const locations = [
@@ -91,17 +92,17 @@ const Locations = () => {
                 
                 <div className="location-info">
                   <div className="location-address">
-                    <span className="location-icon">📍</span>
+                    <span className="location-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/location.png" alt="Location pin" /></span>
                     <pre>{location.address}</pre>
                   </div>
                   
                   <div className="location-phone">
-                    <span className="location-icon">📞</span>
+                    <span className="location-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/phone.png" alt="Phone" /></span>
                     <a href={`tel:${location.phone.replace(/\D/g, '')}`}>{location.phone}</a>
                   </div>
                   
                   <div className="location-hours">
-                    <span className="location-icon">🕐</span>
+                    <span className="location-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/hours.png" alt="Clock" /></span>
                     <pre>{location.hours}</pre>
                   </div>
                 </div>

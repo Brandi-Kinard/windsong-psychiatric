@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import '../styles/icons.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -81,22 +82,22 @@ const Contact = () => {
           
           <div className="contact-info">
             <div className="info-item">
-              <h3>📍 Location</h3>
+              <h3><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/location.png" alt="Location pin" /> Location</h3>
               <p>123 Wellness Drive<br />Miami, FL 33101</p>
             </div>
             
             <div className="info-item">
-              <h3>📞 Phone</h3>
+              <h3><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/phone.png" alt="Phone" /> Phone</h3>
               <p>(305) 555-0123</p>
             </div>
             
             <div className="info-item">
-              <h3>📧 Email</h3>
+              <h3>Email</h3>
               <p>contact@windsongpsychiatric.com</p>
             </div>
             
             <div className="info-item">
-              <h3>🕐 Hours</h3>
+              <h3><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/hours.png" alt="Clock" /> Hours</h3>
               <p>Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 3:00 PM<br />Sunday: Closed</p>
             </div>
           </div>
