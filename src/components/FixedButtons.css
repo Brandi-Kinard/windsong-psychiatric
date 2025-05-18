@@ -22,24 +22,24 @@
 
 .fixed-button-help {
   right: 24px;
-  background-color: #246D80;
-  color: white;
-}
-
-.fixed-button-help:hover {
-  background-color: #006B6B;
-}
-
-.fixed-button-policies {
-  left: 24px;
   background-color: white;
   color: #374151;
   border: 1px solid #e5e7eb;
 }
 
-.fixed-button-policies:hover {
+.fixed-button-help:hover {
   background-color: #f9fafb;
   border-color: #d1d5db;
+}
+
+.fixed-button-policies {
+  left: 24px;
+  background-color: #246D80;
+  color: white;
+}
+
+.fixed-button-policies:hover {
+  background-color: #006B6B;
 }
 
 @media (max-width: 768px) {
