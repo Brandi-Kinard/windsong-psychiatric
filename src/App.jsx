@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import FixedButtons from './components/FixedButtons';
 import About from './components/About';
 import ServicesPage from './components/ServicesPage';
+import NewPatientForm from './components/NewPatientForm';
 import ScrollToTop from './components/ScrollToTop';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -58,6 +59,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/meet-felicia-davis" element={<About />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/new-patient" element={<NewPatientForm />} />
         </Routes>
         <Footer />
         <FixedButtons />

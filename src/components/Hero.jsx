@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
@@ -8,7 +9,7 @@ const Hero = () => {
         <div className="hero-content">
           <h1 className="hero-title">Compassionate mental health care</h1>
           <p className="hero-subtitle">Windsong Family & Psychiatric Associates is here to support your mental wellness journey</p>
-          <a href="/new-patient" className="hero-cta">Get started</a>
+          <Link to="/new-patient" className="hero-cta">Get started</Link>
         </div>
         <div className="hero-illustration">
           <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/uodated-peep-banner.png" alt="Mental health support illustration" />

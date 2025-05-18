@@ -1,5 +1,6 @@
 import React from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { Link } from 'react-router-dom';
 import './CTA.css';
 import '../styles/icons.css';
 
@@ -14,10 +15,10 @@ const CTA = () => {
         
         <div className="cta-options">
           <div className="cta-option">
-            <a href="/new-patient" className="cta-button cta-button-primary">
+            <Link to="/new-patient" className="cta-button cta-button-primary">
               <span className="cta-button-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Get%20started.png" alt="Sparkles" /></span>
               Get started
-            </a>
+            </Link>
             <p className="cta-caption">New patients begin here</p>
           </div>
           
