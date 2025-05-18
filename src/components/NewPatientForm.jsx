@@ -93,10 +93,8 @@ const NewPatientForm = () => {
   const EMAILJS_TEMPLATE_ID = 'template_xjaha0n';
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
-  // Toggle this to switch between test and production emails
-  const TEST_MODE = true; // Set to false when ready for production
-  const TEST_EMAIL = 'brandiellenkinard@gmail.com';
-  const PRODUCTION_EMAIL = 'brandiellenkinard@gmail.com';
+  // Production mode - emails go to the business email
+  const RECIPIENT_EMAIL = 'brandiellenkinard@gmail.com';
 
   const handleSubmit = async () => {
     if (!validateStep()) return;
@@ -133,14 +131,11 @@ ${formData.notes || 'None'}
       // Initialize EmailJS
       emailjs.init(EMAILJS_PUBLIC_KEY);
       
-      // Debug: Log form data
-      console.log('Form data:', formData);
-      
       const templateParams = {
-        to_email: TEST_MODE ? TEST_EMAIL : PRODUCTION_EMAIL,
+        to_email: RECIPIENT_EMAIL,
         from_name: formData.name,
         from_email: formData.email,
-        reply_to: formData.email,  // This ensures replies go to the form submitter
+        reply_to: formData.email,
         phone: formData.phone,
         preferred_contact: formData.preferredContact,
         seeking_care_for: formData.seekingCareFor,
@@ -152,9 +147,6 @@ ${formData.notes || 'None'}
         date: new Date().toLocaleDateString(),
         time: new Date().toLocaleTimeString()
       };
-
-      // Debug: Log template parameters
-      console.log('Template parameters:', templateParams);
 
       // Send email
       await emailjs.send(
