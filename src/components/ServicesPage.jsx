@@ -5,79 +5,34 @@ import '../styles/icons.css';
 const ServicesPage = () => {
   const services = [
     {
-      title: 'Depression & Anxiety Treatment',
-      icon: '🌤️',
-      iconAlt: 'Mental health icon',
-      description: 'Expert care for mood disorders and anxiety conditions',
+      title: 'Psychiatric Evaluations',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Psychiatric%20evaluations.png',
+      iconAlt: 'Psychiatric evaluations icon',
+      description: 'Comprehensive assessments and diagnoses',
       details: [
-        'Major Depressive Disorder',
-        'Generalized Anxiety Disorder',
-        'Panic Disorder',
-        'Social Anxiety',
-        'Seasonal Affective Disorder'
+        'Clinical evaluation and diagnosis',
+        'Treatment plan development',
+        'Cognitive assessments',
+        'Risk assessment',
+        'Second opinions'
       ],
-      approach: 'We use a combination of evidence-based therapies and medication management to help you find relief from symptoms and develop healthy coping strategies.',
+      approach: 'Through thorough clinical evaluations, we gather comprehensive information to develop personalized treatment plans tailored to your specific needs.',
       color: '#E3F2FD'
-    },
-    {
-      title: 'ADHD Management',
-      icon: '🎯',
-      iconAlt: 'ADHD management icon',
-      description: 'Comprehensive evaluation and treatment for attention disorders',
-      details: [
-        'Adult ADHD assessment',
-        'Medication management',
-        'Behavioral strategies',
-        'Executive function support',
-        'School/work accommodations'
-      ],
-      approach: 'Our holistic approach combines medication when appropriate with practical strategies to improve focus, organization, and daily functioning.',
-      color: '#F3E5F5'
-    },
-    {
-      title: 'Trauma Recovery',
-      icon: '🌿',
-      iconAlt: 'Trauma recovery icon',
-      description: 'Healing support for PTSD and trauma-related conditions',
-      details: [
-        'Post-Traumatic Stress Disorder',
-        'Complex trauma',
-        'Childhood trauma',
-        'Acute stress reactions',
-        'Grief and loss'
-      ],
-      approach: 'Using trauma-informed care principles, we create a safe space for healing and help you process difficult experiences at your own pace.',
-      color: '#E8F5E9'
     },
     {
       title: 'Medication Management',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Medication%20management.png',
       iconAlt: 'Medication management icon',
-      description: 'Personalized psychiatric medication treatment',
+      description: 'Expert psychiatric medication treatment',
       details: [
-        'Initial psychiatric evaluation',
         'Medication selection and titration',
         'Side effect monitoring',
         'Regular follow-ups',
-        'Coordination with other providers'
+        'Coordination with other providers',
+        'Medication education'
       ],
-      approach: 'We carefully evaluate your needs and work collaboratively to find the right medication regimen that provides maximum benefit with minimal side effects.',
+      approach: 'We work collaboratively to find the right medication regimen that provides maximum benefit with minimal side effects.',
       color: '#FFF3E0'
-    },
-    {
-      title: 'Couples & Family Support',
-      icon: '❤️',
-      iconAlt: 'Couples and family support icon',
-      description: 'Strengthening relationships through mental health care',
-      details: [
-        'Couples counseling',
-        'Family therapy',
-        'Communication skills',
-        'Conflict resolution',
-        'Relationship enhancement'
-      ],
-      approach: 'We help couples and families navigate mental health challenges together, improving communication and building stronger, healthier relationships.',
-      color: '#FCE4EC'
     },
     {
       title: 'Telepsychiatry',
@@ -95,6 +50,21 @@ const ServicesPage = () => {
       color: '#E0F2F1'
     },
     {
+      title: 'Specialized Care',
+      icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Specialized%20care.png',
+      iconAlt: 'Specialized care icon',
+      description: 'Targeted treatment for specific conditions',
+      details: [
+        'Evidence-based therapies',
+        'Individualized treatment plans',
+        'Holistic approach',
+        'Family involvement when appropriate',
+        'Long-term management strategies'
+      ],
+      approach: 'We provide specialized treatment approaches tailored to specific mental health conditions, ensuring the most effective care for each patient.',
+      color: '#F3E5F5'
+    },
+    {
       title: 'Injections',
       icon: '💉',
       iconAlt: 'Injections icon',
@@ -106,7 +76,7 @@ const ServicesPage = () => {
         'Monthly medication options',
         'Reduced medication non-compliance'
       ],
-      approach: 'Injectable medications provide sustained treatment with improved adherence, offering convenience and consistent therapeutic levels for optimal mental health management.',
+      approach: 'Injectable medications provide sustained treatment with improved adherence, offering convenience and consistent therapeutic levels.',
       color: '#E8EAF6'
     },
     {
@@ -119,12 +89,70 @@ const ServicesPage = () => {
         'Wellness education',
         'Lifestyle counseling',
         'Early intervention programs',
-        'Mental health maintenance plans'
+        'Mental health maintenance'
       ],
-      approach: 'We believe in preventing mental health issues before they arise through education, healthy lifestyle promotion, and early intervention strategies.',
+      approach: 'We believe in preventing mental health issues before they arise through education, healthy lifestyle promotion, and early intervention.',
       color: '#FFF8E1'
     }
   ];
+
+  const treatmentAreas = [
+    {
+      category: 'Mood Disorders',
+      conditions: [
+        { name: 'Depression', description: 'Persistent feelings of sadness or loss of interest in activities, causing significant impairment in daily life.' },
+        { name: 'Bipolar Disorder', description: 'Episodes of unusual and extreme mood swings ranging from depressive lows to manic highs, affecting the ability to carry out day-to-day tasks.' },
+        { name: 'Major Depressive Disorder', description: 'Severe, persistent depression that interferes with daily functioning and quality of life.' }
+      ]
+    },
+    {
+      category: 'Anxiety & Stress Disorders',
+      conditions: [
+        { name: 'Anxiety', description: 'Intense, excessive, and persistent worry and fear about everyday situations. Fast heart rate, rapid breathing, sweating, and feeling tired may occur.' },
+        { name: 'OCD', description: 'Centers on themes such as fear of germs or the need to arrange objects in a specific manner. Symptoms usually begin gradually and vary throughout life.' },
+        { name: 'PTSD (Trauma)', description: 'Includes nightmares or unwanted memories of trauma, avoidance of triggering situations, heightened reactions, anxiety, or depressed mood.' }
+      ]
+    },
+    {
+      category: 'Psychotic Disorders',
+      conditions: [
+        { name: 'Schizophrenia', description: 'Thoughts or experiences that seem out of touch with reality, disorganized speech or behavior, and decreased participation in daily activities.' },
+        { name: 'Schizoaffective Disorder', description: 'A combination of schizophrenia symptoms and mood disorder symptoms.' }
+      ]
+    },
+    {
+      category: 'Neurodevelopmental & Cognitive',
+      conditions: [
+        { name: 'ADHD', description: 'Symptoms of inattention, distractibility, and poor working memory such as trouble focusing, forgetting appointments, and struggling with executive functions.' },
+        { name: 'Dementia', description: 'Progressive decline in cognitive function, memory, and ability to perform everyday activities.' },
+        { name: 'Cognitive Assessments', description: 'Comprehensive evaluations of memory, thinking, and reasoning abilities.' }
+      ]
+    },
+    {
+      category: 'Sleep & Other Conditions',
+      conditions: [
+        { name: 'Insomnia', description: 'Having difficulty falling or staying asleep and not feeling well-rested.' },
+        { name: 'Adjustment Disorder', description: 'Difficulty coping with stressful life events or significant changes.' },
+        { name: 'Grief', description: 'Support for processing loss and bereavement.' }
+      ]
+    }
+  ];
+
+  const geriatricServices = {
+    title: 'Geriatric Psychiatry Specialty',
+    description: 'Specialized mental health care for older adults',
+    features: [
+      'In-home visits',
+      'Facility visits',
+      '24-hour availability',
+      'Dementia care',
+      'Medication optimization',
+      'Family support and education',
+      'Coordination with medical providers',
+      'Cognitive assessments',
+      'End-of-life mental health support'
+    ]
+  };
 
   return (
     <section className="services-page">
@@ -141,46 +169,86 @@ const ServicesPage = () => {
         <div className="services-intro-container">
           <p className="services-intro-text">
             At Windsong Family Psychiatric Associates, we provide evidence-based mental health 
-            treatment in a warm, supportive environment. Our comprehensive services address a 
-            wide range of psychiatric conditions, with treatment plans customized to each 
-            individual's specific needs and goals.
+            treatment in a warm, supportive environment. Our services address a wide range of 
+            psychiatric conditions, with treatment plans customized to each individual's needs.
           </p>
         </div>
       </div>
 
-      <div className="services-grid-container">
-        {services.map((service, index) => (
-          <div key={index} className="service-detail-card">
-            <div 
-              className="service-detail-header"
-              style={{ backgroundColor: service.color }}
-            >
-              <span className="service-detail-icon">
-                {service.iconAlt ? (
-                  <img src={service.icon} alt={service.iconAlt} />
-                ) : (
-                  service.icon
-                )}
-              </span>
-              <h2 className="service-detail-title">{service.title}</h2>
-              <p className="service-detail-description">{service.description}</p>
-            </div>
-            
-            <div className="service-detail-content">
-              <h3 className="service-detail-subtitle">What We Treat</h3>
-              <ul className="service-detail-list">
-                {service.details.map((detail, idx) => (
-                  <li key={idx}>{detail}</li>
-                ))}
-              </ul>
+      {/* Main Services */}
+      <div className="services-section">
+        <h2 className="section-title">Our Core Services</h2>
+        <div className="services-grid-container">
+          {services.map((service, index) => (
+            <div key={index} className="service-detail-card">
+              <div 
+                className="service-detail-header"
+                style={{ backgroundColor: service.color }}
+              >
+                <span className="service-detail-icon">
+                  {service.iconAlt ? (
+                    <img src={service.icon} alt={service.iconAlt} />
+                  ) : (
+                    service.icon
+                  )}
+                </span>
+                <h2 className="service-detail-title">{service.title}</h2>
+                <p className="service-detail-description">{service.description}</p>
+              </div>
               
-              <h3 className="service-detail-subtitle">Our Approach</h3>
-              <p className="service-detail-approach">{service.approach}</p>
+              <div className="service-detail-content">
+                <h3 className="service-detail-subtitle">What's Included</h3>
+                <ul className="service-detail-list">
+                  {service.details.map((detail, idx) => (
+                    <li key={idx}>{detail}</li>
+                  ))}
+                </ul>
+                
+                <h3 className="service-detail-subtitle">Our Approach</h3>
+                <p className="service-detail-approach">{service.approach}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
+      {/* Treatment Areas */}
+      <div className="treatment-areas-section">
+        <h2 className="section-title">Conditions We Treat</h2>
+        <div className="treatment-areas-grid">
+          {treatmentAreas.map((category, index) => (
+            <div key={index} className="treatment-category">
+              <h3 className="category-title">{category.category}</h3>
+              <div className="conditions-list">
+                {category.conditions.map((condition, idx) => (
+                  <div key={idx} className="condition-item">
+                    <h4 className="condition-name">{condition.name}</h4>
+                    <p className="condition-description">{condition.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Geriatric Specialty Section */}
+      <div className="geriatric-section">
+        <div className="geriatric-content">
+          <h2 className="section-title">{geriatricServices.title}</h2>
+          <p className="geriatric-description">{geriatricServices.description}</p>
+          <div className="geriatric-features">
+            <h3 className="geriatric-subtitle">Specialized Services for Older Adults</h3>
+            <ul className="geriatric-list">
+              {geriatricServices.features.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
       <div className="services-cta-section">
         <div className="services-cta-container">
           <h2 className="services-cta-title">Ready to Start Your Journey?</h2>
