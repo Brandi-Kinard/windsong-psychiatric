@@ -22,10 +22,14 @@ function Home() {
   const location = useLocation();
 
   useEffect(() => {
+    // Handle hash navigation
     if (location.hash) {
       const element = document.querySelector(location.hash);
       if (element) {
-        element.scrollIntoView();
+        // Small delay to ensure DOM is ready
+        setTimeout(() => {
+          element.scrollIntoView();
+        }, 0);
       }
     }
   }, [location]);

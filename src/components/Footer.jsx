@@ -37,7 +37,7 @@ const Footer = () => {
                 {location.pathname === '/' ? (
                   <a href="#locations">Locations</a>
                 ) : (
-                  <Link to="/#locations">Locations</Link>
+                  <Link to="/#locations" state={{ fromOtherPage: true }}>Locations</Link>
                 )}
               </li>
               <li><a href="/patient-portal">Patient Portal</a></li>
