@@ -12,6 +12,13 @@ const Navbar = () => {
     { to: location.pathname === '/' ? '#services' : '/#services', text: 'Services' }
   ];
 
+  const isActive = (to) => {
+    if (to === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname === to;
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
@@ -28,7 +35,7 @@ const Navbar = () => {
                 <a 
                   key={index} 
                   href={link.to} 
-                  className="nav-link"
+                  className={`nav-link ${location.pathname === '/' && link.text === 'Services' ? 'active' : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.text}
@@ -39,7 +46,7 @@ const Navbar = () => {
               <Link 
                 key={index} 
                 to={link.to} 
-                className="nav-link"
+                className={`nav-link ${isActive(link.to) ? 'active' : ''}`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.text}
