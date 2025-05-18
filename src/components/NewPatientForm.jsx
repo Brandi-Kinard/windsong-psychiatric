@@ -95,7 +95,7 @@ const NewPatientForm = () => {
   
   // Toggle this to switch between test and production emails
   const TEST_MODE = true; // Set to false when ready for production
-  const TEST_EMAIL = 'your-test-email@gmail.com'; // Replace with your test email
+  const TEST_EMAIL = 'brandiellenkinard@gmail.com';
   const PRODUCTION_EMAIL = 'brandiellenkinard@gmail.com';
 
   const handleSubmit = async () => {
