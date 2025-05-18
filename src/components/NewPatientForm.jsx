@@ -90,7 +90,7 @@ const NewPatientForm = () => {
 
   // EmailJS configuration
   const EMAILJS_SERVICE_ID = 'service_idvcxum';
-  const EMAILJS_TEMPLATE_ID = 'template_xjaha0n';
+  const EMAILJS_TEMPLATE_ID = 'template_uncwr8d';  // New test template
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
   // Production mode - emails go to the business email
