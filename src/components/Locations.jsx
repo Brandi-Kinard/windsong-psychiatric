@@ -6,6 +6,8 @@ const Locations = () => {
     {
       name: 'Huntersville, NC',
       image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/huntersville.png',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.3090508308605!2d-80.86399598788918!3d35.44714257254964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856a905bf400001%3A0xd79199411b30f474!2s9820%20Northcross%20Center%20Ct%20%2350%2C%20Huntersville%2C%20NC%2028078!5e0!3m2!1sen!2sus!4v1747537548863!5m2!1sen!2sus',
+      useEmbed: true,
       address: '9820 Northcross Center Court\nSuite 50\nHuntersville, NC 28078',
       phone: '(704) 688-4199',
       hours: 'Mon-Fri: 9:00 AM - 5:00 PM\nSat: By Appointment',
@@ -18,6 +20,8 @@ const Locations = () => {
     {
       name: 'Fort Mill, SC',
       image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/fort-mill.png',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.996578456237!2d-80.94278922424216!3d35.006790772812415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856845575be0347%3A0x2c1e0668d9a69920!2s200%20Tom%20Hall%20St%20%23102%2C%20Fort%20Mill%2C%20SC%2029715!5e0!3m2!1sen!2sus!4v1747537302551!5m2!1sen!2sus',
+      useEmbed: true,
       address: '200 Tom Hall Street\nSuite 102\nFort Mill, SC 29715',
       phone: '(803) 547-2000',
       hours: 'Mon-Fri: 9:00 AM - 5:00 PM\nSat: By Appointment',
@@ -51,7 +55,18 @@ const Locations = () => {
           {locations.map((location, index) => (
             <div key={index} className="location-card">
               <div className="location-image">
-                {location.mapLink ? (
+                {location.useEmbed ? (
+                  <iframe 
+                    src={location.mapEmbed}
+                    width="100%"
+                    height="100%"
+                    style={{border:0}}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={`Map of ${location.name}`}
+                  />
+                ) : location.mapLink ? (
                   <a href={location.mapLink} target="_blank" rel="noopener noreferrer" title="Get directions">
                     <img 
                       src={location.image} 
@@ -91,9 +106,11 @@ const Locations = () => {
                   </div>
                 </div>
                 
-                <a href={location.link} className="location-cta">
-                  {location.linkText}
-                </a>
+                {location.name !== 'Virtual Care' && (
+                  <a href={location.link} className="location-cta">
+                    {location.linkText}
+                  </a>
+                )}
               </div>
             </div>
           ))}
