@@ -132,6 +132,7 @@ ${formData.notes || 'None'}
       emailjs.init(EMAILJS_PUBLIC_KEY);
       
       const templateParams = {
+        // Primary fields
         to_email: RECIPIENT_EMAIL,
         from_name: formData.name,
         from_email: formData.email,
@@ -145,7 +146,14 @@ ${formData.notes || 'None'}
         availability: formData.availability.join(', '),
         notes: formData.notes || 'None provided',
         date: new Date().toLocaleDateString(),
-        time: new Date().toLocaleTimeString()
+        time: new Date().toLocaleTimeString(),
+        
+        // Adding alternate variable names in case EmailJS is expecting these
+        name: formData.name,
+        email: formData.email,
+        patient_name: formData.name,
+        patient_email: formData.email,
+        contact_method: formData.preferredContact
       };
       
       // Temporary debug to see what we're sending
