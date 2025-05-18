@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Provider.css';
 
 const Provider = () => {
@@ -30,9 +31,9 @@ const Provider = () => {
               She believes in treating each patient as a unique individual, not just a diagnosis.
             </p>
             
-            <a href="/meet-felicia-davis" className="provider-cta">
+            <Link to="/meet-felicia-davis" className="provider-cta">
               Meet Felicia Davis →
-            </a>
+            </Link>
           </div>
           
           <div className="provider-image">

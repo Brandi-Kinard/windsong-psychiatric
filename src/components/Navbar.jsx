@@ -1,35 +1,51 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navLinks = [
-    { href: '#home', text: 'Home' },
-    { href: '#about', text: 'About' },
-    { href: '#services', text: 'Services' }
+    { to: '/', text: 'Home' },
+    { to: '/meet-felicia-davis', text: 'About' },
+    { to: location.pathname === '/' ? '#services' : '/#services', text: 'Services' }
   ];
 
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="nav-logo">
+        <Link to="/" className="nav-logo">
           <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/tree-bw.png" alt="Windsong Psychiatric" />
           <span className="nav-logo-primary">Windsong</span>
           <span className="nav-logo-secondary">Family & Psychiatric Associates, PLLC</span>
-        </div>
+        </Link>
         
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          {navLinks.map((link, index) => (
-            <a 
-              key={index} 
-              href={link.href} 
-              className="nav-link"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.text}
-            </a>
-          ))}
+          {navLinks.map((link, index) => {
+            if (link.to.includes('#')) {
+              return (
+                <a 
+                  key={index} 
+                  href={link.to} 
+                  className="nav-link"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.text}
+                </a>
+              );
+            }
+            return (
+              <Link 
+                key={index} 
+                to={link.to} 
+                className="nav-link"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.text}
+              </Link>
+            );
+          })}
           <a 
             href="/patient-portal" 
             className="nav-link nav-link-cta"
