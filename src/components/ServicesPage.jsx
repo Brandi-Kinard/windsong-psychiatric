@@ -171,20 +171,15 @@ const ServicesPage = () => {
         <div className="services-grid-container">
           {services.map((service, index) => (
             <div key={index} className="service-detail-card">
-              <div 
-                className="service-detail-header"
-                style={{ backgroundColor: service.color }}
-              >
-                <span className="service-detail-icon">
-                  {service.iconAlt ? (
-                    <img src={service.icon} alt={service.iconAlt} />
-                  ) : (
-                    service.icon
-                  )}
-                </span>
-                <h2 className="service-detail-title">{service.title}</h2>
-                <p className="service-detail-description">{service.description}</p>
+              <div className="service-detail-icon">
+                {service.icon.startsWith('http') ? (
+                  <img src={service.icon} alt={service.iconAlt} />
+                ) : (
+                  <span className="service-detail-icon-emoji">{service.icon}</span>
+                )}
               </div>
+              <h2 className="service-detail-title">{service.title}</h2>
+              <p className="service-detail-description">{service.description}</p>
               
               <div className="service-detail-content">
                 <h3 className="service-detail-subtitle">What's included</h3>
