@@ -18,15 +18,38 @@
 }
 
 .insurance-logos {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
   align-items: center;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.insurance-image {
-  max-width: 100%;
+.insurance-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+}
+
+.insurance-logo {
+  max-width: 120px;
+  max-height: 60px;
+  width: auto;
   height: auto;
   object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.insurance-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -37,5 +60,27 @@
   .insurance-title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
+  }
+  
+  .insurance-logos {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .insurance-logo {
+    max-width: 100px;
+    max-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .insurance-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .insurance-logo {
+    max-width: 80px;
+    max-height: 40px;
   }
 }
