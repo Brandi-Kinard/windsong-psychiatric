@@ -147,6 +147,12 @@ ${formData.notes || 'None'}
         date: new Date().toLocaleDateString(),
         time: new Date().toLocaleTimeString()
       };
+      
+      // Temporary debug to see what we're sending
+      console.log('=== EMAILJS TEMPLATE PARAMETERS ===');
+      Object.entries(templateParams).forEach(([key, value]) => {
+        console.log(`${key}: ${value}`);
+      });
 
       // Send email
       await emailjs.send(
