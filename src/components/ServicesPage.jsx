@@ -239,10 +239,13 @@ const ServicesPage = () => {
             Take the first step toward better mental health. We're here to support you every step of the way.
           </p>
           <div className="services-cta-buttons">
-            <a href="/new-patient" className="services-cta-button primary">
-              <span className="cta-button-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Get%20started.png" alt="Sparkles" /></span>
-              Get started
-            </a>
+            <div className="services-cta-option">
+              <a href="/new-patient" className="services-cta-button primary">
+                <span className="cta-button-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Get%20started.png" alt="Sparkles" /></span>
+                Get started
+              </a>
+              <p className="services-cta-caption">New patients begin here</p>
+            </div>
           </div>
         </div>
       </div>

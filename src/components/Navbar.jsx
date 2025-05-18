@@ -39,15 +39,18 @@ const Navbar = () => {
               {link.text}
             </Link>
           ))}
-          <a 
-            href="https://patientonlineportal.com/" 
-            className="nav-link nav-link-cta"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Patient Portal
-          </a>
+          <div className="nav-portal-container">
+            <a 
+              href="https://patientonlineportal.com/" 
+              className="nav-link nav-link-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Patient Portal
+            </a>
+            <span className="nav-portal-caption">Existing patients sign in</span>
+          </div>
         </div>
         
         <div className="nav-menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
