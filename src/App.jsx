@@ -13,9 +13,25 @@ import Footer from './components/Footer';
 import FixedButtons from './components/FixedButtons';
 import About from './components/About';
 import ServicesPage from './components/ServicesPage';
+import ScrollToTop from './components/ScrollToTop';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './App.css';
 
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
+
   return (
     <>
       <Hero />
@@ -34,6 +50,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

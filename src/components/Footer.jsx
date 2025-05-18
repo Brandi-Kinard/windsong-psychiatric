@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
 
   return (
     <footer className="footer">
@@ -32,7 +33,13 @@ const Footer = () => {
             <ul className="footer-list">
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/meet-felicia-davis">Meet Felicia Davis</Link></li>
-              <li><a href="#locations">Locations</a></li>
+              <li>
+                {location.pathname === '/' ? (
+                  <a href="#locations">Locations</a>
+                ) : (
+                  <Link to="/#locations">Locations</Link>
+                )}
+              </li>
               <li><a href="/patient-portal">Patient Portal</a></li>
             </ul>
           </div>
