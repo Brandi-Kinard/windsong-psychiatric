@@ -27,6 +27,19 @@ const CTA = () => {
             <p className="cta-caption">Existing patients sign in</p>
           </div>
         </div>
+        
+        <div className="cta-animation">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="tree-animation"
+          >
+            <source src="/tree-leaves-falling.webm" type="video/webm" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </section>
   );

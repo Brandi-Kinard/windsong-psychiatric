@@ -93,6 +93,20 @@
   max-width: 250px;
 }
 
+.cta-animation {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tree-animation {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  opacity: 0.8;
+}
+
 @media (max-width: 768px) {
   .cta-title {
     font-size: 2rem;
@@ -115,5 +129,13 @@
     width: 100%;
     max-width: 300px;
     justify-content: center;
+  }
+  
+  .cta-animation {
+    margin-top: 3rem;
+  }
+  
+  .tree-animation {
+    max-width: 350px;
   }
 }
