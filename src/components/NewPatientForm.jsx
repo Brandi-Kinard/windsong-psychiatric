@@ -21,7 +21,7 @@ const NewPatientForm = () => {
     notes: ''
   });
 
-  const totalSteps = 8;
+  const totalSteps = 7;
 
   const conditions = [
     'Anxiety',
@@ -79,9 +79,9 @@ const NewPatientForm = () => {
         return formData.previousCare !== '';
       case 4:
         return formData.appointmentType !== '';
-      case 6:
+      case 5:
         return formData.availability.length > 0;
-      case 7:
+      case 6:
         return formData.name && formData.email && formData.phone && formData.preferredContact;
       default:
         return true;
@@ -116,8 +116,6 @@ Previous mental health care: ${formData.previousCare}
 
 Preferred appointment type: ${formData.appointmentType}
 
-Preferred provider gender: ${formData.providerGender || 'No preference'}
-
 Availability:
 ${formData.availability.join(', ')}
 
@@ -145,7 +143,6 @@ ${formData.notes || 'None'}
         support_type: formData.supportType.join(', '),
         previous_care: formData.previousCare,
         appointment_type: formData.appointmentType,
-        provider_gender: formData.providerGender || 'No preference',
         availability: formData.availability.join(', '),
         notes: formData.notes || 'None provided',
         date: new Date().toLocaleDateString(),
@@ -160,7 +157,7 @@ ${formData.notes || 'None'}
       );
       
       // Show success message
-      setCurrentStep(9); // Success step
+      setCurrentStep(8); // Success step
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('There was an error submitting your information. Please try again or contact us directly.');
@@ -264,25 +261,8 @@ ${formData.notes || 'None'}
             </div>
           )}
 
-          {currentStep === 5 && (
-            <div className="form-step">
-              <h2>Do you have a provider gender preference?</h2>
-              <p className="step-subtitle">This is optional</p>
-              <div className="options-grid">
-                {['Female', 'Male', 'Non-binary or gender-diverse', 'Open to best match'].map(option => (
-                  <button
-                    key={option}
-                    className={`option-button ${formData.providerGender === option ? 'selected' : ''}`}
-                    onClick={() => handleInputChange('providerGender', option)}
-                  >
-                    {option}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
 
-          {currentStep === 6 && (
+          {currentStep === 5 && (
             <div className="form-step">
               <h2>When are you typically available?</h2>
               <p className="step-subtitle">Select all that apply</p>
@@ -301,7 +281,7 @@ ${formData.notes || 'None'}
             </div>
           )}
 
-          {currentStep === 7 && (
+          {currentStep === 6 && (
             <div className="form-step">
               <h2>Let's get your contact information</h2>
               <div className="input-grid">
@@ -356,7 +336,7 @@ ${formData.notes || 'None'}
             </div>
           )}
 
-          {currentStep === 8 && (
+          {currentStep === 7 && (
             <div className="form-step">
               <h2>Is there anything else you'd like us to know?</h2>
               <p className="step-subtitle">This is optional</p>
@@ -370,7 +350,7 @@ ${formData.notes || 'None'}
             </div>
           )}
 
-          {currentStep === 9 && (
+          {currentStep === 8 && (
             <div className="form-step success-step">
               <div className="success-icon">✓</div>
               <h2>Thank you for reaching out!</h2>
@@ -387,7 +367,7 @@ ${formData.notes || 'None'}
           )}
         </div>
 
-        {currentStep < 9 && (
+        {currentStep < 8 && (
           <div className="form-footer">
             <button 
               className="nav-button previous"
@@ -397,7 +377,7 @@ ${formData.notes || 'None'}
               ← Previous
             </button>
             
-            {currentStep === 8 ? (
+            {currentStep === 7 ? (
               <button 
                 className="nav-button next primary"
                 onClick={handleSubmit}
