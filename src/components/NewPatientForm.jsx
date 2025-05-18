@@ -139,8 +139,17 @@ ${formData.notes || 'None'}
         to_email: TEST_MODE ? TEST_EMAIL : PRODUCTION_EMAIL,
         from_name: formData.name,
         from_email: formData.email,
-        subject: 'New Patient Inquiry - Windsong Psychiatric',
-        message: emailBody
+        phone: formData.phone,
+        preferred_contact: formData.preferredContact,
+        seeking_care_for: formData.seekingCareFor,
+        support_type: formData.supportType.join(', '),
+        previous_care: formData.previousCare,
+        appointment_type: formData.appointmentType,
+        provider_gender: formData.providerGender || 'No preference',
+        availability: formData.availability.join(', '),
+        notes: formData.notes || 'None provided',
+        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleTimeString()
       };
 
       // Send email
