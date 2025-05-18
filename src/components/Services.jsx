@@ -22,7 +22,7 @@ const Services = () => {
       link: '/services/telemedicine'
     },
     {
-      icon: '⭐',
+      icon: '🤝',
       title: 'Specialized care',
       description: 'Focused treatment for anxiety, depression, ADHD, trauma, and other mental health conditions',
       link: '/services/specialized'
