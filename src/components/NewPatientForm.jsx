@@ -133,6 +133,9 @@ ${formData.notes || 'None'}
       // Initialize EmailJS
       emailjs.init(EMAILJS_PUBLIC_KEY);
       
+      // Debug: Log form data
+      console.log('Form data:', formData);
+      
       const templateParams = {
         to_email: TEST_MODE ? TEST_EMAIL : PRODUCTION_EMAIL,
         from_name: formData.name,
@@ -149,6 +152,9 @@ ${formData.notes || 'None'}
         date: new Date().toLocaleDateString(),
         time: new Date().toLocaleTimeString()
       };
+
+      // Debug: Log template parameters
+      console.log('Template parameters:', templateParams);
 
       // Send email
       await emailjs.send(
