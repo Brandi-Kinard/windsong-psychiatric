@@ -365,14 +365,21 @@ ${formData.notes || 'None'}
               <h2>Thank you for reaching out!</h2>
               <p>We've received your information and will contact you within 1-2 business days.</p>
               <p>For urgent mental health concerns, please call us at (980) 585-2019.</p>
-              <button 
-                className="action-button primary"
-                onClick={() => navigate('/')}
-              >
-                Return to home
-              </button>
+              <div className="action-buttons">
+                <button 
+                  className="action-button primary"
+                  onClick={() => navigate('/')}
+                >
+                  Return to home
+                </button>
+                <button 
+                  className="action-button secondary"
+                  onClick={() => navigate('/helpful-resources')}
+                >
+                  Helpful resources
+                </button>
+              </div>
               <div className="crisis-info">
-                <p>If you're overwhelmed or in a crisis and it is after business hours, you can call or text 988 anytime for support from the Suicide & Crisis Lifeline.</p>
                 <p><strong>If you are experiencing a life-threatening emergency, please call 911 immediately.</strong></p>
               </div>
             </div>

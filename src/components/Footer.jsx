@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           
           <div className="footer-section">
-            <h4 className="footer-heading">Quick Links</h4>
+            <h4 className="footer-heading">Quick links</h4>
             <ul className="footer-list">
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/meet-felicia-davis">Meet Felicia Davis</Link></li>
@@ -40,7 +40,8 @@ const Footer = () => {
                   <Link to="/#locations" state={{ fromOtherPage: true }}>Locations</Link>
                 )}
               </li>
-              <li><a href="https://patientonlineportal.com/" target="_blank" rel="noopener noreferrer">Patient Portal</a></li>
+              <li><Link to="/helpful-resources">Helpful resources</Link></li>
+              <li><a href="https://patientonlineportal.com/" target="_blank" rel="noopener noreferrer">Patient portal</a></li>
             </ul>
           </div>
           
@@ -58,9 +59,9 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>Copyright &copy; {currentYear} Windsong Family & Psychiatric Associates, PLLC</p>
           <div className="footer-bottom-links">
-            <a href="/privacy">Privacy Policy</a>
+            <a href="/privacy">Privacy policy</a>
             <span className="footer-divider">|</span>
-            <a href="/terms">Terms of Service</a>
+            <a href="/terms">Terms of service</a>
           </div>
         </div>
       </div>

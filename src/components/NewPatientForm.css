@@ -339,6 +339,13 @@
   cursor: not-allowed;
 }
 
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 .action-button {
   padding: 1rem 2rem;
   border: none;
@@ -347,7 +354,6 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  margin-top: 2rem;
 }
 
 .action-button.primary {
@@ -357,6 +363,18 @@
 
 .action-button.primary:hover {
   background-color: #006B6B;
+}
+
+.action-button.secondary {
+  background-color: transparent;
+  color: #246D80;
+  border: 2px solid #246D80;
+}
+
+.action-button.secondary:hover {
+  background-color: #E5F2F6;
+  border-color: #006B6B;
+  color: #006B6B;
 }
 
 /* Responsive Design */
@@ -389,6 +407,14 @@
   }
   
   .nav-button {
+    width: 100%;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+  
+  .action-button {
     width: 100%;
   }
 }
