@@ -16,30 +16,30 @@ const PoliciesModal = ({ isOpen, onClose }) => {
       
       <div className="services-list">
         <div className="service-item">
-          <h4>New Patient Visit - $280</h4>
-          <p>Self pay fee for Initial Appointments</p>
+          <h4>New patient visit - $280</h4>
+          <p>Self pay fee for initial appointments</p>
         </div>
         
         <div className="service-item">
-          <h4>Follow Up Visit - $140</h4>
-          <p>Self pay fee for Established Patient Appointments</p>
+          <h4>Follow-up visit - $140</h4>
+          <p>Self pay fee for established patient appointments</p>
         </div>
         
         <div className="service-item">
           <h4>Forms - $10 per page</h4>
-          <p>The completion of detailed forms for use outside of the patient's medical record (e.g. Pre-Employment, Workman's Comp, Disability, Life Insurance, Family Medical Leave)</p>
+          <p>The completion of detailed forms for use outside of the patient's medical record (e.g. pre-employment, workman's comp, disability, life insurance, family medical leave)</p>
           <p className="note">Completion of standard forms (work/school notes, e.g.) is complimentary</p>
         </div>
       </div>
       
-      <h3>Appointment Scheduling & Cancellations</h3>
+      <h3>Appointment scheduling & cancellations</h3>
       
-      <p>We know life can be unpredictable, and we're here to support you. Appointments can be made by calling our office at 980-585-2019 or through our Patient Portal. We offer both in-person and telemedicine appointments.</p>
+      <p>We know life can be unpredictable, and we're here to support you. Appointments can be made by calling our office at 980-585-2019 or through our patient portal. We offer both in-person and telemedicine appointments.</p>
       
       <p>If you need to cancel or reschedule an appointment, please let us know at least 24 hours in advance. This allows us to offer the slot to another client in need.</p>
       
-      <p><strong>Late Cancellations</strong> (less than 24 hours' notice): May incur a fee of $50</p>
-      <p><strong>No-Show Appointments</strong> (missed without notice): May incur a fee of $120</p>
+      <p><strong>Late cancellations</strong> (less than 24 hours' notice): May incur a fee of $50</p>
+      <p><strong>No-show appointments</strong> (missed without notice): May incur a fee of $120</p>
       
       <p className="emergency-notice">We understand that emergencies happen. If your cancellation is due to an unforeseen circumstance, please let us know — we may be able to waive the fee. Emergency situations are handled on a case-by-case basis. We appreciate your understanding as this helps us manage our schedule effectively.</p>
     </div>
@@ -47,7 +47,7 @@ const PoliciesModal = ({ isOpen, onClose }) => {
 
   const policiesContent = (
     <div className="tab-content">
-      <h3>Attendance Policy</h3>
+      <h3>Attendance policy</h3>
       
       <p>We understand that unexpected situations can arise. Each patient is allowed up to two late cancellations or missed appointments. After the second occurrence, continued care at our practice may be discontinued.</p>
       
