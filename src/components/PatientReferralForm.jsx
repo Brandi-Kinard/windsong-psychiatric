@@ -248,9 +248,9 @@ const PatientReferralForm = () => {
             </div>
           </div>
 
-          {/* Reason for Referral (Optional) */}
+          {/* Reason for Referral */}
           <div className="form-section">
-            <h3>Reason for referral (optional)</h3>
+            <h3>Reason for referral</h3>
             <div className="form-group">
               <label htmlFor="referralSource">Referral source (name & phone #)</label>
               <input
@@ -285,9 +285,9 @@ const PatientReferralForm = () => {
             </div>
           </div>
 
-          {/* History (Optional) */}
+          {/* History */}
           <div className="form-section">
-            <h3>History (optional)</h3>
+            <h3>History</h3>
             <div className="form-group">
               <label htmlFor="currentTreatmentProvider">Current treatment provider (name & phone #)</label>
               <input
