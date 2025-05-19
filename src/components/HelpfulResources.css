@@ -9,11 +9,15 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 .hero-content {
+  flex: 1;
   text-align: left;
-  margin-bottom: 4rem;
 }
 
 .hero-content h1 {
@@ -31,44 +35,21 @@
 }
 
 .hero-image {
+  flex: 1;
   text-align: center;
-  margin: 0 auto 4rem;
-  max-width: 1400px;
-  padding: 0 2rem;
 }
 
 .hero-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  max-height: 600px;
+  max-width: 600px;
   object-fit: contain;
-}
-
-/* Emergency Notice */
-.emergency-notice {
-  max-width: 1400px;
-  margin: 0 auto 4rem;
-  padding: 1.5rem 2rem;
-  background-color: #fef2f2;
-  border: 1px solid #fecaca;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.emergency-notice p {
-  color: #dc2626;
-  font-size: 1.125rem;
-  margin: 0;
-}
-
-.emergency-notice strong {
-  font-weight: 700;
 }
 
 /* Resources Section */
 .resources-section {
   background-color: #ffffff;
-  padding: 2rem;
+  padding: 4rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -102,11 +83,24 @@
   margin: 0 auto;
   width: 100%;
   transition: transform 0.2s ease;
+  text-align: center;
 }
 
 .resource-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resource-card.emergency {
+  background-color: #EDF6F9;
+}
+
+.resource-card.emergency .resource-description {
+  color: #dc2626;
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .resource-title {
@@ -129,8 +123,19 @@
   color: #006B6B;
 }
 
+.resource-description {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
+  .hero-section {
+    gap: 3rem;
+  }
+  
   .resources-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
@@ -141,6 +146,16 @@
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
   .hero-content h1 {
     font-size: 2.5rem;
   }
@@ -150,7 +165,7 @@
   }
   
   .hero-image img {
-    max-height: 300px;
+    max-width: 400px;
   }
   
   .resources-grid {
@@ -173,6 +188,10 @@
   
   .hero-section {
     padding: 2rem 1rem;
+  }
+  
+  .hero-image img {
+    max-width: 300px;
   }
   
   .resource-card {
