@@ -17,7 +17,8 @@
   border-radius: 16px;
   width: 90%;
   max-width: 800px;
-  max-height: 90vh;
+  height: 85vh;
+  max-height: 700px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -25,115 +26,129 @@
 }
 
 .policies-modal-header {
-  padding: 1.5rem 1.5rem 0;
-  background-color: white;
+  padding: 2rem 2rem 0;
+  background-color: #246D80;
   border-radius: 16px 16px 0 0;
   position: relative;
+  flex-shrink: 0;
 }
 
 .header-title {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
 .header-icon {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
 .policies-modal-header h2 {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   font-weight: 700;
-  color: #1f2937;
+  color: white;
   margin: 0;
 }
 
 .header-description {
-  font-size: 1rem;
-  color: #6b7280;
-  line-height: 1.6;
+  font-size: 1.125rem;
+  color: white;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
+  opacity: 0.95;
 }
 
 .policies-modal-close {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background: none;
+  background: rgba(255, 255, 255, 0.1);
   border: none;
   font-size: 1.5rem;
-  color: #6b7280;
+  color: white;
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 8px;
   transition: all 0.2s ease;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .policies-modal-close:hover {
-  background-color: #f3f4f6;
-  color: #374151;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Tab Navigation */
 .tab-navigation {
   display: flex;
-  gap: 0;
-  margin: 0 -1.5rem;
-  border-top: 1px solid #e5e7eb;
+  gap: 0.75rem;
+  margin: 0 -2rem;
+  padding: 0 2rem 0.75rem;
+  background-color: #246D80;
   position: sticky;
   top: 0;
-  background-color: white;
   z-index: 10;
+  flex-shrink: 0;
 }
 
 .tab-button {
   flex: 1;
-  padding: 1rem;
-  background: none;
-  border: none;
+  padding: 0.75rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
-  position: relative;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tab-button:hover {
-  color: #374151;
-  background-color: #f9fafb;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .tab-button.active {
+  background-color: white;
   color: #246D80;
+  border-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.tab-button.active::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #246D80;
+.tab-button.active:hover {
+  background-color: white;
+  color: #246D80;
+  border-color: white;
+  transform: translateY(-1px);
 }
 
 /* Content Area */
 .policies-modal-content {
   flex: 1;
   overflow-y: auto;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   background-color: white;
+  min-height: 0;
+  border-radius: 12px 12px 0 0;
+  margin-top: -10px;
 }
 
 .tab-content h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #1f2937;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -144,7 +159,7 @@
 .tab-content h4 {
   font-size: 1.125rem;
   font-weight: 600;
-  color: #246D80;
+  color: #1f2937;
   margin-bottom: 0.5rem;
 }
 
@@ -155,61 +170,54 @@
   margin-bottom: 1rem;
 }
 
-.payment-notice {
-  font-style: italic;
+.payment-due {
+  font-weight: 600;
   color: #374151;
-  margin-bottom: 0.5rem;
 }
 
 .payment-methods {
   margin-bottom: 2rem;
 }
 
-.fee-section {
+.services-list {
+  margin: 2rem 0;
+}
+
+.service-item {
   margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.fee-item {
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  padding: 1rem;
-  margin-bottom: 1rem;
-}
-
-.fee-item h4 {
-  margin-bottom: 0.5rem;
-}
-
-.fee-item p {
-  margin-bottom: 0.5rem;
-  font-size: 0.9375rem;
-}
-
-.fee-item p:last-child {
+.service-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
   margin-bottom: 0;
 }
 
-.cancellation-fees {
-  background-color: #fef2f2;
-  border: 1px solid #fecaca;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem 0;
-}
-
-.cancellation-fees p {
+.service-item h4 {
+  color: #246D80;
   margin-bottom: 0.5rem;
-  color: #7f1d1d;
 }
 
-.cancellation-fees p:last-child {
-  margin-bottom: 0;
+.service-item p {
+  margin-bottom: 0.5rem;
+}
+
+.service-item .note {
+  font-style: italic;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.emergency-notice {
+  color: #EF4444 !important;
+  margin-top: 1.5rem;
 }
 
 .policy-note {
-  background-color: #f3f4f6;
-  padding: 1rem;
+  background-color: #EDF6F9;
+  padding: 1rem 1.5rem;
   border-radius: 8px;
   border-left: 4px solid #246D80;
   margin-top: 1.5rem;
@@ -223,6 +231,7 @@
   justify-content: flex-end;
   background-color: white;
   border-radius: 0 0 16px 16px;
+  flex-shrink: 0;
 }
 
 .policies-modal-ok {
@@ -264,19 +273,29 @@
 @media (max-width: 768px) {
   .policies-modal {
     width: 95%;
-    max-height: 95vh;
+    height: 90vh;
+    max-height: none;
   }
   
   .policies-modal-header {
-    padding: 1rem 1rem 0;
+    padding: 1.5rem 1.5rem 0;
   }
   
   .policies-modal-content {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
   }
   
   .header-title h2 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+  }
+  
+  .header-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .header-description {
+    font-size: 1rem;
   }
   
   .tab-button {
@@ -284,7 +303,7 @@
     padding: 0.875rem;
   }
   
-  .cancellation-fees p {
-    font-size: 0.9375rem;
+  .service-item {
+    margin-bottom: 1.5rem;
   }
 }
