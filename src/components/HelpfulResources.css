@@ -49,7 +49,7 @@
 /* Resources Section */
 .resources-section {
   background-color: #ffffff;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem 4rem;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -59,7 +59,7 @@
   color: #1f2937;
   margin-bottom: 3rem;
   font-weight: 600;
-  text-align: left;
+  text-align: center;
 }
 
 .resources-grid {
@@ -91,17 +91,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.resource-card.emergency {
-  background-color: #EDF6F9;
-}
-
-.resource-card.emergency .resource-description {
-  color: #dc2626;
-  font-weight: 600;
-  margin-top: 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-}
 
 .resource-title {
   font-size: 1.5rem;
