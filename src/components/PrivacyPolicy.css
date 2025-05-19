@@ -1,12 +1,13 @@
 .privacy-policy-page {
   min-height: 100vh;
   background-color: white;
-  padding: 4rem 1.5rem;
+  padding: 2rem 1.5rem 4rem;
 }
 
 .privacy-container {
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 4rem;
 }
 
 .privacy-policy-page h1 {
@@ -50,7 +51,11 @@
 /* Responsive */
 @media (max-width: 768px) {
   .privacy-policy-page {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem 2rem;
+  }
+  
+  .privacy-container {
+    padding-top: 3rem;
   }
   
   .privacy-policy-page h1 {
