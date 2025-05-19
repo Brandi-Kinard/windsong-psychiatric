@@ -7,7 +7,7 @@ const HelpfulResources = () => {
       title: 'NATIONAL ALLIANCE ON MENTAL ILLNESS CRISIS HOTLINES',
       subtitle: 'Mental Health Emergency Hotline',
       number: '988',
-      description: 'If you're overwhelmed or in a crisis and it is after business hours, you can call or text 988 anytime for support from the Suicide & Crisis Lifeline.'
+      description: 'If you\'re overwhelmed or in a crisis and it is after business hours, you can call or text 988 anytime for support from the Suicide & Crisis Lifeline.'
     },
     {
       title: 'NATIONAL SUICIDE HOTLINE',
