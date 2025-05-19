@@ -1,136 +1,95 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './PoliciesModal.css';
 import '../styles/icons.css';
 
 const PoliciesModal = ({ isOpen, onClose }) => {
+  const [activeTab, setActiveTab] = useState('fees');
+
   if (!isOpen) return null;
 
-  const privacyContent = `🌿 POLICIES & FEES
+  const feesContent = (
+    <div className="tab-content">
+      <h3>Service fees</h3>
+      <p className="payment-notice">Payment is due at the time of service</p>
+      <p className="payment-methods">• We accept cash, check, credit/debit cards, and HSA/FSA cards</p>
 
-At Windsong Family & Psychiatric Associates, we are committed to providing compassionate, personalized care. To ensure a smooth experience for all our clients, we've outlined our policies and fees below.
+      <div className="fee-section">
+        <div className="fee-item">
+          <h4>New Patient Visit - $280</h4>
+          <p>Self pay fee for Initial Appointments</p>
+        </div>
 
-📅 APPOINTMENT SCHEDULING & CANCELLATIONS
+        <div className="fee-item">
+          <h4>Follow Up Visit - $140</h4>
+          <p>Self pay fee for Established Patient Appointments</p>
+        </div>
 
-Scheduling
-• Appointments can be made by calling our office at 980-585-2019 or through our Patient Portal
-• We offer both in-person and telemedicine appointments
+        <div className="fee-item">
+          <h4>Forms - $10 per page</h4>
+          <p>The completion of detailed forms for use outside of the patient's medical record (e.g. Pre-Employment, Workman's Comp, Disability, Life Insurance, Family Medical Leave)</p>
+          <p>Completion of standard forms (work/school notes, e.g.) is complimentary</p>
+        </div>
+      </div>
 
-Cancellations
-• We understand that life happens. If you need to cancel or reschedule, please provide at least 24 hours' notice
-• This allows us to offer the slot to another client in need
+      <h3>Appointment Scheduling & Cancellations</h3>
+      <p>We know life can be unpredictable, and we're here to support you. Appointments can be made by calling our office at 980-585-2019 or through our Patient Portal. We offer both in-person and telemedicine appointments.</p>
+      
+      <p>If you need to cancel or reschedule an appointment, please let us know at least 24 hours in advance. This allows us to offer the slot to another client in need.</p>
+      
+      <div className="cancellation-fees">
+        <p><strong>Late Cancellations (less than 24 hours' notice):</strong> May incur a fee of $50</p>
+        <p><strong>No-Show Appointments (missed without notice):</strong> May incur a fee of $120</p>
+      </div>
+      
+      <p>We understand that emergencies happen. If your cancellation is due to an unforeseen circumstance, please let us know — we may be able to waive the fee. Emergency situations are handled on a case-by-case basis. We appreciate your understanding as this helps us manage our schedule effectively.</p>
+    </div>
+  );
 
-Late Cancellations/No-Shows
-• Appointments missed or canceled with less than 24 hours' notice may incur a fee
-• We appreciate your understanding as this helps us manage our schedule effectively
-• Emergency situations are handled on a case-by-case basis
-
-💳 FEES & INSURANCE
-
-Initial Psychiatric Evaluation (60-90 min)
-• Insurance: Copay varies by plan
-• Self-pay: $350-$450
-
-Follow-Up Sessions
-• Medication Management (15-30 min): $150-$200
-• Psychotherapy Session (45-50 min): $175-$225
-• Combined Therapy & Medication (60 min): $250-$300
-
-Accepted Insurance
-We accept most major insurance plans, including:
-• Blue Cross Blue Shield
-• Aetna  
-• Cigna
-• United Healthcare
-• Medicare
-• Medicaid
-• It's advisable to check with your provider regarding coverage specifics
-
-Self-Pay Options
-• For clients without insurance, we offer self-pay rates
-• Flexible payment plans available upon request
-• Sliding scale fees based on financial need
-• Please contact our office for more details
-
-Payment Methods
-• Payment is due at the time of service
-• We accept cash, check, credit/debit cards, and HSA/FSA cards
-
-💊 PRESCRIPTION REFILLS
-
-During Appointments
-• We recommend discussing medication needs during your scheduled sessions
-
-Between Appointments  
-• If you require a refill between appointments, please contact our office at least 3 business days in advance
-
-After-Hours Requests
-• Refill requests made outside of business hours will be addressed on the next business day
-
-📄 FORMS & DOCUMENTATION
-
-Standard Forms
-• Completion of standard forms (e.g., work/school notes) is complimentary
-
-Extended Documentation
-• For detailed forms or letters (e.g., FMLA, disability), a fee may apply
-• Please submit such requests well in advance to allow adequate processing time
-
-🔐 PRIVACY & CONFIDENTIALITY
-
-Your privacy is paramount. We adhere to all HIPAA regulations to ensure your personal and health information remains confidential.
-
-Information We Collect
-• Personal Information: Name, contact details, and health information necessary for treatment
-• Technical Information: IP addresses, browser types, and website usage statistics
-• Demographic Information: Age, gender, and location to better understand our patient population
-
-How We Protect Your Information
-• Encrypted data transmission using SSL protocols
-• Secure servers with restricted access
-• Regular security audits and updates
-• Ongoing training on privacy and security best practices
-
-Your Rights
-You have the right to:
-• Access your personal information
-• Request corrections to your records
-• Opt-out of certain communications
-• Request restrictions on how we use your information
-
-Third-Party Disclosure
-We do not sell, trade, or otherwise transfer your personal information to third parties except:
-• When necessary for treatment coordination with other healthcare providers
-• For payment processing and insurance claims
-• When required by law or court order
-• With your explicit consent
-
-📞 CONTACT US
-
-If you have any questions or need assistance, our friendly staff is here to help.
-
-Phone: 980-585-2019
-Email: info@windsongpsychiatric.com
-Address: 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078
-Office Hours: Monday–Thursday, 8:30 AM – 6:00 PM; Friday, 8:30 AM – 12:00 PM
-
-We appreciate the opportunity to support your mental health journey. Thank you for choosing Windsong Family & Psychiatric Associates.`;
+  const policiesContent = (
+    <div className="tab-content">
+      <h3>Attendance Policy</h3>
+      <p>We understand that unexpected situations can arise. Each patient is allowed up to two late cancellations or missed appointments. After the second occurrence, continued care at our practice may be discontinued.</p>
+      
+      <p className="policy-note"><strong>Please note:</strong> Fees for missed appointments and late cancellations are the responsibility of the patient and are not covered by insurance.</p>
+    </div>
+  );
 
   return (
     <>
       <div className="policies-modal-overlay" onClick={onClose}></div>
       <div className="policies-modal">
         <div className="policies-modal-header">
-          <h2>Policies & fees</h2>
+          <div className="header-title">
+            <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/branch.png" alt="Branch icon" className="header-icon" />
+            <h2>Policies & fees</h2>
+          </div>
           <button className="policies-modal-close" onClick={onClose} aria-label="Close modal">
             ✕
           </button>
+          <p className="header-description">
+            At Windsong Family & Psychiatric Associates, we are committed to providing compassionate, personalized care. To ensure a smooth experience for all our clients, we've outlined our policies and fees below.
+          </p>
+          <div className="tab-navigation">
+            <button 
+              className={`tab-button ${activeTab === 'fees' ? 'active' : ''}`}
+              onClick={() => setActiveTab('fees')}
+            >
+              Fees
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'policies' ? 'active' : ''}`}
+              onClick={() => setActiveTab('policies')}
+            >
+              Policies
+            </button>
+          </div>
         </div>
         <div className="policies-modal-content">
-          <pre>{privacyContent}</pre>
+          {activeTab === 'fees' ? feesContent : policiesContent}
         </div>
         <div className="policies-modal-footer">
           <button className="policies-modal-ok" onClick={onClose}>
-            Accept
+            Close
           </button>
         </div>
       </div>

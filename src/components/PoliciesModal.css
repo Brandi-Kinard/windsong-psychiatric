@@ -4,9 +4,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
-  animation: fadeIn 0.2s ease-out;
 }
 
 .policies-modal {
@@ -15,137 +14,277 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  z-index: 10000;
+  border-radius: 16px;
   width: 90%;
-  max-width: 600px;
-  height: 80vh;
-  max-height: 700px;
+  max-width: 800px;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
-  animation: slideIn 0.3s ease-out;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  z-index: 10000;
 }
 
 .policies-modal-header {
-  background-color: #246D80;
-  color: white;
-  padding: 1.5rem;
-  border-radius: 8px 8px 0 0;
+  padding: 1.5rem 1.5rem 0;
+  background-color: white;
+  border-radius: 16px 16px 0 0;
+  position: relative;
+}
+
+.header-title {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-shrink: 0;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.header-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .policies-modal-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
   margin: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
+}
+
+.header-description {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
 .policies-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
   background: none;
   border: none;
-  color: white;
   font-size: 1.5rem;
+  color: #6b7280;
   cursor: pointer;
-  padding: 0;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
 .policies-modal-close:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #f3f4f6;
+  color: #374151;
 }
 
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  gap: 0;
+  margin: 0 -1.5rem;
+  border-top: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 1rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.tab-button:hover {
+  color: #374151;
+  background-color: #f9fafb;
+}
+
+.tab-button.active {
+  color: #246D80;
+}
+
+.tab-button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #246D80;
+}
+
+/* Content Area */
 .policies-modal-content {
   flex: 1;
   overflow-y: auto;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: white;
 }
 
-.policies-modal-content pre {
-  white-space: pre-wrap;
-  font-family: inherit;
-  margin: 0;
-  line-height: 1.7;
-  color: #374151;
+.tab-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.tab-content h3:first-child {
+  margin-top: 0;
+}
+
+.tab-content h4 {
   font-size: 1.125rem;
+  font-weight: 600;
+  color: #246D80;
+  margin-bottom: 0.5rem;
 }
 
+.tab-content p {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.payment-notice {
+  font-style: italic;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.payment-methods {
+  margin-bottom: 2rem;
+}
+
+.fee-section {
+  margin-bottom: 2rem;
+}
+
+.fee-item {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.fee-item h4 {
+  margin-bottom: 0.5rem;
+}
+
+.fee-item p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9375rem;
+}
+
+.fee-item p:last-child {
+  margin-bottom: 0;
+}
+
+.cancellation-fees {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.cancellation-fees p {
+  margin-bottom: 0.5rem;
+  color: #7f1d1d;
+}
+
+.cancellation-fees p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-note {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #246D80;
+  margin-top: 1.5rem;
+}
+
+/* Footer */
 .policies-modal-footer {
-  background-color: white;
-  padding: 1rem 1.5rem;
   border-top: 1px solid #e5e7eb;
-  border-radius: 0 0 8px 8px;
+  padding: 1rem 1.5rem;
   display: flex;
   justify-content: flex-end;
-  flex-shrink: 0;
+  background-color: white;
+  border-radius: 0 0 16px 16px;
 }
 
 .policies-modal-ok {
   background-color: #246D80;
   color: white;
   border: none;
-  padding: 0.75rem 2rem;
+  padding: 0.625rem 1.5rem;
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .policies-modal-ok:hover {
   background-color: #006B6B;
-  transform: scale(1.05);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Scrollbar styling */
+.policies-modal-content::-webkit-scrollbar {
+  width: 8px;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -45%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
+.policies-modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
 }
 
+.policies-modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.policies-modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .policies-modal {
     width: 95%;
-    height: 90vh;
-  }
-  
-  .policies-modal-content {
-    padding: 1.5rem;
-  }
-  
-  .policies-modal-content pre {
-    font-size: 1rem;
+    max-height: 95vh;
   }
   
   .policies-modal-header {
+    padding: 1rem 1rem 0;
+  }
+  
+  .policies-modal-content {
     padding: 1rem;
   }
   
-  .policies-modal-header h2 {
-    font-size: 1.25rem;
+  .header-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .tab-button {
+    font-size: 0.9375rem;
+    padding: 0.875rem;
+  }
+  
+  .cancellation-fees p {
+    font-size: 0.9375rem;
   }
 }
