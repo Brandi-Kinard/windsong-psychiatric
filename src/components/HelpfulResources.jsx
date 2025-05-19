@@ -32,9 +32,10 @@ const HelpfulResources = () => {
           <h1>Helpful resources</h1>
           <p className="page-subtitle">Crisis support and mental health resources available 24/7</p>
         </div>
-        <div className="hero-image">
-          <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/green-robbin-hero.png" alt="Mental health awareness green ribbon" />
-        </div>
+      </div>
+      
+      <div className="hero-image">
+        <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/green-robbin-hero.png" alt="Mental health awareness green ribbon" />
       </div>
 
       <div className="emergency-notice">

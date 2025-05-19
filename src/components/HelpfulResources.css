@@ -1,29 +1,26 @@
 .helpful-resources-page {
   padding-top: 6rem;
-  background-color: #f9fafb;
+  background-color: #ffffff;
   min-height: 100vh;
 }
 
 /* Hero Section */
 .hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4rem 0;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
 .hero-content {
-  flex: 1;
-  padding: 0 2rem;
+  text-align: left;
+  margin-bottom: 4rem;
 }
 
 .hero-content h1 {
   font-size: 3.5rem;
   font-weight: bold;
   color: #000000;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
 }
 
@@ -34,22 +31,23 @@
 }
 
 .hero-image {
-  flex: 1;
-  padding: 0 2rem;
   text-align: center;
+  margin: 0 auto 4rem;
+  max-width: 1400px;
+  padding: 0 2rem;
 }
 
 .hero-image img {
   max-width: 100%;
   height: auto;
-  max-height: 400px;
+  max-height: 600px;
   object-fit: contain;
 }
 
 /* Emergency Notice */
 .emergency-notice {
-  max-width: 1200px;
-  margin: 0 auto 3rem;
+  max-width: 1400px;
+  margin: 0 auto 4rem;
   padding: 1.5rem 2rem;
   background-color: #fef2f2;
   border: 1px solid #fecaca;
@@ -70,74 +68,79 @@
 /* Resources Section */
 .resources-section {
   background-color: #ffffff;
-  padding: 4rem 0;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .section-title {
-  text-align: center;
   font-size: 2rem;
   color: #1f2937;
   margin-bottom: 3rem;
   font-weight: 600;
+  text-align: left;
 }
 
 .resources-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .resource-card {
-  background-color: #246D80;
-  border-radius: 16px;
-  padding: 2.5rem;
-  text-align: center;
-  color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  padding: 2.5rem 2rem;
+  background-color: #EDF6F9;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  max-width: 380px;
+  margin: 0 auto;
+  width: 100%;
+  transition: transform 0.2s ease;
 }
 
 .resource-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(36, 109, 128, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .resource-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  color: #1f2937;
   margin-bottom: 1.5rem;
-  color: white;
+  text-align: center;
 }
 
 .resource-number {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: white;
+  color: #246D80;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .resource-number:hover {
-  opacity: 0.8;
+  color: #006B6B;
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .resources-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .resource-card {
+    max-width: 360px;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem 0;
-  }
-  
   .hero-content h1 {
     font-size: 2.5rem;
   }
@@ -146,28 +149,42 @@
     font-size: 1.25rem;
   }
   
-  .hero-image {
-    margin-top: 2rem;
+  .hero-image img {
+    max-height: 300px;
   }
   
   .resources-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+  }
+  
+  .resource-card {
+    max-width: 400px;
   }
   
   .section-title {
     font-size: 1.5rem;
   }
+}
+
+@media (max-width: 480px) {
+  .helpful-resources-page {
+    padding-top: 5rem;
+  }
+  
+  .hero-section {
+    padding: 2rem 1rem;
+  }
   
   .resource-card {
-    padding: 2rem;
+    min-height: 200px;
+    padding: 2rem 1.5rem;
   }
   
   .resource-title {
-    font-size: 1.125rem;
+    font-size: 1.35rem;
   }
   
   .resource-number {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 }
