@@ -9,7 +9,8 @@ const Navbar = () => {
   const navLinks = [
     { to: '/', text: 'Home' },
     { to: '/meet-felicia-davis', text: 'About' },
-    { to: '/services', text: 'Services' }
+    { to: '/services', text: 'Services' },
+    { to: '/patient-forms', text: 'Patient forms' }
   ];
 
   const isActive = (to) => {

@@ -41,6 +41,7 @@ const Footer = () => {
                 )}
               </li>
               <li><Link to="/helpful-resources">Helpful resources</Link></li>
+              <li><Link to="/patient-forms">Patient forms</Link></li>
               <li><a href="https://patientonlineportal.com/" target="_blank" rel="noopener noreferrer">Patient portal</a></li>
             </ul>
           </div>

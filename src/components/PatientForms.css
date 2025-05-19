@@ -1,0 +1,127 @@
+.patient-forms-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 6rem 1.5rem 4rem;
+  position: relative;
+}
+
+.patient-forms-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.patient-forms-page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.forms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.form-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.form-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: #246D80;
+}
+
+.form-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-button {
+  display: inline-block;
+  background-color: #246D80;
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.form-button:hover {
+  background-color: #006B6B;
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #10b981;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.success-toast {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    top: 4rem;
+    opacity: 0;
+  }
+  to {
+    top: 6rem;
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .patient-forms-page {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .patient-forms-page h1 {
+    font-size: 2rem;
+  }
+
+  .forms-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-card {
+    padding: 1.5rem;
+  }
+
+  .form-card h3 {
+    font-size: 1.125rem;
+  }
+}

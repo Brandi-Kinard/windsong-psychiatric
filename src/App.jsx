@@ -17,6 +17,8 @@ import NewPatientForm from './components/NewPatientForm';
 import HelpfulResources from './components/HelpfulResources';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
+import PatientForms from './components/PatientForms';
+import PatientReferralForm from './components/PatientReferralForm';
 import ScrollToTop from './components/ScrollToTop';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -66,6 +68,8 @@ function App() {
           <Route path="/helpful-resources" element={<HelpfulResources />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/patient-forms" element={<PatientForms />} />
+          <Route path="/patient-referral" element={<PatientReferralForm />} />
         </Routes>
         <Footer />
         <FixedButtons />
