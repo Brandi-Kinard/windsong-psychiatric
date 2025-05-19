@@ -88,17 +88,17 @@ const Contact = () => {
             
             <div className="info-item">
               <h3><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/phone.png" alt="Phone" /> Phone</h3>
-              <p>(305) 555-0123</p>
+              <p>980-585-2019</p>
             </div>
             
             <div className="info-item">
               <h3>Email</h3>
-              <p>contact@windsongpsychiatric.com</p>
+              <p>info@windsongpsychiatric.com</p>
             </div>
             
             <div className="info-item">
               <h3><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/hours.png" alt="Clock" /> Hours</h3>
-              <p>Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 3:00 PM<br />Sunday: Closed</p>
+              <p>Monday–Thursday: 8:30 AM – 6:00 PM<br />Friday: 8:30 AM – 12:00 PM<br />Saturday & Sunday: Closed</p>
             </div>
           </div>
         </div>

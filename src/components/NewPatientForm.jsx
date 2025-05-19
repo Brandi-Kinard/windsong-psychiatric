@@ -94,7 +94,7 @@ const NewPatientForm = () => {
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
   // Production mode - emails go to the business email
-  const RECIPIENT_EMAIL = 'brandiellenkinard@gmail.com';
+  const RECIPIENT_EMAIL = 'info@windsongpsychiatric.com';
 
   const handleSubmit = async () => {
     if (!validateStep()) return;

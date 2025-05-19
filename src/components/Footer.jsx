@@ -22,7 +22,7 @@ const Footer = () => {
                 <a href="tel:9805852019">(980) 585-2019</a>
               </li>
               <li>
-                <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a>
+                <a href="mailto:info@windsongpsychiatric.com">info@windsongpsychiatric.com</a>
               </li>
               <li>Serving NC & SC</li>
             </ul>
@@ -48,9 +48,9 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-heading">Hours</h4>
             <ul className="footer-list">
-              <li>Monday - Friday: 9:00 AM - 5:00 PM</li>
-              <li>Saturday: By Appointment</li>
-              <li>Sunday: Closed</li>
+              <li>Monday–Thursday: 8:30 AM – 6:00 PM</li>
+              <li>Friday: 8:30 AM – 12:00 PM</li>
+              <li>Saturday & Sunday: Closed</li>
               <li>Virtual appointments available</li>
             </ul>
           </div>
