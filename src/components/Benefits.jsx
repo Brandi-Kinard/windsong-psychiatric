@@ -14,7 +14,7 @@ const Benefits = () => {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Experienced%20provider.png',
       iconAlt: 'Stethoscope icon',
       title: 'Experienced provider',
-      description: 'A board-certified psychiatric provider with decades of experience in mental health care.'
+      description: 'A board-certified psychiatric provider with over a decade of experience in mental health care.'
     },
     {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Whole-person%20approach.png',
