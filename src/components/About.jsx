@@ -9,45 +9,25 @@ const About = () => {
         
         <div className="about-content">
           <div className="about-text">
-            <p className="about-greeting">Hello, my name is Felicia Davis.</p>
-            
             <p>
-              I am a board-certified nurse practitioner in both Family Medicine and Psychiatric Mental Health. 
-              While my clinical background includes experience in both fields, I have focused exclusively on 
-              psychiatry since 2015. My areas of expertise include the care of individuals with persistent 
-              mental illness, acute psychiatric stabilization, and addiction medicine.
+              As a board-certified nurse practitioner in both family and psychiatric medicine, Felicia Davis brings a rare depth of training and heart to every patient interaction. While her clinical experience spans family practice, her true passion lies in psychiatry—particularly in supporting individuals living with chronic mental illness, providing crisis stabilization, and guiding recovery from addiction.
             </p>
             
             <p>
-              Over the years, I've had the privilege of working across a variety of settings—including 
-              inpatient forensic psychiatry, community mental health clinics, outpatient care, and 
-              hospital-based psychiatric consultation. I currently provide psychiatric support in acute 
-              and emergency settings, including consultation to medically hospitalized patients.
+              Over the past decade, Felicia has served patients across a wide range of settings—including inpatient forensic psychiatry, community mental health centers, outpatient clinics, and emergency departments. Today, she provides emergency psychiatric evaluations and consultations to hospitalized patients, working at the intersection of physical and mental health.
             </p>
             
             <p>
-              My educational journey reflects a deep commitment to service and growth. I earned a Bachelor 
-              of Arts in Sociology and Criminal Justice from Norfolk State University, followed by an 
-              Associate's Degree from Queens University and a Bachelor of Science in Nursing from 
-              Winston-Salem State University. To advance my career, I completed a Master of Science in 
-              Nursing at Winston-Salem State, and later obtained a Post-Master's Certificate in Psychiatric 
-              Mental Health Nursing from Husson University.
+              Felicia's educational journey reflects her deep commitment to lifelong learning and care excellence. She holds a Bachelor of Arts in Sociology and Criminal Justice from Norfolk State University, an Associate's degree from Queens University, and a Bachelor of Science in Nursing from Winston-Salem State University. She later completed a Master of Science in Nursing at Winston-Salem State and earned a Post-Master's Certificate in Psychiatric Mental Health Nursing from Husson University.
             </p>
             
             <p>
-              Providing psychiatric care is not just my profession—it is my calling. I'm passionate about 
-              supporting individuals on their path to healing and mental wellness. The mission behind 
-              Windsong Family Psychiatric Associates is rooted in a commitment to compassionate care, 
-              reducing disparities in treatment access, and promoting mental health awareness in the 
-              communities we serve.
+              Felicia founded Windsong Family and Psychiatric Associates with a simple but powerful mission: to expand access to compassionate, evidence-based care—especially for those who've historically been underserved or overlooked. Her work is guided by the belief that every person deserves dignity, hope, and the opportunity to heal.
             </p>
             
             <p>
-              At the heart of our practice are three core values: restoring hope, upholding respect, 
-              and empowering individuals.
+              "All To Thee I Owe" is more than a phrase for Felicia—it's a personal expression of gratitude, purpose, and service that continues to shape how she shows up for her patients each day.
             </p>
-            
-            <p className="about-quote">"All to Thee I Owe."</p>
           </div>
           
           <div className="about-image">
