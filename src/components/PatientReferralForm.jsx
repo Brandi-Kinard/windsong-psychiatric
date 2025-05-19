@@ -28,7 +28,7 @@ const PatientReferralForm = () => {
   });
 
   // EmailJS configuration
-  const EMAILJS_SERVICE_ID = 'service_p61h5be';
+  const EMAILJS_SERVICE_ID = 'service_idvcxum';
   const EMAILJS_TEMPLATE_ID = 'template_uw8p9tg'; // Patient referral template
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
