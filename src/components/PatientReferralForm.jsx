@@ -110,6 +110,7 @@ const PatientReferralForm = () => {
                 <input
                   type="text"
                   id="lastName"
+                  placeholder="Smith"
                   value={formData.lastName}
                   onChange={(e) => handleInputChange('lastName', e.target.value)}
                   required
@@ -120,6 +121,7 @@ const PatientReferralForm = () => {
                 <input
                   type="text"
                   id="firstName"
+                  placeholder="John"
                   value={formData.firstName}
                   onChange={(e) => handleInputChange('firstName', e.target.value)}
                   required
@@ -132,6 +134,7 @@ const PatientReferralForm = () => {
               <input
                 type="tel"
                 id="phone"
+                placeholder="(555) 123-4567"
                 value={formData.phone}
                 onChange={(e) => handleInputChange('phone', e.target.value)}
                 required
@@ -143,6 +146,7 @@ const PatientReferralForm = () => {
               <input
                 type="text"
                 id="address"
+                placeholder="123 Main St, City, State 12345"
                 value={formData.address}
                 onChange={(e) => handleInputChange('address', e.target.value)}
                 required
@@ -154,6 +158,7 @@ const PatientReferralForm = () => {
               <input
                 type="email"
                 id="email"
+                placeholder="john.smith@email.com"
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 required
@@ -166,6 +171,7 @@ const PatientReferralForm = () => {
                 <input
                   type="text"
                   id="race"
+                  placeholder="e.g., Caucasian, African American"
                   value={formData.race}
                   onChange={(e) => handleInputChange('race', e.target.value)}
                   required
@@ -193,6 +199,7 @@ const PatientReferralForm = () => {
               <input
                 type="date"
                 id="dateOfBirth"
+                placeholder="MM/DD/YYYY"
                 value={formData.dateOfBirth}
                 onChange={(e) => handleInputChange('dateOfBirth', e.target.value)}
                 required
@@ -208,6 +215,7 @@ const PatientReferralForm = () => {
               <input
                 type="text"
                 id="privateInsurance"
+                placeholder="Provider name & ID# (or type N/A)"
                 value={formData.privateInsurance}
                 onChange={(e) => handleInputChange('privateInsurance', e.target.value)}
                 required
@@ -220,6 +228,7 @@ const PatientReferralForm = () => {
                 <input
                   type="text"
                   id="medicare"
+                  placeholder="Medicare # or N/A"
                   value={formData.medicare}
                   onChange={(e) => handleInputChange('medicare', e.target.value)}
                   required
@@ -230,6 +239,7 @@ const PatientReferralForm = () => {
                 <input
                   type="text"
                   id="medicaid"
+                  placeholder="Medicaid # or N/A"
                   value={formData.medicaid}
                   onChange={(e) => handleInputChange('medicaid', e.target.value)}
                   required
@@ -246,6 +256,7 @@ const PatientReferralForm = () => {
               <input
                 type="text"
                 id="referralSource"
+                placeholder="Dr. Jane Doe - (555) 987-6543"
                 value={formData.referralSource}
                 onChange={(e) => handleInputChange('referralSource', e.target.value)}
               />
@@ -255,6 +266,7 @@ const PatientReferralForm = () => {
               <label htmlFor="symptoms">Symptoms</label>
               <textarea
                 id="symptoms"
+                placeholder="Describe current symptoms or concerns"
                 value={formData.symptoms}
                 onChange={(e) => handleInputChange('symptoms', e.target.value)}
                 rows="3"
@@ -265,6 +277,7 @@ const PatientReferralForm = () => {
               <label htmlFor="servicesRequesting">Services requesting</label>
               <textarea
                 id="servicesRequesting"
+                placeholder="e.g., Psychiatric evaluation, medication management"
                 value={formData.servicesRequesting}
                 onChange={(e) => handleInputChange('servicesRequesting', e.target.value)}
                 rows="3"
@@ -280,6 +293,7 @@ const PatientReferralForm = () => {
               <input
                 type="text"
                 id="currentTreatmentProvider"
+                placeholder="Provider name & contact (or leave blank)"
                 value={formData.currentTreatmentProvider}
                 onChange={(e) => handleInputChange('currentTreatmentProvider', e.target.value)}
               />
@@ -289,6 +303,7 @@ const PatientReferralForm = () => {
               <label htmlFor="mentalHealthDiagnosis">Mental health diagnosis</label>
               <textarea
                 id="mentalHealthDiagnosis"
+                placeholder="Previous or current diagnoses"
                 value={formData.mentalHealthDiagnosis}
                 onChange={(e) => handleInputChange('mentalHealthDiagnosis', e.target.value)}
                 rows="3"
@@ -299,6 +314,7 @@ const PatientReferralForm = () => {
               <label htmlFor="substanceUse">Substance use</label>
               <textarea
                 id="substanceUse"
+                placeholder="Current or past substance use history"
                 value={formData.substanceUse}
                 onChange={(e) => handleInputChange('substanceUse', e.target.value)}
                 rows="3"
@@ -309,6 +325,7 @@ const PatientReferralForm = () => {
               <label htmlFor="specialNeeds">MR/developmental disabilities/special needs</label>
               <textarea
                 id="specialNeeds"
+                placeholder="Any accommodations or special needs"
                 value={formData.specialNeeds}
                 onChange={(e) => handleInputChange('specialNeeds', e.target.value)}
                 rows="3"
