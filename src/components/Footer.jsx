@@ -59,7 +59,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>Copyright &copy; {currentYear} Windsong Family & Psychiatric Associates, PLLC</p>
           <div className="footer-bottom-links">
-            <a href="/privacy">Privacy policy</a>
+            <Link to="/privacy">Privacy policy</Link>
             <span className="footer-divider">|</span>
             <a href="/terms">Terms of service</a>
           </div>
