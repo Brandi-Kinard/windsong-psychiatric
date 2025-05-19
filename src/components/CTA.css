@@ -105,13 +105,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 320px;
+  min-height: 500px;
 }
 
 .tree-animation {
   width: 100%;
-  max-width: 500px;
-  height: 300px;
+  max-width: 700px;
+  height: 450px;
   opacity: 0.8;
   object-fit: contain;
   border-radius: 8px;
@@ -146,6 +146,7 @@
   }
   
   .tree-animation {
-    max-width: 350px;
+    max-width: 450px;
+    height: 350px;
   }
 }
