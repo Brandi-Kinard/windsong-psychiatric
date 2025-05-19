@@ -6,7 +6,7 @@ const TermsOfService = () => {
   return (
     <div className="terms-of-service-page">
       <div className="terms-container">
-        <h1>Terms of Service</h1>
+        <h1>Terms of service</h1>
         
         <p><strong>Last updated: May 18, 2025</strong></p>
         
