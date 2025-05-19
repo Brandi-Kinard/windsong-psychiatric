@@ -93,8 +93,8 @@ const NewPatientForm = () => {
   const EMAILJS_TEMPLATE_ID = 'template_xjaha0n';  // Back to main template
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
-  // Production mode - emails go to the business email
-  const RECIPIENT_EMAIL = 'info@windsongpsychiatric.com';
+  // Testing mode - emails go to personal email
+  const RECIPIENT_EMAIL = 'brandiellenkinard@gmail.com';
 
   const handleSubmit = async () => {
     if (!validateStep()) return;
