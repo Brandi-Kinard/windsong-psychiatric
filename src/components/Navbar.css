@@ -27,7 +27,7 @@
   text-decoration: none;
 }
 
-.nav-logo img {
+.nav-logo-lottie {
   height: 70px;
   width: auto;
   opacity: 0.9;
@@ -147,7 +147,7 @@
     display: flex;
   }
   
-  .nav-logo img {
+  .nav-logo-lottie {
     height: 50px;
   }
   

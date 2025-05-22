@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -24,7 +25,12 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/tree-bw.png" alt="Windsong Psychiatric" />
+          <DotLottieReact
+            src="https://lottie.host/19b9ab05-06a8-4f8a-bda3-2ea9c9390a67/kAmZcU6xAF.lottie"
+            loop
+            autoplay
+            className="nav-logo-lottie"
+          />
           <span className="nav-logo-primary">Windsong</span>
           <span className="nav-logo-secondary">Psychiatric Associates</span>
         </Link>
