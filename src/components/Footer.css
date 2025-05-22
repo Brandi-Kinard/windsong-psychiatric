@@ -49,6 +49,7 @@
 .footer-list li {
   margin-bottom: 0.75rem;
   font-size: 1.0625rem;
+  white-space: nowrap;
 }
 
 .footer-list a {
