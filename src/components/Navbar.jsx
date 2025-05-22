@@ -26,7 +26,7 @@ const Navbar = () => {
         <Link to="/" className="nav-logo">
           <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/tree-bw.png" alt="Windsong Psychiatric" />
           <span className="nav-logo-primary">Windsong</span>
-          <span className="nav-logo-secondary">Family & Psychiatric Associates, PLLC</span>
+          <span className="nav-logo-secondary">Psychiatric Associates</span>
         </Link>
         
         <div className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
