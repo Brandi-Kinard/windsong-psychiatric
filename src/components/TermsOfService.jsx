@@ -10,7 +10,7 @@ const TermsOfService = () => {
         
         <p><strong>Last updated: May 18, 2025</strong></p>
         
-        <p>Welcome to the website of <strong>Windsong Family Psychiatric Associates, PLLC</strong>. By accessing or using our website, you agree to the following terms and conditions. If you do not agree with these terms, please do not use the website.</p>
+        <p>Welcome to the website of <strong>Windsong & Family Psychiatric Associates, PLLC</strong>. By accessing or using our website, you agree to the following terms and conditions. If you do not agree with these terms, please do not use the website.</p>
         
         <hr />
         
@@ -52,7 +52,7 @@ const TermsOfService = () => {
         
         <h3>7. Intellectual Property</h3>
         
-        <p>All text, logos, graphics, and media are the property of <strong>Windsong Family Psychiatric Associates, PLLC</strong> unless otherwise noted. Unauthorized use or reproduction is prohibited.</p>
+        <p>All text, logos, graphics, and media are the property of <strong>Windsong & Family Psychiatric Associates, PLLC</strong> unless otherwise noted. Unauthorized use or reproduction is prohibited.</p>
         
         <hr />
         
@@ -70,7 +70,7 @@ const TermsOfService = () => {
         
         <p>If you have questions about these Terms, please contact us at:</p>
         
-        <p>📧 <a href="mailto:info@windsongpsychiatric.com">info@windsongpsychiatric.com</a></p>
+        <p>📧 <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a></p>
         
         <p>📞 <a href="tel:9805852019">980-585-2019</a></p>
       </div>
