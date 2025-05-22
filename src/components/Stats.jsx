@@ -9,9 +9,9 @@ const Stats = () => {
       description: 'Patients report significant improvement in their mental health symptoms'
     },
     { 
-      image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/patient-satisfied.png',
-      label: 'Patient satisfied',
-      description: 'Our patients rate their care experience as excellent'
+      image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/compassionate-advocacy.png',
+      label: 'Compassionate advocacy',
+      description: 'Patients say they feel seen, heard, and genuinely cared for during their first visit'
     },
     { 
       image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/response-time.png',
