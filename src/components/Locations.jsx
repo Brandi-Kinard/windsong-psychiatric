@@ -105,7 +105,6 @@ const Locations = () => {
                   </div>
                   
                   <div className="location-fax">
-                    <span className="location-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/fax.png" alt="Fax" /></span>
                     <span>Fax: {location.fax}</span>
                   </div>
                   
