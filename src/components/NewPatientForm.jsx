@@ -40,10 +40,7 @@ const NewPatientForm = () => {
 
   const timeSlots = [
     'Morning (8AM - 12PM)',
-    'Afternoon (12PM - 5PM)',
-    'Evening (5PM - 8PM)',
-    'Weekdays',
-    'Weekends'
+    'Afternoon (12PM - 5PM)'
   ];
 
   const handleNext = () => {
