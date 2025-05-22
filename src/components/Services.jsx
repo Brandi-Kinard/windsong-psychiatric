@@ -39,7 +39,7 @@ const Services = () => {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/prevention%20and%20wellness.png',
       iconAlt: 'Prevention and wellness icon',
       title: 'Prevention & wellness',
-      description: 'Proactive mental health strategies and wellness programs to maintain optimal psychological well-being'
+      description: 'Patient advocate, proactive mental health strategies, and wellness programs to maintain optimal psychological well-being'
     }
   ];
 
