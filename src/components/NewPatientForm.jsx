@@ -7,6 +7,7 @@ const NewPatientForm = () => {
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     seekingCareFor: '',
     supportType: [],
@@ -77,6 +78,10 @@ const NewPatientForm = () => {
 
   const handleInputChange = (field, value) => {
     setFormData({ ...formData, [field]: value });
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors({ ...errors, [field]: false });
+    }
   };
 
   const handleMultiSelect = (field, value) => {
@@ -89,24 +94,60 @@ const NewPatientForm = () => {
   };
 
   const validateStep = () => {
+    const newErrors = {};
+    let isValid = true;
+
     switch (currentStep) {
       case 1:
-        return formData.seekingCareFor !== '';
+        if (!formData.seekingCareFor) {
+          newErrors.seekingCareFor = true;
+          isValid = false;
+        }
+        break;
       case 2:
-        return formData.supportType.length > 0;
+        if (formData.supportType.length === 0) {
+          newErrors.supportType = true;
+          isValid = false;
+        }
+        break;
       case 3:
-        return formData.previousCare !== '';
+        if (!formData.previousCare) {
+          newErrors.previousCare = true;
+          isValid = false;
+        }
+        break;
       case 4:
-        return formData.appointmentType !== '';
+        if (!formData.appointmentType) {
+          newErrors.appointmentType = true;
+          isValid = false;
+        }
+        break;
       case 5:
-        return formData.availability.length > 0;
+        if (formData.availability.length === 0) {
+          newErrors.availability = true;
+          isValid = false;
+        }
+        break;
       case 6:
-        return formData.name && formData.email && formData.phone && formData.preferredContact && 
-               formData.dateOfBirth && formData.address && formData.city && formData.state && 
-               formData.zipCode && formData.insuranceProvider;
+        if (!formData.name) { newErrors.name = true; isValid = false; }
+        if (!formData.email) { newErrors.email = true; isValid = false; }
+        if (!formData.phone) { newErrors.phone = true; isValid = false; }
+        if (!formData.preferredContact) { newErrors.preferredContact = true; isValid = false; }
+        if (!formData.dateOfBirth || formData.dateOfBirth.split('/').some(part => !part)) { 
+          newErrors.dateOfBirth = true; isValid = false; 
+        }
+        if (!formData.address) { newErrors.address = true; isValid = false; }
+        if (!formData.city) { newErrors.city = true; isValid = false; }
+        if (!formData.state) { newErrors.state = true; isValid = false; }
+        if (!formData.zipCode) { newErrors.zipCode = true; isValid = false; }
+        if (!formData.insuranceProvider) { newErrors.insuranceProvider = true; isValid = false; }
+        break;
       default:
-        return true;
+        break;
     }
+
+    setErrors(newErrors);
+    return isValid;
   };
 
   // EmailJS configuration
@@ -339,6 +380,7 @@ ${formData.notes || 'None'}
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
                     placeholder="Your full name"
+                    className={errors.name ? 'error' : ''}
                     required
                   />
                 </div>
@@ -352,7 +394,7 @@ ${formData.notes || 'None'}
                         const newDate = `${e.target.value}/${parts[1] || ''}/${parts[2] || ''}`;
                         handleInputChange('dateOfBirth', newDate);
                       }}
-                      className="date-select"
+                      className={`date-select ${errors.dateOfBirth ? 'error' : ''}`}
                       required
                     >
                       <option value="">Month</option>
@@ -369,7 +411,7 @@ ${formData.notes || 'None'}
                         const newDate = `${parts[0] || ''}/${e.target.value}/${parts[2] || ''}`;
                         handleInputChange('dateOfBirth', newDate);
                       }}
-                      className="date-select"
+                      className={`date-select ${errors.dateOfBirth ? 'error' : ''}`}
                       required
                     >
                       <option value="">Day</option>
@@ -386,7 +428,7 @@ ${formData.notes || 'None'}
                         const newDate = `${parts[0] || ''}/${parts[1] || ''}/${e.target.value}`;
                         handleInputChange('dateOfBirth', newDate);
                       }}
-                      className="date-select"
+                      className={`date-select ${errors.dateOfBirth ? 'error' : ''}`}
                       required
                     >
                       <option value="">Year</option>
@@ -406,6 +448,7 @@ ${formData.notes || 'None'}
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
                     placeholder="your@email.com"
+                    className={errors.email ? 'error' : ''}
                     required
                   />
                 </div>
@@ -417,6 +460,7 @@ ${formData.notes || 'None'}
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
                     placeholder="(555) 555-5555"
+                    className={errors.phone ? 'error' : ''}
                     required
                   />
                 </div>
@@ -426,6 +470,7 @@ ${formData.notes || 'None'}
                     id="contact-method"
                     value={formData.preferredContact}
                     onChange={(e) => handleInputChange('preferredContact', e.target.value)}
+                    className={errors.preferredContact ? 'error' : ''}
                     required
                   >
                     <option value="">Select one</option>
@@ -442,6 +487,7 @@ ${formData.notes || 'None'}
                     value={formData.address}
                     onChange={(e) => handleInputChange('address', e.target.value)}
                     placeholder="Street address"
+                    className={errors.address ? 'error' : ''}
                     required
                   />
                 </div>
@@ -453,6 +499,7 @@ ${formData.notes || 'None'}
                     value={formData.city}
                     onChange={(e) => handleInputChange('city', e.target.value)}
                     placeholder="City"
+                    className={errors.city ? 'error' : ''}
                     required
                   />
                 </div>
@@ -464,6 +511,7 @@ ${formData.notes || 'None'}
                     value={formData.state}
                     onChange={(e) => handleInputChange('state', e.target.value)}
                     placeholder="State"
+                    className={errors.state ? 'error' : ''}
                     required
                   />
                 </div>
@@ -475,12 +523,13 @@ ${formData.notes || 'None'}
                     value={formData.zipCode}
                     onChange={(e) => handleInputChange('zipCode', e.target.value)}
                     placeholder="ZIP code"
+                    className={errors.zipCode ? 'error' : ''}
                     required
                   />
                 </div>
                 <div className="input-group full-width">
                   <label>Subscriber/Insurance provider *</label>
-                  <div className="insurance-selector">
+                  <div className={`insurance-selector ${errors.insuranceProvider ? 'error' : ''}`}>
                     {insuranceProviders.map(provider => (
                       <div 
                         key={provider.name}
