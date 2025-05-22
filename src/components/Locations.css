@@ -122,6 +122,7 @@
 
 .location-address,
 .location-phone,
+.location-fax,
 .location-hours {
   display: flex;
   gap: 0.75rem;
