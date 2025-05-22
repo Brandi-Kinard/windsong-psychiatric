@@ -30,8 +30,9 @@
 .nav-logo img {
   height: 70px;
   width: auto;
-  opacity: 0.25;
+  opacity: 0.9;
   position: relative;
+  filter: brightness(0) saturate(100%) invert(75%) sepia(15%) saturate(500%) hue-rotate(20deg) brightness(108%) contrast(88%);
 }
 
 .nav-logo-primary {
