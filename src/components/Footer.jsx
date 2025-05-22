@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3 className="footer-logo">Windsong Psychiatric</h3>
+            <h3 className="footer-logo">Windsong Psychiatric Associates</h3>
             <p className="footer-tagline">Compassionate mental health care</p>
           </div>
           
@@ -24,7 +24,7 @@ const Footer = () => {
               <li>
                 <a href="mailto:info@windsongpsychiatric.com">info@windsongpsychiatric.com</a>
               </li>
-              <li>Serving NC & SC</li>
+              <li>Serving NC, SC, GA, VA, MD, DC, FL</li>
             </ul>
           </div>
           
@@ -49,9 +49,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-heading">Hours</h4>
             <ul className="footer-list">
-              <li>Monday–Thursday: 8:30 AM – 6:00 PM</li>
-              <li>Friday: 8:30 AM – 12:00 PM</li>
-              <li>Saturday & Sunday: Closed</li>
+              <li>Monday–Thursday: 8:00 AM – 7:00 PM</li>
+              <li>Friday–Sunday: Closed</li>
               <li>Virtual appointments available</li>
             </ul>
           </div>

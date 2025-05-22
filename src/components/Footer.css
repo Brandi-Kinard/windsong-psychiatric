@@ -21,10 +21,6 @@
   text-align: left;
 }
 
-.footer-section:first-child {
-  text-align: center;
-}
-
 .footer-logo {
   font-size: 1.5rem;
   font-weight: bold;
