@@ -88,12 +88,12 @@ const Contact = () => {
             
             <div className="info-item">
               <h3><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/phone.png" alt="Phone" /> Phone</h3>
-              <p>980-585-2019</p>
+              <p>(980) 585-2019</p>
             </div>
             
             <div className="info-item">
               <h3>Email</h3>
-              <p>info@windsongpsychiatric.com</p>
+              <p>contact@windsongpsychiatric.com</p>
             </div>
             
             <div className="info-item">

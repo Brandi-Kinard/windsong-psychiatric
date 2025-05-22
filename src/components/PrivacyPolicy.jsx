@@ -25,7 +25,7 @@ const PrivacyPolicy = () => {
         <p>This Practice will occasionally update this Privacy Statement to reflect company and customer feedback. We encourage you to periodically review this Privacy Statement to be informed of how this Practice is protecting your information.</p>
 
         <h2>Contact Information</h2>
-        <p>Please contact us by phone at 980-585-2019 or by mail at 9820 Northcross Center Court STE 50 Huntersville, N.C. 28078.</p>
+        <p>Please contact us by phone at (980) 585-2019 or by mail at 9820 Northcross Center Court STE 50 Huntersville, N.C. 28078.</p>
       </div>
     </div>
   );

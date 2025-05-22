@@ -34,7 +34,7 @@ const PoliciesModal = ({ isOpen, onClose }) => {
       
       <h3>Appointment scheduling & cancellations</h3>
       
-      <p>We know life can be unpredictable, and we're here to support you. Appointments can be made by calling our office at 980-585-2019 or through our patient portal. We offer both in-person and telemedicine appointments.</p>
+      <p>We know life can be unpredictable, and we're here to support you. Appointments can be made by calling our office at (980) 585-2019 or through our patient portal. We offer both in-person and telemedicine appointments.</p>
       
       <p>If you need to cancel or reschedule an appointment, please let us know at least 24 hours in advance. This allows us to offer the slot to another client in need.</p>
       
