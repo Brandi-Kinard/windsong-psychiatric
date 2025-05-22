@@ -22,9 +22,9 @@ const Locations = () => {
     {
       name: 'Fort Mill, SC',
       image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/fort-mill.png',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.996578456237!2d-80.94278922424216!3d35.006790772812415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856845575be0347%3A0x2c1e0668d9a69920!2s200%20Tom%20Hall%20St%20%23102%2C%20Fort%20Mill%2C%20SC%2029715!5e0!3m2!1sen!2sus!4v1747537302551!5m2!1sen!2sus',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6535.993138761084!2d-80.940214!3d35.006791!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856845575be0347%3A0x2c1e0668d9a69920!2s200%20Tom%20Hall%20St%20%23102%2C%20Fort%20Mill%2C%20SC%2029715!5e0!3m2!1sen!2sus!4v1747881602394!5m2!1sen!2sus',
       useEmbed: true,
-      address: '200 Tom Hall Street\nSuite 102\nFort Mill, SC 29715',
+      address: '975 Market Street\nSuite 201-F\nFort Mill, SC 29708',
       phone: '(980) 585-2019',
       fax: '(980) 585-2016',
       hours: 'Mon–Thu: 8:00 AM – 7:00 PM\nFri–Sun: Closed',
