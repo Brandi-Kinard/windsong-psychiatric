@@ -4,24 +4,24 @@ import './HelpfulResources.css';
 const HelpfulResources = () => {
   const resources = [
     {
-      title: 'Life-threatening emergency',
+      title: 'Life-Threatening Emergency',
       number: '911',
       isEmergency: true
     },
     {
-      title: 'Mental health emergency hotline',
+      title: 'Mental Health Emergency Hotline',
       number: '988'
     },
     {
-      title: 'National suicide hotline',
+      title: 'National Suicide Hotline',
       number: '1-800-273-TALK (8255)'
     },
     {
-      title: 'National sexual assault hotline',
+      title: 'National Sexual Assault Hotline',
       number: '1-800-656-HOPE (4673)'
     },
     {
-      title: 'National domestic violence hotline',
+      title: 'National Domestic Violence Hotline',
       number: '1-800-799-SAFE (7233)'
     },
     {
@@ -43,7 +43,7 @@ const HelpfulResources = () => {
       </div>
 
       <div className="resources-section">
-        <h2 className="section-title">National Alliance on Mental Illness crisis hotlines</h2>
+        <h2 className="section-title">National Alliance on Mental Illness Crisis Hotlines</h2>
         <div className="resources-grid">
           {resources.map((resource, index) => (
             <div key={index} className={`resource-card ${resource.isEmergency ? 'emergency' : ''}`}>
