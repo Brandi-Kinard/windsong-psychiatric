@@ -14,7 +14,7 @@ const About = () => {
             </p>
             
             <p>
-              Over the past decade, Felicia has served patients across a wide range of settings—including inpatient forensic psychiatry, community mental health centers, outpatient clinics, and emergency departments. Today, she provides emergency psychiatric evaluations and consultations to hospitalized patients, working at the intersection of physical and mental health.
+              Over the past decade, Felicia has provided care to patients in diverse clinical environments, including inpatient forensic psychiatry units, community mental health centers, outpatient clinics, and emergency departments, where she conducted emergency psychiatric assessments and consultations for hospitalized individuals. Currently, she practices in an outpatient setting, managing psychiatric care for patients of all ages, with a particular emphasis on pediatric and geriatric populations.
             </p>
             
             <p>
