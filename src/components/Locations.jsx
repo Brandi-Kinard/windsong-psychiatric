@@ -11,6 +11,7 @@ const Locations = () => {
       useEmbed: true,
       address: '9820 Northcross Center Court\nSuite 50\nHuntersville, NC 28078',
       phone: '(704) 688-4199',
+      fax: '(980) 585-2016',
       hours: 'Mon–Thu: 8:00 AM – 7:00 PM\nFri–Sun: Closed',
       link: 'https://maps.google.com/?q=9820+Northcross+Center+Court+Huntersville+NC+28078',
       linkText: 'Get directions',
@@ -25,6 +26,7 @@ const Locations = () => {
       useEmbed: true,
       address: '200 Tom Hall Street\nSuite 102\nFort Mill, SC 29715',
       phone: '(803) 547-2000',
+      fax: '(980) 585-2016',
       hours: 'Mon–Thu: 8:00 AM – 7:00 PM\nFri–Sun: Closed',
       link: 'https://maps.google.com/?q=200+Tom+Hall+Street+Fort+Mill+SC+29715',
       linkText: 'Get directions',
@@ -37,6 +39,7 @@ const Locations = () => {
       image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/virtual-call.png',
       address: 'Available throughout\nNC, SC, GA, VA, MD, DC, FL',
       phone: '(980) 585-2019',
+      fax: '(980) 585-2016',
       hours: 'Mon–Thu: 8:00 AM – 7:00 PM\nFri–Sun: Closed',
       link: '/virtual-care',
       linkText: 'Learn more',
@@ -99,6 +102,11 @@ const Locations = () => {
                   <div className="location-phone">
                     <span className="location-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/phone.png" alt="Phone" /></span>
                     <a href={`tel:${location.phone.replace(/\D/g, '')}`}>{location.phone}</a>
+                  </div>
+                  
+                  <div className="location-fax">
+                    <span className="location-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/fax.png" alt="Fax" /></span>
+                    <span>Fax: {location.fax}</span>
                   </div>
                   
                   <div className="location-hours">

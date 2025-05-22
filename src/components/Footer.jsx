@@ -24,6 +24,7 @@ const Footer = () => {
               <li>
                 <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a>
               </li>
+              <li>Fax: (980) 585-2016</li>
               <li>Serving NC, SC, GA, VA, MD, DC, FL</li>
             </ul>
           </div>
