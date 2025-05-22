@@ -22,7 +22,7 @@ const Footer = () => {
                 <a href="tel:9805852019">(980) 585-2019</a>
               </li>
               <li>
-                <a href="mailto:info@windsongpsychiatric.com">info@windsongpsychiatric.com</a>
+                <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a>
               </li>
               <li>Serving NC, SC, GA, VA, MD, DC, FL</li>
             </ul>
