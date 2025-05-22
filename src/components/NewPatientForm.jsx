@@ -344,14 +344,59 @@ ${formData.notes || 'None'}
                 </div>
                 <div className="input-group">
                   <label htmlFor="dateOfBirth">Date of birth *</label>
-                  <input
-                    id="dateOfBirth"
-                    type="text"
-                    value={formData.dateOfBirth}
-                    onChange={(e) => handleInputChange('dateOfBirth', e.target.value)}
-                    placeholder="MM/DD/YYYY"
-                    required
-                  />
+                  <div className="date-picker-container">
+                    <select
+                      value={formData.dateOfBirth.split('/')[0] || ''}
+                      onChange={(e) => {
+                        const parts = formData.dateOfBirth.split('/');
+                        const newDate = `${e.target.value}/${parts[1] || ''}/${parts[2] || ''}`;
+                        handleInputChange('dateOfBirth', newDate);
+                      }}
+                      className="date-select"
+                      required
+                    >
+                      <option value="">Month</option>
+                      {Array.from({length: 12}, (_, i) => i + 1).map(month => (
+                        <option key={month} value={month.toString().padStart(2, '0')}>
+                          {new Date(2000, month - 1).toLocaleString('default', { month: 'long' })}
+                        </option>
+                      ))}
+                    </select>
+                    <select
+                      value={formData.dateOfBirth.split('/')[1] || ''}
+                      onChange={(e) => {
+                        const parts = formData.dateOfBirth.split('/');
+                        const newDate = `${parts[0] || ''}/${e.target.value}/${parts[2] || ''}`;
+                        handleInputChange('dateOfBirth', newDate);
+                      }}
+                      className="date-select"
+                      required
+                    >
+                      <option value="">Day</option>
+                      {Array.from({length: 31}, (_, i) => i + 1).map(day => (
+                        <option key={day} value={day.toString().padStart(2, '0')}>
+                          {day}
+                        </option>
+                      ))}
+                    </select>
+                    <select
+                      value={formData.dateOfBirth.split('/')[2] || ''}
+                      onChange={(e) => {
+                        const parts = formData.dateOfBirth.split('/');
+                        const newDate = `${parts[0] || ''}/${parts[1] || ''}/${e.target.value}`;
+                        handleInputChange('dateOfBirth', newDate);
+                      }}
+                      className="date-select"
+                      required
+                    >
+                      <option value="">Year</option>
+                      {Array.from({length: 100}, (_, i) => new Date().getFullYear() - i).map(year => (
+                        <option key={year} value={year}>
+                          {year}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
                 <div className="input-group">
                   <label htmlFor="email">Email *</label>
@@ -429,7 +474,7 @@ ${formData.notes || 'None'}
                     type="text"
                     value={formData.zipCode}
                     onChange={(e) => handleInputChange('zipCode', e.target.value)}
-                    placeholder="ZIP Code"
+                    placeholder="ZIP code"
                     required
                   />
                 </div>

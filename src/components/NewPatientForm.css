@@ -225,6 +225,39 @@
   color: #9ca3af;
 }
 
+/* Date picker styling */
+.date-picker-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.date-select {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+  background-color: white;
+  color: #1f2937;
+}
+
+.date-select:focus {
+  outline: none;
+  border-color: #246D80;
+}
+
+.date-select option[value=""] {
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .date-picker-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
 /* Textarea */
 .notes-textarea {
   width: 100%;
