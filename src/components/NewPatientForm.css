@@ -58,7 +58,8 @@
   background-color: #e5e7eb;
   border-radius: 3px;
   overflow: hidden;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  margin-top: 17px;
 }
 
 .progress-fill {
