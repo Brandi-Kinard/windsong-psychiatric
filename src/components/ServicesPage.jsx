@@ -143,7 +143,6 @@ const ServicesPage = () => {
     features: [
       'In-home visits',
       'Facility visits',
-      '24-hour availability',
       'Dementia care',
       'Medication management',
       'Family support and education',
