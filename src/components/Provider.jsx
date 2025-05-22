@@ -36,12 +36,12 @@ const Provider = () => {
             </Link>
           </div>
           
-          <div className="provider-image">
+          <Link to="/meet-felicia-davis" className="provider-image">
             <div className="image-background"></div>
             <div className="image-placeholder">
               <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/felicia-portrait-illustration.png" alt="Felicia Davis, Psychiatric Provider" />
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

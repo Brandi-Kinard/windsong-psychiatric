@@ -84,6 +84,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.provider-image:hover {
+  transform: scale(1.02);
 }
 
 .image-background {
