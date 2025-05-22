@@ -52,17 +52,17 @@ const NewPatientForm = () => {
   ];
 
   const insuranceProviders = [
-    'Tricare',
-    'Blue Cross Blue Shield', 
-    'Medicaid',
-    'Humana',
-    'United Healthcare',
-    'Medicare',
-    'Cigna',
-    'Aetna',
-    'Partners',
-    'Other',
-    'No Insurance/Self-Pay'
+    { name: 'Tricare', logo: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/tricare.png' },
+    { name: 'Blue Cross Blue Shield', logo: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/blue-cross.png' },
+    { name: 'Medicaid', logo: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/medicaid.png' },
+    { name: 'Humana', logo: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/humana.png' },
+    { name: 'United Healthcare', logo: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/united-healthcare.png' },
+    { name: 'Medicare', logo: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/medicare.png' },
+    { name: 'Cigna', logo: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/cigna.png' },
+    { name: 'Aetna', logo: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/aetna.png' },
+    { name: 'Partners', logo: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/partners.png' },
+    { name: 'Other', logo: null },
+    { name: 'No Insurance/Self-Pay', logo: null }
   ];
 
   const handleNext = () => {
@@ -433,18 +433,23 @@ ${formData.notes || 'None'}
                   />
                 </div>
                 <div className="input-group full-width">
-                  <label htmlFor="insurance">Insurance Provider *</label>
-                  <select
-                    id="insurance"
-                    value={formData.insuranceProvider}
-                    onChange={(e) => handleInputChange('insuranceProvider', e.target.value)}
-                    required
-                  >
-                    <option value="">Select your insurance provider</option>
+                  <label>Insurance Provider *</label>
+                  <div className="insurance-selector">
                     {insuranceProviders.map(provider => (
-                      <option key={provider} value={provider}>{provider}</option>
+                      <div 
+                        key={provider.name}
+                        className={`insurance-option ${formData.insuranceProvider === provider.name ? 'selected' : ''}`}
+                        onClick={() => handleInputChange('insuranceProvider', provider.name)}
+                      >
+                        {provider.logo ? (
+                          <img src={provider.logo} alt={provider.name} className="insurance-logo-small" />
+                        ) : (
+                          <div className="insurance-text-only">{provider.name}</div>
+                        )}
+                        <span className="insurance-name">{provider.name}</span>
+                      </div>
                     ))}
-                  </select>
+                  </div>
                 </div>
                 {formData.insuranceProvider && formData.insuranceProvider !== 'No Insurance/Self-Pay' && (
                   <>
