@@ -237,6 +237,11 @@
   border-color: #246D80;
 }
 
+/* Full width input groups */
+.input-group.full-width {
+  grid-column: 1 / -1;
+}
+
 .notes-textarea::placeholder {
   color: #9ca3af;
 }

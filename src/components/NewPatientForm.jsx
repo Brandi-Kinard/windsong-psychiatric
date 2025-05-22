@@ -18,6 +18,14 @@ const NewPatientForm = () => {
     email: '',
     phone: '',
     preferredContact: '',
+    dateOfBirth: '',
+    address: '',
+    city: '',
+    state: '',
+    zipCode: '',
+    insuranceProvider: '',
+    insuranceId: '',
+    subscriberName: '',
     notes: ''
   });
 
@@ -41,6 +49,20 @@ const NewPatientForm = () => {
   const timeSlots = [
     'Morning (8AM - 12PM)',
     'Afternoon (12PM - 5PM)'
+  ];
+
+  const insuranceProviders = [
+    'Tricare',
+    'Blue Cross Blue Shield', 
+    'Medicaid',
+    'Humana',
+    'United Healthcare',
+    'Medicare',
+    'Cigna',
+    'Aetna',
+    'Partners',
+    'Other',
+    'No Insurance/Self-Pay'
   ];
 
   const handleNext = () => {
@@ -79,7 +101,9 @@ const NewPatientForm = () => {
       case 5:
         return formData.availability.length > 0;
       case 6:
-        return formData.name && formData.email && formData.phone && formData.preferredContact;
+        return formData.name && formData.email && formData.phone && formData.preferredContact && 
+               formData.dateOfBirth && formData.address && formData.city && formData.state && 
+               formData.zipCode && formData.insuranceProvider;
       default:
         return true;
     }
@@ -114,11 +138,21 @@ Preferred appointment type: ${formData.appointmentType}
 Availability:
 ${formData.availability.join(', ')}
 
-Contact Information:
+Personal Information:
 Name: ${formData.name}
+Date of Birth: ${formData.dateOfBirth}
 Email: ${formData.email}
 Phone: ${formData.phone}
 Preferred contact method: ${formData.preferredContact}
+
+Address:
+${formData.address}
+${formData.city}, ${formData.state} ${formData.zipCode}
+
+Insurance Information:
+Provider: ${formData.insuranceProvider}
+${formData.insuranceId ? `Insurance ID: ${formData.insuranceId}` : ''}
+${formData.subscriberName ? `Subscriber: ${formData.subscriberName}` : ''}
 
 Additional notes:
 ${formData.notes || 'None'}
@@ -133,9 +167,17 @@ ${formData.notes || 'None'}
         to_email: RECIPIENT_EMAIL,
         reply_to: formData.email,
         name: formData.name,
+        dateOfBirth: formData.dateOfBirth,
         email: formData.email,
         phone: formData.phone,
         contactMethod: formData.preferredContact,  // camelCase for template
+        address: formData.address,
+        city: formData.city,
+        state: formData.state,
+        zipCode: formData.zipCode,
+        insuranceProvider: formData.insuranceProvider,
+        insuranceId: formData.insuranceId || 'Not provided',
+        subscriberName: formData.subscriberName || 'Not provided',
         seekingCareFor: formData.seekingCareFor,
         supportType: formData.supportType.join(', '),
         primaryConcerns: formData.supportType.join(', '),  // Alternative name
@@ -287,16 +329,26 @@ ${formData.notes || 'None'}
 
           {currentStep === 6 && (
             <div className="form-step">
-              <h2>Let's get your contact information</h2>
+              <h2>Personal & Insurance Information</h2>
               <div className="input-grid">
                 <div className="input-group">
-                  <label htmlFor="name">Name *</label>
+                  <label htmlFor="name">Full Name *</label>
                   <input
                     id="name"
                     type="text"
                     value={formData.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
                     placeholder="Your full name"
+                    required
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="dateOfBirth">Date of Birth *</label>
+                  <input
+                    id="dateOfBirth"
+                    type="date"
+                    value={formData.dateOfBirth}
+                    onChange={(e) => handleInputChange('dateOfBirth', e.target.value)}
                     required
                   />
                 </div>
@@ -323,7 +375,7 @@ ${formData.notes || 'None'}
                   />
                 </div>
                 <div className="input-group">
-                  <label htmlFor="contact-method">Preferred contact method *</label>
+                  <label htmlFor="contact-method">Preferred Contact Method *</label>
                   <select
                     id="contact-method"
                     value={formData.preferredContact}
@@ -336,6 +388,88 @@ ${formData.notes || 'None'}
                     <option value="Text">Text</option>
                   </select>
                 </div>
+                <div className="input-group full-width">
+                  <label htmlFor="address">Address *</label>
+                  <input
+                    id="address"
+                    type="text"
+                    value={formData.address}
+                    onChange={(e) => handleInputChange('address', e.target.value)}
+                    placeholder="Street address"
+                    required
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="city">City *</label>
+                  <input
+                    id="city"
+                    type="text"
+                    value={formData.city}
+                    onChange={(e) => handleInputChange('city', e.target.value)}
+                    placeholder="City"
+                    required
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="state">State *</label>
+                  <input
+                    id="state"
+                    type="text"
+                    value={formData.state}
+                    onChange={(e) => handleInputChange('state', e.target.value)}
+                    placeholder="State"
+                    required
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="zipCode">ZIP Code *</label>
+                  <input
+                    id="zipCode"
+                    type="text"
+                    value={formData.zipCode}
+                    onChange={(e) => handleInputChange('zipCode', e.target.value)}
+                    placeholder="ZIP Code"
+                    required
+                  />
+                </div>
+                <div className="input-group full-width">
+                  <label htmlFor="insurance">Insurance Provider *</label>
+                  <select
+                    id="insurance"
+                    value={formData.insuranceProvider}
+                    onChange={(e) => handleInputChange('insuranceProvider', e.target.value)}
+                    required
+                  >
+                    <option value="">Select your insurance provider</option>
+                    {insuranceProviders.map(provider => (
+                      <option key={provider} value={provider}>{provider}</option>
+                    ))}
+                  </select>
+                </div>
+                {formData.insuranceProvider && formData.insuranceProvider !== 'No Insurance/Self-Pay' && (
+                  <>
+                    <div className="input-group">
+                      <label htmlFor="insuranceId">Insurance ID/Member ID</label>
+                      <input
+                        id="insuranceId"
+                        type="text"
+                        value={formData.insuranceId}
+                        onChange={(e) => handleInputChange('insuranceId', e.target.value)}
+                        placeholder="Insurance ID number"
+                      />
+                    </div>
+                    <div className="input-group">
+                      <label htmlFor="subscriberName">Subscriber Name</label>
+                      <input
+                        id="subscriberName"
+                        type="text"
+                        value={formData.subscriberName}
+                        onChange={(e) => handleInputChange('subscriberName', e.target.value)}
+                        placeholder="Name of insurance subscriber"
+                      />
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           )}
