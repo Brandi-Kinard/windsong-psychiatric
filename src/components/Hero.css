@@ -1,8 +1,8 @@
 /* Hero section styles */
 .hero {
-  margin-top: 80px;
+  margin-top: 140px;
   background: #ffffff;
-  padding: 6rem 2rem 4rem;
+  padding: 8rem 2rem 4rem;
   min-height: 100vh;
   overflow: hidden;
 }
