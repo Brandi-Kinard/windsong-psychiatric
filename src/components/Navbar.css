@@ -12,11 +12,11 @@
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 100px;
+  align-items: flex-end;
+  height: 140px;
 }
 
 .nav-logo {
@@ -64,7 +64,8 @@
 .nav-links {
   display: flex;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 0.5rem;
 }
 
 .nav-link {
@@ -170,7 +171,7 @@
   
   .nav-links {
     position: fixed;
-    top: 100px;
+    top: 140px;
     left: -100%;
     width: 100%;
     background-color: #ffffff;
