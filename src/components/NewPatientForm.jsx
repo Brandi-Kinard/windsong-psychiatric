@@ -24,8 +24,8 @@ const NewPatientForm = () => {
     state: '',
     zipCode: '',
     insuranceProvider: '',
-    insuranceId: '',
-    subscriberName: '',
+    otherInsurance: '',
+    subscriberId: '',
     notes: ''
   });
 
@@ -151,8 +151,8 @@ ${formData.city}, ${formData.state} ${formData.zipCode}
 
 Insurance Information:
 Provider: ${formData.insuranceProvider}
-${formData.insuranceId ? `Insurance ID: ${formData.insuranceId}` : ''}
-${formData.subscriberName ? `Subscriber: ${formData.subscriberName}` : ''}
+${formData.otherInsurance ? `Other Provider: ${formData.otherInsurance}` : ''}
+${formData.subscriberId ? `Subscriber ID: ${formData.subscriberId}` : ''}
 
 Additional notes:
 ${formData.notes || 'None'}
@@ -176,8 +176,8 @@ ${formData.notes || 'None'}
         state: formData.state,
         zipCode: formData.zipCode,
         insuranceProvider: formData.insuranceProvider,
-        insuranceId: formData.insuranceId || 'Not provided',
-        subscriberName: formData.subscriberName || 'Not provided',
+        otherInsurance: formData.otherInsurance || 'Not provided',
+        subscriberId: formData.subscriberId || 'Not provided',
         seekingCareFor: formData.seekingCareFor,
         supportType: formData.supportType.join(', '),
         primaryConcerns: formData.supportType.join(', '),  // Alternative name
@@ -329,10 +329,10 @@ ${formData.notes || 'None'}
 
           {currentStep === 6 && (
             <div className="form-step">
-              <h2>Personal & Insurance Information</h2>
+              <h2>Personal & insurance information</h2>
               <div className="input-grid">
                 <div className="input-group">
-                  <label htmlFor="name">Full Name *</label>
+                  <label htmlFor="name">Full name *</label>
                   <input
                     id="name"
                     type="text"
@@ -343,12 +343,13 @@ ${formData.notes || 'None'}
                   />
                 </div>
                 <div className="input-group">
-                  <label htmlFor="dateOfBirth">Date of Birth *</label>
+                  <label htmlFor="dateOfBirth">Date of birth *</label>
                   <input
                     id="dateOfBirth"
-                    type="date"
+                    type="text"
                     value={formData.dateOfBirth}
                     onChange={(e) => handleInputChange('dateOfBirth', e.target.value)}
+                    placeholder="MM/DD/YYYY"
                     required
                   />
                 </div>
@@ -375,7 +376,7 @@ ${formData.notes || 'None'}
                   />
                 </div>
                 <div className="input-group">
-                  <label htmlFor="contact-method">Preferred Contact Method *</label>
+                  <label htmlFor="contact-method">Preferred contact method *</label>
                   <select
                     id="contact-method"
                     value={formData.preferredContact}
@@ -422,7 +423,7 @@ ${formData.notes || 'None'}
                   />
                 </div>
                 <div className="input-group">
-                  <label htmlFor="zipCode">ZIP Code *</label>
+                  <label htmlFor="zipCode">ZIP code *</label>
                   <input
                     id="zipCode"
                     type="text"
@@ -433,7 +434,7 @@ ${formData.notes || 'None'}
                   />
                 </div>
                 <div className="input-group full-width">
-                  <label>Insurance Provider *</label>
+                  <label>Subscriber/Insurance provider *</label>
                   <div className="insurance-selector">
                     {insuranceProviders.map(provider => (
                       <div 
@@ -441,39 +442,37 @@ ${formData.notes || 'None'}
                         className={`insurance-option ${formData.insuranceProvider === provider.name ? 'selected' : ''}`}
                         onClick={() => handleInputChange('insuranceProvider', provider.name)}
                       >
-                        {provider.logo ? (
+                        {provider.logo && (
                           <img src={provider.logo} alt={provider.name} className="insurance-logo-small" />
-                        ) : (
-                          <div className="insurance-text-only">{provider.name}</div>
                         )}
                         <span className="insurance-name">{provider.name}</span>
                       </div>
                     ))}
                   </div>
                 </div>
+                {formData.insuranceProvider === 'Other' && (
+                  <div className="input-group full-width">
+                    <label htmlFor="otherInsurance">Please specify insurance provider</label>
+                    <input
+                      id="otherInsurance"
+                      type="text"
+                      value={formData.otherInsurance}
+                      onChange={(e) => handleInputChange('otherInsurance', e.target.value)}
+                      placeholder="Enter your insurance provider name"
+                    />
+                  </div>
+                )}
                 {formData.insuranceProvider && formData.insuranceProvider !== 'No Insurance/Self-Pay' && (
-                  <>
-                    <div className="input-group">
-                      <label htmlFor="insuranceId">Insurance ID/Member ID</label>
-                      <input
-                        id="insuranceId"
-                        type="text"
-                        value={formData.insuranceId}
-                        onChange={(e) => handleInputChange('insuranceId', e.target.value)}
-                        placeholder="Insurance ID number"
-                      />
-                    </div>
-                    <div className="input-group">
-                      <label htmlFor="subscriberName">Subscriber Name</label>
-                      <input
-                        id="subscriberName"
-                        type="text"
-                        value={formData.subscriberName}
-                        onChange={(e) => handleInputChange('subscriberName', e.target.value)}
-                        placeholder="Name of insurance subscriber"
-                      />
-                    </div>
-                  </>
+                  <div className="input-group">
+                    <label htmlFor="subscriberId">Subscriber ID</label>
+                    <input
+                      id="subscriberId"
+                      type="text"
+                      value={formData.subscriberId}
+                      onChange={(e) => handleInputChange('subscriberId', e.target.value)}
+                      placeholder="Subscriber ID"
+                    />
+                  </div>
                 )}
               </div>
             </div>
