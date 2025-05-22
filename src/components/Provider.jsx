@@ -39,7 +39,7 @@ const Provider = () => {
           <div className="provider-image">
             <div className="image-background"></div>
             <div className="image-placeholder">
-              <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/felicia-davis.avif" alt="Felicia Davis, Psychiatric Provider" />
+              <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/felicia-portrait-illustration.png" alt="Felicia Davis, Psychiatric Provider" />
             </div>
           </div>
         </div>
