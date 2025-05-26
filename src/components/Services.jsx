@@ -8,13 +8,13 @@ const Services = () => {
     {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Psychiatric%20evaluations.png',
       iconAlt: 'Psychiatric evaluations icon',
-      title: 'Psychiatric evaluations',
+      title: 'Psychiatric Evaluations',
       description: 'Comprehensive assessments to understand your mental health needs and create personalized treatment plans'
     },
     {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Medication%20management.png',
       iconAlt: 'Medication management icon',
-      title: 'Medication management',
+      title: 'Medication Management',
       description: 'Expert psychiatric medication evaluation, prescribing, and ongoing monitoring for optimal results'
     },
     {
@@ -26,7 +26,7 @@ const Services = () => {
     {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Specialized%20care.png',
       iconAlt: 'Specialized care icon',
-      title: 'Specialized care',
+      title: 'Specialized Care',
       description: 'Focused treatment for anxiety, depression, ADHD, trauma, and other mental health conditions'
     },
     {
@@ -46,7 +46,7 @@ const Services = () => {
   return (
     <section className="services" id="services">
       <div className="services-container">
-        <h2 className="services-title">Our services</h2>
+        <h2 className="services-title">Our Services</h2>
         <div className="services-grid">
           {services.map((service, index) => (
             <div key={index} className="service-card">

@@ -8,7 +8,7 @@ const Provider = () => {
       <div className="provider-container">
         <div className="provider-content">
           <div className="provider-info">
-            <h2 className="provider-title">A provider who gets you</h2>
+            <h2 className="provider-title">A Provider Who Gets You</h2>
             
             <ul className="provider-features">
               <li className="provider-feature">
