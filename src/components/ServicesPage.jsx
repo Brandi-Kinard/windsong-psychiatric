@@ -158,7 +158,7 @@ const ServicesPage = () => {
         <div className="services-hero-content">
           <h1 className="services-hero-title">Our Services</h1>
           <p className="services-hero-subtitle">
-            At Windsong Family Psychiatric Associates, we provide evidence-based mental health 
+            At Windsong Psychiatric Associates, we provide evidence-based mental health 
             treatment in a warm, supportive environment. Our services address a wide range of 
             psychiatric conditions, with treatment plans customized to each individual's needs.
           </p>
