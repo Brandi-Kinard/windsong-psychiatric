@@ -225,6 +225,15 @@
   color: #9ca3af;
 }
 
+/* Ensure select displays gray text when no value is selected */
+.input-group select:invalid {
+  color: #9ca3af;
+}
+
+.input-group select:valid {
+  color: #1f2937;
+}
+
 /* Date picker styling */
 .date-picker-container {
   display: flex;

@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="hero" id="home">
       <div className="hero-container">
         <div className="hero-content">
-          <h1 className="hero-title">Compassionate mental health care</h1>
+          <h1 className="hero-title">Compassionate Mental Health Care</h1>
           <p className="hero-subtitle">Windsong Psychiatric Associates is here to support your mental wellness journey</p>
           <div className="hero-cta-wrapper">
             <Link to="/new-patient" className="hero-cta">
