@@ -215,6 +215,21 @@
   border-color: #246D80;
 }
 
+/* Error states */
+.input-group input.error,
+.input-group select.error,
+.date-select.error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 1px #dc2626;
+}
+
+.input-group input.error:focus,
+.input-group select.error:focus,
+.date-select.error:focus {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+}
+
 .input-group input::placeholder,
 .input-group select::placeholder {
   color: #9ca3af;
@@ -257,6 +272,11 @@
 }
 
 .date-select option[value=""] {
+  color: #9ca3af;
+}
+
+.date-select:invalid,
+.date-select[value=""] {
   color: #9ca3af;
 }
 
@@ -351,6 +371,15 @@
 .insurance-option.selected .insurance-name {
   color: #246D80;
   font-weight: 600;
+}
+
+/* Error state for insurance selector */
+.insurance-selector.error .insurance-option {
+  border-color: #dc2626;
+}
+
+.insurance-selector.error .insurance-option.selected {
+  border-color: #246D80;
 }
 
 @media (max-width: 768px) {
