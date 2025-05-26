@@ -8,7 +8,7 @@ const ServicesPage = () => {
       title: 'Psychiatric Evaluations',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Psychiatric%20evaluations.png',
       iconAlt: 'Psychiatric evaluations icon',
-      description: 'Comprehensive assessments and diagnoses',
+      description: 'Comprehensive Assessments and Diagnoses',
       details: [
         'Clinical evaluation and diagnosis',
         'Treatment plan development',
@@ -23,7 +23,7 @@ const ServicesPage = () => {
       title: 'Medication Management',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Medication%20management.png',
       iconAlt: 'Medication management icon',
-      description: 'Expert psychiatric medication treatment',
+      description: 'Expert Psychiatric Medication Treatment',
       details: [
         'Medication selection and titration',
         'Side effect monitoring',
@@ -38,7 +38,7 @@ const ServicesPage = () => {
       title: 'Telemedicine',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Telemedicine.png',
       iconAlt: 'Telemedicine icon',
-      description: 'Convenient virtual mental health care',
+      description: 'Convenient Virtual Mental Health Care',
       details: [
         'Secure video appointments',
         'Flexible scheduling',
@@ -53,7 +53,7 @@ const ServicesPage = () => {
       title: 'Specialized Care',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Specialized%20care.png',
       iconAlt: 'Specialized care icon',
-      description: 'Targeted treatment for specific conditions',
+      description: 'Targeted Treatment for Specific Conditions',
       details: [
         'Evidence-based therapies',
         'Individualized treatment plans',
@@ -68,7 +68,7 @@ const ServicesPage = () => {
       title: 'Injections',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/injection.png',
       iconAlt: 'Injections icon',
-      description: 'Medical injections for psychiatric conditions',
+      description: 'Medical Injections for Psychiatric Conditions',
       details: [
         'Long-acting antipsychotics',
         'Mood stabilizer injections',
@@ -83,7 +83,7 @@ const ServicesPage = () => {
       title: 'Prevention & Wellness',
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/prevention%20and%20wellness.png',
       iconAlt: 'Prevention and wellness icon',
-      description: 'Proactive mental health strategies',
+      description: 'Proactive Mental Health Strategies',
       details: [
         'Stress management techniques',
         'Wellness education',
