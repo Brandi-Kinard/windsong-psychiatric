@@ -11,7 +11,7 @@ const Navbar = () => {
     { to: '/', text: 'Home' },
     { to: '/meet-felicia-davis', text: 'About' },
     { to: '/services', text: 'Services' },
-    { to: '/patient-forms', text: 'Patient forms' }
+    { to: '/patient-forms', text: 'Patient Forms' }
   ];
 
   const isActive = (to) => {

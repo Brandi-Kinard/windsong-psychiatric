@@ -17,7 +17,7 @@ const CTA = () => {
           <div className="cta-option">
             <Link to="/new-patient" className="cta-button cta-button-primary">
               <span className="cta-button-icon"><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Get%20started.png" alt="Sparkles" /></span>
-              Get started
+              Get Started
             </Link>
             <p className="cta-caption">New patients begin here</p>
           </div>

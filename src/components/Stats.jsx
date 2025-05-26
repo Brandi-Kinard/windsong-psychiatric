@@ -5,17 +5,17 @@ const Stats = () => {
   const statsData = [
     { 
       image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/symptom-improvement.png',
-      label: 'Symptom improvement',
+      label: 'Symptom Improvement',
       description: 'Patients report significant improvement in their mental health symptoms'
     },
     { 
       image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/compassionate-advocacy.png',
-      label: 'Compassionate advocacy',
+      label: 'Compassionate Advocacy',
       description: 'Patients say they feel seen, heard, and genuinely cared for during their first visit'
     },
     { 
       image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/response-time.png',
-      label: 'Response time',
+      label: 'Response Time',
       description: 'Quick response to all patient inquiries and concerns'
     }
   ];

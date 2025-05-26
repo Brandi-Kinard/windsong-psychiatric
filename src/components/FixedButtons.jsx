@@ -21,7 +21,7 @@ const FixedButtons = () => {
         onClick={() => setIsPoliciesModalOpen(true)}
         aria-label="View policies and fees"
       >
-        <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/branch.png" alt="Branch" /> Policies & fees
+        <img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/branch.png" alt="Branch" /> Policies & Fees
       </button>
       
       <PoliciesModal 
