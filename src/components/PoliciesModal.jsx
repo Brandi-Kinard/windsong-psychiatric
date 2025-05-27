@@ -12,7 +12,7 @@ const PoliciesModal = ({ isOpen, onClose }) => {
       <h3>Service fees</h3>
       
       <p className="payment-due">Payment is due at the time of service</p>
-      <p className="payment-methods">• We accept cash, check, credit/debit cards, and HSA/FSA cards</p>
+      <p className="payment-methods">• We accept check, credit/debit cards, and HSA/FSA cards</p>
       
       <div className="services-list">
         <div className="service-item">
