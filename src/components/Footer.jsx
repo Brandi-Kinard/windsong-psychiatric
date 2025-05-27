@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section">
             <h3 className="footer-logo">Windsong Psychiatric Associates</h3>
-            <p className="footer-tagline">Compassionate mental health care</p>
+            <p className="footer-tagline">Compassionate Mental Health Care</p>
           </div>
           
           <div className="footer-section">
