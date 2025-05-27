@@ -141,14 +141,14 @@ const ServicesPage = () => {
   const geriatricServices = {
     title: 'Geriatric Care',
     features: [
-      'In-home visits',
-      'Facility visits',
-      'Dementia care',
-      'Medication management',
-      'Family support and education',
-      'Coordination with medical providers',
-      'Cognitive assessments',
-      'End-of-life mental health support'
+      'In-home Visits',
+      'Facility Visits',
+      'Dementia Care',
+      'Medication Management',
+      'Family Support and Education',
+      'Coordination with Medical Providers',
+      'Cognitive Assessments',
+      'End-of-Life Mental Health Support'
     ]
   };
 
