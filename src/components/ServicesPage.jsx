@@ -148,7 +148,7 @@ const ServicesPage = () => {
       'Family Support and Education',
       'Coordination with Medical Providers',
       'Cognitive Assessments',
-      'End-of-Life Mental Health Support'
+      'End-of-life Mental Health Support'
     ]
   };
 
