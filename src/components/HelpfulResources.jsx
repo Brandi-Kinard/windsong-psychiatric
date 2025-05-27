@@ -34,7 +34,7 @@ const HelpfulResources = () => {
     <div className="helpful-resources-page">
       <div className="hero-section">
         <div className="hero-content">
-          <h1>Helpful resources</h1>
+          <h1>Helpful Resources</h1>
           <p className="page-subtitle">Crisis support and mental health resources available 24/7</p>
         </div>
         <div className="hero-image">
