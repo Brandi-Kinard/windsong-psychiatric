@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
           
           <div className="footer-section">
-            <h4 className="footer-heading">Quick links</h4>
+            <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-list">
               <li><Link to="/services">Services</Link></li>
               <li><Link to="/meet-felicia-davis">Meet Felicia Davis</Link></li>
@@ -41,9 +41,9 @@ const Footer = () => {
                   <Link to="/#locations" state={{ fromOtherPage: true }}>Locations</Link>
                 )}
               </li>
-              <li><Link to="/helpful-resources">Helpful resources</Link></li>
-              <li><Link to="/patient-forms">Patient forms</Link></li>
-              <li><a href="https://patientonlineportal.com/" target="_blank" rel="noopener noreferrer">Patient portal</a></li>
+              <li><Link to="/helpful-resources">Helpful Resources</Link></li>
+              <li><Link to="/patient-forms">Patient Forms</Link></li>
+              <li><a href="https://patientonlineportal.com/" target="_blank" rel="noopener noreferrer">Patient Portal</a></li>
             </ul>
           </div>
           
