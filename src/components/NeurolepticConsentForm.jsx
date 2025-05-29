@@ -35,13 +35,13 @@ const NeurolepticConsentForm = () => {
     try {
       const templateParams = {
         to_email: RECIPIENT_EMAIL,
-        email_subject: 'Neuroleptic Consent Form Submitted',
+        email_subject: 'Consent for Antipsychotic Medication Submitted',
         printed_name: formData.printedName,
         signature: formData.signature,
         relationship: formData.relationship || 'Self',
         date: formData.date,
         time: new Date().toLocaleTimeString(),
-        consent_text: 'The mental health team has recommended antipsychotic medication as part of the treatment plan.'
+        consent_text: 'Consent for antipsychotic medication with Black Box Warning acknowledgment'
       };
 
       await emailjs.send(
@@ -66,7 +66,7 @@ const NeurolepticConsentForm = () => {
     <div className="neuroleptic-form-page">
       <div className="neuroleptic-form-container">
         <div className="form-header">
-          <h1>Neuroleptic Consent Form</h1>
+          <h1>Consent for Antipsychotic Medication</h1>
           <button className="close-button" onClick={() => navigate('/patient-forms')}>
             ✕
           </button>
@@ -78,35 +78,16 @@ const NeurolepticConsentForm = () => {
             <h3>Consent Information</h3>
             <div className="consent-text">
               <p>
-                The mental health team has recommended antipsychotic medication (also known as neuroleptic medication) 
-                as part of the treatment plan. These medications are used to treat various psychiatric conditions 
-                including schizophrenia, bipolar disorder, severe depression, and other mental health conditions.
+                These medications carry a Black Box Warning; although the FDA has determined that medications in this 
+                class carry an increased risk for stroke and death when given to elderly dementia patients, it is for 
+                safety and/or to relieve suffering. It is only being recommended because other non-antipsychotic 
+                medication regimens have proven unsuccessful.
               </p>
               <p>
-                <strong>Potential Benefits:</strong> Antipsychotic medications can help reduce symptoms such as 
-                hallucinations, delusions, severe mood swings, agitation, and disorganized thinking. They may help 
-                improve functioning and quality of life.
+                There are currently no medications that are approved for the treatment of the behavioral and psychiatric 
+                symptoms associated with dementia. The signature below signifies agreement with this treatment plan and 
+                acknowledgement that these risks have been explained to me.
               </p>
-              <p>
-                <strong>Potential Risks and Side Effects:</strong> Like all medications, antipsychotics can have 
-                side effects. Common side effects may include drowsiness, dizziness, weight gain, dry mouth, 
-                constipation, and blurred vision. Some patients may experience movement disorders, metabolic changes, 
-                or other side effects. Your healthcare provider will monitor you for these effects.
-              </p>
-              <p>
-                <strong>Alternative Treatments:</strong> Alternative treatments may include other medications, 
-                psychotherapy, lifestyle changes, or a combination of treatments. The risks of not taking medication 
-                include continued or worsening symptoms.
-              </p>
-              <p>
-                By signing below, I acknowledge that:
-              </p>
-              <ul>
-                <li>I have been informed about the medication, its benefits, risks, and alternatives</li>
-                <li>I have had the opportunity to ask questions</li>
-                <li>I understand I can withdraw consent at any time</li>
-                <li>I consent to treatment with antipsychotic medication</li>
-              </ul>
             </div>
           </div>
 
@@ -160,6 +141,28 @@ const NeurolepticConsentForm = () => {
                 required
                 readOnly
               />
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="form-contact-info">
+            <h3>Contact Information</h3>
+            <div className="contact-grid">
+              <div className="contact-location">
+                <h4>Fort Mill, SC</h4>
+                <p>1285 Broadcloth St Suite B</p>
+                <p>Fort Mill, SC 29715</p>
+              </div>
+              <div className="contact-location">
+                <h4>Huntersville, NC</h4>
+                <p>110 Commerce Center Dr Suite 101</p>
+                <p>Huntersville, NC 28078</p>
+              </div>
+            </div>
+            <div className="contact-details">
+              <p><strong>Office Phone:</strong> <a href="tel:8038020060">(803) 802-0060</a></p>
+              <p><strong>Office Fax:</strong> (803) 802-8005</p>
+              <p><strong>Email:</strong> <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a></p>
             </div>
           </div>
 

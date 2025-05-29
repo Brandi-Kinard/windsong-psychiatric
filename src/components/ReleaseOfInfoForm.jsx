@@ -37,7 +37,7 @@ const ReleaseOfInfoForm = () => {
     try {
       const templateParams = {
         to_email: RECIPIENT_EMAIL,
-        email_subject: 'Release of Information Submitted',
+        email_subject: 'Release of Medical Information Submitted',
         patient_name: formData.patientName,
         birthdate: formData.birthdate,
         printed_name: formData.printedName,
@@ -45,7 +45,7 @@ const ReleaseOfInfoForm = () => {
         relationship: formData.relationship || 'Self',
         date: formData.date,
         time: new Date().toLocaleTimeString(),
-        authorization_text: 'I understand my records may contain documentation of psychiatric conditions, drug and alcohol abuse, HIV/AIDS testing and treatment, and genetic testing information.'
+        authorization_text: 'Release of medical information with detailed permissions and understanding'
       };
 
       await emailjs.send(
@@ -70,7 +70,7 @@ const ReleaseOfInfoForm = () => {
     <div className="release-form-page">
       <div className="release-form-container">
         <div className="form-header">
-          <h1>Authorization for Release of Medical Information</h1>
+          <h1>Release of Medical Information</h1>
           <button className="close-button" onClick={() => navigate('/patient-forms')}>
             ✕
           </button>
@@ -81,24 +81,35 @@ const ReleaseOfInfoForm = () => {
           <div className="form-section">
             <h3>Authorization Information</h3>
             <div className="authorization-text">
-              <p>
-                I hereby authorize Windsong Psychiatric Services, PLLC to release and/or obtain medical information 
-                concerning my care and treatment. I understand that this authorization is voluntary and that I may 
-                refuse to sign this authorization. My refusal to sign will not affect my ability to obtain treatment.
-              </p>
-              <p>
-                I understand my records may contain documentation of psychiatric conditions, drug and alcohol abuse, 
-                HIV/AIDS testing and treatment, and genetic testing information. I understand that these records are 
-                protected by federal and/or state law and cannot be disclosed without my written authorization.
-              </p>
-              <p>
-                I understand that I may revoke this authorization at any time by notifying Windsong Psychiatric Services, 
-                PLLC in writing. I understand that revocation will not apply to information that has already been 
-                released in response to this authorization.
-              </p>
-              <p>
-                This authorization will expire one year from the date of signature unless otherwise specified.
-              </p>
+              <p><strong>1)</strong> I understand that my records may contain documentation of psychiatric conditions, medical
+              history and substance use, and that this information will be released as part of my record.</p>
+              
+              <p><strong>2)</strong> I understand that if the person or entity receiving this information is not covered by federal
+              privacy regulations, this information will no longer be protected and may be redisclosed.</p>
+              
+              <p><strong>3)</strong> I understand that I may revoke this authorization at any time, but revocation will not apply to
+              information that has already been released.</p>
+              
+              <p><strong>4)</strong> I understand that a copy, email or FAX of this document is just as valid as the original document. 
+              A photocopy of this authorization is as valid as the original form and I have a right to receive a copy upon request.</p>
+              
+              <p><strong>5)</strong> I understand that my records are protected under the Federal regulations and cannot be disclosed 
+              without my written consent unless otherwise provided for in the regulations.</p>
+              
+              <p><strong>I permit the following disclosure of information about me to be made in the format requested, including
+              by telephone, fax or mail:</strong></p>
+              
+              <p><strong>1. I permit:</strong> Any physician or other medical/care provider, hospital, clinic, therapist and other
+              medical related facility or service, pharmacy benefit administrator, insurer, employer, government
+              agency, group policyholder, contract holder or benefit plan administrator to disclose to Windsong
+              Family and Psychiatric Associates information about my health.</p>
+              
+              <p><strong>2. I permit:</strong> Windsong Family and Psychiatric Associates the right to contact my healthcare
+              provider on my behalf to obtain clarifying information (subjective to all state laws) for any
+              reason.</p>
+              
+              <p>I understand that the information that is collected and discussed is to be treated with confidentiality.
+              However, directly relevant information may be shared with appropriate parties that is deemed necessary.</p>
             </div>
           </div>
 
@@ -180,6 +191,28 @@ const ReleaseOfInfoForm = () => {
                 required
                 readOnly
               />
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="form-contact-info">
+            <h3>Contact Information</h3>
+            <div className="contact-grid">
+              <div className="contact-location">
+                <h4>Fort Mill, SC</h4>
+                <p>1285 Broadcloth St Suite B</p>
+                <p>Fort Mill, SC 29715</p>
+              </div>
+              <div className="contact-location">
+                <h4>Huntersville, NC</h4>
+                <p>110 Commerce Center Dr Suite 101</p>
+                <p>Huntersville, NC 28078</p>
+              </div>
+            </div>
+            <div className="contact-details">
+              <p><strong>Office Phone:</strong> <a href="tel:8038020060">(803) 802-0060</a></p>
+              <p><strong>Office Fax:</strong> (803) 802-8005</p>
+              <p><strong>Email:</strong> <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a></p>
             </div>
           </div>
 
