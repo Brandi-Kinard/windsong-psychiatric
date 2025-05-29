@@ -22,17 +22,17 @@ const PatientForms = () => {
 
   const forms = [
     {
-      title: 'General consent for care and treatment',
+      title: 'General Consent for Care and Treatment',
       link: 'https://form.jotform.com/242107489968067',
       external: true
     },
     {
-      title: 'Authorization for release of medical information',
+      title: 'Authorization for Release of Medical Information',
       link: 'https://form.jotform.com/242108969025055',
       external: true
     },
     {
-      title: 'Patient referral',
+      title: 'Patient Referral',
       link: '/patient-referral',
       external: false
     }
@@ -47,7 +47,7 @@ const PatientForms = () => {
       )}
       
       <div className="patient-forms-container">
-        <h1>Patient forms</h1>
+        <h1>Patient Forms</h1>
         
         <div className="forms-grid">
           {forms.map((form, index) => (
