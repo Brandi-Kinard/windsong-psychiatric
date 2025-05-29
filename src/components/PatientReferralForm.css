@@ -160,6 +160,33 @@
   cursor: not-allowed;
 }
 
+/* Footer Contact Information */
+.form-footer-contact {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background-color: white;
+  border-radius: 0 0 16px 16px;
+  margin: 0 -2rem -2rem -2rem;
+}
+
+.form-footer-contact p {
+  color: #4b5563;
+  margin: 0.25rem 0;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.form-footer-contact a {
+  color: #246D80;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.form-footer-contact a:hover {
+  color: #006B6B;
+  text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .patient-referral-page {
@@ -196,5 +223,14 @@
   .submit-button {
     width: 100%;
     justify-content: center;
+  }
+
+  .form-footer-contact {
+    margin: 0 -1.5rem -1.5rem -1.5rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .form-footer-contact p {
+    font-size: 0.75rem;
   }
 }
