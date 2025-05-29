@@ -94,7 +94,7 @@ const PatientReferralForm = () => {
     <div className="patient-referral-page">
       <div className="referral-form-container">
         <div className="form-header">
-          <h1>Windsong Psychiatric patient referral form</h1>
+          <h1>Patient Referral</h1>
           <button className="close-button" onClick={() => navigate('/patient-forms')}>
             ✕
           </button>
@@ -360,10 +360,10 @@ const PatientReferralForm = () => {
           
           {/* Footer Contact Information */}
           <div className="form-footer-contact">
-            <p><strong>Fort Mill, SC:</strong> 1285 Broadcloth St Suite B, Fort Mill, SC 29715</p>
-            <p><strong>Huntersville, NC:</strong> 110 Commerce Center Dr Suite 101, Huntersville, NC 28078</p>
-            <p><strong>Office Phone:</strong> <a href="tel:8038020060">(803) 802-0060</a></p>
-            <p><strong>Office Fax:</strong> (803) 802-8005</p>
+            <p><strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708</p>
+            <p><strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078</p>
+            <p><strong>Office Phone:</strong> <a href="tel:9805852019">(980) 585-2019</a></p>
+            <p><strong>Office Fax:</strong> (980) 585-2016</p>
             <p><strong>Email:</strong> <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a></p>
           </div>
         </form>
