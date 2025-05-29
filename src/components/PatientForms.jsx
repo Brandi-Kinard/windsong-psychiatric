@@ -92,6 +92,27 @@ const PatientForms = () => {
             </div>
           ))}
         </div>
+        
+        <div className="contact-info-section">
+          <h2>Contact Information</h2>
+          <div className="contact-info-grid">
+            <div className="contact-location">
+              <h3>Fort Mill, SC</h3>
+              <p>1285 Broadcloth St Suite B</p>
+              <p>Fort Mill, SC 29715</p>
+            </div>
+            <div className="contact-location">
+              <h3>Huntersville, NC</h3>
+              <p>110 Commerce Center Dr Suite 101</p>
+              <p>Huntersville, NC 28078</p>
+            </div>
+          </div>
+          <div className="contact-details">
+            <p><strong>Office Phone:</strong> <a href="tel:8038020060">(803) 802-0060</a></p>
+            <p><strong>Office Fax:</strong> (803) 802-8005</p>
+            <p><strong>Email:</strong> <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a></p>
+          </div>
+        </div>
       </div>
     </div>
   );
