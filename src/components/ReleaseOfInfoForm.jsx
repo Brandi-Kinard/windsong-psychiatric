@@ -194,28 +194,6 @@ const ReleaseOfInfoForm = () => {
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div className="form-contact-info">
-            <h3>Contact Information</h3>
-            <div className="contact-grid">
-              <div className="contact-location">
-                <h4>Fort Mill, SC</h4>
-                <p>1285 Broadcloth St Suite B</p>
-                <p>Fort Mill, SC 29715</p>
-              </div>
-              <div className="contact-location">
-                <h4>Huntersville, NC</h4>
-                <p>110 Commerce Center Dr Suite 101</p>
-                <p>Huntersville, NC 28078</p>
-              </div>
-            </div>
-            <div className="contact-details">
-              <p><strong>Office Phone:</strong> <a href="tel:8038020060">(803) 802-0060</a></p>
-              <p><strong>Office Fax:</strong> (803) 802-8005</p>
-              <p><strong>Email:</strong> <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a></p>
-            </div>
-          </div>
-
           {/* Action buttons */}
           <div className="form-actions">
             <button
@@ -232,6 +210,15 @@ const ReleaseOfInfoForm = () => {
             >
               {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>
+          </div>
+          
+          {/* Footer Contact Information */}
+          <div className="form-footer-contact">
+            <p><strong>Fort Mill, SC:</strong> 1285 Broadcloth St Suite B, Fort Mill, SC 29715</p>
+            <p><strong>Huntersville, NC:</strong> 110 Commerce Center Dr Suite 101, Huntersville, NC 28078</p>
+            <p><strong>Office Phone:</strong> <a href="tel:8038020060">(803) 802-0060</a></p>
+            <p><strong>Office Fax:</strong> (803) 802-8005</p>
+            <p><strong>Email:</strong> <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a></p>
           </div>
         </form>
       </div>
