@@ -4,12 +4,29 @@ import './PatientForms.css';
 
 const PatientForms = () => {
   const [showToast, setShowToast] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
 
   useEffect(() => {
-    // Check if we need to show the success toast
+    // Check for various form submissions
+    let message = '';
+    
     if (sessionStorage.getItem('referralSubmitted') === 'true') {
-      setShowToast(true);
+      message = 'Patient referral form was successfully submitted!';
       sessionStorage.removeItem('referralSubmitted');
+    } else if (sessionStorage.getItem('consentSubmitted') === 'true') {
+      message = 'Consent for treatment form was successfully submitted!';
+      sessionStorage.removeItem('consentSubmitted');
+    } else if (sessionStorage.getItem('releaseSubmitted') === 'true') {
+      message = 'Release of information form was successfully submitted!';
+      sessionStorage.removeItem('releaseSubmitted');
+    } else if (sessionStorage.getItem('neurolepticSubmitted') === 'true') {
+      message = 'Neuroleptic consent form was successfully submitted!';
+      sessionStorage.removeItem('neurolepticSubmitted');
+    }
+
+    if (message) {
+      setToastMessage(message);
+      setShowToast(true);
       
       // Hide toast after 5 seconds
       const timer = setTimeout(() => {
@@ -23,13 +40,18 @@ const PatientForms = () => {
   const forms = [
     {
       title: 'General Consent for Care and Treatment',
-      link: 'https://form.jotform.com/242107489968067',
-      external: true
+      link: '/consent-for-treatment',
+      external: false
     },
     {
       title: 'Authorization for Release of Medical Information',
-      link: 'https://form.jotform.com/242108969025055',
-      external: true
+      link: '/release-of-information',
+      external: false
+    },
+    {
+      title: 'Neuroleptic Consent Form',
+      link: '/neuroleptic-consent',
+      external: false
     },
     {
       title: 'Patient Referral',
@@ -42,7 +64,7 @@ const PatientForms = () => {
     <div className="patient-forms-page">
       {showToast && (
         <div className="toast success-toast">
-          ✓ Patient referral form was successfully submitted!
+          ✓ {toastMessage}
         </div>
       )}
       

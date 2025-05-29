@@ -19,6 +19,9 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
 import PatientForms from './components/PatientForms';
 import PatientReferralForm from './components/PatientReferralForm';
+import ConsentForTreatmentForm from './components/ConsentForTreatmentForm';
+import ReleaseOfInfoForm from './components/ReleaseOfInfoForm';
+import NeurolepticConsentForm from './components/NeurolepticConsentForm';
 import ScrollToTop from './components/ScrollToTop';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -70,6 +73,9 @@ function App() {
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/patient-forms" element={<PatientForms />} />
           <Route path="/patient-referral" element={<PatientReferralForm />} />
+          <Route path="/consent-for-treatment" element={<ConsentForTreatmentForm />} />
+          <Route path="/release-of-information" element={<ReleaseOfInfoForm />} />
+          <Route path="/neuroleptic-consent" element={<NeurolepticConsentForm />} />
         </Routes>
         <Footer />
         <FixedButtons />
