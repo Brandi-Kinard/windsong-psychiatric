@@ -1,7 +1,7 @@
 .patient-referral-page {
   min-height: 100vh;
   background-color: #EDF6F9;
-  padding: 6rem 1rem 2rem;
+  padding: 8rem 1rem 2rem;
 }
 
 .referral-form-container {
@@ -163,7 +163,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .patient-referral-page {
-    padding: 5rem 0 0;
+    padding: 7rem 0 0;
   }
 
   .referral-form-container {

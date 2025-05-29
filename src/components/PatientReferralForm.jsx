@@ -252,35 +252,38 @@ const PatientReferralForm = () => {
           <div className="form-section">
             <h3>Reason for referral</h3>
             <div className="form-group">
-              <label htmlFor="referralSource">Referral source (name & phone #)</label>
+              <label htmlFor="referralSource">Referral source (name & phone #) *</label>
               <input
                 type="text"
                 id="referralSource"
                 placeholder="Dr. Jane Doe - (555) 987-6543"
                 value={formData.referralSource}
                 onChange={(e) => handleInputChange('referralSource', e.target.value)}
+                required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="symptoms">Symptoms</label>
+              <label htmlFor="symptoms">Symptoms *</label>
               <textarea
                 id="symptoms"
                 placeholder="Describe current symptoms or concerns"
                 value={formData.symptoms}
                 onChange={(e) => handleInputChange('symptoms', e.target.value)}
                 rows="3"
+                required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="servicesRequesting">Services requesting</label>
+              <label htmlFor="servicesRequesting">Services requesting *</label>
               <textarea
                 id="servicesRequesting"
                 placeholder="e.g., Psychiatric evaluation, medication management"
                 value={formData.servicesRequesting}
                 onChange={(e) => handleInputChange('servicesRequesting', e.target.value)}
                 rows="3"
+                required
               />
             </div>
           </div>
@@ -289,46 +292,50 @@ const PatientReferralForm = () => {
           <div className="form-section">
             <h3>History</h3>
             <div className="form-group">
-              <label htmlFor="currentTreatmentProvider">Current treatment provider (name & phone #)</label>
+              <label htmlFor="currentTreatmentProvider">Current treatment provider (name & phone #) *</label>
               <input
                 type="text"
                 id="currentTreatmentProvider"
                 placeholder="Provider name & contact (or leave blank)"
                 value={formData.currentTreatmentProvider}
                 onChange={(e) => handleInputChange('currentTreatmentProvider', e.target.value)}
+                required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="mentalHealthDiagnosis">Mental health diagnosis</label>
+              <label htmlFor="mentalHealthDiagnosis">Mental health diagnosis *</label>
               <textarea
                 id="mentalHealthDiagnosis"
                 placeholder="Previous or current diagnoses"
                 value={formData.mentalHealthDiagnosis}
                 onChange={(e) => handleInputChange('mentalHealthDiagnosis', e.target.value)}
                 rows="3"
+                required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="substanceUse">Substance use</label>
+              <label htmlFor="substanceUse">Substance use *</label>
               <textarea
                 id="substanceUse"
                 placeholder="Current or past substance use history"
                 value={formData.substanceUse}
                 onChange={(e) => handleInputChange('substanceUse', e.target.value)}
                 rows="3"
+                required
               />
             </div>
 
             <div className="form-group">
-              <label htmlFor="specialNeeds">MR/developmental disabilities/special needs</label>
+              <label htmlFor="specialNeeds">MR/developmental disabilities/special needs *</label>
               <textarea
                 id="specialNeeds"
                 placeholder="Any accommodations or special needs"
                 value={formData.specialNeeds}
                 onChange={(e) => handleInputChange('specialNeeds', e.target.value)}
                 rows="3"
+                required
               />
             </div>
           </div>
