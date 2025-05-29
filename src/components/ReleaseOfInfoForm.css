@@ -69,10 +69,6 @@
 }
 
 .authorization-text {
-  background-color: #f9fafb;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
   line-height: 1.6;
 }
 
@@ -202,9 +198,6 @@
     padding: 1.5rem 1rem;
   }
 
-  .authorization-text {
-    padding: 1rem;
-  }
 
   .form-actions {
     flex-direction: column-reverse;
