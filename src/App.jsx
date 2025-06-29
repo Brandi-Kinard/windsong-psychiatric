@@ -14,6 +14,7 @@ import FixedButtons from './components/FixedButtons';
 import About from './components/About';
 import ServicesPage from './components/ServicesPage';
 import NewPatientForm from './components/NewPatientForm';
+import NewPatientFormFixed from './components/NewPatientFormFixed';
 import HelpfulResources from './components/HelpfulResources';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsOfService from './components/TermsOfService';
@@ -67,7 +68,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/meet-felicia-davis" element={<About />} />
           <Route path="/services" element={<ServicesPage />} />
-          <Route path="/new-patient" element={<NewPatientForm />} />
+          <Route path="/new-patient" element={<NewPatientFormFixed />} />
           <Route path="/helpful-resources" element={<HelpfulResources />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />

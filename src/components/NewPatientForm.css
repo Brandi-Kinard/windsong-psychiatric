@@ -3,9 +3,9 @@
   min-height: 100vh;
   background-color: #f9fafb;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 14rem 2rem 2rem;
+  padding: 12rem 2rem 2rem;
 }
 
 .form-container {
@@ -290,6 +290,7 @@
 /* Textarea */
 .notes-textarea {
   width: 100%;
+  min-height: 200px;
   padding: 1rem;
   border: 2px solid #e5e7eb;
   border-radius: 8px;

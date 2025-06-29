@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import './NewPatientForm.css';
 
 const NewPatientForm = () => {
@@ -201,7 +201,7 @@ ${formData.notes || 'None'}
 
     try {
       // Initialize EmailJS
-      emailjs.init(EMAILJS_PUBLIC_KEY);
+      // emailjs.init(EMAILJS_PUBLIC_KEY);
       
       const templateParams = {
         // EmailJS only accepts non-underscore variables in your template
@@ -237,11 +237,11 @@ ${formData.notes || 'None'}
       });
 
       // Send email
-      await emailjs.send(
+      /* await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         templateParams
-      );
+      ); */
       
       // Show success message
       setCurrentStep(8); // Success step
@@ -255,7 +255,8 @@ ${formData.notes || 'None'}
 
   const progressPercentage = currentStep <= totalSteps ? ((currentStep - 1) / totalSteps) * 100 : 100;
 
-  return (
+  try {
+    return (
     <div className="new-patient-form">
       <div className="form-container">
         <div className="form-header">
@@ -647,6 +648,15 @@ ${formData.notes || 'None'}
       </div>
     </div>
   );
+  } catch (error) {
+    console.error('Error rendering NewPatientForm:', error);
+    return (
+      <div style={{ padding: '100px', color: 'red' }}>
+        <h1>Error in NewPatientForm</h1>
+        <p>{error.message}</p>
+      </div>
+    );
+  }
 };
 
 export default NewPatientForm;
