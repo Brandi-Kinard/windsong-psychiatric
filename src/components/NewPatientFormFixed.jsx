@@ -36,6 +36,8 @@ const NewPatientFormFixed = () => {
     notes: ''
   });
 
+  const [errors, setErrors] = useState({});
+
   const totalSteps = 7;
   const progressPercentage = currentStep <= totalSteps ? ((currentStep - 1) / totalSteps) * 100 : 100;
 
@@ -73,8 +75,60 @@ const NewPatientFormFixed = () => {
     { name: 'No Insurance/Self-Pay', logo: null }
   ];
 
+  const validateStep = () => {
+    const newErrors = {};
+    let isValid = true;
+
+    switch(currentStep) {
+      case 1:
+        if (!formData.seekingCareFor) {
+          isValid = false;
+        }
+        break;
+      case 2:
+        if (formData.supportType.length === 0) {
+          isValid = false;
+        }
+        break;
+      case 3:
+        if (!formData.previousCare) {
+          isValid = false;
+        }
+        break;
+      case 4:
+        if (!formData.appointmentType) {
+          isValid = false;
+        }
+        break;
+      case 5:
+        if (formData.availability.length === 0) {
+          isValid = false;
+        }
+        break;
+      case 6:
+        if (!formData.name) { newErrors.name = true; isValid = false; }
+        if (!formData.email) { newErrors.email = true; isValid = false; }
+        if (!formData.phone) { newErrors.phone = true; isValid = false; }
+        if (!formData.preferredContact) { newErrors.preferredContact = true; isValid = false; }
+        if (!formData.dateOfBirth) { newErrors.dateOfBirth = true; isValid = false; }
+        if (!formData.address) { newErrors.address = true; isValid = false; }
+        if (!formData.city) { newErrors.city = true; isValid = false; }
+        if (!formData.state) { newErrors.state = true; isValid = false; }
+        if (!formData.zipCode) { newErrors.zipCode = true; isValid = false; }
+        if (!formData.insuranceProvider) { newErrors.insuranceProvider = true; isValid = false; }
+        break;
+      default:
+        break;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
   const handleNext = () => {
-    setCurrentStep(currentStep + 1);
+    if (validateStep()) {
+      setCurrentStep(currentStep + 1);
+    }
   };
 
   const handlePrevious = () => {
@@ -95,6 +149,8 @@ const NewPatientFormFixed = () => {
   };
 
   const handleSubmit = async () => {
+    if (!validateStep()) return;
+    
     setIsSubmitting(true);
     
     try {
@@ -107,21 +163,35 @@ const NewPatientFormFixed = () => {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
+        contactMethod: formData.preferredContact,
         seekingCareFor: formData.seekingCareFor,
         supportType: formData.supportType.join(', '),
+        primaryConcerns: formData.supportType.join(', '),
         previousCare: formData.previousCare,
         appointmentType: formData.appointmentType,
         availability: formData.availability.join(', '),
-        preferredContact: formData.preferredContact,
-        dateOfBirth: formData.dateOfBirth,
-        address: formData.address,
+        dob: formData.dateOfBirth,
+        street: formData.address,
         city: formData.city,
         state: formData.state,
-        zipCode: formData.zipCode,
-        insuranceProvider: formData.insuranceProvider,
-        subscriberId: formData.subscriberId,
-        notes: formData.notes || 'No additional notes'
+        zip: formData.zipCode,
+        address: `${formData.address}, ${formData.city}, ${formData.state} ${formData.zipCode}`,
+        provider: formData.insuranceProvider,
+        otherinsurance: formData.otherInsurance || 'Not provided',
+        subscriberid: formData.subscriberId || 'Not provided',
+        notes: formData.notes || 'No additional notes',
+        date: new Date().toLocaleDateString(),
+        time: new Date().toLocaleTimeString()
       };
+
+      // Debug logging to see what we're sending
+      console.log('=== EMAILJS TEMPLATE PARAMETERS ===');
+      console.log('Date of Birth:', formData.dateOfBirth);
+      console.log('Address:', formData.address);
+      console.log('Insurance Provider:', formData.insuranceProvider);
+      console.log('Other Insurance:', formData.otherInsurance);
+      console.log('Subscriber ID:', formData.subscriberId);
+      console.log('Template Params:', templateParams);
 
       await emailjs.send(
         EMAILJS_SERVICE_ID,
@@ -288,6 +358,115 @@ const NewPatientFormFixed = () => {
                     required
                   />
                 </div>
+                <div className="input-group">
+                  <label htmlFor="preferredContact">Preferred contact method *</label>
+                  <select
+                    id="preferredContact"
+                    value={formData.preferredContact}
+                    onChange={(e) => handleInputChange('preferredContact', e.target.value)}
+                    required
+                  >
+                    <option value="">Select preferred contact</option>
+                    <option value="phone">Phone</option>
+                    <option value="email">Email</option>
+                    <option value="text">Text</option>
+                  </select>
+                </div>
+                <div className="input-group">
+                  <label htmlFor="dateOfBirth">Date of birth *</label>
+                  <input
+                    id="dateOfBirth"
+                    type="date"
+                    value={formData.dateOfBirth}
+                    onChange={(e) => handleInputChange('dateOfBirth', e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="address">Street address *</label>
+                  <input
+                    id="address"
+                    type="text"
+                    value={formData.address}
+                    onChange={(e) => handleInputChange('address', e.target.value)}
+                    placeholder="123 Main St"
+                    required
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="city">City *</label>
+                  <input
+                    id="city"
+                    type="text"
+                    value={formData.city}
+                    onChange={(e) => handleInputChange('city', e.target.value)}
+                    placeholder="City"
+                    required
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="state">State *</label>
+                  <input
+                    id="state"
+                    type="text"
+                    value={formData.state}
+                    onChange={(e) => handleInputChange('state', e.target.value)}
+                    placeholder="NC"
+                    required
+                  />
+                </div>
+                <div className="input-group">
+                  <label htmlFor="zipCode">Zip code *</label>
+                  <input
+                    id="zipCode"
+                    type="text"
+                    value={formData.zipCode}
+                    onChange={(e) => handleInputChange('zipCode', e.target.value)}
+                    placeholder="28266"
+                    required
+                  />
+                </div>
+                <div className="input-group full-width">
+                  <label>Subscriber/Insurance provider *</label>
+                  <div className={`insurance-selector ${errors.insuranceProvider ? 'error' : ''}`}>
+                    {insuranceProviders.map(provider => (
+                      <div 
+                        key={provider.name}
+                        className={`insurance-option ${formData.insuranceProvider === provider.name ? 'selected' : ''}`}
+                        onClick={() => handleInputChange('insuranceProvider', provider.name)}
+                      >
+                        {provider.logo && (
+                          <img src={provider.logo} alt={provider.name} className="insurance-logo-small" />
+                        )}
+                        <span className="insurance-name">{provider.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {formData.insuranceProvider === 'Other' && (
+                  <div className="input-group full-width">
+                    <label htmlFor="otherInsurance">Please specify insurance provider</label>
+                    <input
+                      id="otherInsurance"
+                      type="text"
+                      value={formData.otherInsurance}
+                      onChange={(e) => handleInputChange('otherInsurance', e.target.value)}
+                      placeholder="Enter your insurance provider name"
+                    />
+                  </div>
+                )}
+                {formData.insuranceProvider && formData.insuranceProvider !== 'No Insurance/Self-Pay' && (
+                  <div className="input-group">
+                    <label htmlFor="subscriberId">Subscriber ID</label>
+                    <input
+                      id="subscriberId"
+                      type="text"
+                      value={formData.subscriberId}
+                      onChange={(e) => handleInputChange('subscriberId', e.target.value)}
+                      placeholder="Subscriber ID"
+                    />
+                  </div>
+                )}
               </div>
             </div>
           )}
