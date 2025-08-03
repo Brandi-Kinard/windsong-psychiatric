@@ -12,7 +12,7 @@ const NewPatientFormFixed = () => {
   const EMAILJS_SERVICE_ID = 'service_idvcxum';
   const EMAILJS_TEMPLATE_ID = 'template_xjaha0n';
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
-  const RECIPIENT_EMAIL = 'windsongpsychiatric@gmail.com';
+  const RECIPIENT_EMAIL = 'contact@windsongpsychiatric.com';
   
   const [formData, setFormData] = useState({
     seekingCareFor: '',

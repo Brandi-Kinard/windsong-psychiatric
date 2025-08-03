@@ -156,7 +156,7 @@ const NewPatientForm = () => {
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
   // Testing mode - emails go to personal email
-  const RECIPIENT_EMAIL = 'windsongpsychiatric@gmail.com';
+  const RECIPIENT_EMAIL = 'contact@windsongpsychiatric.com';
 
   const handleSubmit = async () => {
     if (!validateStep()) return;

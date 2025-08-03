@@ -91,12 +91,10 @@ const Contact = () => {
               <p>(980) 585-2019</p>
             </div>
             
-            {/* Temporarily hidden until Google Workspace setup complete
             <div className="info-item">
               <h3>Email</h3>
               <p>contact@windsongpsychiatric.com</p>
             </div>
-            */}
             
             <div className="info-item">
               <h3><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/hours.png" alt="Clock" /> Hours</h3>
