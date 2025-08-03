@@ -21,9 +21,11 @@ const Footer = () => {
               <li>
                 <a href="tel:9805852019">(980) 585-2019</a>
               </li>
+              {/* Temporarily hidden until Google Workspace setup complete
               <li>
                 <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a>
               </li>
+              */}
               <li>Fax: (980) 585-2016</li>
               <li>Serving NC, SC, GA, VA, MD, DC, FL</li>
             </ul>

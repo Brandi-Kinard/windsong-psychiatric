@@ -70,7 +70,9 @@ const TermsOfService = () => {
         
         <p>If you have questions about these Terms, please contact us at:</p>
         
+        {/* Temporarily hidden until Google Workspace setup complete
         <p>📧 <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a></p>
+        */}
         
         <p>📞 <a href="tel:9805852019">980-585-2019</a></p>
       </div>

@@ -33,7 +33,7 @@ const PatientReferralForm = () => {
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
   // Testing email address
-  const RECIPIENT_EMAIL = 'brandiellenkinard@gmail.com';
+  const RECIPIENT_EMAIL = 'windsongpsychiatric@gmail.com';
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({
@@ -364,7 +364,9 @@ const PatientReferralForm = () => {
             <p><strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078</p>
             <p><strong>Office Phone:</strong> <a href="tel:9805852019">(980) 585-2019</a></p>
             <p><strong>Office Fax:</strong> (980) 585-2016</p>
+            {/* Temporarily hidden until Google Workspace setup complete
             <p><strong>Email:</strong> <a href="mailto:contact@windsongpsychiatric.com">contact@windsongpsychiatric.com</a></p>
+            */}
           </div>
         </form>
       </div>
