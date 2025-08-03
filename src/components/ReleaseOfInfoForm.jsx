@@ -17,7 +17,7 @@ const ReleaseOfInfoForm = () => {
 
   // EmailJS configuration
   const EMAILJS_SERVICE_ID = 'service_idvcxum';
-  const EMAILJS_TEMPLATE_ID = 'template_releaseOfInfo'; // Placeholder template ID
+  const EMAILJS_TEMPLATE_ID = 'template_qmjhapr'; // Release of Information template
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
   // Testing email address
@@ -35,24 +35,37 @@ const ReleaseOfInfoForm = () => {
     setIsSubmitting(true);
 
     try {
+      // Initialize EmailJS
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      
       const templateParams = {
         to_email: RECIPIENT_EMAIL,
-        email_subject: 'Release of Medical Information Submitted',
-        patient_name: formData.patientName,
+        reply_to: RECIPIENT_EMAIL, // Required by EmailJS
+        name: formData.patientName, // Using standard 'name' field
+        patientName: formData.patientName,
         birthdate: formData.birthdate,
-        printed_name: formData.printedName,
+        printedName: formData.printedName,
         signature: formData.signature,
         relationship: formData.relationship || 'Self',
         date: formData.date,
-        time: new Date().toLocaleTimeString(),
-        authorization_text: 'Release of medical information with detailed permissions and understanding'
+        submissionDate: new Date().toLocaleDateString(),
+        submissionTime: new Date().toLocaleTimeString(),
+        // Add empty fields that might be expected
+        email: 'Not provided',
+        phone: 'Not provided',
+        notes: 'Release of Medical Information form submitted'
       };
+
+      // Debug logging
+      console.log('=== RELEASE OF INFO FORM DEBUG ===');
+      console.log('Template ID:', EMAILJS_TEMPLATE_ID);
+      console.log('Form Data:', formData);
+      console.log('Template Params:', templateParams);
 
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY
+        templateParams
       );
 
       // Set success flag and navigate back

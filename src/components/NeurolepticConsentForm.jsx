@@ -15,7 +15,7 @@ const NeurolepticConsentForm = () => {
 
   // EmailJS configuration
   const EMAILJS_SERVICE_ID = 'service_idvcxum';
-  const EMAILJS_TEMPLATE_ID = 'template_neuroleptic'; // Placeholder template ID
+  const EMAILJS_TEMPLATE_ID = 'template_gay14r6'; // Consent for Antipsychotic Medication template
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
   // Testing email address
@@ -33,22 +33,35 @@ const NeurolepticConsentForm = () => {
     setIsSubmitting(true);
 
     try {
+      // Initialize EmailJS
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      
       const templateParams = {
         to_email: RECIPIENT_EMAIL,
-        email_subject: 'Consent for Antipsychotic Medication Submitted',
-        printed_name: formData.printedName,
+        reply_to: RECIPIENT_EMAIL, // Required by EmailJS
+        name: formData.printedName, // Using standard 'name' field
+        printedName: formData.printedName,
         signature: formData.signature,
         relationship: formData.relationship || 'Self',
         date: formData.date,
-        time: new Date().toLocaleTimeString(),
-        consent_text: 'Consent for antipsychotic medication with Black Box Warning acknowledgment'
+        submissionDate: new Date().toLocaleDateString(),
+        submissionTime: new Date().toLocaleTimeString(),
+        // Add empty fields that might be expected
+        email: 'Not provided',
+        phone: 'Not provided',
+        notes: 'Consent for Antipsychotic Medication form submitted'
       };
+
+      // Debug logging
+      console.log('=== NEUROLEPTIC CONSENT FORM DEBUG ===');
+      console.log('Template ID:', EMAILJS_TEMPLATE_ID);
+      console.log('Form Data:', formData);
+      console.log('Template Params:', templateParams);
 
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY
+        templateParams
       );
 
       // Set success flag and navigate back
