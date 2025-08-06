@@ -4,6 +4,12 @@
   min-height: 100vh;
 }
 
+@media (max-width: 900px) {
+  .helpful-resources-page {
+    padding-top: 12rem;
+  }
+}
+
 /* Hero Section */
 .hero-section {
   max-width: 1400px;

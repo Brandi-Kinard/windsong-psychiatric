@@ -188,9 +188,15 @@
 }
 
 /* Responsive */
+@media (max-width: 900px) {
+  .patient-referral-page {
+    padding-top: 14rem;
+  }
+}
+
 @media (max-width: 768px) {
   .patient-referral-page {
-    padding: 10rem 0 0;
+    padding: 14rem 0 0;
   }
 
   .referral-form-container {

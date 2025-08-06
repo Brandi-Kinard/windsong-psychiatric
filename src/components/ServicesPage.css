@@ -5,6 +5,12 @@
   background-color: #ffffff;
 }
 
+@media (max-width: 900px) {
+  .services-page {
+    padding-top: 180px;
+  }
+}
+
 /* Hero section */
 .services-hero {
   background-color: #ffffff;

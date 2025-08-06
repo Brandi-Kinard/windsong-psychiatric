@@ -243,4 +243,10 @@
   .form-footer-contact p {
     font-size: 0.75rem;
   }
+}/* Add tablet breakpoint */
+@media (max-width: 900px) {
+  .consent-form-page {
+    padding-top: 14rem;
+  }
 }
+

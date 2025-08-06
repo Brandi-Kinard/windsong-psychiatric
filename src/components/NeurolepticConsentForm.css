@@ -215,9 +215,15 @@
 }
 
 /* Responsive */
+@media (max-width: 900px) {
+  .neuroleptic-form-page {
+    padding-top: 14rem;
+  }
+}
+
 @media (max-width: 768px) {
   .neuroleptic-form-page {
-    padding: 10rem 0 0;
+    padding: 14rem 0 0;
   }
 
   .neuroleptic-form-container {

@@ -201,9 +201,15 @@
 }
 
 /* Responsive */
+@media (max-width: 900px) {
+  .release-form-page {
+    padding-top: 14rem;
+  }
+}
+
 @media (max-width: 768px) {
   .release-form-page {
-    padding: 10rem 0 0;
+    padding: 14rem 0 0;
   }
 
   .release-form-container {

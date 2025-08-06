@@ -103,9 +103,15 @@
 }
 
 /* Responsive */
+@media (max-width: 900px) {
+  .patient-forms-page {
+    padding-top: 12rem;
+  }
+}
+
 @media (max-width: 768px) {
   .patient-forms-page {
-    padding: 5rem 1rem 3rem;
+    padding: 12rem 1rem 3rem;
   }
 
   .patient-forms-page h1 {

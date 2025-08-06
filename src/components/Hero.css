@@ -119,10 +119,17 @@
   margin: 0;
 }
 
+@media (max-width: 900px) {
+  .hero {
+    margin-top: 160px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero {
     padding: 2rem 1.5rem 1rem;
     min-height: auto;
+    margin-top: 160px;
   }
   
   .hero-content {

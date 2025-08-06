@@ -546,7 +546,17 @@
 }
 
 /* Responsive Design */
+@media (max-width: 900px) {
+  .new-patient-form {
+    padding-top: 14rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .new-patient-form {
+    padding: 14rem 2rem 2rem;
+  }
+  
   .form-container {
     border-radius: 0;
     max-width: 100%;
