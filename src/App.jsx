@@ -23,6 +23,9 @@ import PatientReferralForm from './components/PatientReferralForm';
 import ConsentForTreatmentForm from './components/ConsentForTreatmentForm';
 import ReleaseOfInfoForm from './components/ReleaseOfInfoForm';
 import NeurolepticConsentForm from './components/NeurolepticConsentForm';
+import AttendancePolicyForm from './components/AttendancePolicyForm';
+// TEMPORARILY HIDDEN - EmailJS subscription upgrade pending
+// import FinancialResponsibilityForm from './components/FinancialResponsibilityForm';
 import ScrollToTop from './components/ScrollToTop';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -77,6 +80,9 @@ function App() {
           <Route path="/consent-for-treatment" element={<ConsentForTreatmentForm />} />
           <Route path="/release-of-information" element={<ReleaseOfInfoForm />} />
           <Route path="/neuroleptic-consent" element={<NeurolepticConsentForm />} />
+          <Route path="/attendance-policy" element={<AttendancePolicyForm />} />
+          {/* TEMPORARILY HIDDEN - EmailJS subscription upgrade pending */}
+          {/* <Route path="/financial-responsibility" element={<FinancialResponsibilityForm />} /> */}
         </Routes>
         <Footer />
         <FixedButtons />

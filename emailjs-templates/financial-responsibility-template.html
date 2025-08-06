@@ -1,0 +1,115 @@
+<!-- EmailJS Template for Patient Financial Responsibility and Payment Policy -->
+<!-- Template ID: template_placeholder (to be updated when EmailJS subscription is upgraded) -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #1a4d2e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 0 0 5px 5px;
+        }
+        .field-group {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 3px;
+        }
+        .field-label {
+            font-weight: bold;
+            color: #1a4d2e;
+        }
+        .field-value {
+            margin-left: 10px;
+        }
+        .footer {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #1a4d2e;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Patient Financial Responsibility and Payment Policy - Form Submission</h2>
+    </div>
+    
+    <div class="content">
+        <p><strong>A patient has submitted the Patient Financial Responsibility and Payment Policy form.</strong></p>
+        
+        <div class="field-group">
+            <span class="field-label">Patient Name:</span>
+            <span class="field-value">{{patientName}}</span>
+        </div>
+        
+        <div class="field-group">
+            <span class="field-label">Signature:</span>
+            <span class="field-value">{{signature}}</span>
+        </div>
+        
+        <div class="field-group">
+            <span class="field-label">Relationship to Patient:</span>
+            <span class="field-value">{{relationship}}</span>
+        </div>
+        
+        <div class="field-group">
+            <span class="field-label">Date Signed:</span>
+            <span class="field-value">{{date}}</span>
+        </div>
+        
+        <div class="field-group">
+            <span class="field-label">Policy Acknowledged:</span>
+            <span class="field-value">{{acknowledgment}}</span>
+        </div>
+        
+        <div class="field-group">
+            <span class="field-label">Submission Date:</span>
+            <span class="field-value">{{submissionDate}}</span>
+        </div>
+        
+        <div class="field-group">
+            <span class="field-label">Submission Time:</span>
+            <span class="field-value">{{submissionTime}}</span>
+        </div>
+        
+        <div class="footer">
+            <p>This form was submitted electronically through the Windsong Psychiatric Associates website.</p>
+            <p>The patient has acknowledged that they have read, understand, and agree to comply with the financial responsibility and payment policy.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+EmailJS Template Variables:
+- {{to_email}} - Recipient email (contact@windsongpsychiatric.com)
+- {{reply_to}} - Reply-to email
+- {{patientName}} - Patient's name
+- {{signature}} - Electronic signature
+- {{relationship}} - Relationship to patient (Self, Parent, Guardian, etc.)
+- {{date}} - Date signed
+- {{acknowledgment}} - Policy acknowledgment (Yes/No)
+- {{submissionDate}} - Date form was submitted
+- {{submissionTime}} - Time form was submitted
+- {{formType}} - Type of form (Patient Financial Responsibility and Payment Policy)
+-->
