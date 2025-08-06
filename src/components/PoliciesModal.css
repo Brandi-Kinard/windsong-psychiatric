@@ -95,6 +95,7 @@
   top: 0;
   z-index: 10;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .tab-button {
@@ -298,12 +299,55 @@
     font-size: 1rem;
   }
   
+  .tab-navigation {
+    gap: 0.5rem;
+    padding: 0 1.5rem 0.75rem;
+    margin: 0 -1.5rem;
+  }
+  
   .tab-button {
     font-size: 0.9375rem;
-    padding: 0.875rem;
+    padding: 0.75rem 1rem;
+    min-width: 0;
+    flex: 1;
   }
   
   .service-item {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .policies-modal {
+    width: 98%;
+  }
+  
+  .tab-navigation {
+    gap: 0.25rem;
+    padding: 0 1rem 0.75rem;
+    margin: 0 -1rem;
+  }
+  
+  .tab-button {
+    font-size: 0.875rem;
+    padding: 0.625rem 0.5rem;
+    border-radius: 25px;
+  }
+  
+  .policies-modal-header {
+    padding: 1rem 1rem 0;
+  }
+  
+  .policies-modal-content {
+    padding: 1.25rem 0.75rem;
+  }
+  
+  .header-title h2 {
+    font-size: 1.5rem;
+  }
+  
+  .header-icon {
+    width: 24px;
+    height: 24px;
   }
 }
