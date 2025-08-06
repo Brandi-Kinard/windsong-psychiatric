@@ -51,7 +51,9 @@ const Footer = () => {
             <h4 className="footer-heading">Hours</h4>
             <ul className="footer-list">
               <li>Monday–Thursday: 8:00 AM – 7:00 PM</li>
-              <li>Friday–Sunday: Closed</li>
+              <li>Friday: Closed</li>
+              <li>Saturday: By appointment only (case-by-case basis)</li>
+              <li>Sunday: Closed</li>
               <li>Virtual appointments available</li>
             </ul>
           </div>

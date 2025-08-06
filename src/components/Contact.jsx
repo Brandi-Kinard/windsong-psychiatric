@@ -98,7 +98,7 @@ const Contact = () => {
             
             <div className="info-item">
               <h3><img src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/hours.png" alt="Clock" /> Hours</h3>
-              <p>Monday–Thursday: 8:00 AM – 7:00 PM<br />Friday–Sunday: Closed</p>
+              <p>Monday–Thursday: 8:00 AM – 7:00 PM<br />Friday: Closed<br />Saturday: By appointment only (case-by-case basis)<br />Sunday: Closed</p>
             </div>
           </div>
         </div>

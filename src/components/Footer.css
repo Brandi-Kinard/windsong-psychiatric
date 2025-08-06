@@ -12,7 +12,7 @@
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }
@@ -49,7 +49,6 @@
 .footer-list li {
   margin-bottom: 0.75rem;
   font-size: 1.0625rem;
-  white-space: nowrap;
 }
 
 .footer-list a {
