@@ -1,0 +1,17 @@
+{
+  "name": "Windsong Family & Psychiatric Associates",
+  "short_name": "Windsong Psychiatric",
+  "description": "Compassionate psychiatric and mental health services in Charlotte, Huntersville, Fort Mill, and Baltimore",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#246D80",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/windsongpsych.png",
+      "type": "image/png",
+      "sizes": "48x48 72x72 96x96 144x144 192x192 256x256 384x384 512x512"
+    }
+  ]
+}
