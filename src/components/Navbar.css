@@ -238,10 +238,36 @@
 @media (max-width: 900px) {
   .nav-container {
     position: relative;
+    height: 160px;
+  }
+  
+  .nav-logo-lottie {
+    height: 120px;
+    left: -90px;
+  }
+  
+  .nav-logo-primary {
+    font-size: 3.75rem;
+    left: 30px;
+    bottom: 20px;
+  }
+  
+  .nav-logo-secondary {
+    left: 30px;
+    font-size: 1.4rem;
+    bottom: 4px;
+    font-weight: 600;
+    line-height: 1;
   }
   
   .nav-menu {
     display: flex;
+    gap: 8px;
+  }
+  
+  .nav-menu-bar {
+    width: 40px;
+    height: 5px;
   }
   
   .nav-links {
@@ -297,29 +323,33 @@
   }
 }
 
-/* Mobile phones - compact logo */
+/* Mobile phones - scaled up 2x */
 @media (max-width: 768px) {
   .nav-container {
-    height: 80px;
-    padding: 0.5rem 1rem;
+    height: 160px;
+    padding: 1rem 2rem;
   }
   
   .nav-logo-lottie {
-    height: 60px;
-    left: -45px;
+    height: 120px;
+    left: -90px;
   }
   
   .nav-logo-primary {
-    font-size: 1.875rem;
-    left: 15px;
-    bottom: 10px;
+    font-size: 3.75rem;
+    left: 30px;
+    bottom: 20px;
   }
   
   .nav-logo-secondary {
-    left: 15px;
-    font-size: 0.7rem;
-    bottom: 2px;
+    left: 30px;
+    font-size: 1.4rem;
+    bottom: 4px;
     font-weight: 600;
     line-height: 1;
+  }
+  
+  .nav-links {
+    top: 160px;
   }
 }
