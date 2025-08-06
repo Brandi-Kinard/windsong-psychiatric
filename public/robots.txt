@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.windsongpsychiatric.com/sitemap.xml
+
+# Block old URLs that might be indexed
+Disallow: /copy-of-meet-the-provider
