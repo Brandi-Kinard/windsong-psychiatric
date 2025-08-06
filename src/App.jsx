@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Insurance from './components/Insurance';
@@ -83,6 +83,12 @@ function App() {
           <Route path="/attendance-policy" element={<AttendancePolicyForm />} />
           {/* TEMPORARILY HIDDEN - EmailJS subscription upgrade pending */}
           {/* <Route path="/financial-responsibility" element={<FinancialResponsibilityForm />} /> */}
+          
+          {/* Redirect old URLs to home */}
+          <Route path="/copy-of-meet-the-provider" element={<Navigate to="/" replace />} />
+          
+          {/* Catch-all route - redirect any unmatched routes to home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <Footer />
         <FixedButtons />
