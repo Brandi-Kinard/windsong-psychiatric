@@ -35,7 +35,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
   const responses = {
     insurance: {
       keywords: ['insurance', 'accept', 'coverage', 'plan', 'medicaid', 'medicare', 'blue cross', 'aetna', 'cigna', 'united', 'covered', 'pay for', 'cost', 'money', 'afford', 'expensive'],
-      response: 'We accept most major insurance plans including Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, Medicare, and Medicaid. For a complete list of accepted insurance, please visit our <a href="/insurance" target="_blank">Insurance page</a> or call us at (980) 585-2019.',
+      response: 'We accept most major insurance plans including Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, Medicare, and Medicaid. For a complete list of accepted insurance, please see our <a href="/#insurance" target="_blank">Insurance section</a> or call us at (980) 585-2019.',
       type: 'info'
     },
     appointment: {
@@ -87,7 +87,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response += 'We can probably help you! ';
         }
         
-        response += 'Call (980) 585-2019 to talk about how we can help, or visit our <a href="/services" target="_blank">Services page</a> for more details.';
+        response += 'Call (980) 585-2019 to talk about how we can help, or visit our <a href="/#services" target="_blank">Services section</a> for more details.';
         
         return response;
       },
@@ -119,7 +119,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     },
     location: {
       keywords: ['location', 'located', 'address', 'where', 'directions', 'fort mill', 'huntersville', 'baltimore'],
-      response: 'We have three convenient locations:\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\nAll offices offer ample parking and easy access. You can scroll down on this page to see our locations section with directions and maps.',
+      response: 'We have three convenient locations:\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\nAll offices offer ample parking and easy access. <a href="/#locations" target="_blank">View directions and maps</a> for detailed location information.',
       type: 'info'
     },
     telehealth: {
@@ -202,7 +202,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response += 'Yes, we can probably help you! ';
         }
         
-        response += 'Call (980) 585-2019 to talk about how we can help you, or <a href="/services" target="_blank">learn more about our services</a>.';
+        response += 'Call (980) 585-2019 to talk about how we can help you, or <a href="/#services" target="_blank">learn more about our services</a>.';
         
         return response;
       },
@@ -322,7 +322,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     
     // Default response
     return { 
-      text: "I'd be happy to help you with that. You can explore our website for more information about our <a href='/services' target='_blank'>services</a>, <a href='/insurance' target='_blank'>insurance</a>, and <a href='/patient-forms' target='_blank'>patient forms</a>. For specific questions or to schedule an appointment, please call us at (980) 585-2019.",
+      text: "I'd be happy to help you with that. You can explore our website for more information about our <a href='/#services' target='_blank'>services</a>, <a href='/#insurance' target='_blank'>insurance</a>, and <a href='/patient-forms' target='_blank'>patient forms</a>. For specific questions or to schedule an appointment, please call us at (980) 585-2019.",
       type: 'default'
     };
   };

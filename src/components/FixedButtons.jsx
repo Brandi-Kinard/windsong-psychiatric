@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './FixedButtons.css';
 import '../styles/icons.css';
 import PoliciesModal from './PoliciesModal';
@@ -14,6 +14,25 @@ const FixedButtons = () => {
   const [isChatbotMinimized, setIsChatbotMinimized] = useState(() => {
     return sessionStorage.getItem('chatbotMinimized') === 'true';
   });
+
+  // Monitor sessionStorage changes (for when user navigates back/forward)
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setIsChatbotOpen(sessionStorage.getItem('chatbotOpen') === 'true');
+      setIsChatbotMinimized(sessionStorage.getItem('chatbotMinimized') === 'true');
+    };
+
+    // Listen for storage events
+    window.addEventListener('storage', handleStorageChange);
+    
+    // Also check periodically in case of same-origin changes
+    const interval = setInterval(handleStorageChange, 100);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      clearInterval(interval);
+    };
+  }, []);
 
   // Save chatbot state to sessionStorage whenever it changes
   const handleChatbotOpenChange = (isOpen) => {
