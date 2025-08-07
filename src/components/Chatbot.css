@@ -12,6 +12,19 @@
   display: none;
 }
 
+/* Desktop/Mobile title and button visibility */
+.chatbot-back-mobile {
+  display: none;
+}
+
+.chatbot-title-mobile {
+  display: none;
+}
+
+.chatbot-title-desktop {
+  display: inline;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -360,6 +373,40 @@
     justify-content: center;
   }
   
+  /* Mobile UI elements for tablet */
+  .chatbot-back-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background 0.2s;
+    margin-right: 8px;
+  }
+  
+  .chatbot-back-mobile:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .chatbot-title-mobile {
+    display: inline;
+  }
+  
+  .chatbot-title-desktop {
+    display: none;
+  }
+  
+  .chatbot-minimize-desktop {
+    display: none;
+  }
+  
   /* Tablet minimized state */
   .chatbot-wrapper.minimized {
     background: transparent;
@@ -384,15 +431,20 @@
     align-items: flex-end;
     background: rgba(0, 0, 0, 0.5);
     animation: mobileSlideIn 0.3s ease;
+    padding: 0; /* Remove any padding on mobile */
+    margin: 0;
   }
   
   .chatbot-container {
     width: 100%;
+    max-width: 100%;
     height: 85vh;
     max-height: 85vh;
     border-radius: 20px 20px 0 0;
     margin: 0;
+    padding: 0;
     animation: bottomSheetSlideUp 0.3s ease;
+    box-sizing: border-box;
   }
   
   .chatbot-header {
@@ -451,6 +503,40 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  
+  /* Mobile UI elements for phone */
+  .chatbot-back-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background 0.2s;
+    margin-right: 8px;
+  }
+  
+  .chatbot-back-mobile:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .chatbot-title-mobile {
+    display: inline;
+  }
+  
+  .chatbot-title-desktop {
+    display: none;
+  }
+  
+  .chatbot-minimize-desktop {
+    display: none;
   }
   
   /* Mobile phone minimized state */

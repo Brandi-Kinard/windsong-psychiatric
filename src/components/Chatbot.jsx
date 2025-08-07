@@ -256,6 +256,42 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     sessionStorage.setItem('chatbotMessages', JSON.stringify(messagesToSave));
   }, [messages]);
 
+  // Handle link clicks within chatbot messages
+  const handleLinkClick = (e) => {
+    e.preventDefault();
+    const href = e.target.getAttribute('href');
+    if (href) {
+      // Check if we're on mobile/tablet (screen width)
+      const isMobileOrTablet = window.innerWidth <= 768;
+      
+      if (isMobileOrTablet) {
+        // On mobile/tablet, minimize the chatbot before navigation
+        onMinimize();
+      }
+      
+      // Navigate in the same tab
+      window.location.href = href;
+    }
+  };
+
+  // Add click handlers to links in bot messages after they're rendered
+  useEffect(() => {
+    const chatContainer = chatContainerRef.current;
+    if (chatContainer) {
+      const links = chatContainer.querySelectorAll('.message-content a');
+      links.forEach(link => {
+        link.addEventListener('click', handleLinkClick);
+      });
+
+      // Cleanup event listeners
+      return () => {
+        links.forEach(link => {
+          link.removeEventListener('click', handleLinkClick);
+        });
+      };
+    }
+  }, [messages]);
+
   useEffect(() => {
     if (isOpen && messages.length === 1) {
       setTimeout(() => {
@@ -395,18 +431,22 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       <div className="chatbot-container">
         <div className="chatbot-header">
           <div className="chatbot-header-info">
+            <button className="chatbot-back-mobile" onClick={onMinimize}>←</button>
             <img 
               src="https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Help.png" 
               alt="Chatbot" 
               className="chatbot-avatar"
             />
             <div>
-              <h3>Windsong Assistant</h3>
+              <h3 className="chatbot-title">
+                <span className="chatbot-title-desktop">Windsong Assistant</span>
+                <span className="chatbot-title-mobile">Chat</span>
+              </h3>
               <span className="chatbot-status">🟢 Online</span>
             </div>
           </div>
           <div className="chatbot-header-buttons">
-            <button className="chatbot-minimize" onClick={onMinimize}>−</button>
+            <button className="chatbot-minimize chatbot-minimize-desktop" onClick={onMinimize}>−</button>
             <button className="chatbot-close" onClick={onClose}>✕</button>
           </div>
         </div>
@@ -453,7 +493,18 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
               {message.type === 'action' && (
                 <div className="action-message">
                   <p>{message.text}</p>
-                  <a href={message.button.link} className="action-button">
+                  <a 
+                    href={message.button.link} 
+                    className="action-button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const isMobileOrTablet = window.innerWidth <= 768;
+                      if (isMobileOrTablet) {
+                        onMinimize();
+                      }
+                      window.location.href = message.button.link;
+                    }}
+                  >
                     {message.button.text}
                   </a>
                 </div>
