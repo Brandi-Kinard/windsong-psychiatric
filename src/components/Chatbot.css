@@ -275,8 +275,104 @@
   cursor: not-allowed;
 }
 
-/* Mobile responsiveness - Bottom Sheet Design */
-@media (max-width: 768px) {
+/* Tablet responsiveness - Bottom Sheet Design */
+@media (max-width: 768px) and (min-width: 481px) {
+  .chatbot-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    animation: mobileSlideIn 0.3s ease;
+    padding: 20px 20px 0 20px;
+  }
+  
+  .chatbot-container {
+    width: 80%;
+    max-width: 600px;
+    height: 85vh;
+    max-height: 85vh;
+    border-radius: 20px 20px 0 0;
+    margin: 0;
+    animation: bottomSheetSlideUp 0.3s ease;
+  }
+  
+  .chatbot-header {
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    padding: 16px 20px;
+  }
+  
+  .chatbot-header::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+  }
+  
+  .chatbot-close,
+  .chatbot-minimize {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+  
+  .chatbot-header-buttons {
+    gap: 12px;
+  }
+  
+  .message-content {
+    max-width: 90%;
+  }
+  
+  .chatbot-input-form {
+    padding: 16px 20px 20px 20px;
+    gap: 12px;
+  }
+  
+  .chatbot-input {
+    padding: 14px 18px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .chatbot-send {
+    padding: 14px 20px;
+    font-size: 14px;
+    min-width: 80px;
+  }
+  
+  .quick-reply-button {
+    padding: 10px 14px;
+    font-size: 14px;
+    min-height: 44px; /* Better touch target */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Tablet minimized state */
+  .chatbot-wrapper.minimized {
+    background: transparent;
+    pointer-events: none;
+  }
+  
+  .chatbot-wrapper.minimized .chatbot-container {
+    display: none;
+  }
+}
+
+/* Mobile phone responsiveness - Full width Bottom Sheet */
+@media (max-width: 480px) {
   .chatbot-wrapper {
     position: fixed;
     top: 0;
@@ -357,7 +453,7 @@
     justify-content: center;
   }
   
-  /* Mobile minimized state */
+  /* Mobile phone minimized state */
   .chatbot-wrapper.minimized {
     background: transparent;
     pointer-events: none;
