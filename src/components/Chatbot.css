@@ -288,8 +288,11 @@
   cursor: not-allowed;
 }
 
-/* Tablet responsiveness - Bottom Sheet Design */
-@media (max-width: 768px) and (min-width: 481px) {
+/* Tablet responsiveness - Bottom Sheet Design (iPad, Android tablets) */
+@media (min-width: 768px) and (max-width: 1024px), 
+       (min-device-width: 768px) and (max-device-width: 1024px), 
+       (min-width: 768px) and (max-width: 820px) and (orientation: portrait),
+       (min-width: 1024px) and (max-width: 1180px) and (orientation: landscape) {
   .chatbot-wrapper {
     position: fixed;
     top: 0;
@@ -418,8 +421,12 @@
   }
 }
 
-/* Mobile phone responsiveness - Full width Bottom Sheet */
-@media (max-width: 480px) {
+/* Mobile phone responsiveness - Full width Bottom Sheet (iPhone, Android phones) */
+@media (max-width: 767px), 
+       (max-device-width: 767px), 
+       screen and (max-width: 430px) and (-webkit-min-device-pixel-ratio: 2),
+       screen and (max-width: 480px) and (orientation: portrait),
+       screen and (max-width: 767px) and (orientation: landscape) and (max-height: 430px) {
   .chatbot-wrapper {
     position: fixed;
     top: 0;

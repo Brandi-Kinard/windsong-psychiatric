@@ -295,8 +295,11 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         sessionStorage.setItem('chatbotScrollPosition', chatContainerRef.current.scrollTop.toString());
       }
       
-      // Check if we're on mobile/tablet (screen width)
-      const isMobileOrTablet = window.innerWidth <= 768;
+      // Check if we're on mobile/tablet (comprehensive detection)
+      const isMobile = window.innerWidth <= 767 || (window.innerWidth <= 767 && window.innerHeight <= 430);
+      const isTablet = (window.innerWidth > 767 && window.innerWidth <= 1024) || 
+                      (window.innerWidth >= 768 && window.innerWidth <= 1024);
+      const isMobileOrTablet = isMobile || isTablet;
       
       if (isMobileOrTablet) {
         // On mobile/tablet, minimize the chatbot before navigation
@@ -556,7 +559,11 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
                       if (chatContainerRef.current) {
                         sessionStorage.setItem('chatbotScrollPosition', chatContainerRef.current.scrollTop.toString());
                       }
-                      const isMobileOrTablet = window.innerWidth <= 768;
+                      // Check if we're on mobile/tablet (comprehensive detection)
+                      const isMobile = window.innerWidth <= 767 || (window.innerWidth <= 767 && window.innerHeight <= 430);
+                      const isTablet = (window.innerWidth > 767 && window.innerWidth <= 1024) || 
+                                      (window.innerWidth >= 768 && window.innerWidth <= 1024);
+                      const isMobileOrTablet = isMobile || isTablet;
                       if (isMobileOrTablet) {
                         onMinimize();
                       }
