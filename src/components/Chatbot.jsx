@@ -213,8 +213,37 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       response: 'We have several patient forms available online:\n\n• New Patient Inquiry Form\n• Consent for Treatment\n• Release of Information\n• Patient Referral Form\n• Medical Practice Attendance Policy\n• Financial Responsibility Form\n\nYou can access all forms on our <a href="/patient-forms">Patient Forms page</a>. Completing forms online saves time during your visit!',
       type: 'info'
     },
+    // Emotional support and validation responses
+    emotionalSupport: {
+      keywords: ['dont feel well', 'don\'t feel well', 'not feeling well', 'feel bad', 'feeling bad', 'feel terrible', 'feeling terrible', 'struggling', 'having a hard time', 'going through a tough time', 'really struggling', 'feel lost', 'feeling lost', 'feel hopeless', 'feeling hopeless', 'feel overwhelmed', 'feeling overwhelmed', 'having trouble', 'need help', 'feel alone', 'feeling alone', 'feel empty', 'feeling empty', 'hurting', 'in pain', 'feel broken', 'feeling broken', 'not doing well', 'doing badly', 'feel awful', 'feeling awful'],
+      response: (input) => {
+        const lower = input.toLowerCase();
+        let response = 'I\'m sorry you\'re not feeling well right now. ';
+        
+        if (lower.includes('struggling') || lower.includes('hard time') || lower.includes('tough time')) {
+          response += 'It sounds like you\'re going through a really difficult time, and that takes a lot of strength to reach out. ';
+        } else if (lower.includes('alone') || lower.includes('lost') || lower.includes('empty')) {
+          response += 'Feeling this way can be really isolating and scary. You\'re not alone in this. ';
+        } else if (lower.includes('overwhelmed') || lower.includes('hopeless') || lower.includes('broken')) {
+          response += 'Those feelings can be incredibly heavy to carry. It\'s brave of you to reach out. ';
+        } else {
+          response += 'Your feelings are valid, and it\'s important that you\'re reaching out. ';
+        }
+        
+        response += '\n\nWe understand how hard it can be to take that first step toward getting help. At Windsong, we create a safe, caring space where you can talk about what you\'re going through without judgment.\n\n';
+        
+        if (lower.includes('need help') || lower.includes('dont know') || lower.includes('don\'t know')) {
+          response += 'Taking the step to get help shows real courage. ';
+        }
+        
+        response += 'Would you like to:\n• <a href=\"/new-patient\">Fill out our new patient form</a> to get started\n• Call us at (980) 585-2019 to speak with someone right away\n• Learn more about <a href=\"/#services\">how we can help</a>\n\nYou don\'t have to go through this alone. We\'re here to support you.';
+        
+        return response;
+      },
+      type: 'support'
+    },
     payment: {
-      keywords: ['cost', 'price', 'payment', 'pay', 'fee', 'charge', 'expensive', 'afford'],
+      keywords: ['cost', 'price', 'payment', 'pay', 'fee', 'charge', 'expensive', 'afford', 'money', 'insurance cost', 'how much'],
       response: 'We accept most major insurance plans and strive to make mental health care accessible. Payment options include:\n\n• Insurance (we\'ll verify your coverage)\n• Credit/debit cards\n• Payment plans may be available\n\nFor specific cost information or to verify insurance coverage, please call our billing department at (980) 585-2019. You can also view our Policies & Fees by clicking the "Policies & Fees" button at the bottom of your screen.',
       type: 'info'
     },
@@ -325,9 +354,17 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
   const findResponse = (input) => {
     const lowerInput = input.toLowerCase();
     
-    // Check for crisis keywords first
+    // Check for crisis keywords first (highest priority)
     if (responses.crisis.keywords.some(keyword => lowerInput.includes(keyword))) {
       return { text: responses.crisis.response, type: 'crisis' };
+    }
+    
+    // Check for emotional support needs (second highest priority)
+    if (responses.emotionalSupport.keywords.some(keyword => lowerInput.includes(keyword))) {
+      return { 
+        text: responses.emotionalSupport.response(input),
+        type: 'support'
+      };
     }
     
     // Check greeting patterns
@@ -362,7 +399,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     
     // Check other responses
     for (const [key, data] of Object.entries(responses)) {
-      if (['crisis', 'greeting', 'ageQuestions', 'conditions', 'telehealth'].includes(key)) continue;
+      if (['crisis', 'emotionalSupport', 'greeting', 'ageQuestions', 'conditions', 'telehealth'].includes(key)) continue;
       
       if (data.keywords.some(keyword => lowerInput.includes(keyword))) {
         return { 
