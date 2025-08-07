@@ -383,8 +383,15 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
 
   if (!isOpen) return null;
 
+  const handleOverlayClick = (e) => {
+    // Only close if clicking on the overlay background (not the container)
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
+  };
+
   return (
-    <div className={`chatbot-wrapper ${isMinimized ? 'minimized' : ''}`}>
+    <div className={`chatbot-wrapper ${isMinimized ? 'minimized' : ''}`} onClick={handleOverlayClick}>
       <div className="chatbot-container">
         <div className="chatbot-header">
           <div className="chatbot-header-info">

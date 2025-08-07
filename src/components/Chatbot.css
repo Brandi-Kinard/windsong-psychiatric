@@ -1,9 +1,15 @@
+/* Desktop positioning */
 .chatbot-wrapper {
   position: fixed;
   bottom: 120px;
   right: 20px;
   z-index: 9999;
   animation: fadeIn 0.3s ease;
+}
+
+/* Desktop minimized state */
+.chatbot-wrapper.minimized .chatbot-container {
+  display: none;
 }
 
 @keyframes fadeIn {
@@ -269,27 +275,112 @@
   cursor: not-allowed;
 }
 
-/* Mobile responsiveness */
+/* Mobile responsiveness - Bottom Sheet Design */
 @media (max-width: 768px) {
   .chatbot-wrapper {
-    bottom: 0;
-    right: 0;
+    position: fixed;
+    top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: flex-end;
+    background: rgba(0, 0, 0, 0.5);
+    animation: mobileSlideIn 0.3s ease;
   }
   
   .chatbot-container {
     width: 100%;
-    height: 100vh;
-    max-height: 100vh;
-    border-radius: 0;
+    height: 85vh;
+    max-height: 85vh;
+    border-radius: 20px 20px 0 0;
+    margin: 0;
+    animation: bottomSheetSlideUp 0.3s ease;
   }
   
   .chatbot-header {
-    border-radius: 0;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    padding: 16px 20px;
+  }
+  
+  .chatbot-header::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+  }
+  
+  .chatbot-close,
+  .chatbot-minimize {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+  
+  .chatbot-header-buttons {
+    gap: 12px;
   }
   
   .message-content {
-    max-width: 85%;
+    max-width: 90%;
+  }
+  
+  .chatbot-input-form {
+    padding: 16px 20px 20px 20px;
+    gap: 12px;
+  }
+  
+  .chatbot-input {
+    padding: 14px 18px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .chatbot-send {
+    padding: 14px 20px;
+    font-size: 14px;
+    min-width: 80px;
+  }
+  
+  .quick-reply-button {
+    padding: 10px 14px;
+    font-size: 14px;
+    min-height: 44px; /* Better touch target */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Mobile minimized state */
+  .chatbot-wrapper.minimized {
+    background: transparent;
+    pointer-events: none;
+  }
+  
+  .chatbot-wrapper.minimized .chatbot-container {
+    display: none;
+  }
+}
+
+@keyframes mobileSlideIn {
+  from { background: rgba(0, 0, 0, 0); }
+  to { background: rgba(0, 0, 0, 0.5); }
+}
+
+@keyframes bottomSheetSlideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
