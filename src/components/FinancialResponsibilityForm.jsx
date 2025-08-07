@@ -16,7 +16,7 @@ const FinancialResponsibilityForm = () => {
 
   // EmailJS configuration
   const EMAILJS_SERVICE_ID = 'service_idvcxum';
-  const EMAILJS_TEMPLATE_ID = 'template_placeholder'; // Placeholder - will be updated
+  const EMAILJS_TEMPLATE_ID = 'template_thdv17m';
   const EMAILJS_PUBLIC_KEY = 'wFQLtLxDwWnkGF0TF';
   
   // Testing email address

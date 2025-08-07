@@ -25,12 +25,10 @@ const PatientForms = () => {
     } else if (sessionStorage.getItem('attendancePolicySubmitted') === 'true') {
       message = 'Medical Practice Attendance Policy form was successfully submitted!';
       sessionStorage.removeItem('attendancePolicySubmitted');
+    } else if (sessionStorage.getItem('financialPolicySubmitted') === 'true') {
+      message = 'Patient Financial Responsibility and Payment Policy form was successfully submitted!';
+      sessionStorage.removeItem('financialPolicySubmitted');
     }
-    // TEMPORARILY HIDDEN - EmailJS subscription upgrade pending
-    // else if (sessionStorage.getItem('financialPolicySubmitted') === 'true') {
-    //   message = 'Patient Financial Responsibility and Payment Policy form was successfully submitted!';
-    //   sessionStorage.removeItem('financialPolicySubmitted');
-    // }
 
     if (message) {
       setToastMessage(message);
@@ -71,12 +69,11 @@ const PatientForms = () => {
       link: '/attendance-policy',
       external: false
     },
-    // TEMPORARILY HIDDEN - EmailJS subscription upgrade pending
-    // {
-    //   title: 'Patient Financial Responsibility',
-    //   link: '/financial-responsibility',
-    //   external: false
-    // }
+    {
+      title: 'Patient Financial Responsibility',
+      link: '/financial-responsibility',
+      external: false
+    }
   ];
 
   return (
