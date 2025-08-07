@@ -123,7 +123,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     services: {
       keywords: ['services', 'what do you offer', 'what services', 'treatment', 'help with'],
       priority: 8,
-      response: 'We offer comprehensive psychiatric services:\n\n<strong>Core Services:</strong>\n• Psychiatric evaluations and assessments\n• Medication management and monitoring\n• Telemedicine appointments\n• Long-acting injections\n• Cognitive assessments\n• Crisis support\n\n<strong>Specialized Care:</strong>\n• Geriatric psychiatry (including facility visits)\n• Evidence-based treatments\n• Holistic, whole-person approach\n• B12 vitamin injections\n\n<strong>We treat:</strong> anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, insomnia, dementia, and more.\n\nVisit our <a href="/#services">Services section</a> for complete details or call (980) 585-2019.',
+      response: 'We offer comprehensive psychiatric services:\n\n<strong>Core Services:</strong>\n• <strong>Psychiatric Evaluations</strong> - comprehensive assessments and treatment planning\n• <strong>Medication Management</strong> - expert psychiatric medication evaluation and monitoring\n• <strong>Telemedicine</strong> - convenient virtual appointments with HIPAA-compliant platform\n• <strong>Specialized Care</strong> - focused treatment for anxiety, depression, ADHD, trauma, and other conditions\n• <strong>Injections</strong> - long-acting antipsychotics, mood stabilizers, and B12 vitamin injections\n• <strong>Prevention & Wellness</strong> - proactive mental health strategies and patient advocacy\n\n<strong>Geriatric Specialty Care:</strong>\n• In-home visits and facility visits\n• Dementia care and cognitive assessments\n• Family support and education\n• Coordination with medical providers\n• End-of-life mental health support\n\n<strong>We treat:</strong> Depression, bipolar disorder, anxiety, OCD, PTSD, schizophrenia, ADHD, insomnia, adjustment disorder, grief, dementia, and more.\n\nVisit our <a href="/#services">Services section</a> for complete details or call (980) 585-2019.',
       type: 'info'
     },
 
@@ -170,7 +170,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response = '<strong>Felicia Davis is a Psychiatric Nurse Practitioner (PMHNP-BC).</strong> She\'s also board-certified as a Family Nurse Practitioner (FNP-BC).\n\n';
         }
         
-        response += '<strong>Felicia Davis, MSN, PMHNP-BC, FNP-BC</strong> is our experienced psychiatric nurse practitioner:\n\n<strong>Credentials:</strong>\n• Board-certified in psychiatric mental health\n• Board-certified in family medicine\n• Master of Science in Nursing\n• Over a decade of mental health experience\n\n<strong>Experience:</strong>\n• Inpatient psychiatric units\n• Outpatient clinics\n• Emergency departments  \n• Community mental health centers\n• Specialized in pediatric and geriatric care\n\n<strong>Mission:</strong> Expanding access to compassionate, evidence-based mental health care.\n\nLearn more on our <a href="/meet-felicia-davis">Meet Felicia Davis</a> page.';
+        response += '<strong>Felicia Davis, MSN, PMHNP-BC, FNP-BC</strong> is our experienced psychiatric nurse practitioner:\n\n<strong>Educational Background:</strong>\n• Bachelor of Arts in Sociology and Criminal Justice (Norfolk State University)\n• Bachelor of Science in Nursing (Winston-Salem State University)\n• Master of Science in Nursing (Winston-Salem State University)\n• Post-Master\'s Certificate in Psychiatric Mental Health Nursing (Husson University)\n\n<strong>Clinical Experience (Over a Decade):</strong>\n• Inpatient forensic psychiatry units\n• Community mental health centers\n• Outpatient psychiatric clinics\n• Emergency departments (psychiatric assessments and consultations)\n• Specialized in pediatric and geriatric populations\n\n<strong>Current Practice:</strong>\n• Outpatient psychiatric care for all ages\n• Focus on chronic mental illness support\n• Crisis stabilization\n• Addiction recovery guidance\n\n<strong>Mission:</strong> "All To Thee I Owe" - expanding access to compassionate, evidence-based care for underserved populations.\n\nLearn more on our <a href="/meet-felicia-davis">Meet Felicia Davis</a> page.';
         
         return response;
       },
@@ -385,7 +385,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     // Session costs and pricing (directs to actual fee location)
     sessionCosts: {
       keywords: ['how much', 'cost', 'price', 'session cost', 'appointment cost', 'fees', 'pay for session', 'pay for appointment', 'what does it cost', 'pricing', 'expensive', 'charges', 'bill', 'billing', 'what are the fees'],
-      response: 'You can find our complete fee schedule and pricing information in our <strong>Policies & Fees</strong> section:\n\n<strong>Current Self-Pay Fees:</strong>\n• New patient visit: $280\n• Follow-up visit: $140\n• Forms completion: $10 per page\n\n<strong>We also accept:</strong>\n• Most major insurance plans (we verify coverage)\n• HSA/FSA cards\n• Payment plans for financial hardship\n\nClick the <strong>"Policies & Fees"</strong> button at the bottom of your screen to see complete details, or call (980) 585-2019 for insurance verification.',
+      response: 'You can find our complete fee schedule and pricing information in our <strong>Policies & Fees</strong> section:\n\n<strong>Current Self-Pay Fees:</strong>\n• New patient visit: $280\n• Follow-up visit: $140\n• Forms completion: $10 per page\n\n<strong>Cancellation & No-Show Fees:</strong>\n• Late cancellation (under 24 hours): $50\n• No-show appointment: $120\n\n<strong>Payment Options:</strong>\n• Most major insurance plans (we verify coverage before appointments)\n• Check, credit/debit cards, HSA/FSA cards\n• Payment due at time of service\n\n<strong>Important:</strong> We understand emergencies happen - fees may be waived for unforeseen circumstances on a case-by-case basis.\n\nClick the <strong>"Policies & Fees"</strong> button at the bottom of your screen to see complete details, or call (980) 585-2019 for insurance verification.',
       type: 'info'
     },
     
@@ -396,10 +396,11 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       type: 'info'
     },
     
-    // Comprehensive services
+    // Comprehensive services with detailed conditions
     servicesDetailed: {
-      keywords: ['services', 'what do you offer', 'treatment', 'help with', 'psychiatric evaluation', 'medication management', 'injections', 'geriatric care', 'what can you treat', 'what services'],
-      response: 'We offer comprehensive psychiatric services:\n\n<strong>Core Services:</strong>\n• Psychiatric evaluations and assessments\n• Medication management and monitoring\n• Telemedicine appointments\n• Long-acting injections\n• Cognitive assessments\n\n<strong>Specialized Care:</strong>\n• Geriatric psychiatry (including facility visits)\n• Evidence-based treatments\n• Holistic, whole-person approach\n• Crisis support and intervention\n\n<strong>We treat conditions like:</strong> anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, insomnia, and more.\n\nVisit our <a href="/#services">Services section</a> for complete details or call (980) 585-2019 to discuss your specific needs.',
+      keywords: ['conditions we treat', 'what conditions', 'what mental health', 'disorders', 'illnesses', 'problems'],
+      priority: 7,
+      response: 'We treat a wide range of mental health conditions:\n\n<strong>Mood Disorders:</strong>\n• Depression and Major Depressive Disorder\n• Bipolar Disorder\n• Mood swings and emotional instability\n\n<strong>Anxiety & Stress Disorders:</strong>\n• Generalized Anxiety Disorder\n• Panic Attacks and Panic Disorder\n• OCD (Obsessive-Compulsive Disorder)\n• PTSD and Trauma-related conditions\n\n<strong>Neurodevelopmental & Cognitive:</strong>\n• ADHD (attention and focus issues)\n• Dementia and cognitive decline\n• Memory concerns and cognitive assessments\n\n<strong>Psychotic Disorders:</strong>\n• Schizophrenia\n• Schizoaffective Disorder\n• Thought disorders and reality perception issues\n\n<strong>Other Conditions:</strong>\n• Insomnia and sleep disorders\n• Adjustment Disorder (difficulty coping with change)\n• Grief and bereavement support\n\n<strong>We provide:</strong> Evidence-based treatments, individualized treatment plans, holistic approaches, and long-term management strategies.\n\nCall (980) 585-2019 to discuss your specific situation.',
       type: 'info'
     },
     
@@ -569,10 +570,10 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         }
         
         if (!lower.includes('baltimore') && !lower.includes('fort mill') && !lower.includes('huntersville')) {
-          response = '<strong>We have three convenient locations:</strong>\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\n';
+          response = '<strong>We have three convenient locations plus virtual care:</strong>\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\n💻 <strong>Virtual Care:</strong> Available throughout NC, SC, MD, GA, VA, DC, FL\n\n';
         }
         
-        response += '<strong>Contact Information:</strong>\n📞 <strong>Phone:</strong> (980) 585-2019\n📠 <strong>Fax:</strong> (980) 585-2016\n✉️ <strong>Email:</strong> contact@windsongpsychiatric.com\n\n<strong>All locations</strong> offer ample parking and easy access. View <a href="/#locations">directions and maps</a> for details!';
+        response += '<strong>Contact Information:</strong>\n📞 <strong>Phone:</strong> (980) 585-2019\n📠 <strong>Fax:</strong> (980) 585-2016\n✉️ <strong>Email:</strong> contact@windsongpsychiatric.com\n\n<strong>Office Hours (All Locations):</strong>\n• Monday–Thursday: 8:00 AM – 7:00 PM\n• Friday: Closed\n• Saturday: By appointment only (case-by-case basis)\n• Sunday: Closed\n\n<strong>All locations</strong> offer ample parking and easy access. View <a href="/#locations">directions and maps</a> for details!';
         
         return response;
       },
@@ -619,6 +620,22 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         return response;
       },
       type: 'info'
+    },
+
+    // Why choose Windsong - benefits and approach
+    whyChoose: {
+      keywords: ['why choose', 'why windsong', 'what makes you different', 'benefits', 'advantages', 'why should i choose', 'what sets you apart'],
+      priority: 7,
+      response: '<strong>Why Choose Windsong Psychiatric Associates?</strong>\n\n<strong>🧠 Care for Every Age:</strong>\n• Specialized mental health care for adolescents (13+), adults, and seniors\n• Age-appropriate treatment approaches tailored to your life stage\n\n<strong>👩‍⚕️ Experienced Provider:</strong>\n• Board-certified psychiatric provider with over a decade of experience\n• Extensive background in inpatient, outpatient, emergency, and community settings\n• Specialized expertise in pediatric and geriatric populations\n\n<strong>🤝 Whole-Person Approach:</strong>\n• We treat the whole person, not just symptoms\n• Integrate physical health, lifestyle, and environmental factors\n• Evidence-based care that puts you first\n• Compassionate, individualized treatment plans\n\n<strong>Our Mission:</strong> Expanding access to quality mental health care, especially for underserved populations. Every person deserves dignity, hope, and the opportunity to heal.\n\n<strong>"All To Thee I Owe"</strong> - our guiding principle of gratitude, purpose, and service.\n\nReady to experience the difference? Call (980) 585-2019 or <a href="/new-patient">get started online</a>.',
+      type: 'info'
+    },
+
+    // Crisis resources and helpful resources
+    crisisResources: {
+      keywords: ['crisis resources', 'hotlines', 'emergency numbers', 'suicide hotline', '988', 'crisis help', 'mental health emergency'],
+      priority: 10,
+      response: '⚠️ <strong>Crisis & Emergency Resources Available 24/7:</strong>\n\n🆘 <strong>Life-Threatening Emergency:</strong> 911\n\n☎️ <strong>Mental Health Crisis:</strong> 988 (Suicide & Crisis Lifeline)\n\n<strong>Other Important Resources:</strong>\n• National Suicide Hotline: 1-800-273-TALK (8255)\n• National Sexual Assault Hotline: 1-800-656-HOPE (4673)\n• National Domestic Violence Hotline: 1-800-799-SAFE (7233)\n• National Council on Alcoholism & Drug Dependency: 1-800-622-2255\n\n<strong>Remember:</strong> If you\'re having thoughts of self-harm or experiencing a mental health emergency, please reach out immediately. You don\'t have to face this alone.\n\nFor more resources, visit our <a href="/helpful-resources">Helpful Resources</a> page.',
+      type: 'crisis'
     },
 
     contact: {
@@ -740,6 +757,11 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       return { text: responses.crisis.response, type: 'crisis' };
     }
     
+    // Crisis resources - also high priority
+    if (responses.crisisResources && responses.crisisResources.keywords.some(keyword => lowerInput.includes(keyword))) {
+      return { text: responses.crisisResources.response, type: 'crisis' };
+    }
+    
     // Emotional support - second highest priority  
     if (responses.emotionalSupport && responses.emotionalSupport.keywords.some(keyword => lowerInput.includes(keyword))) {
       return { 
@@ -750,7 +772,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     
     // Score all other responses
     for (const [key, data] of Object.entries(responses)) {
-      if (['crisis', 'emotionalSupport'].includes(key)) continue;
+      if (['crisis', 'crisisResources', 'emotionalSupport'].includes(key)) continue;
       
       let score = 0;
       let keywordMatches = 0;
