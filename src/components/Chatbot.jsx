@@ -245,14 +245,14 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     // Attendance policy and procedures
     attendancePolicy: {
       keywords: ['attendance policy', 'attendance', 'missed appointment', 'no show', 'cancel appointment', 'cancellation policy', 'reschedule', 'late', 'tardy', 'policy', 'where can i find the attendance policy', 'attendance rules', 'appointment rules'],
-      response: 'Our attendance policy helps ensure quality care for all patients:\n\n• **24 hours notice** required for cancellations or rescheduling\n• Arriving more than 15 minutes late may require rescheduling\n• Late cancellations and no-shows may incur fees\n• Multiple missed appointments may affect continued care\n\nYou can find the complete <a href="/attendance-policy">Medical Practice Attendance Policy</a> form with full details. For specific questions about your situation, please call (980) 585-2019.',
+      response: 'Our attendance policy helps ensure quality care for all patients:\n\n**Key Requirements:**\n• **24 hours notice** required for cancellations or rescheduling\n• Arriving more than 15 minutes late may require rescheduling\n• Late cancellations (under 24 hrs): $50 fee\n• No-show appointments: $120 fee\n• After 2 missed appointments, continued care may be discontinued\n\n**Find complete details in:**\n• **"Policies & Fees"** button at bottom of your screen\n• <a href="/attendance-policy">Medical Practice Attendance Policy</a> form\n\nCall (980) 585-2019 for specific questions about your situation.',
       type: 'info'
     },
     
-    // Session costs and pricing (flexible language)
+    // Session costs and pricing (directs to actual fee location)
     sessionCosts: {
-      keywords: ['how much', 'cost', 'price', 'session cost', 'appointment cost', 'fees', 'pay for session', 'pay for appointment', 'what does it cost', 'pricing', 'expensive', 'charges', 'bill', 'billing'],
-      response: 'We strive to make mental health care accessible with several payment options:\n\n• **Most major insurance plans accepted** - we verify your coverage\n• **Self-pay options available** for those without insurance\n• **Payment plans** may be available for financial hardship\n• **HSA/FSA cards accepted**\n\nSpecific fees vary based on service type and insurance coverage. For current pricing details and to verify your insurance benefits, please call our billing department at (980) 585-2019. You can also review our <a href="/financial-responsibility">Financial Responsibility Policy</a>.',
+      keywords: ['how much', 'cost', 'price', 'session cost', 'appointment cost', 'fees', 'pay for session', 'pay for appointment', 'what does it cost', 'pricing', 'expensive', 'charges', 'bill', 'billing', 'what are the fees'],
+      response: 'You can find our complete fee schedule and pricing information in our **Policies & Fees** section:\n\n**Current Self-Pay Fees:**\n• New patient visit: $280\n• Follow-up visit: $140\n• Forms completion: $10 per page\n\n**We also accept:**\n• Most major insurance plans (we verify coverage)\n• HSA/FSA cards\n• Payment plans for financial hardship\n\nClick the **"Policies & Fees"** button at the bottom of your screen to see complete details, or call (980) 585-2019 for insurance verification.',
       type: 'info'
     },
     
@@ -299,6 +299,13 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     ageEligibility: {
       keywords: ['age', 'how old', 'children', 'kids', 'teens', 'adolescent', 'adult', 'seniors', 'elderly', '13', 'minimum age'],
       response: 'We provide psychiatric care for:\n\n• **Adolescents 13 and older**\n• **Adults of all ages**\n• **Seniors and elderly patients**\n\n**Specialized experience with:**\n• Teenage mental health concerns\n• Adult psychiatric conditions\n• Geriatric psychiatry (including dementia care)\n• Age-appropriate treatment approaches\n\nFor children under 13, we can provide referrals to child psychiatrists. Call (980) 585-2019 to discuss your specific needs.',
+      type: 'info'
+    },
+    
+    // Cancellation fees and policies
+    cancellationFees: {
+      keywords: ['cancellation fee', 'cancel fee', 'no show fee', 'missed appointment fee', 'late cancellation', 'charged for canceling', 'fee for missing', 'cancel charge'],
+      response: 'Here are our cancellation fee details:\n\n**Late Cancellation** (less than 24 hours notice): $50 fee\n**No-Show** (missed without notice): $120 fee\n\n**Important notes:**\n• Emergency situations handled case-by-case\n• Fees may be waived for unforeseen circumstances\n• Payment due at time of service\n• Not covered by insurance\n\nFind complete policy details by clicking **"Policies & Fees"** at the bottom of your screen, or call (980) 585-2019 to discuss your specific situation.',
       type: 'info'
     },
     
