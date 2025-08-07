@@ -35,12 +35,12 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
   const responses = {
     insurance: {
       keywords: ['insurance', 'accept', 'coverage', 'plan', 'medicaid', 'medicare', 'blue cross', 'aetna', 'cigna', 'united', 'covered', 'pay for', 'cost', 'money', 'afford', 'expensive'],
-      response: 'We accept most major insurance plans including Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, Medicare, and Medicaid. For a complete list of accepted insurance, please see our <a href="/#insurance" target="_blank">Insurance section</a> or call us at (980) 585-2019.',
+      response: 'We accept most major insurance plans including Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, Medicare, and Medicaid. For a complete list of accepted insurance, please see our <a href="/#insurance">Insurance section</a> or call us at (980) 585-2019.',
       type: 'info'
     },
     appointment: {
       keywords: ['appointment', 'schedule', 'book', 'available', 'new patient', 'see someone', 'talk to doctor', 'meet', 'visit', 'come in'],
-      response: 'To schedule an appointment, you can:\n\n1. Call us at (980) 585-2019\n2. Fill out our <a href="/new-patient" target="_blank">New Patient form</a>\n3. Have your provider send us a referral\n\nWe typically see new patients within 1-2 weeks.',
+      response: 'To schedule an appointment, you can:\n\n1. Call us at (980) 585-2019\n2. Fill out our <a href="/new-patient">New Patient form</a>\n3. Have your provider send us a referral\n\nWe typically see new patients within 1-2 weeks.',
       type: 'action'
     },
     getStarted: {
@@ -53,7 +53,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response += 'Since you\'re new, ';
         }
         
-        response += 'Here\'s what you can do:\n\n1. Fill out our <a href="/new-patient" target="_blank">New Patient Form</a> - it\'s easy and takes just a few minutes\n2. Or call us at (980) 585-2019 to talk to someone right away\n3. We\'ll call you back within 1-2 days to set up your first visit\n\n';
+        response += 'Here\'s what you can do:\n\n1. Fill out our <a href="/new-patient">New Patient Form</a> - it\'s easy and takes just a few minutes\n2. Or call us at (980) 585-2019 to talk to someone right away\n3. We\'ll call you back within 1-2 days to set up your first visit\n\n';
         
         if (lower.includes('dont know') || lower.includes('confused') || lower.includes('help')) {
           response += 'Don\'t worry - we make it simple! ';
@@ -87,7 +87,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response += 'We can probably help you! ';
         }
         
-        response += 'Call (980) 585-2019 to talk about how we can help, or visit our <a href="/#services" target="_blank">Services section</a> for more details.';
+        response += 'Call (980) 585-2019 to talk about how we can help, or visit our <a href="/#services">Services section</a> for more details.';
         
         return response;
       },
@@ -119,7 +119,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     },
     location: {
       keywords: ['location', 'located', 'address', 'where', 'directions', 'fort mill', 'huntersville', 'baltimore'],
-      response: 'We have three convenient locations:\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\nAll offices offer ample parking and easy access. <a href="/#locations" target="_blank">View directions and maps</a> for detailed location information.',
+      response: 'We have three convenient locations:\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\nAll offices offer ample parking and easy access. <a href="/#locations">View directions and maps</a> for detailed location information.',
       type: 'info'
     },
     telehealth: {
@@ -155,7 +155,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     },
     provider: {
       keywords: ['felicia', 'davis', 'provider', 'doctor', 'practitioner', 'fnp', 'psychiatrist', 'nurse', 'name'],
-      response: 'Felicia Davis, FNP-C is our psychiatric nurse practitioner. She has extensive experience in mental health care and is dedicated to providing compassionate, personalized treatment. Learn more about her background and approach on our <a href="/meet-felicia-davis" target="_blank">Meet Felicia Davis</a> page.',
+      response: 'Felicia Davis, FNP-C is our psychiatric nurse practitioner. She has extensive experience in mental health care and is dedicated to providing compassionate, personalized treatment. Learn more about her background and approach on our <a href="/meet-felicia-davis">Meet Felicia Davis</a> page.',
       type: 'info'
     },
     greeting: {
@@ -202,7 +202,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response += 'Yes, we can probably help you! ';
         }
         
-        response += 'Call (980) 585-2019 to talk about how we can help you, or <a href="/#services" target="_blank">learn more about our services</a>.';
+        response += 'Call (980) 585-2019 to talk about how we can help you, or <a href="/#services">learn more about our services</a>.';
         
         return response;
       },
@@ -210,7 +210,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     },
     forms: {
       keywords: ['form', 'paperwork', 'documents', 'patient form', 'intake'],
-      response: 'We have several patient forms available online:\n\n• New Patient Inquiry Form\n• Consent for Treatment\n• Release of Information\n• Patient Referral Form\n• Medical Practice Attendance Policy\n• Financial Responsibility Form\n\nYou can access all forms on our <a href="/patient-forms" target="_blank">Patient Forms page</a>. Completing forms online saves time during your visit!',
+      response: 'We have several patient forms available online:\n\n• New Patient Inquiry Form\n• Consent for Treatment\n• Release of Information\n• Patient Referral Form\n• Medical Practice Attendance Policy\n• Financial Responsibility Form\n\nYou can access all forms on our <a href="/patient-forms">Patient Forms page</a>. Completing forms online saves time during your visit!',
       type: 'info'
     },
     payment: {
@@ -322,7 +322,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     
     // Default response
     return { 
-      text: "I'd be happy to help you with that. You can explore our website for more information about our <a href='/#services' target='_blank'>services</a>, <a href='/#insurance' target='_blank'>insurance</a>, and <a href='/patient-forms' target='_blank'>patient forms</a>. For specific questions or to schedule an appointment, please call us at (980) 585-2019.",
+      text: "I'd be happy to help you with that. You can explore our website for more information about our <a href='/#services'>services</a>, <a href='/#insurance'>insurance</a>, and <a href='/patient-forms'>patient forms</a>. For specific questions or to schedule an appointment, please call us at (980) 585-2019.",
       type: 'default'
     };
   };
@@ -453,7 +453,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
               {message.type === 'action' && (
                 <div className="action-message">
                   <p>{message.text}</p>
-                  <a href={message.button.link} target="_blank" rel="noopener noreferrer" className="action-button">
+                  <a href={message.button.link} className="action-button">
                     {message.button.text}
                   </a>
                 </div>
