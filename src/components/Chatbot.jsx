@@ -54,7 +54,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     generalHelp: {
       keywords: ['i need help', 'need help', 'can you help me out', 'help me', 'can you help', 'looking for help'],
       priority: 9,
-      response: 'I\'d be happy to help you! I can answer questions about:\n\n• **Scheduling appointments** and new patient process\n• **Services we offer** and conditions we treat  \n• **Insurance coverage** and pricing\n• **Office locations** and hours\n• **Forms and policies**\n• **Provider information**\n\nWhat specific information are you looking for? Or you can call us directly at (980) 585-2019.',
+      response: 'I\'d be happy to help you! I can answer questions about:\n\n• <strong>Scheduling appointments</strong> and new patient process\n• <strong>Services we offer</strong> and conditions we treat  \n• <strong>Insurance coverage</strong> and pricing\n• <strong>Office locations</strong> and hours\n• <strong>Forms and policies</strong>\n• <strong>Provider information</strong>\n\nWhat specific information are you looking for? Or you can call us directly at (980) 585-2019.',
       type: 'support'
     },
 
@@ -68,31 +68,31 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         
         // Specific plan mentions
         if (lower.includes('blue cross')) {
-          response += '✅ **Blue Cross Blue Shield** - Yes, we accept this\n';
+          response += '✅ <strong>Blue Cross Blue Shield</strong> - Yes, we accept this\n';
         }
         if (lower.includes('aetna')) {
-          response += '✅ **Aetna** - Yes, we accept this\n';
+          response += '✅ <strong>Aetna</strong> - Yes, we accept this\n';
         }
         if (lower.includes('cigna')) {
-          response += '✅ **Cigna** - Yes, we accept this\n';
+          response += '✅ <strong>Cigna</strong> - Yes, we accept this\n';
         }
         if (lower.includes('united')) {
-          response += '✅ **United Healthcare** - Yes, we accept this\n';
+          response += '✅ <strong>United Healthcare</strong> - Yes, we accept this\n';
         }
         if (lower.includes('medicare')) {
-          response += '✅ **Medicare** - Yes, we accept this\n';
+          response += '✅ <strong>Medicare</strong> - Yes, we accept this\n';
         }
         if (lower.includes('medicaid')) {
-          response += '✅ **Medicaid** - Yes, we accept this\n';
+          response += '✅ <strong>Medicaid</strong> - Yes, we accept this\n';
         }
         if (lower.includes('tricare')) {
-          response += '✅ **Tricare** - Yes, we accept this\n';
+          response += '✅ <strong>Tricare</strong> - Yes, we accept this\n';
         }
         if (lower.includes('humana')) {
-          response += '✅ **Humana** - Yes, we accept this\n';
+          response += '✅ <strong>Humana</strong> - Yes, we accept this\n';
         }
         
-        response += '\n**Other plans we accept:**\n• Partners and many other major carriers\n\n**We verify your coverage** before your appointment to let you know about copayments, deductibles, and coverage details.\n\nFor specific insurance verification, call (980) 585-2019 or visit our <a href="/#insurance">Insurance section</a>.';
+        response += '\n<strong>Other plans we accept:</strong>\n• Partners and many other major carriers\n\n<strong>We verify your coverage</strong> before your appointment to let you know about copayments, deductibles, and coverage details.\n\nFor specific insurance verification, call (980) 585-2019 or visit our <a href="/#insurance">Insurance section</a>.';
         
         return response;
       },
@@ -112,7 +112,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response = 'To schedule an appointment, you can:\n\n';
         }
         
-        response += '**3 Easy Ways:**\n1. **Call us** at (980) 585-2019\n2. **Fill out** our <a href="/new-patient">New Patient form</a> online\n3. **Have your provider** send us a referral\n\n**Timeline:** New patients typically seen within 1-2 weeks.\n\nWhich method works best for you?';
+        response += '<strong>3 Easy Ways:</strong>\n1. <strong>Call us</strong> at (980) 585-2019\n2. <strong>Fill out</strong> our <a href="/new-patient">New Patient form</a> online\n3. <strong>Have your provider</strong> send us a referral\n\n<strong>Timeline:</strong> New patients typically seen within 1-2 weeks.\n\nWhich method works best for you?';
         
         return response;
       },
@@ -123,7 +123,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     services: {
       keywords: ['services', 'what do you offer', 'what services', 'treatment', 'help with'],
       priority: 8,
-      response: 'We offer comprehensive psychiatric services:\n\n**Core Services:**\n• Psychiatric evaluations and assessments\n• Medication management and monitoring\n• Telemedicine appointments\n• Long-acting injections\n• Cognitive assessments\n• Crisis support\n\n**Specialized Care:**\n• Geriatric psychiatry (including facility visits)\n• Evidence-based treatments\n• Holistic, whole-person approach\n• B12 vitamin injections\n\n**We treat:** anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, insomnia, dementia, and more.\n\nVisit our <a href="/#services">Services section</a> for complete details or call (980) 585-2019.',
+      response: 'We offer comprehensive psychiatric services:\n\n<strong>Core Services:</strong>\n• Psychiatric evaluations and assessments\n• Medication management and monitoring\n• Telemedicine appointments\n• Long-acting injections\n• Cognitive assessments\n• Crisis support\n\n<strong>Specialized Care:</strong>\n• Geriatric psychiatry (including facility visits)\n• Evidence-based treatments\n• Holistic, whole-person approach\n• B12 vitamin injections\n\n<strong>We treat:</strong> anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, insomnia, dementia, and more.\n\nVisit our <a href="/#services">Services section</a> for complete details or call (980) 585-2019.',
       type: 'info'
     },
 
@@ -136,22 +136,22 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         let response = '';
         
         if (lower.includes('anxiety')) {
-          response = '✅ **Yes, we treat anxiety!** We provide comprehensive anxiety treatment including:\n• Medication management\n• Evidence-based approaches\n• Coping strategies\n• Regular monitoring and support';
+          response = '✅ <strong>Yes, we treat anxiety!</strong> We provide comprehensive anxiety treatment including:\n• Medication management\n• Evidence-based approaches\n• Coping strategies\n• Regular monitoring and support';
         } else if (lower.includes('depression')) {
-          response = '✅ **Yes, we treat depression!** Our depression care includes:\n• Psychiatric evaluations\n• Medication management\n• Treatment plan development\n• Ongoing support and monitoring';
+          response = '✅ <strong>Yes, we treat depression!</strong> Our depression care includes:\n• Psychiatric evaluations\n• Medication management\n• Treatment plan development\n• Ongoing support and monitoring';
         } else if (lower.includes('adhd')) {
-          response = '✅ **Yes, we treat ADHD!** Our ADHD services include:\n• Comprehensive evaluations\n• Medication management\n• Treatment for teens and adults\n• Focus and attention strategies';
+          response = '✅ <strong>Yes, we treat ADHD!</strong> Our ADHD services include:\n• Comprehensive evaluations\n• Medication management\n• Treatment for teens and adults\n• Focus and attention strategies';
         } else if (lower.includes('bipolar')) {
-          response = '✅ **Yes, we treat bipolar disorder!** We provide:\n• Mood stabilization\n• Medication management\n• Long-term support\n• Crisis intervention when needed';
+          response = '✅ <strong>Yes, we treat bipolar disorder!</strong> We provide:\n• Mood stabilization\n• Medication management\n• Long-term support\n• Crisis intervention when needed';
         } else if (lower.includes('ptsd')) {
-          response = '✅ **Yes, we treat PTSD and trauma!** Our trauma care includes:\n• Trauma-informed treatment\n• Evidence-based approaches\n• Medication when appropriate\n• Supportive therapy options';
+          response = '✅ <strong>Yes, we treat PTSD and trauma!</strong> Our trauma care includes:\n• Trauma-informed treatment\n• Evidence-based approaches\n• Medication when appropriate\n• Supportive therapy options';
         } else if (lower.includes('prescribe') || lower.includes('medication')) {
-          response = '✅ **Yes, we prescribe medication!** As a psychiatric nurse practitioner, Felicia Davis can:\n• Prescribe psychiatric medications\n• Monitor medication effectiveness\n• Adjust dosages as needed\n• Provide medication education';
+          response = '✅ <strong>Yes, we prescribe medication!</strong> As a psychiatric nurse practitioner, Felicia Davis can:\n• Prescribe psychiatric medications\n• Monitor medication effectiveness\n• Adjust dosages as needed\n• Provide medication education';
         } else {
-          response = '✅ **We treat many mental health conditions** including anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, insomnia, and more.';
+          response = '✅ <strong>We treat many mental health conditions</strong> including anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, insomnia, and more.';
         }
         
-        response += '\n\nWe specialize in **adolescents (13+), adults, and seniors**. Call (980) 585-2019 to discuss your specific needs.';
+        response += '\n\nWe specialize in <strong>adolescents (13+), adults, and seniors</strong>. Call (980) 585-2019 to discuss your specific needs.';
         
         return response;
       },
@@ -167,10 +167,10 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         let response = '';
         
         if (lower.includes('psychiatrist or nurse practitioner') || lower.includes('are you a psychiatrist')) {
-          response = '**Felicia Davis is a Psychiatric Nurse Practitioner (PMHNP-BC).** She\'s also board-certified as a Family Nurse Practitioner (FNP-BC).\n\n';
+          response = '<strong>Felicia Davis is a Psychiatric Nurse Practitioner (PMHNP-BC).</strong> She\'s also board-certified as a Family Nurse Practitioner (FNP-BC).\n\n';
         }
         
-        response += '**Felicia Davis, MSN, PMHNP-BC, FNP-BC** is our experienced psychiatric nurse practitioner:\n\n**Credentials:**\n• Board-certified in psychiatric mental health\n• Board-certified in family medicine\n• Master of Science in Nursing\n• Over a decade of mental health experience\n\n**Experience:**\n• Inpatient psychiatric units\n• Outpatient clinics\n• Emergency departments  \n• Community mental health centers\n• Specialized in pediatric and geriatric care\n\n**Mission:** Expanding access to compassionate, evidence-based mental health care.\n\nLearn more on our <a href="/meet-felicia-davis">Meet Felicia Davis</a> page.';
+        response += '<strong>Felicia Davis, MSN, PMHNP-BC, FNP-BC</strong> is our experienced psychiatric nurse practitioner:\n\n<strong>Credentials:</strong>\n• Board-certified in psychiatric mental health\n• Board-certified in family medicine\n• Master of Science in Nursing\n• Over a decade of mental health experience\n\n<strong>Experience:</strong>\n• Inpatient psychiatric units\n• Outpatient clinics\n• Emergency departments  \n• Community mental health centers\n• Specialized in pediatric and geriatric care\n\n<strong>Mission:</strong> Expanding access to compassionate, evidence-based mental health care.\n\nLearn more on our <a href="/meet-felicia-davis">Meet Felicia Davis</a> page.';
         
         return response;
       },
@@ -343,7 +343,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     },
     forms: {
       keywords: ['form', 'paperwork', 'documents', 'patient form', 'intake', 'fill out', 'complete'],
-      response: 'We have several patient forms available online to streamline your visit:\n\n• **New Patient Inquiry Form** - for scheduling and intake\n• **Consent for Treatment** - required for care\n• **Release of Information** - for sharing records\n• **Patient Referral Form** - comprehensive information\n• **Attendance Policy** - practice guidelines\n• **Financial Responsibility** - payment policies\n\nAccess all forms on our <a href="/patient-forms">Patient Forms page</a>. Completing forms online in advance saves time during your visit!',
+      response: 'We have several patient forms available online to streamline your visit:\n\n• <strong>New Patient Inquiry Form</strong> - for scheduling and intake\n• <strong>Consent for Treatment</strong> - required for care\n• <strong>Release of Information</strong> - for sharing records\n• <strong>Patient Referral Form</strong> - comprehensive information\n• <strong>Attendance Policy</strong> - practice guidelines\n• <strong>Financial Responsibility</strong> - payment policies\n\nAccess all forms on our <a href="/patient-forms">Patient Forms page</a>. Completing forms online in advance saves time during your visit!',
       type: 'info'
     },
     // Emotional support and validation responses
@@ -378,42 +378,42 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     // Attendance policy and procedures
     attendancePolicy: {
       keywords: ['attendance policy', 'attendance', 'missed appointment', 'no show', 'cancel appointment', 'cancellation policy', 'reschedule', 'late', 'tardy', 'policy', 'where can i find the attendance policy', 'attendance rules', 'appointment rules'],
-      response: 'Our attendance policy helps ensure quality care for all patients:\n\n**Key Requirements:**\n• **24 hours notice** required for cancellations or rescheduling\n• Arriving more than 15 minutes late may require rescheduling\n• Late cancellations (under 24 hrs): $50 fee\n• No-show appointments: $120 fee\n• After 2 missed appointments, continued care may be discontinued\n\n**Find complete details in:**\n• **"Policies & Fees"** button at bottom of your screen\n• <a href="/attendance-policy">Medical Practice Attendance Policy</a> form\n\nCall (980) 585-2019 for specific questions about your situation.',
+      response: 'Our attendance policy helps ensure quality care for all patients:\n\n<strong>Key Requirements:</strong>\n• <strong>24 hours notice</strong> required for cancellations or rescheduling\n• Arriving more than 15 minutes late may require rescheduling\n• Late cancellations (under 24 hrs): $50 fee\n• No-show appointments: $120 fee\n• After 2 missed appointments, continued care may be discontinued\n\n<strong>Find complete details in:</strong>\n• <strong>"Policies & Fees"</strong> button at bottom of your screen\n• <a href="/attendance-policy">Medical Practice Attendance Policy</a> form\n\nCall (980) 585-2019 for specific questions about your situation.',
       type: 'info'
     },
     
     // Session costs and pricing (directs to actual fee location)
     sessionCosts: {
       keywords: ['how much', 'cost', 'price', 'session cost', 'appointment cost', 'fees', 'pay for session', 'pay for appointment', 'what does it cost', 'pricing', 'expensive', 'charges', 'bill', 'billing', 'what are the fees'],
-      response: 'You can find our complete fee schedule and pricing information in our **Policies & Fees** section:\n\n**Current Self-Pay Fees:**\n• New patient visit: $280\n• Follow-up visit: $140\n• Forms completion: $10 per page\n\n**We also accept:**\n• Most major insurance plans (we verify coverage)\n• HSA/FSA cards\n• Payment plans for financial hardship\n\nClick the **"Policies & Fees"** button at the bottom of your screen to see complete details, or call (980) 585-2019 for insurance verification.',
+      response: 'You can find our complete fee schedule and pricing information in our <strong>Policies & Fees</strong> section:\n\n<strong>Current Self-Pay Fees:</strong>\n• New patient visit: $280\n• Follow-up visit: $140\n• Forms completion: $10 per page\n\n<strong>We also accept:</strong>\n• Most major insurance plans (we verify coverage)\n• HSA/FSA cards\n• Payment plans for financial hardship\n\nClick the <strong>"Policies & Fees"</strong> button at the bottom of your screen to see complete details, or call (980) 585-2019 for insurance verification.',
       type: 'info'
     },
     
     // Provider information
     providerInfo: {
       keywords: ['felicia davis', 'provider', 'doctor', 'nurse practitioner', 'psychiatrist', 'who is', 'qualifications', 'experience', 'background', 'credentials', 'pmhnp', 'fnp'],
-      response: 'Felicia Davis, MSN, PMHNP-BC, FNP-BC is our experienced psychiatric nurse practitioner:\n\n• **Board-certified** in both psychiatric and family medicine\n• **Over a decade** of mental health experience\n• **Comprehensive background**: inpatient, outpatient, emergency, and community settings\n• **All ages welcome**: specializes in pediatric and geriatric care\n• **Evidence-based approach** with compassionate, individualized care\n\nHer mission is expanding access to quality mental health care for underserved populations. Learn more about her background on our <a href="/meet-felicia-davis">Meet Felicia Davis</a> page.',
+      response: 'Felicia Davis, MSN, PMHNP-BC, FNP-BC is our experienced psychiatric nurse practitioner:\n\n• <strong>Board-certified</strong> in both psychiatric and family medicine\n• <strong>Over a decade</strong> of mental health experience\n• <strong>Comprehensive background</strong>: inpatient, outpatient, emergency, and community settings\n• <strong>All ages welcome</strong>: specializes in pediatric and geriatric care\n• <strong>Evidence-based approach</strong> with compassionate, individualized care\n\nHer mission is expanding access to quality mental health care for underserved populations. Learn more about her background on our <a href="/meet-felicia-davis">Meet Felicia Davis</a> page.',
       type: 'info'
     },
     
     // Comprehensive services
     servicesDetailed: {
       keywords: ['services', 'what do you offer', 'treatment', 'help with', 'psychiatric evaluation', 'medication management', 'injections', 'geriatric care', 'what can you treat', 'what services'],
-      response: 'We offer comprehensive psychiatric services:\n\n**Core Services:**\n• Psychiatric evaluations and assessments\n• Medication management and monitoring\n• Telemedicine appointments\n• Long-acting injections\n• Cognitive assessments\n\n**Specialized Care:**\n• Geriatric psychiatry (including facility visits)\n• Evidence-based treatments\n• Holistic, whole-person approach\n• Crisis support and intervention\n\n**We treat conditions like:** anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, insomnia, and more.\n\nVisit our <a href="/#services">Services section</a> for complete details or call (980) 585-2019 to discuss your specific needs.',
+      response: 'We offer comprehensive psychiatric services:\n\n<strong>Core Services:</strong>\n• Psychiatric evaluations and assessments\n• Medication management and monitoring\n• Telemedicine appointments\n• Long-acting injections\n• Cognitive assessments\n\n<strong>Specialized Care:</strong>\n• Geriatric psychiatry (including facility visits)\n• Evidence-based treatments\n• Holistic, whole-person approach\n• Crisis support and intervention\n\n<strong>We treat conditions like:</strong> anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, insomnia, and more.\n\nVisit our <a href="/#services">Services section</a> for complete details or call (980) 585-2019 to discuss your specific needs.',
       type: 'info'
     },
     
     // Office hours and availability  
     hours: {
       keywords: ['hours', 'open', 'time', 'when', 'business hours', 'office hours', 'available', 'schedule', 'what time'],
-      response: 'Our office hours are:\n\n**Monday - Thursday:** 8:00 AM – 7:00 PM\n**Friday:** Closed\n**Saturday:** By appointment only\n**Sunday:** Closed\n\n**All three locations** (Fort Mill SC, Huntersville NC, Baltimore MD) follow the same schedule.\n\n**Telemedicine** appointments available during regular hours throughout NC, SC, MD, GA, VA, DC, and FL.\n\nFor appointments and inquiries, call (980) 585-2019 during business hours.',
+      response: 'Our office hours are:\n\n<strong>Monday - Thursday:</strong> 8:00 AM – 7:00 PM\n<strong>Friday:</strong> Closed\n<strong>Saturday:</strong> By appointment only\n<strong>Sunday:</strong> Closed\n\n<strong>All three locations</strong> (Fort Mill SC, Huntersville NC, Baltimore MD) follow the same schedule.\n\n<strong>Telemedicine</strong> appointments available during regular hours throughout NC, SC, MD, GA, VA, DC, and FL.\n\nFor appointments and inquiries, call (980) 585-2019 during business hours.',
       type: 'info'
     },
     
     // New patient process
     newPatient: {
       keywords: ['new patient', 'first time', 'getting started', 'how to start', 'first appointment', 'new here', 'begin treatment', 'start care'],
-      response: 'Welcome! Getting started is simple:\n\n**Step 1:** Complete our <a href="/new-patient">New Patient Form</a> online (saves time!)\n**Step 2:** We\'ll call you within 1-2 business days to schedule\n**Step 3:** Bring insurance card and ID to your first visit\n\n**What to expect:**\n• Comprehensive evaluation and assessment\n• Discussion of your concerns and goals\n• Development of individualized treatment plan\n• Questions about insurance and next steps\n\n**New patients typically seen within 1-2 weeks.** Call (980) 585-2019 with questions or to schedule directly.',
+      response: 'Welcome! Getting started is simple:\n\n<strong>Step 1:</strong> Complete our <a href="/new-patient">New Patient Form</a> online (saves time!)\n<strong>Step 2:</strong> We\'ll call you within 1-2 business days to schedule\n<strong>Step 3:</strong> Bring insurance card and ID to your first visit\n\n<strong>What to expect:</strong>\n• Comprehensive evaluation and assessment\n• Discussion of your concerns and goals\n• Development of individualized treatment plan\n• Questions about insurance and next steps\n\n<strong>New patients typically seen within 1-2 weeks.</strong> Call (980) 585-2019 with questions or to schedule directly.',
       type: 'action',
       followUp: {
         text: 'Ready to get started?',
@@ -424,21 +424,21 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     // Insurance coverage
     insuranceDetailed: {
       keywords: ['insurance', 'coverage', 'accept', 'medicaid', 'medicare', 'blue cross', 'aetna', 'cigna', 'united', 'tricare', 'humana', 'covered', 'benefits'],
-      response: 'We accept most major insurance plans including:\n\n• Blue Cross Blue Shield\n• Aetna, Cigna, United Healthcare\n• Medicare and Medicaid\n• Tricare, Humana\n• Partners and many others\n\n**We verify your coverage** before your appointment and will let you know about:\n• Copayments and deductibles\n• Coverage details\n• Any prior authorization requirements\n\nFor specific insurance verification, call (980) 585-2019. Visit our <a href="/#insurance">Insurance section</a> for the complete list.',
+      response: 'We accept most major insurance plans including:\n\n• Blue Cross Blue Shield\n• Aetna, Cigna, United Healthcare\n• Medicare and Medicaid\n• Tricare, Humana\n• Partners and many others\n\n<strong>We verify your coverage</strong> before your appointment and will let you know about:\n• Copayments and deductibles\n• Coverage details\n• Any prior authorization requirements\n\nFor specific insurance verification, call (980) 585-2019. Visit our <a href="/#insurance">Insurance section</a> for the complete list.',
       type: 'info'
     },
     
     // Age and eligibility
     ageEligibility: {
       keywords: ['age', 'how old', 'children', 'kids', 'teens', 'adolescent', 'adult', 'seniors', 'elderly', '13', 'minimum age'],
-      response: 'We provide psychiatric care for:\n\n• **Adolescents 13 and older**\n• **Adults of all ages**\n• **Seniors and elderly patients**\n\n**Specialized experience with:**\n• Teenage mental health concerns\n• Adult psychiatric conditions\n• Geriatric psychiatry (including dementia care)\n• Age-appropriate treatment approaches\n\nFor children under 13, we can provide referrals to child psychiatrists. Call (980) 585-2019 to discuss your specific needs.',
+      response: 'We provide psychiatric care for:\n\n• <strong>Adolescents 13 and older</strong>\n• <strong>Adults of all ages</strong>\n• <strong>Seniors and elderly patients</strong>\n\n<strong>Specialized experience with:</strong>\n• Teenage mental health concerns\n• Adult psychiatric conditions\n• Geriatric psychiatry (including dementia care)\n• Age-appropriate treatment approaches\n\nFor children under 13, we can provide referrals to child psychiatrists. Call (980) 585-2019 to discuss your specific needs.',
       type: 'info'
     },
     
     // Cancellation fees and policies
     cancellationFees: {
       keywords: ['cancellation fee', 'cancel fee', 'no show fee', 'missed appointment fee', 'late cancellation', 'charged for canceling', 'fee for missing', 'cancel charge'],
-      response: 'Here are our cancellation fee details:\n\n**Late Cancellation** (less than 24 hours notice): $50 fee\n**No-Show** (missed without notice): $120 fee\n\n**Important notes:**\n• Emergency situations handled case-by-case\n• Fees may be waived for unforeseen circumstances\n• Payment due at time of service\n• Not covered by insurance\n\nFind complete policy details by clicking **"Policies & Fees"** at the bottom of your screen, or call (980) 585-2019 to discuss your specific situation.',
+      response: 'Here are our cancellation fee details:\n\n<strong>Late Cancellation</strong> (less than 24 hours notice): $50 fee\n<strong>No-Show</strong> (missed without notice): $120 fee\n\n<strong>Important notes:</strong>\n• Emergency situations handled case-by-case\n• Fees may be waived for unforeseen circumstances\n• Payment due at time of service\n• Not covered by insurance\n\nFind complete policy details by clicking <strong>"Policies & Fees"</strong> at the bottom of your screen, or call (980) 585-2019 to discuss your specific situation.',
       type: 'info'
     },
     
@@ -448,19 +448,19 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       priority: 8,
       response: (input) => {
         const lower = input.toLowerCase();
-        let response = 'Our **office hours** are:\n\n**Monday - Thursday:** 8:00 AM – 7:00 PM\n**Friday:** Closed\n**Saturday:** By appointment only\n**Sunday:** Closed\n\n**All three locations** follow the same schedule.\n\n';
+        let response = 'Our <strong>office hours</strong> are:\n\n<strong>Monday - Thursday:</strong> 8:00 AM – 7:00 PM\n<strong>Friday:</strong> Closed\n<strong>Saturday:</strong> By appointment only\n<strong>Sunday:</strong> Closed\n\n<strong>All three locations</strong> follow the same schedule.\n\n';
         
         if (lower.includes('weekend') || lower.includes('saturday')) {
-          response += '**Weekend availability:** Saturday appointments are available by special arrangement.\n\n';
+          response += '<strong>Weekend availability:</strong> Saturday appointments are available by special arrangement.\n\n';
         }
         if (lower.includes('evening')) {
-          response += '**Evening hours:** We offer appointments until 7:00 PM Monday-Thursday.\n\n';
+          response += '<strong>Evening hours:</strong> We offer appointments until 7:00 PM Monday-Thursday.\n\n';
         }
         if (lower.includes('friday')) {
-          response += '**Friday:** Yes, we are closed on Fridays.\n\n';
+          response += '<strong>Friday:</strong> Yes, we are closed on Fridays.\n\n';
         }
         
-        response += '**Telemedicine** appointments available during regular hours. Call (980) 585-2019 to schedule!';
+        response += '<strong>Telemedicine</strong> appointments available during regular hours. Call (980) 585-2019 to schedule!';
         
         return response;
       },
@@ -476,18 +476,18 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         let response = '';
         
         if (lower.includes('children') || lower.includes('kids')) {
-          response = '**Children under 13:** We specialize in adolescents (13+) and adults. For younger children, we can provide referrals to child psychiatrists.\n\n';
+          response = '<strong>Children under 13:</strong> We specialize in adolescents (13+) and adults. For younger children, we can provide referrals to child psychiatrists.\n\n';
         }
         
         if (lower.includes('15') || lower.includes('teen')) {
-          response += '✅ **Yes! We see teenagers 13 and older.** We have specialized experience with:\n• Teen anxiety and depression\n• ADHD in adolescents\n• School and social stress\n• Family involvement when appropriate\n\n';
+          response += '✅ <strong>Yes! We see teenagers 13 and older.</strong> We have specialized experience with:\n• Teen anxiety and depression\n• ADHD in adolescents\n• School and social stress\n• Family involvement when appropriate\n\n';
         }
         
         if (lower.includes('senior') || lower.includes('elderly')) {
-          response += '✅ **Absolutely! We provide comprehensive care for seniors** including:\n• Geriatric psychiatry\n• Dementia and cognitive concerns\n• Medication management for older adults\n• In-home and facility visits when needed\n\n';
+          response += '✅ <strong>Absolutely! We provide comprehensive care for seniors</strong> including:\n• Geriatric psychiatry\n• Dementia and cognitive concerns\n• Medication management for older adults\n• In-home and facility visits when needed\n\n';
         }
         
-        response += '**We serve:**\n• **Adolescents** 13 and older\n• **Adults** of all ages\n• **Seniors** and elderly patients\n\nCall (980) 585-2019 to discuss your specific needs!';
+        response += '<strong>We serve:</strong>\n• <strong>Adolescents</strong> 13 and older\n• <strong>Adults</strong> of all ages\n• <strong>Seniors</strong> and elderly patients\n\nCall (980) 585-2019 to discuss your specific needs!';
         
         return response;
       },
@@ -503,22 +503,22 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         let response = '';
         
         if (lower.includes('never been') || lower.includes('what should i expect')) {
-          response = '**First time seeing a psychiatrist?** That\'s completely normal! Here\'s what to expect:\n\n';
+          response = '<strong>First time seeing a psychiatrist?</strong> That\'s completely normal! Here\'s what to expect:\n\n';
         } else {
-          response = '**Welcome!** Getting started as a new patient is simple:\n\n';
+          response = '<strong>Welcome!</strong> Getting started as a new patient is simple:\n\n';
         }
         
-        response += '**Step 1: Getting Started**\n• Fill out our <a href="/new-patient">New Patient Form</a> online (saves time!)\n• Or call us at (980) 585-2019 to schedule directly\n• No referral required!\n\n';
+        response += '<strong>Step 1: Getting Started</strong>\n• Fill out our <a href="/new-patient">New Patient Form</a> online (saves time!)\n• Or call us at (980) 585-2019 to schedule directly\n• No referral required!\n\n';
         
         if (lower.includes('what do i bring') || lower.includes('bring to')) {
-          response += '**What to bring:**\n• Insurance card and photo ID\n• List of current medications\n• Previous mental health records (if available)\n• Any specific concerns or questions\n\n';
+          response += '<strong>What to bring:</strong>\n• Insurance card and photo ID\n• List of current medications\n• Previous mental health records (if available)\n• Any specific concerns or questions\n\n';
         }
         
         if (lower.includes('what should i expect') || lower.includes('first visit')) {
-          response += '**Your first visit:**\n• Comprehensive evaluation (usually 60-90 minutes)\n• Discussion of your concerns and goals\n• Review of medical and mental health history\n• Development of personalized treatment plan\n• Questions about next steps\n\n';
+          response += '<strong>Your first visit:</strong>\n• Comprehensive evaluation (usually 60-90 minutes)\n• Discussion of your concerns and goals\n• Review of medical and mental health history\n• Development of personalized treatment plan\n• Questions about next steps\n\n';
         }
         
-        response += '**Timeline:** New patients typically seen within 1-2 weeks!\n\nReady to get started?';
+        response += '<strong>Timeline:</strong> New patients typically seen within 1-2 weeks!\n\nReady to get started?';
         
         return response;
       },
@@ -538,10 +538,10 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         let response = 'We have several patient forms available online:\n\n';
         
         if (lower.includes('financial responsibility')) {
-          response += '**Financial Responsibility Form** covers payment policies, fees, and insurance information.\n\n';
+          response += '<strong>Financial Responsibility Form</strong> covers payment policies, fees, and insurance information.\n\n';
         }
         
-        response += '**Available Forms:**\n• **New Patient Inquiry Form** - for scheduling and intake\n• **Consent for Treatment** - required for care\n• **Release of Information** - for sharing records\n• **Patient Referral Form** - comprehensive information\n• **Attendance Policy** - practice guidelines\n• **Financial Responsibility** - payment policies\n\n**Benefits of completing online:**\n• Saves time during your visit\n• More convenient\n• Secure and confidential\n\nAccess all forms at our <a href="/patient-forms">Patient Forms page</a>!';
+        response += '<strong>Available Forms:</strong>\n• <strong>New Patient Inquiry Form</strong> - for scheduling and intake\n• <strong>Consent for Treatment</strong> - required for care\n• <strong>Release of Information</strong> - for sharing records\n• <strong>Patient Referral Form</strong> - comprehensive information\n• <strong>Attendance Policy</strong> - practice guidelines\n• <strong>Financial Responsibility</strong> - payment policies\n\n<strong>Benefits of completing online:</strong>\n• Saves time during your visit\n• More convenient\n• Secure and confidential\n\nAccess all forms at our <a href="/patient-forms">Patient Forms page</a>!';
         
         return response;
       },
@@ -557,22 +557,22 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         let response = '';
         
         if (lower.includes('baltimore')) {
-          response = '✅ **Yes, we have a Baltimore location!**\n\n📍 **Baltimore, MD:** 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\n';
+          response = '✅ <strong>Yes, we have a Baltimore location!</strong>\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\n';
         }
         
         if (lower.includes('fort mill')) {
-          response += '📍 **Fort Mill, SC:** 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n';
+          response += '📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n';
         }
         
         if (lower.includes('huntersville')) {
-          response += '📍 **Huntersville, NC:** 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n';
+          response += '📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n';
         }
         
         if (!lower.includes('baltimore') && !lower.includes('fort mill') && !lower.includes('huntersville')) {
-          response = '**We have three convenient locations:**\n\n📍 **Fort Mill, SC:** 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 **Huntersville, NC:** 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 **Baltimore, MD:** 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\n';
+          response = '<strong>We have three convenient locations:</strong>\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\n';
         }
         
-        response += '**Contact Information:**\n📞 **Phone:** (980) 585-2019\n📠 **Fax:** (980) 585-2016\n✉️ **Email:** contact@windsongpsychiatric.com\n\n**All locations** offer ample parking and easy access. View <a href="/#locations">directions and maps</a> for details!';
+        response += '<strong>Contact Information:</strong>\n📞 <strong>Phone:</strong> (980) 585-2019\n📠 <strong>Fax:</strong> (980) 585-2016\n✉️ <strong>Email:</strong> contact@windsongpsychiatric.com\n\n<strong>All locations</strong> offer ample parking and easy access. View <a href="/#locations">directions and maps</a> for details!';
         
         return response;
       },
@@ -585,13 +585,13 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       priority: 8,
       response: (input) => {
         const lower = input.toLowerCase();
-        let response = '✅ **Yes! We offer telehealth appointments.**\n\n';
+        let response = '✅ <strong>Yes! We offer telehealth appointments.</strong>\n\n';
         
         if (lower.includes('phone')) {
-          response += '**Phone and video options available** - whatever works best for you!\n\n';
+          response += '<strong>Phone and video options available</strong> - whatever works best for you!\n\n';
         }
         
-        response += '**Telehealth Benefits:**\n• Meet with your provider from anywhere\n• No travel time or parking hassles\n• Great for follow-up appointments\n• Most insurance plans cover virtual visits\n• Same quality care as in-person\n\n**Available in:** NC, SC, MD, GA, VA, DC, and FL\n\n**Perfect if you:**\n• Live far from our offices\n• Have transportation challenges\n• Prefer the comfort of home\n• Have a busy schedule\n\n**Same office hours:** Monday-Thursday 8 AM - 7 PM\n\nAsk about telehealth when you call (980) 585-2019 to schedule!';
+        response += '<strong>Telehealth Benefits:</strong>\n• Meet with your provider from anywhere\n• No travel time or parking hassles\n• Great for follow-up appointments\n• Most insurance plans cover virtual visits\n• Same quality care as in-person\n\n<strong>Available in:</strong> NC, SC, MD, GA, VA, DC, and FL\n\n<strong>Perfect if you:</strong>\n• Live far from our offices\n• Have transportation challenges\n• Prefer the comfort of home\n• Have a busy schedule\n\n<strong>Same office hours:</strong> Monday-Thursday 8 AM - 7 PM\n\nAsk about telehealth when you call (980) 585-2019 to schedule!';
         
         return response;
       },
@@ -607,11 +607,11 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         let response = '';
         
         if (lower.includes('injection') || lower.includes('b12')) {
-          response = '✅ **Yes! We offer several types of injections:**\n\n• **Long-acting antipsychotics** - monthly medication options\n• **B12 vitamin injections** - for energy and wellness\n• **Mood stabilizer injections**\n\n**Benefits:**\n• Improved medication compliance\n• Steady medication levels\n• Less frequent dosing\n\n';
+          response = '✅ <strong>Yes! We offer several types of injections:</strong>\n\n• <strong>Long-acting antipsychotics</strong> - monthly medication options\n• <strong>B12 vitamin injections</strong> - for energy and wellness\n• <strong>Mood stabilizer injections</strong>\n\n<strong>Benefits:</strong>\n• Improved medication compliance\n• Steady medication levels\n• Less frequent dosing\n\n';
         }
         
         if (lower.includes('cognitive assessment')) {
-          response += '✅ **Yes! We provide cognitive assessments** for:\n\n• Memory concerns\n• Attention and focus issues\n• Dementia screening\n• ADHD evaluation\n• Post-injury cognitive function\n\n**What\'s included:**\n• Comprehensive testing\n• Detailed evaluation\n• Treatment recommendations\n• Follow-up planning\n\n';
+          response += '✅ <strong>Yes! We provide cognitive assessments</strong> for:\n\n• Memory concerns\n• Attention and focus issues\n• Dementia screening\n• ADHD evaluation\n• Post-injury cognitive function\n\n<strong>What\'s included:</strong>\n• Comprehensive testing\n• Detailed evaluation\n• Treatment recommendations\n• Follow-up planning\n\n';
         }
         
         response += 'Call (980) 585-2019 to discuss these services and schedule an appointment!';
@@ -624,7 +624,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     contact: {
       keywords: ['phone', 'call', 'email', 'contact', 'reach', 'fax'],
       priority: 6,
-      response: 'Here\'s how to reach us:\n\n📞 **Phone:** (980) 585-2019\n📠 **Fax:** (980) 585-2016\n✉️ **Email:** contact@windsongpsychiatric.com\n\n**Office Hours:** Monday-Thursday 8:00 AM – 7:00 PM\n\nFor fastest response, please call during business hours. We typically respond to new patient inquiries within 1-2 business days.',
+      response: 'Here\'s how to reach us:\n\n📞 <strong>Phone:</strong> (980) 585-2019\n📠 <strong>Fax:</strong> (980) 585-2016\n✉️ <strong>Email:</strong> contact@windsongpsychiatric.com\n\n<strong>Office Hours:</strong> Monday-Thursday 8:00 AM – 7:00 PM\n\nFor fastest response, please call during business hours. We typically respond to new patient inquiries within 1-2 business days.',
       type: 'info'
     }
   };
@@ -803,7 +803,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     // Fallback responses for common unhandled cases
     if (lowerInput.includes('california') || lowerInput.includes('west coast') || lowerInput.includes('texas') || lowerInput.includes('florida')) {
       return {
-        text: "We currently have locations in **North Carolina** (Fort Mill and Huntersville), **South Carolina** (Fort Mill), and **Maryland** (Baltimore). We also offer **telemedicine** services in NC, SC, MD, GA, VA, DC, and FL.\n\nIf you're in another state, I'd recommend contacting us at (980) 585-2019 to discuss telehealth options if available in your area.",
+        text: "We currently have locations in <strong>North Carolina</strong> (Fort Mill and Huntersville), <strong>South Carolina</strong> (Fort Mill), and <strong>Maryland</strong> (Baltimore). We also offer <strong>telemedicine</strong> services in NC, SC, MD, GA, VA, DC, and FL.\n\nIf you're in another state, I'd recommend contacting us at (980) 585-2019 to discuss telehealth options if available in your area.",
         type: 'info'
       };
     }
@@ -815,12 +815,12 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         const age = parseInt(ageMatch[1]);
         if (age < 13) {
           return {
-            text: "We specialize in treating **adolescents 13 and older** and adults. For children under 13, we recommend consulting with a child psychiatrist. Please call us at (980) 585-2019 for referral recommendations to pediatric specialists.",
+            text: "We specialize in treating <strong>adolescents 13 and older</strong> and adults. For children under 13, we recommend consulting with a child psychiatrist. Please call us at (980) 585-2019 for referral recommendations to pediatric specialists.",
             type: 'info'
           };
         } else {
           return {
-            text: `✅ **Yes, at ${age} you definitely qualify for our services!** We provide psychiatric care for adolescents (13+) and adults of all ages.\n\nWe offer comprehensive treatment for anxiety, depression, ADHD, and many other conditions. Ready to get started? Call (980) 585-2019 or fill out our <a href="/new-patient">New Patient Form</a>.`,
+            text: `✅ <strong>Yes, at ${age} you definitely qualify for our services!</strong> We provide psychiatric care for adolescents (13+) and adults of all ages.\n\nWe offer comprehensive treatment for anxiety, depression, ADHD, and many other conditions. Ready to get started? Call (980) 585-2019 or fill out our <a href="/new-patient">New Patient Form</a>.`,
             type: 'info'
           };
         }
@@ -829,7 +829,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     
     // Default response with better guidance
     return { 
-      text: "I'd be happy to help you with that! I can answer questions about:\n\n• **Scheduling** appointments and new patient process\n• **Services** we offer and conditions we treat\n• **Insurance** coverage and pricing\n• **Locations** and office hours\n• **Provider** information\n\nWhat specific information are you looking for? You can also explore our website or call us at (980) 585-2019.",
+      text: "I'd be happy to help you with that! I can answer questions about:\n\n• <strong>Scheduling</strong> appointments and new patient process\n• <strong>Services</strong> we offer and conditions we treat\n• <strong>Insurance</strong> coverage and pricing\n• <strong>Locations</strong> and office hours\n• <strong>Provider</strong> information\n\nWhat specific information are you looking for? You can also explore our website or call us at (980) 585-2019.",
       type: 'default'
     };
   };
