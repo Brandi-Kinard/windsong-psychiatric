@@ -261,6 +261,11 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     e.preventDefault();
     const href = e.target.getAttribute('href');
     if (href) {
+      // Save current scroll position before navigating
+      if (chatContainerRef.current) {
+        sessionStorage.setItem('chatbotScrollPosition', chatContainerRef.current.scrollTop.toString());
+      }
+      
       // Check if we're on mobile/tablet (screen width)
       const isMobileOrTablet = window.innerWidth <= 768;
       
@@ -301,6 +306,18 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           timestamp: new Date()
         }]);
       }, 1000);
+    }
+    
+    // Restore scroll position when chatbot is reopened (only if there are existing messages)
+    if (isOpen && messages.length > 1) {
+      const savedScrollPosition = sessionStorage.getItem('chatbotScrollPosition');
+      if (savedScrollPosition && chatContainerRef.current) {
+        setTimeout(() => {
+          if (chatContainerRef.current) {
+            chatContainerRef.current.scrollTop = parseInt(savedScrollPosition, 10);
+          }
+        }, 200); // Small delay to ensure DOM is rendered
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
@@ -498,6 +515,10 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
                     className="action-button"
                     onClick={(e) => {
                       e.preventDefault();
+                      // Save current scroll position before navigating
+                      if (chatContainerRef.current) {
+                        sessionStorage.setItem('chatbotScrollPosition', chatContainerRef.current.scrollTop.toString());
+                      }
                       const isMobileOrTablet = window.innerWidth <= 768;
                       if (isMobileOrTablet) {
                         onMinimize();
