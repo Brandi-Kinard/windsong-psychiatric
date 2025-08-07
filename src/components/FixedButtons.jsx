@@ -6,8 +6,25 @@ import Chatbot from './Chatbot';
 
 const FixedButtons = () => {
   const [isPoliciesModalOpen, setIsPoliciesModalOpen] = useState(false);
-  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
-  const [isChatbotMinimized, setIsChatbotMinimized] = useState(false);
+  
+  // Load chatbot state from sessionStorage
+  const [isChatbotOpen, setIsChatbotOpen] = useState(() => {
+    return sessionStorage.getItem('chatbotOpen') === 'true';
+  });
+  const [isChatbotMinimized, setIsChatbotMinimized] = useState(() => {
+    return sessionStorage.getItem('chatbotMinimized') === 'true';
+  });
+
+  // Save chatbot state to sessionStorage whenever it changes
+  const handleChatbotOpenChange = (isOpen) => {
+    setIsChatbotOpen(isOpen);
+    sessionStorage.setItem('chatbotOpen', isOpen.toString());
+  };
+
+  const handleChatbotMinimizedChange = (isMinimized) => {
+    setIsChatbotMinimized(isMinimized);
+    sessionStorage.setItem('chatbotMinimized', isMinimized.toString());
+  };
 
   return (
     <>
@@ -16,11 +33,11 @@ const FixedButtons = () => {
         onClick={() => {
           if (isChatbotOpen) {
             // If chat is open, minimize it
-            setIsChatbotMinimized(!isChatbotMinimized);
+            handleChatbotMinimizedChange(!isChatbotMinimized);
           } else {
             // If chat is closed, open it
-            setIsChatbotOpen(true);
-            setIsChatbotMinimized(false);
+            handleChatbotOpenChange(true);
+            handleChatbotMinimizedChange(false);
           }
         }}
         aria-label="Get help"
@@ -46,11 +63,13 @@ const FixedButtons = () => {
         isOpen={isChatbotOpen} 
         isMinimized={isChatbotMinimized}
         onClose={() => {
-          setIsChatbotOpen(false);
-          setIsChatbotMinimized(false);
+          handleChatbotOpenChange(false);
+          handleChatbotMinimizedChange(false);
+          // Clear the messages when fully closing
+          sessionStorage.removeItem('chatbotMessages');
         }}
         onMinimize={() => {
-          setIsChatbotMinimized(true);
+          handleChatbotMinimizedChange(true);
         }}
       />
     </>

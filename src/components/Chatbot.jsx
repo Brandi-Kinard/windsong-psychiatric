@@ -34,27 +34,63 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
 
   const responses = {
     insurance: {
-      keywords: ['insurance', 'accept', 'coverage', 'plan', 'medicaid', 'medicare', 'blue cross', 'aetna', 'cigna', 'united'],
+      keywords: ['insurance', 'accept', 'coverage', 'plan', 'medicaid', 'medicare', 'blue cross', 'aetna', 'cigna', 'united', 'covered', 'pay for', 'cost', 'money', 'afford', 'expensive'],
       response: 'We accept most major insurance plans including Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, Medicare, and Medicaid. For a complete list of accepted insurance, please visit our <a href="/insurance" target="_blank">Insurance page</a> or call us at (980) 585-2019.',
       type: 'info'
     },
     appointment: {
-      keywords: ['appointment', 'schedule', 'book', 'available', 'new patient'],
+      keywords: ['appointment', 'schedule', 'book', 'available', 'new patient', 'see someone', 'talk to doctor', 'meet', 'visit', 'come in'],
       response: 'To schedule an appointment, you can:\n\n1. Call us at (980) 585-2019\n2. Fill out our <a href="/new-patient" target="_blank">New Patient form</a>\n3. Have your provider send us a referral\n\nWe typically see new patients within 1-2 weeks.',
       type: 'action'
     },
     getStarted: {
-      keywords: ['get started', 'begin', 'start', 'first step', 'how do i', 'what do i do'],
-      response: 'I\'d be happy to help you get started! Here\'s what you can do:\n\n1. Fill out our <a href="/new-patient" target="_blank">New Patient Inquiry Form</a> - it only takes a few minutes\n2. Or call us directly at (980) 585-2019\n3. We\'ll contact you within 1-2 business days to schedule your first appointment\n\nWould you like me to guide you to the new patient form?',
+      keywords: ['get started', 'begin', 'start', 'first step', 'how do i', 'what do i do', 'need help', 'what now', 'where do i start', 'how to begin', 'first time', 'new here', 'dont know what to do', 'help me start'],
+      response: (input) => {
+        const lower = input.toLowerCase();
+        let response = 'I\'d be happy to help you get started! ';
+        
+        if (lower.includes('first time') || lower.includes('new')) {
+          response += 'Since you\'re new, ';
+        }
+        
+        response += 'Here\'s what you can do:\n\n1. Fill out our <a href="/new-patient" target="_blank">New Patient Form</a> - it\'s easy and takes just a few minutes\n2. Or call us at (980) 585-2019 to talk to someone right away\n3. We\'ll call you back within 1-2 days to set up your first visit\n\n';
+        
+        if (lower.includes('dont know') || lower.includes('confused') || lower.includes('help')) {
+          response += 'Don\'t worry - we make it simple! ';
+        }
+        
+        response += 'Would you like me to take you to the form now?';
+        
+        return response;
+      },
       type: 'action',
       followUp: {
-        text: 'Click below to start your new patient inquiry:',
+        text: 'Click below to start your new patient form:',
         button: { text: 'Start New Patient Form', link: '/new-patient' }
       }
     },
     services: {
-      keywords: ['services', 'offer', 'treatment', 'therapy', 'medication', 'help with'],
-      response: 'We offer comprehensive psychiatric services including:\n\n• Psychiatric evaluations\n• Medication management\n• Treatment for depression, anxiety, ADHD, bipolar disorder, and more\n• Both in-person and telehealth appointments\n• Specialized care for adults and adolescents\n\nVisit our <a href="/services" target="_blank">Services page</a> for more details.',
+      keywords: ['services', 'offer', 'treatment', 'therapy', 'medication', 'help with', 'what do you do', 'can you help', 'do you treat', 'what kind of help', 'mental health help', 'psychiatric help', 'counseling', 'what services'],
+      response: (input) => {
+        const lower = input.toLowerCase();
+        let response = 'We help people with mental health concerns. ';
+        
+        if (lower.includes('what do you do') || lower.includes('what kind')) {
+          response += 'Here\'s what we do:\n\n';
+        } else {
+          response += 'Our services include:\n\n';
+        }
+        
+        response += '• Check-ups for your mental health\n• Help with medications\n• Treatment for feeling sad, worried, or having trouble focusing\n• Appointments you can do from home (telehealth)\n• Help for teens and adults\n\n';
+        
+        if (lower.includes('can you help') || lower.includes('help with')) {
+          response += 'We can probably help you! ';
+        }
+        
+        response += 'Call (980) 585-2019 to talk about how we can help, or visit our <a href="/services" target="_blank">Services page</a> for more details.';
+        
+        return response;
+      },
       type: 'info'
     },
     ageQuestions: {
@@ -83,12 +119,33 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     },
     location: {
       keywords: ['location', 'located', 'address', 'where', 'directions', 'fort mill', 'huntersville', 'baltimore'],
-      response: 'We have three convenient locations:\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\nAll offices offer ample parking and easy access. <a href="#" onclick="event.preventDefault(); document.getElementById(\'locations\')?.scrollIntoView({ behavior: \'smooth\' }); return false;">View directions and maps</a> below on this page.',
+      response: 'We have three convenient locations:\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\nAll offices offer ample parking and easy access. You can scroll down on this page to see our locations section with directions and maps.',
       type: 'info'
     },
     telehealth: {
-      keywords: ['telehealth', 'virtual', 'online', 'video', 'remote'],
-      response: 'Yes! We offer telehealth appointments for established patients. This allows you to meet with your provider from the comfort of your home. Telehealth visits are covered by most insurance plans. Ask about this option when scheduling.',
+      keywords: ['telehealth', 'virtual', 'online', 'video', 'remote', 'phone call', 'phone', 'call', 'computer', 'home', 'zoom', 'facetime', 'video chat', 'talk online', 'meet online', 'see doctor online', 'virtual help', 'help online', 'online help', 'talk over phone', 'phone appointment', 'video appointment', 'from home', 'dont want to come in', 'cant come in', 'stay home'],
+      response: (input) => {
+        const lower = input.toLowerCase();
+        let response = 'Yes! We offer telehealth (virtual) appointments. ';
+        
+        if (lower.includes('phone') || lower.includes('call')) {
+          response += 'You can talk to your doctor over the phone or video call. ';
+        } else if (lower.includes('home') || lower.includes('stay home') || lower.includes('dont want to come') || lower.includes('cant come')) {
+          response += 'You can see your doctor from home using your phone or computer. ';
+        } else {
+          response += 'You can meet with your provider using video chat from anywhere. ';
+        }
+        
+        response += 'This is great if you:\n\n• Want to stay home\n• Live far away\n• Have trouble getting to the office\n• Feel more comfortable at home\n\nMost insurance plans cover virtual visits. ';
+        
+        if (lower.includes('how') || lower.includes('start') || lower.includes('get')) {
+          response += '\n\n<strong>Ready to get started?</strong> Call us at (980) 585-2019 and ask about telehealth when you schedule!';
+        } else {
+          response += 'Ask about telehealth when you call (980) 585-2019 to schedule!';
+        }
+        
+        return response;
+      },
       type: 'info'
     },
     hours: {
@@ -118,19 +175,36 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       type: 'crisis'
     },
     conditions: {
-      keywords: ['depression', 'anxiety', 'adhd', 'bipolar', 'panic', 'ptsd', 'ocd', 'eating disorder', 'substance', 'addiction'],
+      keywords: ['depression', 'anxiety', 'adhd', 'bipolar', 'panic', 'ptsd', 'ocd', 'eating disorder', 'substance', 'addiction', 'sad', 'worried', 'scared', 'nervous', 'cant focus', 'trouble focusing', 'moody', 'mood swings', 'cant sleep', 'sleeping problems', 'feeling down', 'feeling low', 'panic attacks', 'racing thoughts', 'can\'t concentrate', 'hyperactive', 'restless', 'trauma', 'flashbacks', 'nightmares'],
       response: (input) => {
         const lower = input.toLowerCase();
-        if (lower.includes('depression')) {
-          return 'We provide comprehensive treatment for depression, including evaluation, medication management, and ongoing support. Our approach is personalized to each patient\'s needs. <a href="/services" target="_blank">Learn more about our services</a> or call (980) 585-2019 to schedule an evaluation.';
-        } else if (lower.includes('anxiety') || lower.includes('panic')) {
-          return 'We specialize in treating anxiety disorders, including generalized anxiety, panic disorder, and social anxiety. Treatment may include medication management and therapy referrals. <a href="/services" target="_blank">Learn more</a> or call (980) 585-2019 to schedule an appointment.';
-        } else if (lower.includes('adhd')) {
-          return 'We offer comprehensive ADHD evaluation and treatment for both adolescents and adults. This includes thorough assessment, medication management, and strategies for managing symptoms. Call (980) 585-2019 to schedule an ADHD evaluation.';
-        } else if (lower.includes('bipolar')) {
-          return 'We provide specialized care for bipolar disorder, including mood stabilization, medication management, and ongoing monitoring. Our experienced team understands the complexity of bipolar disorder. Call (980) 585-2019 to learn more.';
+        let response = '';
+        
+        if (lower.includes('depression') || lower.includes('sad') || lower.includes('feeling down') || lower.includes('feeling low')) {
+          response = 'We help people who feel sad or depressed. We can check what\'s wrong and help you feel better with medicine or talking. ';
+        } else if (lower.includes('anxiety') || lower.includes('worried') || lower.includes('scared') || lower.includes('nervous') || lower.includes('panic')) {
+          response = 'We help people who worry a lot or feel scared. If you have panic attacks or feel nervous often, we can help you feel calmer. ';
+        } else if (lower.includes('adhd') || lower.includes('cant focus') || lower.includes('trouble focusing') || lower.includes('can\'t concentrate') || lower.includes('hyperactive') || lower.includes('restless')) {
+          response = 'We help people who have trouble focusing or sitting still. This might be ADHD. We can test you and help you concentrate better with medicine or other ways. ';
+        } else if (lower.includes('bipolar') || lower.includes('mood swings') || lower.includes('moody')) {
+          response = 'We help people whose mood changes a lot (sometimes very happy, sometimes very sad). This might be bipolar disorder. We can help keep your mood more steady. ';
+        } else if (lower.includes('ptsd') || lower.includes('trauma') || lower.includes('flashbacks') || lower.includes('nightmares')) {
+          response = 'We help people who have been through scary or bad things. If you have bad dreams or scary memories, we can help you feel safer. ';
+        } else if (lower.includes('cant sleep') || lower.includes('sleeping problems')) {
+          response = 'We can help if you have trouble sleeping. Sometimes sleep problems are connected to feeling worried or sad. ';
+        } else {
+          response = 'We help people with many different mental health problems like feeling sad, worried, having trouble focusing, and more. ';
         }
-        return 'We treat a wide range of mental health conditions including depression, anxiety, ADHD, bipolar disorder, PTSD, and more. Visit our <a href="/services" target="_blank">services page</a> or call (980) 585-2019 to discuss your specific needs.';
+        
+        response += '\n\nWe want to help you feel better. ';
+        
+        if (lower.includes('do you treat') || lower.includes('can you help')) {
+          response += 'Yes, we can probably help you! ';
+        }
+        
+        response += 'Call (980) 585-2019 to talk about how we can help you, or <a href="/services" target="_blank">learn more about our services</a>.';
+        
+        return response;
       },
       type: 'info'
     },
@@ -225,9 +299,17 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       };
     }
     
+    // Check telehealth-specific questions
+    if (responses.telehealth.keywords.some(keyword => lowerInput.includes(keyword))) {
+      return { 
+        text: responses.telehealth.response(input),
+        type: 'info'
+      };
+    }
+    
     // Check other responses
     for (const [key, data] of Object.entries(responses)) {
-      if (['crisis', 'greeting', 'ageQuestions', 'conditions'].includes(key)) continue;
+      if (['crisis', 'greeting', 'ageQuestions', 'conditions', 'telehealth'].includes(key)) continue;
       
       if (data.keywords.some(keyword => lowerInput.includes(keyword))) {
         return { 
