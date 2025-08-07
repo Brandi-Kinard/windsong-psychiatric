@@ -34,7 +34,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
 
   const responses = {
     insurance: {
-      keywords: ['insurance', 'accept', 'coverage', 'plan', 'medicaid', 'medicare', 'blue cross', 'aetna', 'cigna', 'united', 'covered', 'pay for', 'cost', 'money', 'afford', 'expensive'],
+      keywords: ['insurance', 'accept', 'coverage', 'plan'],
       response: 'We accept most major insurance plans including Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, Medicare, and Medicaid. For a complete list of accepted insurance, please see our <a href="/#insurance">Insurance section</a> or call us at (980) 585-2019.',
       type: 'info'
     },
@@ -209,8 +209,8 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       type: 'info'
     },
     forms: {
-      keywords: ['form', 'paperwork', 'documents', 'patient form', 'intake'],
-      response: 'We have several patient forms available online:\n\n• New Patient Inquiry Form\n• Consent for Treatment\n• Release of Information\n• Patient Referral Form\n• Medical Practice Attendance Policy\n• Financial Responsibility Form\n\nYou can access all forms on our <a href="/patient-forms">Patient Forms page</a>. Completing forms online saves time during your visit!',
+      keywords: ['form', 'paperwork', 'documents', 'patient form', 'intake', 'fill out', 'complete'],
+      response: 'We have several patient forms available online to streamline your visit:\n\n• **New Patient Inquiry Form** - for scheduling and intake\n• **Consent for Treatment** - required for care\n• **Release of Information** - for sharing records\n• **Patient Referral Form** - comprehensive information\n• **Attendance Policy** - practice guidelines\n• **Financial Responsibility** - payment policies\n\nAccess all forms on our <a href="/patient-forms">Patient Forms page</a>. Completing forms online in advance saves time during your visit!',
       type: 'info'
     },
     // Emotional support and validation responses
@@ -242,14 +242,69 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       },
       type: 'support'
     },
-    payment: {
-      keywords: ['cost', 'price', 'payment', 'pay', 'fee', 'charge', 'expensive', 'afford', 'money', 'insurance cost', 'how much'],
-      response: 'We accept most major insurance plans and strive to make mental health care accessible. Payment options include:\n\n• Insurance (we\'ll verify your coverage)\n• Credit/debit cards\n• Payment plans may be available\n\nFor specific cost information or to verify insurance coverage, please call our billing department at (980) 585-2019. You can also view our Policies & Fees by clicking the "Policies & Fees" button at the bottom of your screen.',
+    // Attendance policy and procedures
+    attendancePolicy: {
+      keywords: ['attendance policy', 'attendance', 'missed appointment', 'no show', 'cancel appointment', 'cancellation policy', 'reschedule', 'late', 'tardy', 'policy', 'where can i find the attendance policy', 'attendance rules', 'appointment rules'],
+      response: 'Our attendance policy helps ensure quality care for all patients:\n\n• **24 hours notice** required for cancellations or rescheduling\n• Arriving more than 15 minutes late may require rescheduling\n• Late cancellations and no-shows may incur fees\n• Multiple missed appointments may affect continued care\n\nYou can find the complete <a href="/attendance-policy">Medical Practice Attendance Policy</a> form with full details. For specific questions about your situation, please call (980) 585-2019.',
       type: 'info'
     },
+    
+    // Session costs and pricing (flexible language)
+    sessionCosts: {
+      keywords: ['how much', 'cost', 'price', 'session cost', 'appointment cost', 'fees', 'pay for session', 'pay for appointment', 'what does it cost', 'pricing', 'expensive', 'charges', 'bill', 'billing'],
+      response: 'We strive to make mental health care accessible with several payment options:\n\n• **Most major insurance plans accepted** - we verify your coverage\n• **Self-pay options available** for those without insurance\n• **Payment plans** may be available for financial hardship\n• **HSA/FSA cards accepted**\n\nSpecific fees vary based on service type and insurance coverage. For current pricing details and to verify your insurance benefits, please call our billing department at (980) 585-2019. You can also review our <a href="/financial-responsibility">Financial Responsibility Policy</a>.',
+      type: 'info'
+    },
+    
+    // Provider information
+    providerInfo: {
+      keywords: ['felicia davis', 'provider', 'doctor', 'nurse practitioner', 'psychiatrist', 'who is', 'qualifications', 'experience', 'background', 'credentials', 'pmhnp', 'fnp'],
+      response: 'Felicia Davis, MSN, PMHNP-BC, FNP-BC is our experienced psychiatric nurse practitioner:\n\n• **Board-certified** in both psychiatric and family medicine\n• **Over a decade** of mental health experience\n• **Comprehensive background**: inpatient, outpatient, emergency, and community settings\n• **All ages welcome**: specializes in pediatric and geriatric care\n• **Evidence-based approach** with compassionate, individualized care\n\nHer mission is expanding access to quality mental health care for underserved populations. Learn more about her background on our <a href="/meet-felicia-davis">Meet Felicia Davis</a> page.',
+      type: 'info'
+    },
+    
+    // Comprehensive services
+    servicesDetailed: {
+      keywords: ['services', 'what do you offer', 'treatment', 'help with', 'psychiatric evaluation', 'medication management', 'injections', 'geriatric care', 'what can you treat', 'what services'],
+      response: 'We offer comprehensive psychiatric services:\n\n**Core Services:**\n• Psychiatric evaluations and assessments\n• Medication management and monitoring\n• Telemedicine appointments\n• Long-acting injections\n• Cognitive assessments\n\n**Specialized Care:**\n• Geriatric psychiatry (including facility visits)\n• Evidence-based treatments\n• Holistic, whole-person approach\n• Crisis support and intervention\n\n**We treat conditions like:** anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, insomnia, and more.\n\nVisit our <a href="/#services">Services section</a> for complete details or call (980) 585-2019 to discuss your specific needs.',
+      type: 'info'
+    },
+    
+    // Office hours and availability  
+    hours: {
+      keywords: ['hours', 'open', 'time', 'when', 'business hours', 'office hours', 'available', 'schedule', 'what time'],
+      response: 'Our office hours are:\n\n**Monday - Thursday:** 8:00 AM – 7:00 PM\n**Friday:** Closed\n**Saturday:** By appointment only\n**Sunday:** Closed\n\n**All three locations** (Fort Mill SC, Huntersville NC, Baltimore MD) follow the same schedule.\n\n**Telemedicine** appointments available during regular hours throughout NC, SC, MD, GA, VA, DC, and FL.\n\nFor appointments and inquiries, call (980) 585-2019 during business hours.',
+      type: 'info'
+    },
+    
+    // New patient process
+    newPatient: {
+      keywords: ['new patient', 'first time', 'getting started', 'how to start', 'first appointment', 'new here', 'begin treatment', 'start care'],
+      response: 'Welcome! Getting started is simple:\n\n**Step 1:** Complete our <a href="/new-patient">New Patient Form</a> online (saves time!)\n**Step 2:** We\'ll call you within 1-2 business days to schedule\n**Step 3:** Bring insurance card and ID to your first visit\n\n**What to expect:**\n• Comprehensive evaluation and assessment\n• Discussion of your concerns and goals\n• Development of individualized treatment plan\n• Questions about insurance and next steps\n\n**New patients typically seen within 1-2 weeks.** Call (980) 585-2019 with questions or to schedule directly.',
+      type: 'action',
+      followUp: {
+        text: 'Ready to get started?',
+        button: { text: 'Complete New Patient Form', link: '/new-patient' }
+      }
+    },
+    
+    // Insurance coverage
+    insuranceDetailed: {
+      keywords: ['insurance', 'coverage', 'accept', 'medicaid', 'medicare', 'blue cross', 'aetna', 'cigna', 'united', 'tricare', 'humana', 'covered', 'benefits'],
+      response: 'We accept most major insurance plans including:\n\n• Blue Cross Blue Shield\n• Aetna, Cigna, United Healthcare\n• Medicare and Medicaid\n• Tricare, Humana\n• Partners and many others\n\n**We verify your coverage** before your appointment and will let you know about:\n• Copayments and deductibles\n• Coverage details\n• Any prior authorization requirements\n\nFor specific insurance verification, call (980) 585-2019. Visit our <a href="/#insurance">Insurance section</a> for the complete list.',
+      type: 'info'
+    },
+    
+    // Age and eligibility
+    ageEligibility: {
+      keywords: ['age', 'how old', 'children', 'kids', 'teens', 'adolescent', 'adult', 'seniors', 'elderly', '13', 'minimum age'],
+      response: 'We provide psychiatric care for:\n\n• **Adolescents 13 and older**\n• **Adults of all ages**\n• **Seniors and elderly patients**\n\n**Specialized experience with:**\n• Teenage mental health concerns\n• Adult psychiatric conditions\n• Geriatric psychiatry (including dementia care)\n• Age-appropriate treatment approaches\n\nFor children under 13, we can provide referrals to child psychiatrists. Call (980) 585-2019 to discuss your specific needs.',
+      type: 'info'
+    },
+    
     contact: {
-      keywords: ['phone', 'call', 'email', 'contact', 'reach', 'fax'],
-      response: 'Here\'s how to reach us:\n\n📞 Phone: (980) 585-2019\n📠 Fax: (980) 585-2016\n✉️ Email: contact@windsongpsychiatric.com\n\nOffice hours: Monday-Friday (appointment times vary)\n\nFor fastest response, please call during business hours.',
+      keywords: ['phone', 'call', 'email', 'contact', 'reach', 'fax', 'address', 'location'],
+      response: 'Here\'s how to reach us:\n\n📞 **Phone:** (980) 585-2019\n📠 **Fax:** (980) 585-2016\n✉️ **Email:** contact@windsongpsychiatric.com\n\n**Office Hours:** Monday-Thursday 8:00 AM – 7:00 PM\n\nFor fastest response, please call during business hours. We typically respond to new patient inquiries within 1-2 business days.',
       type: 'info'
     }
   };
