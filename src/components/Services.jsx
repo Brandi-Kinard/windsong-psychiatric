@@ -27,7 +27,7 @@ const Services = () => {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/Specialized%20care.png',
       iconAlt: 'Specialized care icon',
       title: 'Specialized Care',
-      description: 'Focused treatment for anxiety, depression, ADHD, trauma, and other mental health conditions'
+      description: 'Focused treatment for anxiety, depression, ADHD, trauma, autism spectrum disorders, conduct disorders, and other mental health conditions'
     },
     {
       icon: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/injection.png',

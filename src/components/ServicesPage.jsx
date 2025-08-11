@@ -124,6 +124,8 @@ const ServicesPage = () => {
       category: 'Neurodevelopmental & Cognitive',
       conditions: [
         { name: 'ADHD', description: 'Symptoms of inattention, distractibility, and poor working memory such as trouble focusing, forgetting appointments, and struggling with executive functions.' },
+        { name: 'Autism Spectrum Disorders', description: 'Support for children and adults with autism, including co-occurring conditions like anxiety, ADHD, and behavioral challenges.' },
+        { name: 'Conduct Disorders', description: 'Management of behavioral disorders in children and adolescents, working with families to develop effective strategies.' },
         { name: 'Dementia', description: 'Progressive decline in cognitive function, memory, and ability to perform everyday activities.' },
         { name: 'Cognitive Assessments', description: 'Comprehensive evaluations of memory, thinking, and reasoning abilities.' }
       ]

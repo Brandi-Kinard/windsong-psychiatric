@@ -123,13 +123,13 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     services: {
       keywords: ['services', 'what do you offer', 'what services', 'treatment', 'help with'],
       priority: 8,
-      response: 'We offer comprehensive psychiatric services:\n\n<strong>Core Services:</strong>\n• <strong>Psychiatric Evaluations</strong> - comprehensive assessments and treatment planning\n• <strong>Medication Management</strong> - expert psychiatric medication evaluation and monitoring\n• <strong>Telemedicine</strong> - convenient virtual appointments with HIPAA-compliant platform\n• <strong>Specialized Care</strong> - focused treatment for anxiety, depression, ADHD, trauma, and other conditions\n• <strong>Injections</strong> - long-acting antipsychotics, mood stabilizers, and B12 vitamin injections\n• <strong>Prevention & Wellness</strong> - proactive mental health strategies and patient advocacy\n\n<strong>Geriatric Specialty Care:</strong>\n• In-home visits and facility visits\n• Dementia care and cognitive assessments\n• Family support and education\n• Coordination with medical providers\n• End-of-life mental health support\n\n<strong>We treat:</strong> Depression, bipolar disorder, anxiety, OCD, PTSD, schizophrenia, ADHD, insomnia, adjustment disorder, grief, dementia, and more.\n\nVisit our <a href="/#services">Services section</a> for complete details or call (980) 585-2019.',
+      response: 'We offer comprehensive psychiatric services:\n\n<strong>Core Services:</strong>\n• <strong>Psychiatric Evaluations</strong> - comprehensive assessments and treatment planning\n• <strong>Medication Management</strong> - expert psychiatric medication evaluation and monitoring\n• <strong>Telemedicine</strong> - convenient virtual appointments with HIPAA-compliant platform\n• <strong>Specialized Care</strong> - focused treatment for anxiety, depression, ADHD, trauma, autism spectrum disorders, conduct disorders, and other conditions\n• <strong>Injections</strong> - long-acting antipsychotics, mood stabilizers, and B12 vitamin injections\n• <strong>Prevention & Wellness</strong> - proactive mental health strategies and patient advocacy\n\n<strong>Geriatric Specialty Care:</strong>\n• In-home visits and facility visits\n• Dementia care and cognitive assessments\n• Family support and education\n• Coordination with medical providers\n• End-of-life mental health support\n\n<strong>We treat:</strong> Depression, bipolar disorder, anxiety, OCD, PTSD, schizophrenia, ADHD, autism spectrum disorders, conduct disorders, insomnia, adjustment disorder, grief, dementia, and more.\n\nVisit our <a href="/#services">Services section</a> for complete details or call (980) 585-2019.',
       type: 'info'
     },
 
     // Specific condition treatment
     conditionTreatment: {
-      keywords: ['do you treat', 'can you help with', 'anxiety', 'depression', 'adhd', 'bipolar', 'ptsd', 'schizophrenia', 'what about', 'medication', 'prescribe'],
+      keywords: ['do you treat', 'can you help with', 'anxiety', 'depression', 'adhd', 'bipolar', 'ptsd', 'schizophrenia', 'autism', 'conduct', 'what about', 'medication', 'prescribe'],
       priority: 8,
       response: (input) => {
         const lower = input.toLowerCase();
@@ -140,18 +140,22 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         } else if (lower.includes('depression')) {
           response = '✅ <strong>Yes, we treat depression!</strong> Our depression care includes:\n• Psychiatric evaluations\n• Medication management\n• Treatment plan development\n• Ongoing support and monitoring';
         } else if (lower.includes('adhd')) {
-          response = '✅ <strong>Yes, we treat ADHD!</strong> Our ADHD services include:\n• Comprehensive evaluations\n• Medication management\n• Treatment for teens and adults\n• Focus and attention strategies';
+          response = '✅ <strong>Yes, we treat ADHD!</strong> Our ADHD services include:\n• Comprehensive evaluations\n• Medication management\n• Treatment for children, teens and adults\n• Focus and attention strategies';
         } else if (lower.includes('bipolar')) {
           response = '✅ <strong>Yes, we treat bipolar disorder!</strong> We provide:\n• Mood stabilization\n• Medication management\n• Long-term support\n• Crisis intervention when needed';
         } else if (lower.includes('ptsd')) {
           response = '✅ <strong>Yes, we treat PTSD and trauma!</strong> Our trauma care includes:\n• Trauma-informed treatment\n• Evidence-based approaches\n• Medication when appropriate\n• Supportive therapy options';
+        } else if (lower.includes('autism')) {
+          response = '✅ <strong>Yes, we treat autism spectrum disorders!</strong> Our autism care includes:\n• Comprehensive evaluations\n• Medication management for co-occurring conditions\n• Support for anxiety and ADHD symptoms\n• Family guidance and education';
+        } else if (lower.includes('conduct')) {
+          response = '✅ <strong>Yes, we manage conduct disorders!</strong> Our approach includes:\n• Behavioral assessments\n• Medication when appropriate\n• Family involvement strategies\n• School collaboration support';
         } else if (lower.includes('prescribe') || lower.includes('medication')) {
           response = '✅ <strong>Yes, we prescribe medication!</strong> As a psychiatric nurse practitioner, Felicia Davis can:\n• Prescribe psychiatric medications\n• Monitor medication effectiveness\n• Adjust dosages as needed\n• Provide medication education';
         } else {
-          response = '✅ <strong>We treat many mental health conditions</strong> including anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, insomnia, and more.';
+          response = '✅ <strong>We treat many mental health conditions</strong> including anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, autism spectrum disorders, conduct disorders, insomnia, and more.';
         }
         
-        response += '\n\nWe specialize in <strong>adolescents (13+), adults, and seniors</strong>. Call (980) 585-2019 to discuss your specific needs.';
+        response += '\n\nWe specialize in <strong>pediatric patients (ages 3+), adolescents, adults, and seniors</strong>. Call (980) 585-2019 to discuss your specific needs.';
         
         return response;
       },
@@ -214,7 +218,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response += 'Our services include:\n\n';
         }
         
-        response += '• Check-ups for your mental health\n• Help with medications\n• Treatment for feeling sad, worried, or having trouble focusing\n• Appointments you can do from home (telehealth)\n• Help for teens and adults\n\n';
+        response += '• Check-ups for your mental health\n• Help with medications\n• Treatment for feeling sad, worried, or having trouble focusing\n• Help with autism and behavior problems\n• Appointments you can do from home (telehealth)\n• Help for young children (ages 3+), teens, and adults\n\n';
         
         if (lower.includes('can you help') || lower.includes('help with')) {
           response += 'We can probably help you! ';
@@ -308,7 +312,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       type: 'crisis'
     },
     conditions: {
-      keywords: ['depression', 'anxiety', 'adhd', 'bipolar', 'panic', 'ptsd', 'ocd', 'eating disorder', 'substance', 'addiction', 'sad', 'worried', 'scared', 'nervous', 'cant focus', 'trouble focusing', 'moody', 'mood swings', 'cant sleep', 'sleeping problems', 'feeling down', 'feeling low', 'panic attacks', 'racing thoughts', 'can\'t concentrate', 'hyperactive', 'restless', 'trauma', 'flashbacks', 'nightmares'],
+      keywords: ['depression', 'anxiety', 'adhd', 'bipolar', 'panic', 'ptsd', 'ocd', 'eating disorder', 'substance', 'addiction', 'sad', 'worried', 'scared', 'nervous', 'cant focus', 'trouble focusing', 'moody', 'mood swings', 'cant sleep', 'sleeping problems', 'feeling down', 'feeling low', 'panic attacks', 'racing thoughts', 'can\'t concentrate', 'hyperactive', 'restless', 'trauma', 'flashbacks', 'nightmares', 'autism', 'behavior', 'conduct'],
       response: (input) => {
         const lower = input.toLowerCase();
         let response = '';
@@ -323,10 +327,14 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response = 'We help people whose mood changes a lot (sometimes very happy, sometimes very sad). This might be bipolar disorder. We can help keep your mood more steady. ';
         } else if (lower.includes('ptsd') || lower.includes('trauma') || lower.includes('flashbacks') || lower.includes('nightmares')) {
           response = 'We help people who have been through scary or bad things. If you have bad dreams or scary memories, we can help you feel safer. ';
+        } else if (lower.includes('autism')) {
+          response = 'We help children and adults with autism spectrum disorders. We can help with related challenges like anxiety, ADHD symptoms, and provide support for you and your family. ';
+        } else if (lower.includes('behavior') || lower.includes('conduct')) {
+          response = 'We help children with behavior problems and conduct disorders. We work with families to find the right approach, which may include medication and behavior strategies. ';
         } else if (lower.includes('cant sleep') || lower.includes('sleeping problems')) {
           response = 'We can help if you have trouble sleeping. Sometimes sleep problems are connected to feeling worried or sad. ';
         } else {
-          response = 'We help people with many different mental health problems like feeling sad, worried, having trouble focusing, and more. ';
+          response = 'We help people with many different mental health problems like feeling sad, worried, having trouble focusing, autism, behavior problems, and more. ';
         }
         
         response += '\n\nWe want to help you feel better. ';
@@ -400,7 +408,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     servicesDetailed: {
       keywords: ['conditions we treat', 'what conditions', 'what mental health', 'disorders', 'illnesses', 'problems'],
       priority: 7,
-      response: 'We treat a wide range of mental health conditions:\n\n<strong>Mood Disorders:</strong>\n• Depression and Major Depressive Disorder\n• Bipolar Disorder\n• Mood swings and emotional instability\n\n<strong>Anxiety & Stress Disorders:</strong>\n• Generalized Anxiety Disorder\n• Panic Attacks and Panic Disorder\n• OCD (Obsessive-Compulsive Disorder)\n• PTSD and Trauma-related conditions\n\n<strong>Neurodevelopmental & Cognitive:</strong>\n• ADHD (attention and focus issues)\n• Dementia and cognitive decline\n• Memory concerns and cognitive assessments\n\n<strong>Psychotic Disorders:</strong>\n• Schizophrenia\n• Schizoaffective Disorder\n• Thought disorders and reality perception issues\n\n<strong>Other Conditions:</strong>\n• Insomnia and sleep disorders\n• Adjustment Disorder (difficulty coping with change)\n• Grief and bereavement support\n\n<strong>We provide:</strong> Evidence-based treatments, individualized treatment plans, holistic approaches, and long-term management strategies.\n\nCall (980) 585-2019 to discuss your specific situation.',
+      response: 'We treat a wide range of mental health conditions:\n\n<strong>Mood Disorders:</strong>\n• Depression and Major Depressive Disorder\n• Bipolar Disorder\n• Mood swings and emotional instability\n\n<strong>Anxiety & Stress Disorders:</strong>\n• Generalized Anxiety Disorder\n• Panic Attacks and Panic Disorder\n• OCD (Obsessive-Compulsive Disorder)\n• PTSD and Trauma-related conditions\n\n<strong>Neurodevelopmental & Cognitive:</strong>\n• ADHD (attention and focus issues)\n• Autism Spectrum Disorders\n• Conduct Disorders\n• Dementia and cognitive decline\n• Memory concerns and cognitive assessments\n\n<strong>Psychotic Disorders:</strong>\n• Schizophrenia\n• Schizoaffective Disorder\n• Thought disorders and reality perception issues\n\n<strong>Other Conditions:</strong>\n• Insomnia and sleep disorders\n• Adjustment Disorder (difficulty coping with change)\n• Grief and bereavement support\n\n<strong>We provide:</strong> Evidence-based treatments, individualized treatment plans, holistic approaches, and long-term management strategies.\n\nCall (980) 585-2019 to discuss your specific situation.',
       type: 'info'
     },
     
@@ -432,7 +440,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     // Age and eligibility
     ageEligibility: {
       keywords: ['age', 'how old', 'children', 'kids', 'teens', 'adolescent', 'adult', 'seniors', 'elderly', '13', 'minimum age'],
-      response: 'We provide psychiatric care for:\n\n• <strong>Adolescents 13 and older</strong>\n• <strong>Adults of all ages</strong>\n• <strong>Seniors and elderly patients</strong>\n\n<strong>Specialized experience with:</strong>\n• Teenage mental health concerns\n• Adult psychiatric conditions\n• Geriatric psychiatry (including dementia care)\n• Age-appropriate treatment approaches\n\nFor children under 13, we can provide referrals to child psychiatrists. Call (980) 585-2019 to discuss your specific needs.',
+      response: 'We provide psychiatric care for:\n\n• <strong>Pediatric patients ages 3 and older</strong>\n• <strong>Adolescents and teenagers</strong>\n• <strong>Adults of all ages</strong>\n• <strong>Seniors and elderly patients</strong>\n\n<strong>Specialized experience with:</strong>\n• Childhood mental health concerns (ages 3+)\n• Teenage mental health concerns\n• Adult psychiatric conditions\n• Geriatric psychiatry (including dementia care)\n• Age-appropriate treatment approaches\n\nFor children under 3, we can provide referrals to appropriate specialists. Call (980) 585-2019 to discuss your specific needs.',
       type: 'info'
     },
     
@@ -469,26 +477,26 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     },
 
     // Age and eligibility - comprehensive  
-    ageEligibility: {
-      keywords: ['age', 'children', 'kids', 'teenagers', 'teens', 'seniors', 'elderly', 'minimum age', 'do you see children', 'can you help seniors', 'i\'m 15'],
+    ageEligibilityComprehensive: {
+      keywords: ['age', 'children', 'kids', 'teenagers', 'teens', 'seniors', 'elderly', 'minimum age', 'do you see children', 'can you help seniors', 'i\'m 15', 'pediatric'],
       priority: 8,
       response: (input) => {
         const lower = input.toLowerCase();
         let response = '';
         
-        if (lower.includes('children') || lower.includes('kids')) {
-          response = '<strong>Children under 13:</strong> We specialize in adolescents (13+) and adults. For younger children, we can provide referrals to child psychiatrists.\n\n';
+        if (lower.includes('children') || lower.includes('kids') || lower.includes('pediatric')) {
+          response = '<strong>Children ages 3 and up:</strong> Yes! We provide pediatric psychiatric care starting at age 3. We help with ADHD, anxiety, autism spectrum disorders, conduct disorders, and more.\n\n';
         }
         
         if (lower.includes('15') || lower.includes('teen')) {
-          response += '✅ <strong>Yes! We see teenagers 13 and older.</strong> We have specialized experience with:\n• Teen anxiety and depression\n• ADHD in adolescents\n• School and social stress\n• Family involvement when appropriate\n\n';
+          response += '✅ <strong>Yes! We see teenagers and adolescents.</strong> We have specialized experience with:\n• Teen anxiety and depression\n• ADHD in adolescents\n• Autism spectrum disorders\n• School and social stress\n• Family involvement when appropriate\n\n';
         }
         
         if (lower.includes('senior') || lower.includes('elderly')) {
           response += '✅ <strong>Absolutely! We provide comprehensive care for seniors</strong> including:\n• Geriatric psychiatry\n• Dementia and cognitive concerns\n• Medication management for older adults\n• In-home and facility visits when needed\n\n';
         }
         
-        response += '<strong>We serve:</strong>\n• <strong>Adolescents</strong> 13 and older\n• <strong>Adults</strong> of all ages\n• <strong>Seniors</strong> and elderly patients\n\nCall (980) 585-2019 to discuss your specific needs!';
+        response += '<strong>We serve:</strong>\n• <strong>Children</strong> ages 3 and older\n• <strong>Adolescents and teenagers</strong>\n• <strong>Adults</strong> of all ages\n• <strong>Seniors</strong> and elderly patients\n\nCall (980) 585-2019 to discuss your specific needs!';
         
         return response;
       },
@@ -626,7 +634,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     whyChoose: {
       keywords: ['why choose', 'why windsong', 'what makes you different', 'benefits', 'advantages', 'why should i choose', 'what sets you apart'],
       priority: 7,
-      response: '<strong>Why Choose Windsong Psychiatric Associates?</strong>\n\n<strong>🧠 Care for Every Age:</strong>\n• Specialized mental health care for adolescents (13+), adults, and seniors\n• Age-appropriate treatment approaches tailored to your life stage\n\n<strong>👩‍⚕️ Experienced Provider:</strong>\n• Board-certified psychiatric provider with over a decade of experience\n• Extensive background in inpatient, outpatient, emergency, and community settings\n• Specialized expertise in pediatric and geriatric populations\n\n<strong>🤝 Whole-Person Approach:</strong>\n• We treat the whole person, not just symptoms\n• Integrate physical health, lifestyle, and environmental factors\n• Evidence-based care that puts you first\n• Compassionate, individualized treatment plans\n\n<strong>Our Mission:</strong> Expanding access to quality mental health care, especially for underserved populations. Every person deserves dignity, hope, and the opportunity to heal.\n\n<strong>"All To Thee I Owe"</strong> - our guiding principle of gratitude, purpose, and service.\n\nReady to experience the difference? Call (980) 585-2019 or <a href="/new-patient">get started online</a>.',
+      response: '<strong>Why Choose Windsong Psychiatric Associates?</strong>\n\n<strong>🧠 Care for Every Age:</strong>\n• Specialized mental health care for children (ages 3+), adolescents, adults, and seniors\n• Age-appropriate treatment approaches tailored to your life stage\n\n<strong>👩‍⚕️ Experienced Provider:</strong>\n• Board-certified psychiatric provider with over a decade of experience\n• Extensive background in inpatient, outpatient, emergency, and community settings\n• Specialized expertise in pediatric and geriatric populations\n\n<strong>🤝 Whole-Person Approach:</strong>\n• We treat the whole person, not just symptoms\n• Integrate physical health, lifestyle, and environmental factors\n• Evidence-based care that puts you first\n• Compassionate, individualized treatment plans\n\n<strong>Our Mission:</strong> Expanding access to quality mental health care, especially for underserved populations. Every person deserves dignity, hope, and the opportunity to heal.\n\n<strong>"All To Thee I Owe"</strong> - our guiding principle of gratitude, purpose, and service.\n\nReady to experience the difference? Call (980) 585-2019 or <a href="/new-patient">get started online</a>.',
       type: 'info'
     },
 
@@ -835,14 +843,14 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       const ageMatch = lowerInput.match(/(\d+)/);
       if (ageMatch) {
         const age = parseInt(ageMatch[1]);
-        if (age < 13) {
+        if (age < 3) {
           return {
-            text: "We specialize in treating <strong>adolescents 13 and older</strong> and adults. For children under 13, we recommend consulting with a child psychiatrist. Please call us at (980) 585-2019 for referral recommendations to pediatric specialists.",
+            text: "We serve pediatric patients starting at age 3. For children under 3, we recommend consulting with your pediatrician for appropriate referrals. Please call us at (980) 585-2019 for more information.",
             type: 'info'
           };
         } else {
           return {
-            text: `✅ <strong>Yes, at ${age} you definitely qualify for our services!</strong> We provide psychiatric care for adolescents (13+) and adults of all ages.\n\nWe offer comprehensive treatment for anxiety, depression, ADHD, and many other conditions. Ready to get started? Call (980) 585-2019 or fill out our <a href="/new-patient">New Patient Form</a>.`,
+            text: `✅ <strong>Yes, at ${age} you definitely qualify for our services!</strong> We provide psychiatric care for children (ages 3+), adolescents, adults, and seniors.\n\nWe offer comprehensive treatment for anxiety, depression, ADHD, autism spectrum disorders, conduct disorders, and many other conditions. Ready to get started? Call (980) 585-2019 or fill out our <a href="/new-patient">New Patient Form</a>.`,
             type: 'info'
           };
         }
