@@ -441,7 +441,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     
     // Age and eligibility
     ageEligibility: {
-      keywords: ['age', 'how old', 'children', 'kids', 'teens', 'adolescent', 'adult', 'seniors', 'elderly', '13', 'minimum age'],
+      keywords: ['age', 'how old', 'children', 'kids', 'teens', 'adolescent', 'adult', 'seniors', 'elderly', '13', 'minimum age', 'what ages', 'ages do you', 'age range', 'serve ages'],
       response: 'We provide psychiatric care for:\n\n• <strong>Pediatric patients ages 4 and older</strong>\n• <strong>Adolescents and teenagers</strong>\n• <strong>Adults of all ages</strong>\n• <strong>Seniors and elderly patients</strong>\n\n<strong>Specialized experience with:</strong>\n• Childhood mental health concerns (ages 4+)\n• Teenage mental health concerns\n• Adult psychiatric conditions\n• Geriatric psychiatry (including dementia care)\n• Age-appropriate treatment approaches\n\nFor children under 4, we can provide referrals to appropriate specialists. Call (980) 585-2019 to discuss your specific needs.',
       type: 'info'
     },
@@ -480,7 +480,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
 
     // Age and eligibility - comprehensive  
     ageEligibilityComprehensive: {
-      keywords: ['age', 'children', 'kids', 'teenagers', 'teens', 'seniors', 'elderly', 'minimum age', 'do you see children', 'can you help seniors', 'i\'m 15', 'pediatric'],
+      keywords: ['age', 'children', 'kids', 'teenagers', 'teens', 'seniors', 'elderly', 'minimum age', 'do you see children', 'can you help seniors', 'i\'m 15', 'pediatric', 'what ages', 'ages do you', 'age range', 'serve ages'],
       priority: 8,
       response: (input) => {
         const lower = input.toLowerCase();
