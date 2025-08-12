@@ -155,7 +155,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response = '✅ <strong>We treat many mental health conditions</strong> including anxiety, depression, ADHD, bipolar disorder, PTSD, schizophrenia, autism spectrum disorders, conduct disorders, insomnia, and more.';
         }
         
-        response += '\n\nWe specialize in <strong>pediatric patients (ages 3+), adolescents, adults, and seniors</strong>. Call (980) 585-2019 to discuss your specific needs.';
+        response += '\n\nWe specialize in <strong>pediatric patients (ages 4+), adolescents, adults, and seniors</strong>. Call (980) 585-2019 to discuss your specific needs.';
         
         return response;
       },
@@ -218,7 +218,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response += 'Our services include:\n\n';
         }
         
-        response += '• Check-ups for your mental health\n• Help with medications\n• Treatment for feeling sad, worried, or having trouble focusing\n• Help with autism and behavior problems\n• Appointments you can do from home (telehealth)\n• Help for young children (ages 3+), teens, and adults\n\n';
+        response += '• Check-ups for your mental health\n• Help with medications\n• Treatment for feeling sad, worried, or having trouble focusing\n• Help with autism and behavior problems\n• Appointments you can do from home (telehealth)\n• Help for young children (ages 4+), teens, and adults\n\n';
         
         if (lower.includes('can you help') || lower.includes('help with')) {
           response += 'We can probably help you! ';
@@ -236,8 +236,10 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         const ageMatch = input.match(/(\d+)\s*years?\s*old/i);
         if (ageMatch) {
           const age = parseInt(ageMatch[1]);
-          if (age < 13) {
-            return 'We specialize in treating adolescents (13+) and adults. For children under 13, we recommend consulting with a child psychiatrist. Please call us at (980) 585-2019 for referral recommendations.';
+          if (age < 4) {
+            return 'We serve pediatric patients ages 4 and up. For children under 4, we recommend consulting with a child psychiatrist. Please call us at (980) 585-2019 for referral recommendations.';
+          } else if (age >= 4 && age < 13) {
+            return 'Yes! We provide specialized psychiatric care for children ages 4 and up. Our services include evaluation, medication management, and treatment for ADHD, anxiety, autism spectrum disorders, conduct disorders, and other childhood mental health conditions. Call (980) 585-2019 to schedule an appointment.';
           } else if (age >= 13 && age < 18) {
             return 'Yes! We provide specialized psychiatric care for adolescents. Our services include evaluation, medication management, and treatment for anxiety, depression, ADHD, and other mental health conditions common in teens. Call (980) 585-2019 to schedule an appointment.';
           } else if (age >= 55) {
@@ -250,7 +252,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         if (input.includes('senior') || input.includes('elderly')) {
           return 'Yes, we provide psychiatric care for seniors and older adults. We understand the unique mental health needs that come with aging and offer compassionate, specialized care. Call (980) 585-2019 to learn more.';
         }
-        return 'We provide psychiatric services for adolescents (13+) and adults of all ages. For specific age-related questions, please call us at (980) 585-2019.';
+        return 'We provide psychiatric services for pediatric patients (ages 4+), adolescents, adults, and seniors. For specific age-related questions, please call us at (980) 585-2019.';
       },
       type: 'info'
     },
@@ -440,7 +442,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     // Age and eligibility
     ageEligibility: {
       keywords: ['age', 'how old', 'children', 'kids', 'teens', 'adolescent', 'adult', 'seniors', 'elderly', '13', 'minimum age'],
-      response: 'We provide psychiatric care for:\n\n• <strong>Pediatric patients ages 3 and older</strong>\n• <strong>Adolescents and teenagers</strong>\n• <strong>Adults of all ages</strong>\n• <strong>Seniors and elderly patients</strong>\n\n<strong>Specialized experience with:</strong>\n• Childhood mental health concerns (ages 3+)\n• Teenage mental health concerns\n• Adult psychiatric conditions\n• Geriatric psychiatry (including dementia care)\n• Age-appropriate treatment approaches\n\nFor children under 3, we can provide referrals to appropriate specialists. Call (980) 585-2019 to discuss your specific needs.',
+      response: 'We provide psychiatric care for:\n\n• <strong>Pediatric patients ages 4 and older</strong>\n• <strong>Adolescents and teenagers</strong>\n• <strong>Adults of all ages</strong>\n• <strong>Seniors and elderly patients</strong>\n\n<strong>Specialized experience with:</strong>\n• Childhood mental health concerns (ages 4+)\n• Teenage mental health concerns\n• Adult psychiatric conditions\n• Geriatric psychiatry (including dementia care)\n• Age-appropriate treatment approaches\n\nFor children under 4, we can provide referrals to appropriate specialists. Call (980) 585-2019 to discuss your specific needs.',
       type: 'info'
     },
     
@@ -485,7 +487,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         let response = '';
         
         if (lower.includes('children') || lower.includes('kids') || lower.includes('pediatric')) {
-          response = '<strong>Children ages 3 and up:</strong> Yes! We provide pediatric psychiatric care starting at age 3. We help with ADHD, anxiety, autism spectrum disorders, conduct disorders, and more.\n\n';
+          response = '<strong>Children ages 4 and up:</strong> Yes! We provide pediatric psychiatric care starting at age 4. We help with ADHD, anxiety, autism spectrum disorders, conduct disorders, and more.\n\n';
         }
         
         if (lower.includes('15') || lower.includes('teen')) {
@@ -496,7 +498,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
           response += '✅ <strong>Absolutely! We provide comprehensive care for seniors</strong> including:\n• Geriatric psychiatry\n• Dementia and cognitive concerns\n• Medication management for older adults\n• In-home and facility visits when needed\n\n';
         }
         
-        response += '<strong>We serve:</strong>\n• <strong>Children</strong> ages 3 and older\n• <strong>Adolescents and teenagers</strong>\n• <strong>Adults</strong> of all ages\n• <strong>Seniors</strong> and elderly patients\n\nCall (980) 585-2019 to discuss your specific needs!';
+        response += '<strong>We serve:</strong>\n• <strong>Children</strong> ages 4 and older\n• <strong>Adolescents and teenagers</strong>\n• <strong>Adults</strong> of all ages\n• <strong>Seniors</strong> and elderly patients\n\nCall (980) 585-2019 to discuss your specific needs!';
         
         return response;
       },
@@ -634,7 +636,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     whyChoose: {
       keywords: ['why choose', 'why windsong', 'what makes you different', 'benefits', 'advantages', 'why should i choose', 'what sets you apart'],
       priority: 7,
-      response: '<strong>Why Choose Windsong Psychiatric Associates?</strong>\n\n<strong>🧠 Care for Every Age:</strong>\n• Specialized mental health care for children (ages 3+), adolescents, adults, and seniors\n• Age-appropriate treatment approaches tailored to your life stage\n\n<strong>👩‍⚕️ Experienced Provider:</strong>\n• Board-certified psychiatric provider with over a decade of experience\n• Extensive background in inpatient, outpatient, emergency, and community settings\n• Specialized expertise in pediatric and geriatric populations\n\n<strong>🤝 Whole-Person Approach:</strong>\n• We treat the whole person, not just symptoms\n• Integrate physical health, lifestyle, and environmental factors\n• Evidence-based care that puts you first\n• Compassionate, individualized treatment plans\n\n<strong>Our Mission:</strong> Expanding access to quality mental health care, especially for underserved populations. Every person deserves dignity, hope, and the opportunity to heal.\n\n<strong>"All To Thee I Owe"</strong> - our guiding principle of gratitude, purpose, and service.\n\nReady to experience the difference? Call (980) 585-2019 or <a href="/new-patient">get started online</a>.',
+      response: '<strong>Why Choose Windsong Psychiatric Associates?</strong>\n\n<strong>🧠 Care for Every Age:</strong>\n• Specialized mental health care for children (ages 4+), adolescents, adults, and seniors\n• Age-appropriate treatment approaches tailored to your life stage\n\n<strong>👩‍⚕️ Experienced Provider:</strong>\n• Board-certified psychiatric provider with over a decade of experience\n• Extensive background in inpatient, outpatient, emergency, and community settings\n• Specialized expertise in pediatric and geriatric populations\n\n<strong>🤝 Whole-Person Approach:</strong>\n• We treat the whole person, not just symptoms\n• Integrate physical health, lifestyle, and environmental factors\n• Evidence-based care that puts you first\n• Compassionate, individualized treatment plans\n\n<strong>Our Mission:</strong> Expanding access to quality mental health care, especially for underserved populations. Every person deserves dignity, hope, and the opportunity to heal.\n\n<strong>"All To Thee I Owe"</strong> - our guiding principle of gratitude, purpose, and service.\n\nReady to experience the difference? Call (980) 585-2019 or <a href="/new-patient">get started online</a>.',
       type: 'info'
     },
 
@@ -843,14 +845,14 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
       const ageMatch = lowerInput.match(/(\d+)/);
       if (ageMatch) {
         const age = parseInt(ageMatch[1]);
-        if (age < 3) {
+        if (age < 4) {
           return {
-            text: "We serve pediatric patients starting at age 3. For children under 3, we recommend consulting with your pediatrician for appropriate referrals. Please call us at (980) 585-2019 for more information.",
+            text: "We serve pediatric patients starting at age 4. For children under 4, we recommend consulting with your pediatrician for appropriate referrals. Please call us at (980) 585-2019 for more information.",
             type: 'info'
           };
         } else {
           return {
-            text: `✅ <strong>Yes, at ${age} you definitely qualify for our services!</strong> We provide psychiatric care for children (ages 3+), adolescents, adults, and seniors.\n\nWe offer comprehensive treatment for anxiety, depression, ADHD, autism spectrum disorders, conduct disorders, and many other conditions. Ready to get started? Call (980) 585-2019 or fill out our <a href="/new-patient">New Patient Form</a>.`,
+            text: `✅ <strong>Yes, at ${age} you definitely qualify for our services!</strong> We provide psychiatric care for children (ages 4+), adolescents, adults, and seniors.\n\nWe offer comprehensive treatment for anxiety, depression, ADHD, autism spectrum disorders, conduct disorders, and many other conditions. Ready to get started? Call (980) 585-2019 or fill out our <a href="/new-patient">New Patient Form</a>.`,
             type: 'info'
           };
         }
