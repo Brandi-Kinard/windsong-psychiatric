@@ -50,6 +50,21 @@ const Locations = () => {
       lng: -76.6110
     },
     {
+      name: 'Norfolk, VA',
+      image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/norfolk.png',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.7019758455117!2d-76.29349272415936!3d36.84961297223313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89ba980da5c8ef45%3A0xa2c98932da70709c!2s259%20Granby%20St%20Suite%20%23250%2C%20Norfolk%2C%20VA%2023510!5e0!3m2!1sen!2sus!4v1759787041857!5m2!1sen!2sus',
+      useEmbed: true,
+      address: '259 Granby Street\nSuite 250\nNorfolk, VA 23510',
+      phone: '(980) 585-2019',
+      fax: '(980) 585-2016',
+      hours: 'Mon–Thu: 8:00 AM – 7:00 PM\nFri: Closed\nSat: By appointment only (case-by-case basis)\nSun: Closed',
+      link: 'https://maps.google.com/?q=259+Granby+Street+Suite+250+Norfolk+VA+23510',
+      linkText: 'Get directions',
+      mapLink: 'https://www.google.com/maps/dir//259+Granby+Street,+Suite+250,+Norfolk,+VA+23510',
+      lat: 36.8496,
+      lng: -76.2935
+    },
+    {
       name: 'Virtual Care',
       image: 'https://raw.githubusercontent.com/Brandi-Kinard/imageSamples/main/windsong-psych/virtual-call.png',
       address: 'Available throughout\nNC, SC, MD, GA, VA, DC, FL',
