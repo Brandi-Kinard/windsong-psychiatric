@@ -16,12 +16,12 @@ const PoliciesModal = ({ isOpen, onClose }) => {
       
       <div className="services-list">
         <div className="service-item">
-          <h4>New patient visit - $280</h4>
+          <h4>New patient visit - $350</h4>
           <p>Self pay fee for initial appointments</p>
         </div>
         
         <div className="service-item">
-          <h4>Follow-up visit - $140</h4>
+          <h4>Follow-up visit - $250</h4>
           <p>Self pay fee for established patient appointments</p>
         </div>
         
@@ -39,7 +39,7 @@ const PoliciesModal = ({ isOpen, onClose }) => {
       <p>If you need to cancel or reschedule an appointment, please let us know at least 24 hours in advance. This allows us to offer the slot to another client in need.</p>
       
       <p><strong>Late cancellations</strong> (less than 24 hours' notice): May incur a fee of $50</p>
-      <p><strong>No-show appointments</strong> (missed without notice): May incur a fee of $120</p>
+      <p><strong>No-show appointments</strong> (missed without notice): May incur a fee of $100</p>
       
       <p className="emergency-notice">We understand that emergencies happen. If your cancellation is due to an unforeseen circumstance, please let us know — we may be able to waive the fee. Emergency situations are handled on a case-by-case basis. We appreciate your understanding as this helps us manage our schedule effectively.</p>
     </div>
