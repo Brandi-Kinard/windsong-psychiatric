@@ -258,7 +258,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
     },
     location: {
       keywords: ['location', 'located', 'address', 'where', 'directions', 'fort mill', 'huntersville', 'baltimore'],
-      response: 'We have three convenient locations:\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\nAll offices offer ample parking and easy access. <a href="/#locations">View directions and maps</a> for detailed location information.',
+      response: 'We have three convenient locations:\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Baltimore, MD:</strong> 175 W Ostend St, Suite 102, Baltimore, MD 21230\n\nAll offices offer ample parking and easy access. <a href="/#locations">View directions and maps</a> for detailed location information.',
       type: 'info'
     },
     telehealth: {
@@ -568,7 +568,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         let response = '';
         
         if (lower.includes('baltimore')) {
-          response = '✅ <strong>Yes, we have a Baltimore location!</strong>\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\n';
+          response = '✅ <strong>Yes, we have a Baltimore location!</strong>\n\n📍 <strong>Baltimore, MD:</strong> 175 W Ostend St, Suite 102, Baltimore, MD 21230\n\n';
         }
         
         if (lower.includes('fort mill')) {
@@ -580,7 +580,7 @@ const Chatbot = ({ isOpen, isMinimized, onClose, onMinimize }) => {
         }
         
         if (!lower.includes('baltimore') && !lower.includes('fort mill') && !lower.includes('huntersville')) {
-          response = '<strong>We have three convenient locations plus virtual care:</strong>\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Baltimore, MD:</strong> 33 S. Gay Street, Suite 202, Baltimore, MD 21202\n\n💻 <strong>Virtual Care:</strong> Available throughout NC, SC, MD, GA, VA, DC, FL\n\n';
+          response = '<strong>We have three convenient locations plus virtual care:</strong>\n\n📍 <strong>Huntersville, NC:</strong> 9820 Northcross Center Court, Suite 50, Huntersville, NC 28078\n\n📍 <strong>Fort Mill, SC:</strong> 975 Market Street, Suite 201-F, Fort Mill, SC 29708\n\n📍 <strong>Baltimore, MD:</strong> 175 W Ostend St, Suite 102, Baltimore, MD 21230\n\n💻 <strong>Virtual Care:</strong> Available throughout NC, SC, MD, GA, VA, DC, FL\n\n';
         }
         
         response += '<strong>Contact Information:</strong>\n📞 <strong>Phone:</strong> (980) 585-2019\n📠 <strong>Fax:</strong> (980) 585-2016\n✉️ <strong>Email:</strong> contact@windsongpsychiatric.com\n\n<strong>Office Hours (All Locations):</strong>\n• Monday–Thursday: 8:00 AM – 7:00 PM\n• Friday: Closed\n• Saturday: By appointment only (case-by-case basis)\n• Sunday: Closed\n\n<strong>All locations</strong> offer ample parking and easy access. View <a href="/#locations">directions and maps</a> for details!';

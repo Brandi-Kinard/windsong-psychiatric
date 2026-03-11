@@ -408,7 +408,7 @@ newResponseKey: {
 **Offices**:
 1. **Huntersville, NC**: 9820 Northcross Center Court, Suite 50
 2. **Fort Mill, SC**: 975 Market Street, Suite 201-F  
-3. **Baltimore, MD**: 33 S. Gay Street, Suite 202
+3. **Baltimore, MD**: 175 W Ostend St, Suite 102
 4. **Virtual Care**: Available in NC, SC, MD, GA, VA, DC, FL
 
 #### Policies & Fees
