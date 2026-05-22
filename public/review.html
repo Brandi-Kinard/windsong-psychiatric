@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Windsong &mdash; Leave a Review</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #eef2f0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 380px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+  }
+
+  .card-top {
+    background: linear-gradient(160deg, #2C6073 0%, #3d7d92 100%);
+    padding: 1.75rem 2rem 2.5rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .logo {
+    width: 200px;
+    margin: 0 auto 1rem;
+    display: block;
+    opacity: 0.95;
+  }
+
+  .avatar-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.8);
+    overflow: hidden;
+    margin: 0 auto;
+    background: #cfdde3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.75rem 2rem 2rem;
+    text-align: center;
+  }
+
+  .provider-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+  }
+
+  .provider-creds {
+    font-size: 12px;
+    font-weight: 500;
+    color: #2C6073;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+
+  .provider-title {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 0.15rem;
+  }
+
+  .provider-practice {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 1.75rem;
+  }
+
+  .divider {
+    height: 1px;
+    background: #f0eeea;
+    margin: 0 0 1.75rem;
+  }
+
+  .ask-text {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .review-btn {
+    display: block;
+    width: 100%;
+    background: #2C6073;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-radius: 14px;
+    text-align: center;
+    transition: background 0.2s, transform 0.1s;
+    letter-spacing: 0.02em;
+  }
+
+  .review-btn:hover {
+    background: #1f4756;
+    transform: translateY(-1px);
+  }
+
+  .review-btn:active {
+    transform: translateY(0);
+  }
+
+  .stars-row {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 1.25rem;
+  }
+
+  .star {
+    width: 20px;
+    height: 20px;
+    fill: #f5a623;
+  }
+
+  .footer-note {
+    font-size: 11px;
+    color: #bbb;
+    margin-top: 1.25rem;
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-top">
+    <svg class="logo" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+      <text x="50%" y="44" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-style="italic" fill="white" opacity="0.95">Windsong</text>
+      <text x="50%" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" opacity="0.75" letter-spacing="2.5">FAMILY &amp; PSYCHIATRIC ASSOCIATES</text>
+    </svg>
+    <div class="avatar-wrapper">
+      <img src="data:image/jpeg;base64,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" alt="Felicia L. Davis">
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="provider-name">Felicia L. Davis</div>
+    <div class="provider-creds">MSN, PMHNP-BC, FNP-BC</div>
+    <div class="provider-title">Psychiatric Nurse Practitioner</div>
+    <div class="provider-practice">Windsong Family &amp; Psychiatric Associates</div>
+
+    <div class="divider"></div>
+
+    <div class="stars-row">
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <svg class="star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    </div>
+
+    <p class="ask-text">Enjoyed your experience with Windsong? Your review helps others find the care they need.</p>
+
+    <a href="https://g.page/r/CRC6vidOegC3EAI/review" class="review-btn">
+      Leave a Google Review &rarr;
+    </a>
+
+    <p class="footer-note">Takes less than a minute &bull; No account required to rate</p>
+  </div>
+</div>
+
+</body>
+</html>
