@@ -44,7 +44,7 @@ const Footer = () => {
               <li><Link to="/helpful-resources">Helpful Resources</Link></li>
               <li><Link to="/patient-forms">Patient Forms</Link></li>
               <li><a href="https://patientonlineportal.com/" target="_blank" rel="noopener noreferrer">Patient Portal</a></li>
-              <li><a href="/review.html">Leave a Review</a></li>
+              <li><a href="/review">Leave a Review</a></li>
             </ul>
           </div>
           
